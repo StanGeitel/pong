@@ -8,12 +8,11 @@ void i2c_init(){
 	USIDR = 0xFF;
 	USICR = (0 << USISIE) | (0 << USISIE) |		//disable interrupts
 			(1 << USIWM1) | (0 << USIWM0) |		//set two-wire mode
-			(1 << USICS1) | (0 USICS0) | (1 << USICLK) |		//software clock strobe as counter clock source
+			(1 << USICS1) | (0 << USICS0) | (1 << USICLK) |		//software clock strobe as counter clock source
 			(0 << USITC);
 	USISR = (1 << USISIF) | (1 << USIOIF) | ( 1<< USIPF ) | (1 << USIDC) |      // Clear flags,
 			(0x0<<USICNT0);		//reset counter value
-			
-//	USICR |= (1 << USITC);
+	
 }
 
 

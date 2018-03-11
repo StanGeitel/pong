@@ -2,11 +2,18 @@
 #include "i2c.h"
 
 void i2c_init(){
-	USICR |= (1 << USIWM1);		//select Two-wire mode
-//	DDRB |= (1 << DDB7) | (1 << DDB5);		//enable output driver for SCL, SCL is high unless forced low by start detector or bit PORTB register. SDA corresponds with MSB of USIDR and PORTB bit.
-//	PORTB |= (1 << DDB7) | (1 << DDB5);		//set both high in portB
-	USICR &= ~(3 << USICS0);	//clear USICS1 and 0 to enable clocking with USICLK
+	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pullup.
+	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SCL and SDA. SCL is high unless forced low by start detector or bit PORTB register. SDA corresponds with MSB of USIDR and PORTB bit.
 	
+	USIDR = 0xFF;
+	USICR = (0 << USISIE) | (0 << USISIE) |		//disable interrupts
+			(1 << USIWM1) | (0 << USIWM0) |		//set two-wire mode
+			(1 << USICS1) | (0 USICS0) | (1 << USICLK) |		//software clock strobe as counter clock source
+			(0 << USITC);
+	USISR = (1 << USISIF) | (1 << USIOIF) | ( 1<< USIPF ) | (1 << USIDC) |      // Clear flags,
+			(0x0<<USICNT0);		//reset counter value
+			
+//	USICR |= (1 << USITC);
 }
 
 

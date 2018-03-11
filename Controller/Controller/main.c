@@ -1,16 +1,12 @@
-/*
- * Controller.c
- *
- * Created: 05/03/2018 20:07:34
- * Author : stan
- */ 
-
 #include <avr/io.h>
-
+#include <stdint.h>
+#include "i2c.h"
+#include "acc.h"
 
 int main(void)
 {
-    /* Replace with your application code */
+//    i2c_init();
+	
     while (1) 
     {
     }

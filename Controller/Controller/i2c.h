@@ -4,7 +4,6 @@
 
 
 void i2c_init();
-uint8_t i2c_read_data();
 void i2c_write_data(uint8_t);
 
 

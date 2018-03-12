@@ -11,6 +11,7 @@
 int main(void)
 {
     i2c_init();
+	i2c_send_start();
 	
     while (1) 
     {

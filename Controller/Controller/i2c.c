@@ -1,12 +1,11 @@
 #include <avr/io.h>
-#include <util/delay.h>
 
 #include "i2c.h"
 
 void i2c_init(){
 	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
 	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
-//SDA corresponds with MSB of USIDR and PORTB bit. SCL is high unless forced low by start detector or bit PORTB register.
+	//SDA corresponds with MSB of USIDR and PORTB bit. SCL is high unless forced low by start detector or bit PORTB register.
 	
 	USIDR = 0xFF;							//set data register high for start condition
 	USICR = USICR_MASK;						//control register mask
@@ -16,11 +15,11 @@ void i2c_init(){
 
 void i2c_send_start(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
-	_delay_us(BIT_TIME/2);
 	PORTB &= ~(1<<PINB7);			//force SCL low
 	PORTB |= (1<<PINB5);			//release SDA
+	PORTB |= (1<<PINB7);			//release SCL
 }
-
+/*
 void i2c_send_stop(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
 	while(!(PORTB & (1<<PINB5)));
@@ -92,4 +91,4 @@ uint8_t i2c_read(uint8_t reg_address){
 			}
 		}
 	}
-}
+}*/

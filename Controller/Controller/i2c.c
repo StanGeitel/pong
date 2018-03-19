@@ -9,7 +9,7 @@ void init(){
 
 void send_start(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
-	while(!(PORTB & (1<<PINB5)));	//wait for SDA to go low
+	while(PORTB & (1<<PINB5));		//wait for SDA to go low
 	PORTB &= ~(1<<PINB7);			//force SCL low
 
 }

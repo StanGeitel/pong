@@ -81,8 +81,8 @@ void init(){
 void send_start(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
   40:	c5 98       	cbi	0x18, 5	; 24
-	while(!(PORTB & (1<<PINB5)));	//wait for SDA to go low
-  42:	c5 9b       	sbis	0x18, 5	; 24
+	while(PORTB & (1<<PINB5));		//wait for SDA to go low
+  42:	c5 99       	sbic	0x18, 5	; 24
   44:	fe cf       	rjmp	.-4      	; 0x42 <send_start+0x2>
 	PORTB &= ~(1<<PINB7);			//force SCL low
   46:	c7 98       	cbi	0x18, 7	; 24

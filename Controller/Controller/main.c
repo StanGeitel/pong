@@ -6,15 +6,10 @@
 
 int main(void)
 {
-	init();
-	send_start();
-
-
-//	PORTB &= ~(1<<PINB5);
-//	PORTB &= ~(1<<PINB7);
+	i2c_init();
+	i2c_send_stop();
 	
     while (1) 
     {
     }
 }
-

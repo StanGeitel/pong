@@ -66,6 +66,15 @@ uint8_t i2c_get_ack(){
 	DDRB &= ~(1<<PINB5);					//set as input
 	PORTB &= ~(1<<PINB5);					//disable pull up
 	
+	PORTB |= (1<<PINB7);					//release SCL
+	while(!(PORTB & (1<<PINB7)));			//wait for SCL to go high
+	if(PORTB & (1<<PINB5)){					//read SDA
+		ret = 1;
+	}else{
+		ret = 0;
+	}
+	_delay_us(BIT_TIME);					//wait a bit
+	PORTB &= ~(1<<PINB7);					//force SCL low
 	
 	PORTB |= (1<<PINB5);					//enable pull up
 	DDRB |= (1<<PINB5);						//set as output
@@ -74,12 +83,21 @@ uint8_t i2c_get_ack(){
 
 uint8_t i2c_single_read(uint8_t reg_address){
 	uint8_t ret;
-	i2c_send_start();
-	USIDR = (DEV_ADD<<1);				//device address and write 
-	i2c_transfer();
-	
-	i2c_get_ack();
+
+	i2c_send_reg_add(reg_address);+
 	
 	USIDR = ((DEV_ADD<<1) & 1);			//device address and read
+	
 	return(ret);
+}
+
+void i2c_send_reg_add(uint8_t reg_address){
+	i2c_send_start();
+	USIDR = (DEV_ADD<<1);				//device address and write
+	i2c_transfer();						//send
+	i2c_get_ack();						//wait for acknowledge
+	
+	USIDR= reg_address;					//write register address
+	i2c_transfer();						//send
+	i2c_get_ack();						//wait for acknowledge
 }

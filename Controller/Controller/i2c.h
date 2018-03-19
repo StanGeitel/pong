@@ -16,3 +16,4 @@ void i2c_send_nack(void);
 void i2c_transfer(void);
 uint8_t i2c_get_ack(void);
 uint8_t i2c_single_read(uint8_t);
+void i2c_send_reg_add(uint8_t);

@@ -2,6 +2,74 @@
 
 #include "i2c.h"
 
+void init(){
+	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
+	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
+}
+
+void send_start(){
+	PORTB &= ~(1<<PINB5);			//force SDA low
+	while(!(PORTB & (1<<PINB5)));	//wait for SDA to go low
+	PORTB &= ~(1<<PINB7);			//force SCL low
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 void i2c_init(){
 	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
 	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
@@ -19,7 +87,7 @@ void i2c_send_start(){
 	PORTB |= (1<<PINB5);			//release SDA
 	PORTB |= (1<<PINB7);			//release SCL
 }
-/*
+
 void i2c_send_stop(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
 	while(!(PORTB & (1<<PINB5)));

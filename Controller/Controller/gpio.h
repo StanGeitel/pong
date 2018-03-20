@@ -7,7 +7,6 @@
 #define PORT(port) _SFR_IO8(0x01B - ((port - 10) * 3))
 
 
-
 #endif /* GPIO_H_ */
 
 void set_output_gpio(unsigned char port, int pin);

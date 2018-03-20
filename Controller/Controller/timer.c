@@ -1,9 +1,3 @@
-/*
- * timer.c
- *
- * Created: 4-12-2017 06:37:22
- *  Author: Stan Geitel
- */ 
  #include <avr/io.h>
  #include <avr/common.h>
  #include <avr/interrupt.h>

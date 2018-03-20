@@ -1,9 +1,3 @@
-/*
- * gpio.c
- *
- * Created: 3-12-2017 19:09:33
- *  Author: Stan Geitel
- */ 
 #include <avr/io.h>
 #include <avr/common.h>
 #include <avr/interrupt.h>

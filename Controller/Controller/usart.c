@@ -23,7 +23,7 @@
 #define BAUD 9600
 
 
-#define MYUBBR ((F_CPU / (BAUD * 16L)) - 1)//16L is for asynchrone mode
+#define MYUBBR ((F_CPU / (BAUD * 16L)) - 1)			//16L is for asynchrone mode
 #define BUFFER_SIZE 16
 
 volatile static uint8_t rx_buffer[BUFFER_SIZE] = "xxxxxxxxxxxxxxxx";

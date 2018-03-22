@@ -5,7 +5,6 @@
 #include <util/delay.h>
 
 
-
 #endif /* USART_H_ */
 
 

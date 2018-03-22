@@ -10,6 +10,7 @@
 #endif
 
 void i2c_init(void);
+void i2c_send_start(void);
 void i2c_send_stop(void);
 void i2c_send_ack(void);
 void i2c_send_nack(void);

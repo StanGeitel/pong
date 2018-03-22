@@ -4,7 +4,13 @@
 
 acc.c
 
+gpio.c
+
 i2c.c
 
 main.c
+
+timer.c
+
+usart.c
 

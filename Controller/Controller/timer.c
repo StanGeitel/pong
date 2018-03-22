@@ -21,9 +21,7 @@
 	GTCCR |= (1 << PSR10);	
  }
 
- //Er kan niet 2 keer gebruik gemaakt worden van dezelfde interrupt dus deze is gecommend
-
- /*ISR (TIMER0_COMPA_vect){
+ ISR (TIMER0_COMPA_vect){
 	if(read_gpio(0xB, 7)){
 		clear_output_gpio(0xB, 7);
 	}
@@ -31,4 +29,4 @@
 		set_output_gpio(0xB, 7);
 	}
 	
- }*/
+ }

@@ -38,8 +38,11 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../acc.c \
+../gpio.c \
 ../i2c.c \
-../main.c
+../main.c \
+../timer.c \
+../usart.c
 
 
 PREPROCESSING_SRCS += 
@@ -50,23 +53,35 @@ ASM_SRCS +=
 
 OBJS +=  \
 acc.o \
+gpio.o \
 i2c.o \
-main.o
+main.o \
+timer.o \
+usart.o
 
 OBJS_AS_ARGS +=  \
 acc.o \
+gpio.o \
 i2c.o \
-main.o
+main.o \
+timer.o \
+usart.o
 
 C_DEPS +=  \
 acc.d \
+gpio.d \
 i2c.d \
-main.d
+main.d \
+timer.d \
+usart.d
 
 C_DEPS_AS_ARGS +=  \
 acc.d \
+gpio.d \
 i2c.d \
-main.d
+main.d \
+timer.d \
+usart.d
 
 OUTPUT_FILE_PATH +=Controller.elf
 
@@ -82,6 +97,12 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 

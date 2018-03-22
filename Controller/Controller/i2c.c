@@ -1,4 +1,4 @@
-#define F_CPU				8000000UL		//8MHz
+#define F_CPU				1000000UL		//1MHz
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -10,7 +10,7 @@ void i2c_init(){
 	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
 	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
 	//SDA corresponds with MSB of USIDR and PORTB bit. SCL is high unless forced low by start detector or bit PORTB register.
-	
+
 	USIDR = 0xFF;							//set data register high for start condition
 	USICR = USICR_MASK;						//control register mask
 	USISR = (1<<USISIF)|(1<<USIOIF)|(1<<USIPF)|(1<<USIDC)|(0x0<<USICNT0);	//reset flags and counter value
@@ -21,7 +21,6 @@ void i2c_send_start(){
 	PORTB &= ~(1<<PINB5);			//force SDA low
 	while(PORTB & (1<<PINB5));		//wait for SDA low
 	PORTB &= ~(1<<PINB7);			//force SCL low
-
 }
 
 void i2c_send_stop(){
@@ -80,7 +79,7 @@ uint8_t i2c_get_ack(){
 	DDRB |= (1<<PINB5);						//set as output
 	return(ret);
 }
-
+/*
 uint8_t i2c_get_data(){
 	DDRB &= ~(1<<PINB5);					//set as input
 	PORTB &= ~(1<<PINB5);					//disable pull up
@@ -88,7 +87,7 @@ uint8_t i2c_get_data(){
 	i2c_send_nack();
 	i2c_send_stop();
 }
-
+*/
 void i2c_send_reg_add(uint8_t reg_address){
 	i2c_send_start();
 	USIDR = (DEV_ADD<<1);				//device address and write
@@ -99,7 +98,7 @@ void i2c_send_reg_add(uint8_t reg_address){
 	i2c_transfer();						//send
 	i2c_get_ack();						//wait for acknowledge
 }
-
+/*
 uint8_t i2c_single_read(uint8_t reg_address){
 	uint8_t ret;
 
@@ -111,3 +110,4 @@ uint8_t i2c_single_read(uint8_t reg_address){
 	
 	return(ret);
 }
+*/

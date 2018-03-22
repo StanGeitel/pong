@@ -1,6 +1,6 @@
 /*
 ===============================================================================
- Name        : main.c
+ Name        : Console.c
  Author      : $(author)
  Version     :
  Copyright   : $(copyright)
@@ -14,13 +14,15 @@
 
 #include <cr_section_macros.h>
 
+#include <stdio.h>
+
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
 
 int main(void) {
 
-    // TODO: insert code here
+    printf("Hello World\n");
 
     // Force the counter to be placed into memory
     volatile static int i = 0 ;

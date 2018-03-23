@@ -3,31 +3,31 @@ Controller.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000029a  00000000  00000000  00000094  2**1
+  0 .text         00000226  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000004  00800060  0000029a  0000032e  2**0
+  1 .data         00000002  00800060  00000226  000002ba  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000004  00800064  00800064  00000332  2**0
+  2 .bss          00000002  00800062  00800062  000002bc  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000332  2**0
+  3 .comment      00000030  00000000  00000000  000002bc  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000364  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002ec  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000160  00000000  00000000  000003a4  2**0
+  5 .debug_aranges 00000170  00000000  00000000  0000032c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000de4  00000000  00000000  00000504  2**0
+  6 .debug_info   00000ed1  00000000  00000000  0000049c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000919  00000000  00000000  000012e8  2**0
+  7 .debug_abbrev 00000939  00000000  00000000  0000136d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000009c3  00000000  00000000  00001c01  2**0
+  8 .debug_line   00000a58  00000000  00000000  00001ca6  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000002ec  00000000  00000000  000025c4  2**2
+  9 .debug_frame  000002f8  00000000  00000000  00002700  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000573  00000000  00000000  000028b0  2**0
+ 10 .debug_str    00000564  00000000  00000000  000029f8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000054d  00000000  00000000  00002e23  2**0
+ 11 .debug_loc    000005b1  00000000  00000000  00002f5c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000110  00000000  00000000  00003370  2**0
+ 12 .debug_ranges 00000120  00000000  00000000  0000350d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -40,7 +40,7 @@ Disassembly of section .text:
    8:	29 c0       	rjmp	.+82     	; 0x5c <__bad_interrupt>
    a:	28 c0       	rjmp	.+80     	; 0x5c <__bad_interrupt>
    c:	27 c0       	rjmp	.+78     	; 0x5c <__bad_interrupt>
-   e:	16 c1       	rjmp	.+556    	; 0x23c <__vector_7>
+   e:	26 c0       	rjmp	.+76     	; 0x5c <__bad_interrupt>
   10:	e6 c0       	rjmp	.+460    	; 0x1de <__vector_8>
   12:	24 c0       	rjmp	.+72     	; 0x5c <__bad_interrupt>
   14:	23 c0       	rjmp	.+70     	; 0x5c <__bad_interrupt>
@@ -65,18 +65,18 @@ Disassembly of section .text:
   32:	10 e0       	ldi	r17, 0x00	; 0
   34:	a0 e6       	ldi	r26, 0x60	; 96
   36:	b0 e0       	ldi	r27, 0x00	; 0
-  38:	ea e9       	ldi	r30, 0x9A	; 154
+  38:	e6 e2       	ldi	r30, 0x26	; 38
   3a:	f2 e0       	ldi	r31, 0x02	; 2
   3c:	02 c0       	rjmp	.+4      	; 0x42 <__SREG__+0x3>
   3e:	05 90       	lpm	r0, Z+
   40:	0d 92       	st	X+, r0
-  42:	a4 36       	cpi	r26, 0x64	; 100
+  42:	a2 36       	cpi	r26, 0x62	; 98
   44:	b1 07       	cpc	r27, r17
   46:	d9 f7       	brne	.-10     	; 0x3e <__SP_L__+0x1>
 
 00000048 <__do_clear_bss>:
   48:	20 e0       	ldi	r18, 0x00	; 0
-  4a:	a4 e6       	ldi	r26, 0x64	; 100
+  4a:	a2 e6       	ldi	r26, 0x62	; 98
   4c:	b0 e0       	ldi	r27, 0x00	; 0
   4e:	01 c0       	rjmp	.+2      	; 0x52 <.do_clear_bss_start>
 
@@ -84,11 +84,11 @@ Disassembly of section .text:
   50:	1d 92       	st	X+, r1
 
 00000052 <.do_clear_bss_start>:
-  52:	a8 36       	cpi	r26, 0x68	; 104
+  52:	a4 36       	cpi	r26, 0x64	; 100
   54:	b2 07       	cpc	r27, r18
   56:	e1 f7       	brne	.-8      	; 0x50 <.do_clear_bss_loop>
   58:	85 d0       	rcall	.+266    	; 0x164 <main>
-  5a:	1d c1       	rjmp	.+570    	; 0x296 <_exit>
+  5a:	e3 c0       	rjmp	.+454    	; 0x222 <_exit>
 
 0000005c <__bad_interrupt>:
   5c:	d1 cf       	rjmp	.-94     	; 0x0 <__vectors>
@@ -363,11 +363,11 @@ int main(void)
  1dc:	18 95       	reti
 
 000001de <__vector_8>:
-  // enable uart data interrupt (send data)
-  UCSRB |= (1<<UDRIE);
+  tx_buffer[1] = data;
+  UCSRB |= (1<<UDRIE);					// enable uart data interrupt (send data)
 }
 
-//send a char out of the buffer
+//send a command out of the buffer
 ISR(USART_UDRE_vect) {
  1de:	1f 92       	push	r1
  1e0:	0f 92       	push	r0
@@ -375,112 +375,40 @@ ISR(USART_UDRE_vect) {
  1e4:	0f 92       	push	r0
  1e6:	11 24       	eor	r1, r1
  1e8:	8f 93       	push	r24
- 1ea:	9f 93       	push	r25
- 1ec:	ef 93       	push	r30
- 1ee:	ff 93       	push	r31
-  uint8_t tmp_tail = 0;
-  if (tx_head != tx_tail) {//check if there is any more data to send
- 1f0:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <tx_head>
- 1f4:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <__data_end>
- 1f8:	98 17       	cp	r25, r24
- 1fa:	b1 f0       	breq	.+44     	; 0x228 <__vector_8+0x4a>
-    tmp_tail = (tx_tail + 1) % BUFFER_SIZE;//goes from 0 to 15 and then to 0
- 1fc:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <__data_end>
- 200:	90 e0       	ldi	r25, 0x00	; 0
- 202:	01 96       	adiw	r24, 0x01	; 1
- 204:	81 70       	andi	r24, 0x01	; 1
- 206:	90 78       	andi	r25, 0x80	; 128
- 208:	99 23       	and	r25, r25
- 20a:	24 f4       	brge	.+8      	; 0x214 <__vector_8+0x36>
- 20c:	01 97       	sbiw	r24, 0x01	; 1
- 20e:	8e 6f       	ori	r24, 0xFE	; 254
- 210:	9f 6f       	ori	r25, 0xFF	; 255
- 212:	01 96       	adiw	r24, 0x01	; 1
-    UDR = tx_buffer[tx_tail];//put the last byte of the buffer into the uart register
- 214:	e0 91 64 00 	lds	r30, 0x0064	; 0x800064 <__data_end>
- 218:	f0 e0       	ldi	r31, 0x00	; 0
- 21a:	e0 5a       	subi	r30, 0xA0	; 160
- 21c:	ff 4f       	sbci	r31, 0xFF	; 255
- 21e:	90 81       	ld	r25, Z
- 220:	9c b9       	out	0x0c, r25	; 12
-    tx_tail = tmp_tail;
- 222:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <__data_end>
- 226:	01 c0       	rjmp	.+2      	; 0x22a <__vector_8+0x4c>
-  }
-  else {
-    // disable this interrupt if nothing more to send
-    UCSRB &= ~(1 << UDRIE);
- 228:	55 98       	cbi	0x0a, 5	; 10
-  }
+ 1ea:	ef 93       	push	r30
+ 1ec:	ff 93       	push	r31
+	if(bytes > 0){
+ 1ee:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 1f2:	88 23       	and	r24, r24
+ 1f4:	69 f0       	breq	.+26     	; 0x210 <__vector_8+0x32>
+		UDR = tx_buffer[bytes];			//write byte to data register
+ 1f6:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__data_start>
+ 1fa:	f0 e0       	ldi	r31, 0x00	; 0
+ 1fc:	ee 59       	subi	r30, 0x9E	; 158
+ 1fe:	ff 4f       	sbci	r31, 0xFF	; 255
+ 200:	80 81       	ld	r24, Z
+ 202:	8c b9       	out	0x0c, r24	; 12
+		bytes--;						//lower bytes by one
+ 204:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 208:	81 50       	subi	r24, 0x01	; 1
+ 20a:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 20e:	01 c0       	rjmp	.+2      	; 0x212 <__vector_8+0x34>
+	}else{
+		UCSRB &= ~(1<<UDRIE);			//disable interrupt
+ 210:	55 98       	cbi	0x0a, 5	; 10
+	}
 }
- 22a:	ff 91       	pop	r31
- 22c:	ef 91       	pop	r30
- 22e:	9f 91       	pop	r25
- 230:	8f 91       	pop	r24
- 232:	0f 90       	pop	r0
- 234:	0f be       	out	0x3f, r0	; 63
- 236:	0f 90       	pop	r0
- 238:	1f 90       	pop	r1
- 23a:	18 95       	reti
+ 212:	ff 91       	pop	r31
+ 214:	ef 91       	pop	r30
+ 216:	8f 91       	pop	r24
+ 218:	0f 90       	pop	r0
+ 21a:	0f be       	out	0x3f, r0	; 63
+ 21c:	0f 90       	pop	r0
+ 21e:	1f 90       	pop	r1
+ 220:	18 95       	reti
 
-0000023c <__vector_7>:
+00000222 <_exit>:
+ 222:	f8 94       	cli
 
-//Receive a char from UART and stores it in ring buffer
-ISR(USART_RX_vect) {
- 23c:	1f 92       	push	r1
- 23e:	0f 92       	push	r0
- 240:	0f b6       	in	r0, 0x3f	; 63
- 242:	0f 92       	push	r0
- 244:	11 24       	eor	r1, r1
- 246:	2f 93       	push	r18
- 248:	8f 93       	push	r24
- 24a:	9f 93       	push	r25
- 24c:	ef 93       	push	r30
- 24e:	ff 93       	push	r31
-  uint8_t tmp_head = 0;
-  tmp_head = (rx_head + 1) % BUFFER_SIZE;//goes from 0 to 15 and then to 0
- 250:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <rx_head>
- 254:	90 e0       	ldi	r25, 0x00	; 0
- 256:	01 96       	adiw	r24, 0x01	; 1
- 258:	81 70       	andi	r24, 0x01	; 1
- 25a:	90 78       	andi	r25, 0x80	; 128
- 25c:	99 23       	and	r25, r25
- 25e:	24 f4       	brge	.+8      	; 0x268 <__vector_7+0x2c>
- 260:	01 97       	sbiw	r24, 0x01	; 1
- 262:	8e 6f       	ori	r24, 0xFE	; 254
- 264:	9f 6f       	ori	r25, 0xFF	; 255
- 266:	01 96       	adiw	r24, 0x01	; 1
-  if (tmp_head == rx_tail) {//the buffer is full because the head hit the tail
- 268:	20 91 66 00 	lds	r18, 0x0066	; 0x800066 <rx_tail>
- 26c:	28 17       	cp	r18, r24
- 26e:	49 f0       	breq	.+18     	; 0x282 <__vector_7+0x46>
-    //buffer overflow error!
-  }
-  else{
-		rx_buffer[rx_head] = UDR;//put data in the rx buffer
- 270:	e0 91 67 00 	lds	r30, 0x0067	; 0x800067 <rx_head>
- 274:	f0 e0       	ldi	r31, 0x00	; 0
- 276:	9c b1       	in	r25, 0x0c	; 12
- 278:	ee 59       	subi	r30, 0x9E	; 158
- 27a:	ff 4f       	sbci	r31, 0xFF	; 255
- 27c:	90 83       	st	Z, r25
-		rx_head = tmp_head;  //give the new location of rx head (old rx_head + 1)  
- 27e:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <rx_head>
-  }
-}
- 282:	ff 91       	pop	r31
- 284:	ef 91       	pop	r30
- 286:	9f 91       	pop	r25
- 288:	8f 91       	pop	r24
- 28a:	2f 91       	pop	r18
- 28c:	0f 90       	pop	r0
- 28e:	0f be       	out	0x3f, r0	; 63
- 290:	0f 90       	pop	r0
- 292:	1f 90       	pop	r1
- 294:	18 95       	reti
-
-00000296 <_exit>:
- 296:	f8 94       	cli
-
-00000298 <__stop_program>:
- 298:	ff cf       	rjmp	.-2      	; 0x298 <__stop_program>
+00000224 <__stop_program>:
+ 224:	ff cf       	rjmp	.-2      	; 0x224 <__stop_program>

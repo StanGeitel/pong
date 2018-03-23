@@ -13,4 +13,4 @@
 
 // Initialize UART to 9600 baud with 8N1.
 void init_uart(void);
-void uart_transmit(uint8_t command, uint8_t data)
+void uart_transmit(uint8_t command, uint8_t data);

@@ -59,6 +59,17 @@ void i2c_transfer(){				//generates 8 clock pulses
 	_delay_us(BIT_TIME);
 }
 
+void i2c_transfer_v2(){				//generates 8 clock pulses
+	for(int i = 0; i < 8; i++){
+		PORTB |= (1<<PINB7);			//release SCL
+		while(!(PORTB & (1<<PINB7)));	//wait for SCL to go high
+		_delay_us(BIT_TIME);
+		PORTB &= ~(1<<PINB7);
+	}
+	_delay_us(BIT_TIME);
+}
+
+
 uint8_t i2c_get_ack(){
 	uint8_t ret;
 	
@@ -79,26 +90,30 @@ uint8_t i2c_get_ack(){
 	DDRB |= (1<<PINB5);						//set as output
 	return(ret);
 }
-/*
+
 uint8_t i2c_get_data(){
-	DDRB &= ~(1<<PINB5);					//set as input
-	PORTB &= ~(1<<PINB5);					//disable pull up
-	i2c_transfer();							//
-	i2c_send_nack();
-	i2c_send_stop();
+	uint8_t ret;
+	DDRB &= ~(1<<PINB5);				//set as input
+	PORTB &= ~(1<<PINB5);				//disable pull up
+	i2c_transfer();							
+	ret = USIDR;						//read data register
+	USIDR = 0xFF;						//reset data register
+	return(ret);
 }
-*/
+
 void i2c_send_reg_add(uint8_t reg_address){
 	i2c_send_start();
 	USIDR = (DEV_ADD<<1);				//device address and write
 	i2c_transfer();						//send
+	USIDR = 0xFF;						//reset data register
 	i2c_get_ack();						//wait for acknowledge
 	
 	USIDR = reg_address;				//write register address
 	i2c_transfer();						//send
+	USIDR = 0xFF;						//reset data register
 	i2c_get_ack();						//wait for acknowledge
 }
-/*
+
 uint8_t i2c_single_read(uint8_t reg_address){
 	uint8_t ret;
 
@@ -107,7 +122,17 @@ uint8_t i2c_single_read(uint8_t reg_address){
 	USIDR = ((DEV_ADD<<1) & 1);			//device address and read
 	i2c_transfer();
 	i2c_get_ack();
-	
+	ret = i2c_get_data();
+	i2c_send_nack();
+	i2c_send_stop();
 	return(ret);
 }
-*/
+
+void i2c_single_write(uint8_t reg_address, uint8_t data){
+	i2c_send_reg_add(reg_address);
+	USIDR = data;
+	i2c_transfer();
+	USIDR = 0xFF;
+	i2c_get_ack();
+	i2c_send_stop();
+}

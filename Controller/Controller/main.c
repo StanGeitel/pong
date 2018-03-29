@@ -2,8 +2,10 @@
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
+
 #include "i2c.h"
 #include "acc.h"
+#include "usart.h"
 
 int main(void)
 {

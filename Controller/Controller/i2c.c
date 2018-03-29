@@ -4,16 +4,9 @@
 
 #include "i2c.h"
 
-uint8_t buffer;
-
 void i2c_init(){
 	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
 	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
-	//SDA corresponds with MSB of USIDR and PORTB bit. SCL is high unless forced low by start detector or bit PORTB register.
-
-	USIDR = 0xFF;							//set data register high for start condition
-	USICR = USICR_MASK;						//control register mask
-	USISR = (1<<USISIF)|(1<<USIOIF)|(1<<USIPF)|(1<<USIDC)|(0x0<<USICNT0);	//reset flags and counter value
 	
 }
 
@@ -49,26 +42,16 @@ void i2c_send_nack(){
 	PORTB &= ~(1<<PINB7);			//force SCL low
 }
 
-void i2c_transfer(){				//generates 8 clock pulses
-	for(int i = 0; i < 8; i++){
-		PORTB |= (1<<PINB7);			//release SCL
-		while(!(PORTB & (1<<PINB7)));	//wait for SCL to go high
-		_delay_ms(1000);
-		PORTB &= ~(1<<PINB7);
-		_delay_ms(1000);
-	}
-	_delay_us(BIT_TIME);
-}
-
 uint8_t i2c_get_ack(){
 	uint8_t ret;
 	
-	DDRB &= ~(1<<PINB5);					//set as input
-	PORTB &= ~(1<<PINB5);					//disable pull up
+	DDRB &= ~(1<<PINB5);					//set SDA as input
+	PORTB &= ~(1<<PINB5);					//disable SDA pull up
 	
 	PORTB |= (1<<PINB7);					//release SCL
 	while(!(PORTB & (1<<PINB7)));			//wait for SCL to go high
-	if(PORTB & (1<<PINB5)){					//read SDA
+	
+	if(PORTB & (1<<PINB5)){					//read if SDA is 1
 		ret = 1;
 	}else{
 		ret = 0;
@@ -76,58 +59,56 @@ uint8_t i2c_get_ack(){
 	_delay_us(BIT_TIME);					//wait a bit
 	PORTB &= ~(1<<PINB7);					//force SCL low
 	
-	PORTB |= (1<<PINB5);					//enable pull up
-	DDRB |= (1<<PINB5);						//set as output
+	PORTB |= (1<<PINB5);					//enable SDA pull up
+	DDRB |= (1<<PINB5);						//set as SDA as output
 	return(ret);
 }
+
+void i2c_send_data(uint8_t data){
+	PORTB &= ~(1<<PINB7);					//pull SCL low
+	for(int i = 0; i <= 7; i++){			//count bit 0 to 7 
+		while(PORTB & (1<<PINB7));			//wait for SCL to go low
+		
+		if((data>>i) & 1){					//read if data bit on position i is 1
+			PORTB |= (1<<PINB5);			//write SDA 1
+		}else{
+			PORTB &= ~(1<<PINB5);			//write SDA 0
+		}
+		
+		PORTB |= (1<<PINB7);				//release SCL
+		while(!(PORTB & (1<<PINB7)));		//wait for SCL to go high
+		_delay_us(BIT_TIME);
+		PORTB &= ~(1<<PINB7);				//force SCL low
+		_delay_us(BIT_TIME);
+	}
+}
+
 
 uint8_t i2c_get_data(){
-	uint8_t ret;
-	DDRB &= ~(1<<PINB5);				//set as input
-	PORTB &= ~(1<<PINB5);				//disable pull up
-	i2c_transfer();							
-	ret = USIDR;						//read data register
-	USIDR = 0xFF;						//reset data register
-	return(ret);
-}
-
-void i2c_send_reg_add(uint8_t reg_address){
-	i2c_send_start();
-	USIDR = (DEV_ADD<<1);				//device address and write
-	i2c_transfer();						//send
-	USIDR = 0xFF;						//reset data register
-	i2c_get_ack();						//wait for acknowledge
+	uint8_t buf;
 	
-	USIDR = reg_address;				//write register address
-	i2c_transfer();						//send
-	USIDR = 0xFF;						//reset data register
-	i2c_get_ack();						//wait for acknowledge
+	DDRB &= ~(1<<PINB5);					//set as input
+	PORTB &= ~(1<<PINB5);					//disable pull up
+	
+	PORTB &= ~(1<<PINB7);					//pull SCL low
+	for(int i = 0; i <= 7; i++){			//count bit 0 to 7
+		while(PORTB & (1<<PINB7));			//wait for SCL to go low
+		
+		if(PORTB & (1<<PINB5)){				//read if SDA is 1
+			buf |= (1<<i);					//write bit on position i 1
+		}else{
+			buf &= ~(1<<i);					//write bit on position i 0
+		}
+		
+		PORTB |= (1<<PINB7);				//release SCL
+		while(!(PORTB & (1<<PINB7)));		//wait for SCL to go high
+		_delay_us(BIT_TIME);
+		PORTB &= ~(1<<PINB7);				//force SCL low
+		_delay_us(BIT_TIME);
+	}
+	
+	return(buf);
 }
-
-uint8_t i2c_single_read(uint8_t reg_address){
-	uint8_t ret;
-
-	i2c_send_reg_add(reg_address);
-	i2c_send_start();
-	USIDR = ((DEV_ADD<<1) & 1);			//device address and read
-	i2c_transfer();
-	i2c_get_ack();
-	ret = i2c_get_data();
-	i2c_send_nack();
-	i2c_send_stop();
-	return(ret);
-}
-
-void i2c_single_write(uint8_t reg_address, uint8_t data){
-	i2c_send_reg_add(reg_address);
-	USIDR = data;
-	i2c_transfer();
-	USIDR = 0xFF;
-	i2c_get_ack();
-	i2c_send_stop();
-}
-
-
 
 /*
 void usi_init(){

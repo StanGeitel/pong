@@ -1,111 +1,117 @@
-#define F_CPU				1000000UL		//1MHz
+#define F_CPU				8000000UL		//8MHz
 #include <avr/io.h>
 #include <util/delay.h>
 
 #include "i2c.h"
 
 void i2c_init(){
-	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
-	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
-	
+	PORT(_PORT) = (1 << _SCL) | (1 << _SDA);		//set HIGH with pull up.
+	DDR(_PORT) = (1 << _SCL) | (1 << _SDA);			//enable output driver for SDA and SCL.
+	while(1){
+		_delay_us(BIT_TIME);
+		PORT(_PORT) ^= (1<<_SDA);			//toggle SDA
+	}
 }
 
 void i2c_send_start(){
-	PORTB &= ~(1<<PINB5);			//force SDA low
-	while(PORTB & (1<<PINB5));		//wait for SDA low
+	PORT(_PORT) &= ~(1<<_SDA);				//force SDA low
+	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA low
 	_delay_us(BIT_TIME);
-	PORTB &= ~(1<<PINB7);			//force SCL low
+	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
 }
 
 void i2c_send_stop(){
-	PORTB &= ~(1<<PINB5);			//force SDA low
-	while(PORTB & (1<<PINB5));		//wait for SDA low
-	PORTB |= (1<<PINB7);			//release SCL
-	while(!(PORTB & (1<<PINB7)));	//wait for SCL high
-	PORTB |= (1<<PINB5);			//release SDA
+	PORT(_PORT) &= ~(1<<_SDA);				//force SDA low
+	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA low
+	PORT(_PORT) |= (1<<_SCL);				//release SCL
+	while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL high
+	PORT(_PORT) |= (1<<_SDA);				//release SDA
 }
 
 void i2c_send_ack(){
-	PORTB &= ~(1<<PINB5);			//force SDA low
-	while(PORTB & (1<<PINB5));		//wait for SDA to go low
-	PORTB |= (1<<PINB7);			//release SCL
-	while(!(PORTB & (1<<PINB7)));	//wait for SCL to go high
-	PORTB &= ~(1<<PINB7);			//force SCL low
-	PORTB |= (1<<PINB5);			//release SDA
+	PORT(_PORT) &= ~(1<<_SDA);				//force SDA low
+	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA to go low
+	PORT(_PORT) |= (1<<_SCL);				//release SCL
+	while(!(PORTB & (1<<_SCL)));			//wait for SCL to go high
+	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
+	PORT(_PORT) |= (1<<_SDA);				//release SDA
 }
 
 void i2c_send_nack(){
-	PORTB |= (1<<PINB5);			//release SDA
-	while(!(PORTB & (1<<PINB5)));	//wait for SDA to go high
-	PORTB |= (1<<PINB7);			//release SCL
-	while(!(PORTB & (1<<PINB7)));	//wait for SCL to go high
-	PORTB &= ~(1<<PINB7);			//force SCL low
+	PORT(_PORT) |= (1<<_SDA);				//release SDA
+	while(!(PORT(_PORT) & (1<<_SDA)));		//wait for SDA to go high
+	PORT(_PORT) |= (1<<_SCL);				//release SCL
+	while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
+	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
 }
 
 uint8_t i2c_get_ack(){
 	uint8_t ret;
 	
-	DDRB &= ~(1<<PINB5);					//set SDA as input
-	PORTB &= ~(1<<PINB5);					//disable SDA pull up
+	DDR(_PORT) &= ~(1<<_SDA);					//set SDA as input
+	PORT(_PORT) &= ~(1<<_SDA);					//disable SDA pull up
 	
-	PORTB |= (1<<PINB7);					//release SCL
-	while(!(PORTB & (1<<PINB7)));			//wait for SCL to go high
+	PORT(_PORT) |= (1<<_SCL);					//release SCL
+	while(!(PORT(_PORT) & (1<<_SCL)));			//wait for SCL to go high
 	
-	if(PORTB & (1<<PINB5)){					//read if SDA is 1
+	if(PORT(_PORT) & (1<<_SDA)){				//read if SDA is 1
 		ret = 1;
 	}else{
 		ret = 0;
 	}
-	_delay_us(BIT_TIME);					//wait a bit
-	PORTB &= ~(1<<PINB7);					//force SCL low
+	_delay_us(BIT_TIME);						//wait a bit
+	PORT(_PORT) &= ~(1<<_SCL);					//force SCL low
 	
-	PORTB |= (1<<PINB5);					//enable SDA pull up
-	DDRB |= (1<<PINB5);						//set as SDA as output
+	PORT(_PORT) |= (1<<_SDA);					//enable SDA pull up
+	DDR(_PORT) |= (1<<_SDA);					//set as SDA as output
 	return(ret);
 }
 
 void i2c_send_data(uint8_t data){
-	PORTB &= ~(1<<PINB7);					//pull SCL low
-	for(int i = 0; i <= 7; i++){			//count bit 0 to 7 
-		while(PORTB & (1<<PINB7));			//wait for SCL to go low
+	PORT(_PORT) &= ~(1<<_SCL);					//pull SCL low
+	for(int i = 0; i <= 7; i++){				//count bit 0 to 7 
+		while(PORT(_PORT) & (1<<_SCL));			//wait for SCL to go low
 		
-		if((data>>i) & 1){					//read if data bit on position i is 1
-			PORTB |= (1<<PINB5);			//write SDA 1
+		if((data>>i) & 1){						//read if data bit on position i is 1
+			PORT(_PORT) |= (1<<_SDA);			//write SDA 1
 		}else{
-			PORTB &= ~(1<<PINB5);			//write SDA 0
+			PORT(_PORT) &= ~(1<<_SDA);			//write SDA 0
 		}
-		
-		PORTB |= (1<<PINB7);				//release SCL
-		while(!(PORTB & (1<<PINB7)));		//wait for SCL to go high
+	
+		PORT(_PORT) |= (1<<_SCL);				//release SCL
+		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
 		_delay_us(BIT_TIME);
-		PORTB &= ~(1<<PINB7);				//force SCL low
+		PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
 		_delay_us(BIT_TIME);
 	}
 }
 
 
 uint8_t i2c_get_data(){
-	uint8_t buf;
+	uint8_t buf = 0;
 	
-	DDRB &= ~(1<<PINB5);					//set as input
-	PORTB &= ~(1<<PINB5);					//disable pull up
+	DDR(_PORT) &= ~(1<<_SDA);					//set SDA as input
+	PORT(_PORT) &= ~(1<<_SDA);					//disable pull up
 	
-	PORTB &= ~(1<<PINB7);					//pull SCL low
-	for(int i = 0; i <= 7; i++){			//count bit 0 to 7
-		while(PORTB & (1<<PINB7));			//wait for SCL to go low
+	PORT(_PORT) &= ~(1<<_SCL);					//pull SCL low
+	for(int i = 0; i <= 7; i++){				//count bit 0 to 7
+		while(PORT(_PORT) & (1<<_SCL));			//wait for SCL to go low
 		
-		if(PORTB & (1<<PINB5)){				//read if SDA is 1
-			buf |= (1<<i);					//write bit on position i 1
+		if(PORT(_PORT) & (1<<_SDA)){			//read if SDA is 1
+			buf |= (1<<i);						//write bit on position i 1
 		}else{
-			buf &= ~(1<<i);					//write bit on position i 0
+			buf &= ~(1<<i);						//write bit on position i 0
 		}
 		
-		PORTB |= (1<<PINB7);				//release SCL
-		while(!(PORTB & (1<<PINB7)));		//wait for SCL to go high
+		PORT(_PORT) |= (1<<_SCL);				//release SCL
+		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
 		_delay_us(BIT_TIME);
-		PORTB &= ~(1<<PINB7);				//force SCL low
+		PORTB &= ~(1<<_SCL);					//force SCL low
 		_delay_us(BIT_TIME);
 	}
+	
+	PORT(_PORT) |= (1<<_SDA);					//enable SDA pull up
+	DDR(_PORT) |= (1<<_SDA);					//set as SDA as output
 	
 	return(buf);
 }

@@ -1,4 +1,4 @@
-#define F_CPU		1000000UL		//1MHz 
+#define F_CPU		8000000UL		//8MHz 
 #include <avr/io.h>
 #include <avr/interrupt.h>
 

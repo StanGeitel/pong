@@ -1,4 +1,4 @@
-#define F_CPU		1000000UL		//1MHz 
+#define F_CPU		8000000UL		//8MHz 
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
@@ -9,15 +9,12 @@
 
 int main(void)
 {
-	i2c_init();
-	_delay_ms(2000);
-//	i2c_transfer();
-//	i2c_transfer_v2();
-//	i2c_send_reg_add(0x25);
+	CLKPR = (1<<CLKPCE);		//enable clock divider changes
+	CLKPR = (0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);	//set clock divider to 1, 8MHz system clock
 	
+	i2c_init();
 	
     while (1) 
     {
-		
     }
 }

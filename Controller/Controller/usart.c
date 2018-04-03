@@ -18,6 +18,7 @@ void uart_transmit(uint8_t command, uint8_t data) {
   while (!(UCSRA & (1<<UDRE)));
   tx_buffer[0] = command;
   tx_buffer[1] = data;
+  bytes = 2;
   UCSRB |= (1<<UDRIE);							// enable uart data interrupt (send data)
 }
 

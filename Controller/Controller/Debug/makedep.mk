@@ -4,6 +4,8 @@
 
 acc.c
 
+gauge.c
+
 gpio.c
 
 i2c.c

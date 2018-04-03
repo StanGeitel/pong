@@ -7,10 +7,6 @@
 void i2c_init(){
 	PORT(_PORT) = (1 << _SCL) | (1 << _SDA);		//set HIGH with pull up.
 	DDR(_PORT) = (1 << _SCL) | (1 << _SDA);			//enable output driver for SDA and SCL.
-	while(1){
-		_delay_us(4.6);
-		PORT(_PORT) ^= (1<<_SDA);			//toggle SDA
-	}
 }
 
 void i2c_send_start(){

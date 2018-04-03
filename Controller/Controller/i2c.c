@@ -14,6 +14,7 @@ void i2c_send_start(){
 	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA low
 	_delay_us(BIT_TIME);
 	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
+	PORT(_PORT) |= (1<<_SDA);				//release SDA
 }
 
 void i2c_send_stop(){
@@ -21,14 +22,17 @@ void i2c_send_stop(){
 	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA low
 	PORT(_PORT) |= (1<<_SCL);				//release SCL
 	while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL high
+	_delay_us(BIT_TIME);
 	PORT(_PORT) |= (1<<_SDA);				//release SDA
+	_delay_us(BIT_TIME);
 }
 
 void i2c_send_ack(){
 	PORT(_PORT) &= ~(1<<_SDA);				//force SDA low
 	while(PORT(_PORT) & (1<<_SDA));			//wait for SDA to go low
 	PORT(_PORT) |= (1<<_SCL);				//release SCL
-	while(!(PORTB & (1<<_SCL)));			//wait for SCL to go high
+	while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
+	_delay_us(BIT_TIME);
 	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
 	PORT(_PORT) |= (1<<_SDA);				//release SDA
 }
@@ -65,15 +69,11 @@ uint8_t i2c_get_ack(){
 
 void i2c_send_data(uint8_t data){
 	PORT(_PORT) &= ~(1<<_SCL);					//pull SCL low
-	for(int i = 0; i <= 7; i++){				//count bit 0 to 7 
+	for(int i = 0; i < 8; i++){
 		while(PORT(_PORT) & (1<<_SCL));			//wait for SCL to go low
 		
-		if((data>>i) & 1){						//read if data bit on position i is 1
-			PORT(_PORT) |= (1<<_SDA);			//write SDA 1
-		}else{
-			PORT(_PORT) &= ~(1<<_SDA);			//write SDA 0
-		}
-	
+		PORT(_PORT) = (((data>>i) & 1)<<_SDA);
+		
 		PORT(_PORT) |= (1<<_SCL);				//release SCL
 		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
 		_delay_us(BIT_TIME);
@@ -102,7 +102,7 @@ uint8_t i2c_get_data(){
 		PORT(_PORT) |= (1<<_SCL);				//release SCL
 		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
 		_delay_us(BIT_TIME);
-		PORTB &= ~(1<<_SCL);					//force SCL low
+		PORT(_PORT) &= ~(1<<_SCL);					//force SCL low
 		_delay_us(BIT_TIME);
 	}
 	
@@ -112,27 +112,29 @@ uint8_t i2c_get_data(){
 	return(buf);
 }
 
-/*
+
 void usi_init(){
 	PORTB = (1 << PINB5) | (1 << PINB7);	//set HIGH with pull up.
 	DDRB = (1 << PINB5) | (1 << PINB7);		//enable output driver for SDA and SCL.
 	//SDA corresponds with MSB of USIDR and PORTB bit. SCL is high unless forced low by start detector or bit PORTB register.
 
 	USIDR = 0xFF;							//set data register high for start condition
-	USICR = USICR_MASK;						//control register mask
+	USICR = (0<<USISIE)|(0<<USISIE)|(1<<USIWM1)|(0<<USIWM0)|(1<<USICS1)|(0<<USICS0)|(1<<USICLK)|(0<<USITC)
 	USISR = (1<<USISIF)|(1<<USIOIF)|(1<<USIPF)|(1<<USIDC)|(0x0<<USICNT0);	//reset flags and counter value
 	
 }
 
-void usi_transfer(){				//generates 8 clock pulses
+
+void usi_transfer(){						//generates 8 clock pulses
 	USISR &= ~(0xF << USICNT0);				//reset counter
 	do{
-		USICR = USICR_MASK|(1<<USITC);		//toggle SCL to HIGH
+		USICR |= (1<<USITC);				//toggle SCL to HIGH
 		while(!(PORTB & (1<<PINB7)));		//wait until SCL is HIGH
-		_delay_ms(1000);
-		USICR = USICR_MASK|(1<<USITC);		//toggle SCL to LOW
-		_delay_ms(1000);
-	}while(!(USISR & (1 << USICNT3)));		//check if counter is 8
+		_delay_us(BIT_TIME);
+		USICR |= (1<<USITC);				//toggle SCL to LOW
+		_delay_us(BIT_TIME);
+	}while(!(USISR & (1<<USIOIF)));			//check counter overflow flag
 	_delay_us(BIT_TIME);
 }
-*/
+
+

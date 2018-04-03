@@ -2,6 +2,7 @@
 #define ACC_H_
 #include <stdint.h>
 
+#define ACC_ADD		0b1101000		//accelerometer address
 
 #endif
 

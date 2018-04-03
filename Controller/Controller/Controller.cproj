@@ -153,6 +153,12 @@
     <Compile Include="acc.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="gauge.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="gauge.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="gpio.c">
       <SubType>compile</SubType>
     </Compile>

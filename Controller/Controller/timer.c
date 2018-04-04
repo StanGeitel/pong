@@ -2,31 +2,23 @@
  #include <avr/common.h>
  #include <avr/interrupt.h>
  #include "timer.h"
- #include "gpio.h"
 
  void init_timer0(void){
-	TCCR0A &= ~(0xF << COM0B0);		//Set normal port operation, OCOA disconnected.
-	TCCR0A |= (1 << WGM01);			//Set timer on CTC so it resets when interrupt is created on timerA
-	TCCR0B |= (1 << CS00);			//Set prescaler to 0
-	OCR0A = 104;					//Set match register on 104
-	TIMSK |= (1 << OCIE0A);			//enable interrupt on compare register0 A
-	SREG |= (1 << SREG_I);
- }
-
- void clear_int_flag_timer0(void){
-	TIFR |= (1 << OCF0A);			//clear interrupt flag on compare register0 A 
+	DDRB |= (1<<DDB2);
+	TCCR0A = (0<<COM0A1)|(0<<COM0A0)|(0<<COM0B1)|(0<<COM0B0)|(0<<WGM01)|(0<<WGM00);
+	TCCR0B = (0<<WGM02)|(0<<CS02)|(0<<CS01)|(1<<CS00);		//Select 8MHz clock with no prescaler
+	OCR0A = 160;											//Set match register on 10 pulses
+	OCR0B = 9;
+	TIMSK |= (1<<OCIE0A)|(1<<OCIE0B);
+	SREG |= (1<<SREG_I);								//enable global interrupt
  }
  
- void reset_prescaler(void){
-	GTCCR |= (1 << PSR10);	
+ ISR(TIMER0_COMPA_vect){
+	TCCR0B &= ~((1<<CS02)|(1<<CS01)|(1<<CS00));
+	TCNT0 = 0x00;
  }
-
- ISR (TIMER0_COMPA_vect){
-	if(read_gpio(0xB, 7)){
-		clear_output_gpio(0xB, 7);
-	}
-	else{
-		set_output_gpio(0xB, 7);
-	}
-	
+ 
+ ISR(TIMER0_COMPB_vect){
+	OCR0B += 10;
+	PORTB ^= (1<<2);
  }

@@ -13,7 +13,7 @@
 
 #define SCL_FREQ	400				//kHz
 #define BIT_TIME	0.625			//us
-#define USICR_MASK	((0<<USISIE)|(0<<USISIE)|(1<<USIWM1)|(0<<USIWM0)|(1<<USICS1)|(0<<USICS0)|(1<<USICLK)|(0<<USITC))
+#define USICR_MASK	
 
 #endif
 
@@ -28,3 +28,4 @@ uint8_t i2c_get_data(void);
 
 void usi_init(void);
 void usi_transfer(void);
+

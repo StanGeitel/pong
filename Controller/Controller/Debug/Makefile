@@ -38,6 +38,7 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../acc.c \
+../gauge.c \
 ../gpio.c \
 ../i2c.c \
 ../main.c \
@@ -53,6 +54,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 acc.o \
+gauge.o \
 gpio.o \
 i2c.o \
 main.o \
@@ -61,6 +63,7 @@ usart.o
 
 OBJS_AS_ARGS +=  \
 acc.o \
+gauge.o \
 gpio.o \
 i2c.o \
 main.o \
@@ -69,6 +72,7 @@ usart.o
 
 C_DEPS +=  \
 acc.d \
+gauge.d \
 gpio.d \
 i2c.d \
 main.d \
@@ -77,6 +81,7 @@ usart.d
 
 C_DEPS_AS_ARGS +=  \
 acc.d \
+gauge.d \
 gpio.d \
 i2c.d \
 main.d \
@@ -97,6 +102,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

@@ -14,13 +14,15 @@ int main(void)
 	CLKPR = (1<<CLKPCE);		//enable clock divider changes
 	CLKPR = (0<<CLKPCE)|(0<<CLKPS3)|(0<<CLKPS2)|(0<<CLKPS1)|(0<<CLKPS0);	//set clock divider to 1, 8MHz system clock
 	
-	usi_init();
+	/*usi_init();
 	_delay_ms(3000);
 	i2c_send_start();
 	usi_send(0x11);
 	i2c_get_ack();
-	i2c_send_stop();
-
+	i2c_send_stop();*/
+	
+	init_uart();
+	uart_transmit(0x24, 0x42);
     while (1) 
     {
     }

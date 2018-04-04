@@ -1,4 +1,4 @@
-//UART 0
+
 
 #define PINSEL0		(* (unsigned int* )(0x4002C000))	//8.5.1 Pin function select register 0
 #define PCLKSEL0 	(* (unsigned int* )(0x400FC1A8))	//4.7.3 Peripheral Clock Selection register 0

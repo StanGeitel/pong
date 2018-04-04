@@ -1,10 +1,11 @@
 #include <avr/io.h>
 #include "gauge.h"
 #include "i2c.h"
+// #include "gpio.h"
 
 void gauge_init(void){
-	gauge_single_write(0x02, 0xFF);
-	gauge_single_write(0x03, 0xFF);
+	gauge_single_write(CHARGE_MSB, 0xFF);
+	gauge_single_write(CHARGE_LSB, 0xFF);
 }
 
 void gauge_send_reg_add(uint8_t reg_address){
@@ -14,7 +15,7 @@ void gauge_send_reg_add(uint8_t reg_address){
 	i2c_send_data(reg_address);				//send register address of MPU
 	i2c_get_ack();							//wait for acknowledge
 }
-
+/*
 uint8_t gauge_single_read(uint8_t reg_address){
 	uint8_t ret;
 	gauge_send_reg_add(reg_address);
@@ -26,6 +27,7 @@ uint8_t gauge_single_read(uint8_t reg_address){
 	i2c_send_stop();
 	return(ret);
 }
+*/
 
 void gauge_single_write(uint8_t reg_address, uint8_t data){
 	gauge_send_reg_add(reg_address);
@@ -34,18 +36,27 @@ void gauge_single_write(uint8_t reg_address, uint8_t data){
 	i2c_send_stop();
 }
 
-uint8_t gauge_double_read(uint8_t reg_address){
-	uint8_t ret1;
-	uint8_t ret2;
-	gauge_send_reg_add(reg_address);
+void gauge_batterylevel(){
+	uint16_t buffer;
+	gauge_send_reg_add(CHARGE_MSB);
 	i2c_send_start();
 	i2c_send_data((GAUGE_ADD<<1) & 1);			//device address and read
 	i2c_get_ack();
-	ret1 = i2c_get_data();
+	buffer = (i2c_get_data() << 8);
 	i2c_send_ack();
-	ret2 = i2c_get_data();
+	buffer |= i2c_get_data();
 	i2c_send_nack();
 	i2c_send_stop();
-	return(ret1); // ret 2 moet ook mee
+	
+	// q(LSB) ? 42,5 uAh daardoor nemen registers C en D 48235,29 stappen af in totaal (van 100-0 %)
+	// 17301 is 0% en 31771,5 is 30% en 65535 is 100%
+	
+	if (buffer > 31772){
+		// void dat led constant aan staat
+	}
+	else{
+		// void dat led knippert
+	}
+	
 }
 

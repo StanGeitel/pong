@@ -56,12 +56,10 @@ volatile uint8_t old_pins = 0;
 	SREG |= (1 << SREG_I);				//enable interrupts I in global status register
 	int i;
 	for(i = 0; i < 6; i++){
-	 enable_input_gpio('B', i);
+		enable_input_gpio('B', i);
 	}
  }
  
- 
-
  
  //ISR(PCINT1_vect){						//Pin change interrupt1 service routine
 //	
@@ -71,18 +69,7 @@ volatile uint8_t old_pins = 0;
 //	
 // }
  
- void init_external_interrupt0_gpio(void){
-	MCUCR |= (1 << ISC00);
-	MCUCR |= (1 << ISC01);				//The rising edge of INT0 generates an interrupt request
-		
-	GIMSK |= (1 << INT0);				//enable external interrupt 0 in general interrupt mask register
-	SREG |= (1 << SREG_I);				//enable interrupts I in global status register	
- } 
- 
- ISR(INT0_vect){						//External interrupt0 service routine
-	 
- }
- 
+
  void init_external_interrupt1_gpio(void){
 	 MCUCR |= (1 << ISC10);				//The rising edge of INT1 generates an interrupt request
 	 MCUCR |= (1 << ISC11);

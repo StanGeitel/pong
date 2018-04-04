@@ -25,7 +25,7 @@ void i2c_send_nack(void);
 uint8_t i2c_get_ack(void);
 void i2c_send_data(uint8_t);
 uint8_t i2c_get_data(void);
-void usi_init(void);
-void usi_send(uint8_t);
-uint8_t usi_read(void);
 
+void old_i2c_init(void);
+void old_i2c_send_data(uint8_t);
+uint8_t old_i2c_get_data(void);

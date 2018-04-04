@@ -5,6 +5,10 @@
 uint16_t x_pos = 0;
 uint16_t y_pos = 0;
 
+void acc_init(){
+	i2c_init();
+}
+
 void acc_send_reg_add(uint8_t reg_address){
 	i2c_send_start();
 	i2c_send_data(ACC_ADD<<1);				//send device address and write

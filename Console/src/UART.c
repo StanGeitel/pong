@@ -9,9 +9,12 @@
 #define DLL0		(* (unsigned int *)(0x4000C000))	//14.4.3 UART Divisor Latch LSB Register
 #define DLM0		(* (unsigned int *)(0x4000C004))	//14.4.3 UART Divisor Latch MSB Register
 
+#define clockCoreFreq (12000000UL)
 
-void UART_Init()
+void UART_Init(void)
 {
+	uint32_t UartPclk, Pclk, RegValue;
+
 	PINSEL0 &= ~(0xF << 4);
 	PINSEL0 |=  (0x1 << 6);			// pin P0.3 als RXD0
 
@@ -21,10 +24,48 @@ void UART_Init()
 	LCR0 &= ~(0xFF<<0);
 	LCR0 |= (0x9B<<0); // 8bit data, 1Stop bit, Even parity, Enable access to Divisor Latches -- 10011011
 
+	/** Baud Rate Calculation :
+	   PCLKSELx registers contains the PCLK info for all the clock dependent peripherals.
+	   Bit6,Bit7 contains the Uart Clock(ie.UART_PCLK) information.
+	   The UART_PCLK and the actual Peripheral Clock(PCLK) is calculated as below.
+	   (Refer data sheet for more info)
 
+	   UART_PCLK    PCLK
+		 0x00       SystemFreq/4
+		 0x01       SystemFreq
+		 0x02       SystemFreq/2
+		 0x03       SystemFreq/8
+	 **/
 
+	UartPclk = (PCLKSEL0 >> 6) & 0x03;
 
+	switch( UartPclk )
+	{
+		  case 0x00:
+			Pclk = clockCoreFreq/4;
+			break;
+		  case 0x01:
+			Pclk = clockCoreFreq;
+			break;
+		  case 0x02:
+			Pclk = clockCoreFreq/2;
+			break;
+		  case 0x03:
+			Pclk = clockCoreFreq/8;
+			break;
+	}
 
+	RegValue = ( Pclk / (16 * 9600 )); //9600 baud rate
+	DLL0 =  RegValue & 0xFF;
+	DLM0 = (RegValue >> 0x08) & 0xFF;
+}
+
+char uart_RxChar()
+{
+    char ch;
+    while(util_IsBitCleared(LPC_UART0->LSR,SBIT_RDR));  // Wait till the data is received
+    ch = LPC_UART0->RBR;                                // Read received data
+    return ch;
 }
 
 

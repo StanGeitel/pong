@@ -4,6 +4,7 @@
 #define PCLKSEL0 	(* (unsigned int* )(0x400FC1A8))	//4.7.3 Peripheral Clock Selection register 0
 
 #define LCR0		(* (unsigned int *)(0x4000C00C))	//14.4.7 UART Line Control Register
+#define LSR0		(* (unsigned int *)(0x4000C014))	//14.4.8 UART Line Status Register
 #define RBR0		(* (unsigned int *)(0x4000C000))	//14.4.1 UART Receiver Buffer Register
 #define FCR0		(* (unsigned int *)(0x4000C008))	//14.4.6 UART FIFO Control Register
 #define DLL0		(* (unsigned int *)(0x4000C000))	//14.4.3 UART Divisor Latch LSB Register
@@ -23,6 +24,7 @@ void UART_Init(void)
 
 	LCR0 &= ~(0xFF<<0);
 	LCR0 |= (0x9B<<0); // 8bit data, 1Stop bit, Even parity, Enable access to Divisor Latches -- 10011011
+
 
 	/** Baud Rate Calculation :
 	   PCLKSELx registers contains the PCLK info for all the clock dependent peripherals.
@@ -58,13 +60,15 @@ void UART_Init(void)
 	RegValue = ( Pclk / (16 * 9600 )); //9600 baud rate
 	DLL0 =  RegValue & 0xFF;
 	DLM0 = (RegValue >> 0x08) & 0xFF;
+
+	util_BitClear(LCR0,(7));  // Clear DLAB after setting DLL,DLM
 }
 
 char uart_RxChar()
 {
     char ch;
-    while(util_IsBitCleared(LPC_UART0->LSR,SBIT_RDR));  // Wait till the data is received
-    ch = LPC_UART0->RBR;                                // Read received data
+    while(util_IsBitCleared(LSR0,0));  // Wait till the data is received
+    ch = RBR0;               // Read received data
     return ch;
 }
 

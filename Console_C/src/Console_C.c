@@ -24,12 +24,12 @@ int main(void) {
 
     printf("Start\n");
     UART_Init();
-    printf(uart_RxChar() + " -/n");
 
     // Force the counter to be placed into memory
     volatile static int i = 0 ;
     // Enter an infinite loop, just incrementing a counter
     while(1) {
+    	printf(uart_RxChar() + " -/n");
         i++ ;
     }
     return 0 ;

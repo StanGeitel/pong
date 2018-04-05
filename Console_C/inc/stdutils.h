@@ -42,9 +42,6 @@ Errors and omissions should be reported to codelibraries@exploreembedded.com
 #ifndef _STD_UTIL_H_
 #define	_STD_UTIL_H_
 
-#include <reg51.h>
-#pragma OT(9)       /* Selcet highest level of optimization */
-
 /***************************************************************************************************
     Basic data types for 8051/PIC/AVR 8bit controllers
  ***************************************************************************************************/

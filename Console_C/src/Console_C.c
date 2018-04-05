@@ -17,19 +17,23 @@
 
 // TODO: insert other include files here
 #include "UART.h"
+#include "stdutils.h"
 // TODO: insert other definitions and declarations here
 
 int main(void) {
+	int ch;
 
     printf("Start\n");
-    UART_Init();
+    UART_Init(9600);
 
     // Force the counter to be placed into memory
     volatile static int i = 0 ;
     // Enter an infinite loop, just incrementing a counter
     while(1) {
-    	printf(uart_RxChar() + " -\n");
-    	for(int x=0;x<100000;x++){asm("NOP");}
+
+    	ch = uart_RxChar();
+    	printf(ch);
+    	printf("- \n");
         i++ ;
     }
     return 0 ;

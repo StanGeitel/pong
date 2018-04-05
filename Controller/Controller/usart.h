@@ -8,4 +8,4 @@
 #endif /* USART_H_ */
 
 void init_uart(void);
-void uart_transmit(uint8_t, uint8_t );
+void uart_transmit(uint8_t ); //, uint8_t

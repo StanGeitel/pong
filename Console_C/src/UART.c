@@ -8,24 +8,27 @@
 #define FCR0		(* (unsigned int *)(0x4000C008))	//14.4.6 UART FIFO Control Register
 #define DLL0		(* (unsigned int *)(0x4000C000))	//14.4.3 UART Divisor Latch LSB Register
 #define DLM0		(* (unsigned int *)(0x4000C004))	//14.4.3 UART Divisor Latch MSB Register
+#define IER0		(* (unsigned int *)(0x4000C004))	//14.4.4 UART Interrupt Enable Register
 
 #define clockCoreFreq (12000000UL)
 
 #include "UART.h"
 #include "stdutils.h"
 
-void UART_Init(void)
+void UART_Init(uint32_t baudrate)
 {
 	uint32_t UartPclk, Pclk, RegValue;
 
 	PINSEL0 &= ~(0xF << 4);
-	PINSEL0 |=  (0x1 << 6);			// pin P0.3 als RXD0
+	PINSEL0 |=  (0x1 << 6);		// pin P0.3 als RXD0
+
+	IER0 |= (0x1<<0);			//Enable the RDA interrupts.
 
 	FCR0 &= ~(0x7<<0);
-	FCR0 |= (0x3<<0); // Enable FIFO and reset Rx FIFO buffers
+	FCR0 |= (0x3<<0); 			// Enable FIFO and reset Rx FIFO buffers
 
 	LCR0 &= ~(0xFF<<0);
-	LCR0 |= (0x9B<<0); // 8bit data, 1Stop bit, Even parity, Enable access to Divisor Latches -- 10011011
+	LCR0 |= (0x9B<<0); 			// 8bit data, 1Stop bit, Even parity, Enable access to Divisor Latches -- 10011011
 
 
 	/** Baud Rate Calculation :
@@ -41,7 +44,7 @@ void UART_Init(void)
 		 0x03       SystemFreq/8
 	 **/
 
-	UartPclk = (PCLKSEL0 >> 6) & 0x03;
+	UartPclk = (PCLKSEL0 & (0x03<<6));
 
 	switch( UartPclk )
 	{
@@ -59,17 +62,17 @@ void UART_Init(void)
 			break;
 	}
 
-	RegValue = ( Pclk / (16 * 9600 )); //9600 baud rate
+	RegValue = ( Pclk / (16 * baudrate )); //9600 baud rate
 	DLL0 =  RegValue & 0xFF;
 	DLM0 = (RegValue >> 0x08) & 0xFF;
 
 	LCR0 &= ~(0x1<<7);  // Clear DLAB after setting DLL,DLM
 }
 
-char uart_RxChar()
+int uart_RxChar()
 {
-    char ch;
-    while( LSR0 = (0x1 << 0));  // Wait till the data is received
+	int ch;
+    while( !(LSR0 & (1 << 7)) && !(LSR0 & (1 << 0))); //wait until any data arrives in Rx FIFO
     ch = RBR0;               	// Read received data
     return ch;
 }

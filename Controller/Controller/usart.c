@@ -4,9 +4,6 @@
 
 #include "usart.h"
 
-volatile static uint8_t tx_buffer[2];
-volatile static uint8_t bytes = 2;
-
 void init_uart(void) {
   UBRRH = (uint8_t)(MYUBBR >> 8);								//set baud rate
   UBRRL = (uint8_t)(MYUBBR);
@@ -14,9 +11,9 @@ void init_uart(void) {
   UCSRC = (1<<UPM1) | (0<<USBS) | (1<<UCSZ1) | (1<<UCSZ0);		//enable even parity, set 8-bit character, set 1 stop bit
 }
 
-void uart_transmit(uint8_t command, uint8_t data) {
+void uart_transmit(uint8_t command) { //, uint8_t data
   while (!(UCSRA & (1<<UDRE)));
   UDR = command;
-  while (!(UCSRA & (1<<UDRE)));
-  UDR = data; 
+  //while (!(UCSRA & (1<<UDRE)));
+  //UDR = data; 
 }

@@ -3,6 +3,10 @@
 #include <stdint.h>
 
 #define ACC_ADD		0b1101000		//accelerometer address
+#define X_MSB		0x3B
+#define X_LSB		0x3C
+#define Y_MSB		0x3D
+#define Y_LSB		0x3E
 
 #endif
 
@@ -10,4 +14,4 @@ void acc_init(void);
 void acc_send_reg_add(uint8_t);
 void acc_single_write(uint8_t, uint8_t);
 uint8_t acc_single_read(uint8_t);
- void init_external_interrupt0(void);
+void init_int_pin(void);

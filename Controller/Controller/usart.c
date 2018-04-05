@@ -16,23 +16,7 @@ void init_uart(void) {
 
 void uart_transmit(uint8_t command, uint8_t data) {
   while (!(UCSRA & (1<<UDRE)));
-	UDR = command;
-  
+  UDR = command;
   while (!(UCSRA & (1<<UDRE)));
-	UDR = data; 
-  
-  /*tx_buffer[0] = command;
-  tx_buffer[1] = data;
-  bytes = 2;
-  //UCSRB |= (1<<UDRIE);	*/						// enable uart data interrupt (send data)
-}
-
-//send a command out of the buffer
-ISR(USART_UDRE_vect) {
-	if(bytes > 0){
-		UDR = tx_buffer[bytes];					//write byte to data register
-		bytes--;								//lower bytes by one
-	}else{
-		UCSRB &= ~(1<<UDRIE);					//disable interrupt
-	}
+  UDR = data; 
 }

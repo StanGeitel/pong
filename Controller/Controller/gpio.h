@@ -1,6 +1,10 @@
 
 #ifndef GPIO_H_
 #define GPIO_H_
+#include <stdint.h>
+
+#define _PORT	0xB
+#define _B0		
 
 #define PIN(port) _SFR_IO8(0x019 - ((port - 10) * 3))
 #define DDR(port) _SFR_IO8(0x01A - ((port - 10) * 3))
@@ -16,5 +20,3 @@ void enable_input_gpio(unsigned char port, int pin);
 void enable_pullup_gpio(unsigned char port, int pin);
 int read_gpio(unsigned char port, int pin);
 void init_pin_change_interrupt_gpio(int pcint);
-void init_external_interrupt0_gpio(void);
-void init_external_interrupt1_gpio(void);

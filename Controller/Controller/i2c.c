@@ -14,6 +14,8 @@ void i2c_init(){
 }
 
 void i2c_send_start(){
+	PORT(_PORT) = (1<<_SDA)|(1<<_SCL);		//release both for start condition
+	while((!(PORT(_PORT)&(1<<_SCL)))|(!(PORT(_PORT)&(1<<_SDA))));
 	PORT(_PORT) &= ~(1<<_SDA);				//force SDA low
 	_delay_us(BIT_TIME);
 	PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
@@ -42,42 +44,35 @@ void i2c_send_nack(){
 }
 
 uint8_t i2c_get_ack(){
-	uint8_t ret;
+	uint8_t ret = 0;
 	DDR(_PORT) &= ~(1<<_SDA);					//set SDA as input
-	
-	PORT(_PORT) |= (1<<_SCL);					//release SCL
-	_delay_us(BIT_TIME/2);
-	if(PORT(_PORT) & (1<<_SDA)){				//read if SDA is 1
-		ret = 1;
-	}else{
-		ret = 0;
-	}
-	_delay_us(BIT_TIME/2);
-	PORT(_PORT) &= ~(1<<_SCL);					//force SCL low
-	
+	USICR |= (1<<USITC);						//toggle SCL to HIGH
+	_delay_us(BIT_TIME);
+	USICR |= (1<<USITC);						//toggle SCL to LOW
+	_delay_us(BIT_TIME);
+	ret = (USIDR & 1);
+	USIDR = 0xFF;
 	DDR(_PORT) |= (1<<_SDA);					//set as SDA as output
 	return(ret);
 }
 
 void i2c_send_data(uint8_t data){
-	PORT(_PORT) |= (1<<_SCL);					//release SCL
-	USICR |= (1<<USITC);						//toggle SCL to HIGH
-	USISR &= ~(0xF<<USICNT0);					//reset counter
 	USIDR = data;
 	PORT(_PORT) |= (1<<_SDA);
+	USISR &= ~(0xF<<USICNT0);					//reset counter
 	do{
 		USICR |= (1<<USITC);					//toggle SCL to HIGH
 		_delay_us(BIT_TIME);
 		USICR |= (1<<USITC);					//toggle SCL to LOW
 		_delay_us(BIT_TIME);
 	}while(!(USISR & (1<<USIOIF)));				//check counter overflow flag
+	
 	USIDR = 0xFF;
 }
 
 uint8_t i2c_get_data(){
-	uint8_t ret = 0;
+	uint8_t ret;
 	DDR(_PORT) &= ~(1<<_SDA);					//set SDA as input
-	PORT(_PORT) &= ~(1<<_SDA);					//disable pull up
 	USISR &= ~(0xF << USICNT0);					//reset counter
 	do{
 		USICR |= (1<<USITC);					//toggle SCL to HIGH
@@ -87,50 +82,6 @@ uint8_t i2c_get_data(){
 	}while(!(USISR & (1<<USIOIF)));				//check counter overflow flag
 	ret = USIDR;
 	USIDR = 0xFF;
-	PORT(_PORT) |= (1<<_SDA);					//enable SDA pull up
 	DDR(_PORT) |= (1<<_SDA);					//set as SDA as output
 	return(ret);
 }
-
-/*
-void old_i2c_init(){
-	PORT(_PORT) = (1<<_SCL)|(1<<_SDA);		//set HIGH with pull up.
-	DDR(_PORT) = (1<<_SCL)|(1<<_SDA);		//enable output driver for SDA and SCL.
-}
-
-void old_i2c_send_data(uint8_t data){
-	PORT(_PORT) &= ~(1<<_SCL);					//pull SCL low
-	for(int i = 0; i < 8; i++){
-		while(PORT(_PORT) & (1<<_SCL));			//wait for SCL to go low
-		PORT(_PORT) = (((data>>i) & 1)<<_SDA);
-		PORT(_PORT) |= (1<<_SCL);				//release SCL
-		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
-		_delay_us(BIT_TIME);
-		PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
-		_delay_us(BIT_TIME);
-	}
-}
-
-uint8_t old_i2c_get_data(){
-	uint8_t buf = 0;
-	DDR(_PORT) &= ~(1<<_SDA);					//set SDA as input
-	PORT(_PORT) &= ~(1<<_SDA);					//disable pull up
-	PORT(_PORT) &= ~(1<<_SCL);					//pull SCL low
-	for(int i = 0; i <= 7; i++){				//count bit 0 to 7
-		while(PORT(_PORT) & (1<<_SCL));			//wait for SCL to go low
-		if(PORT(_PORT) & (1<<_SDA)){			//read if SDA is 1
-			buf |= (1<<i);						//write bit on position i 1
-		}else{
-			buf &= ~(1<<i);						//write bit on position i 0
-		}
-		PORT(_PORT) |= (1<<_SCL);				//release SCL
-		while(!(PORT(_PORT) & (1<<_SCL)));		//wait for SCL to go high
-		_delay_us(BIT_TIME);
-		PORT(_PORT) &= ~(1<<_SCL);				//force SCL low
-		_delay_us(BIT_TIME);
-	}
-	PORT(_PORT) |= (1<<_SDA);					//enable SDA pull up
-	DDR(_PORT) |= (1<<_SDA);					//set as SDA as output
-	return(buf);
-}
-*/

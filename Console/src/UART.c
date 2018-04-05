@@ -12,6 +12,7 @@
 
 #define clockCoreFreq (12000000UL)
 
+#include "UART.h"
 void UART_Init(void)
 {
 	uint32_t UartPclk, Pclk, RegValue;

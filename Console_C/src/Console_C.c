@@ -13,7 +13,6 @@
 #endif
 
 #include <cr_section_macros.h>
-
 #include <stdio.h>
 
 // TODO: insert other include files here
@@ -29,7 +28,8 @@ int main(void) {
     volatile static int i = 0 ;
     // Enter an infinite loop, just incrementing a counter
     while(1) {
-    	printf(uart_RxChar() + " -/n");
+    	printf(uart_RxChar() + " -\n");
+    	for(int x=0;x<100000;x++){asm("NOP");}
         i++ ;
     }
     return 0 ;

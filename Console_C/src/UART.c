@@ -1,9 +1,3 @@
-/*
- * UART.c
- *
- *  Created on: 5 apr. 2018
- *      Author: Sven
- */
 
 #define PINSEL0		(* (unsigned int* )(0x4002C000))	//8.5.1 Pin function select register 0
 #define PCLKSEL0 	(* (unsigned int* )(0x400FC1A8))	//4.7.3 Peripheral Clock Selection register 0
@@ -75,7 +69,7 @@ void UART_Init(void)
 char uart_RxChar()
 {
     char ch;
-    while( LSR0 == (0x1 << 0));  // Wait till the data is received
+    while( LSR0 = (0x1 << 0));  // Wait till the data is received
     ch = RBR0;               	// Read received data
     return ch;
 }

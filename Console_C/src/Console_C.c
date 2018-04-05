@@ -1,6 +1,6 @@
 /*
 ===============================================================================
- Name        : main.c
+ Name        : Console_C.c
  Author      : $(author)
  Version     :
  Copyright   : $(copyright)
@@ -14,33 +14,22 @@
 
 #include <cr_section_macros.h>
 
-#ifdef __cplusplus
-extern "C"
-{
-#endif
-
-#include "UART.h"
-
-#ifdef __cplusplus
-}
-#endif
-// TODO: insert other include files here
 #include <stdio.h>
+
+// TODO: insert other include files here
+#include "UART.h"
 // TODO: insert other definitions and declarations here
 
-
-
 int main(void) {
-	char uart_rec;
-    // TODO: insert code here
-	extern "C" void UART_Init(void);
-	printf("Initialized. Application started.\n");
-	uart_rec extern "C" char uart_RxChar();
+
+    printf("Start\n");
+    UART_Init();
 
     // Force the counter to be placed into memory
     volatile static int i = 0 ;
     // Enter an infinite loop, just incrementing a counter
     while(1) {
+    	printf(uart_RxChar() + " -/n");
         i++ ;
     }
     return 0 ;

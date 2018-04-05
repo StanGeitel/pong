@@ -1,4 +1,9 @@
-
+/*
+ * UART.c
+ *
+ *  Created on: 5 apr. 2018
+ *      Author: Sven
+ */
 
 #define PINSEL0		(* (unsigned int* )(0x4002C000))	//8.5.1 Pin function select register 0
 #define PCLKSEL0 	(* (unsigned int* )(0x400FC1A8))	//4.7.3 Peripheral Clock Selection register 0
@@ -13,6 +18,8 @@
 #define clockCoreFreq (12000000UL)
 
 #include "UART.h"
+#include "stdutils.h"
+
 void UART_Init(void)
 {
 	uint32_t UartPclk, Pclk, RegValue;
@@ -62,16 +69,17 @@ void UART_Init(void)
 	DLL0 =  RegValue & 0xFF;
 	DLM0 = (RegValue >> 0x08) & 0xFF;
 
-	util_BitClear(LCR0,(7));  // Clear DLAB after setting DLL,DLM
+	LCR0 &= ~(0x1<<7);  // Clear DLAB after setting DLL,DLM
 }
 
 char uart_RxChar()
 {
     char ch;
-    while(util_IsBitCleared(LSR0,0));  // Wait till the data is received
-    ch = RBR0;               // Read received data
+    while( LSR0 == (0x1 << 0));  // Wait till the data is received
+    ch = RBR0;               	// Read received data
     return ch;
 }
+
 
 
 

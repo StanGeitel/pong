@@ -15,7 +15,7 @@
 #include "UART.h"
 #include "stdutils.h"
 
-void UART_Init(uint32_t baudrate)
+void UART_Init(void)
 {
 	uint32_t UartPclk, Pclk, RegValue;
 
@@ -62,7 +62,7 @@ void UART_Init(uint32_t baudrate)
 			break;
 	}
 
-	RegValue = ( Pclk / (16 * baudrate )); //9600 baud rate
+	RegValue = ( Pclk / (16 * 9600 )); //9600 baud rate
 	DLL0 =  RegValue & 0xFF;
 	DLM0 = (RegValue >> 0x08) & 0xFF;
 

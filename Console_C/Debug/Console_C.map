@@ -459,24 +459,25 @@ END GROUP
                 0x00000300                PROVIDE (__CRP_WORD_END__, .)
                 0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
- .text.main     0x00000300       0x40 ./src/Console_C.o
+ .text.main     0x00000300       0x3c ./src/Console_C.o
                 0x00000300                main
  .text.UART_Init
-                0x00000340       0xf8 ./src/UART.o
-                0x00000340                UART_Init
+                0x0000033c       0xf8 ./src/UART.o
+                0x0000033c                UART_Init
  .text.uart_RxChar
-                0x00000438       0x3c ./src/UART.o
-                0x00000438                uart_RxChar
- .text.__main   0x00000474       0x14 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_semihost.a(_cr__main.o)
-                0x00000474                __CR_SEMIHOST
-                0x00000474                __main
+                0x00000434       0x3c ./src/UART.o
+                0x00000434                uart_RxChar
+ .text.__main   0x00000470       0x14 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_semihost.a(_cr__main.o)
+                0x00000470                __CR_SEMIHOST
+                0x00000470                __main
  .text.fp_round
-                0x00000488       0x4c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x00000484       0x4c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
  .text.pr_dec.constprop.1
-                0x000004d4       0x26 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
- *fill*         0x000004fa        0x2 ff
- .text.sprintf  0x000004fc       0x6c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
-                0x000004fc                sprintf
+                0x000004d0       0x26 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+ *fill*         0x000004f6        0x2 ff
+ .text.sprintf  0x000004f8       0x6c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x000004f8                sprintf
+ *fill*         0x00000564        0x4 ff
  .text.fp_display
                 0x00000568      0x8ec c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
  .text.vsnprintf
@@ -715,17 +716,17 @@ END GROUP
                 0xefff74c6                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(Console_C.axf elf32-littlearm)
 
-.debug_info     0x00000000      0x3f8
+.debug_info     0x00000000      0x3ea
  .debug_info    0x00000000       0x96 ./src/Console_C.o
- .debug_info    0x00000096       0xd0 ./src/UART.o
- .debug_info    0x00000166      0x253 ./src/cr_startup_lpc175x_6x.o
- .debug_info    0x000003b9       0x3f ./src/crp.o
+ .debug_info    0x00000096       0xc2 ./src/UART.o
+ .debug_info    0x00000158      0x253 ./src/cr_startup_lpc175x_6x.o
+ .debug_info    0x000003ab       0x3f ./src/crp.o
 
-.debug_abbrev   0x00000000      0x223
+.debug_abbrev   0x00000000      0x214
  .debug_abbrev  0x00000000       0x5f ./src/Console_C.o
- .debug_abbrev  0x0000005f       0x99 ./src/UART.o
- .debug_abbrev  0x000000f8       0xf5 ./src/cr_startup_lpc175x_6x.o
- .debug_abbrev  0x000001ed       0x36 ./src/crp.o
+ .debug_abbrev  0x0000005f       0x8a ./src/UART.o
+ .debug_abbrev  0x000000e9       0xf5 ./src/cr_startup_lpc175x_6x.o
+ .debug_abbrev  0x000001de       0x36 ./src/crp.o
 
 .debug_aranges  0x00000000       0xe0
  .debug_aranges
@@ -742,18 +743,18 @@ OUTPUT(Console_C.axf elf32-littlearm)
  .debug_ranges  0x00000010       0x18 ./src/UART.o
  .debug_ranges  0x00000028       0x70 ./src/cr_startup_lpc175x_6x.o
 
-.debug_macro    0x00000000      0xdd4
- .debug_macro   0x00000000       0x5c ./src/Console_C.o
- .debug_macro   0x0000005c      0x886 ./src/Console_C.o
- .debug_macro   0x000008e2       0x82 ./src/Console_C.o
- .debug_macro   0x00000964       0x10 ./src/Console_C.o
- .debug_macro   0x00000974      0x12d ./src/Console_C.o
- .debug_macro   0x00000aa1       0xa0 ./src/Console_C.o
- .debug_macro   0x00000b41      0x1c4 ./src/Console_C.o
- .debug_macro   0x00000d05       0x64 ./src/UART.o
- .debug_macro   0x00000d69       0x1d ./src/cr_startup_lpc175x_6x.o
- .debug_macro   0x00000d86       0x1a ./src/crp.o
- .debug_macro   0x00000da0       0x34 ./src/crp.o
+.debug_macro    0x00000000      0xdcc
+ .debug_macro   0x00000000       0x58 ./src/Console_C.o
+ .debug_macro   0x00000058      0x886 ./src/Console_C.o
+ .debug_macro   0x000008de       0x82 ./src/Console_C.o
+ .debug_macro   0x00000960       0x10 ./src/Console_C.o
+ .debug_macro   0x00000970      0x12d ./src/Console_C.o
+ .debug_macro   0x00000a9d       0xa0 ./src/Console_C.o
+ .debug_macro   0x00000b3d      0x1c4 ./src/Console_C.o
+ .debug_macro   0x00000d01       0x60 ./src/UART.o
+ .debug_macro   0x00000d61       0x1d ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000d7e       0x1a ./src/crp.o
+ .debug_macro   0x00000d98       0x34 ./src/crp.o
 
 .debug_line     0x00000000      0x3c4
  .debug_line    0x00000000      0x1b9 ./src/Console_C.o
@@ -761,14 +762,14 @@ OUTPUT(Console_C.axf elf32-littlearm)
  .debug_line    0x00000278       0xd4 ./src/cr_startup_lpc175x_6x.o
  .debug_line    0x0000034c       0x78 ./src/crp.o
 
-.debug_str      0x00000000     0x3dad
+.debug_str      0x00000000     0x3da4
  .debug_str     0x00000000     0x3939 ./src/Console_C.o
                                0x3982 (size before relaxing)
- .debug_str     0x00003939      0x1c0 ./src/UART.o
-                               0x2f60 (size before relaxing)
- .debug_str     0x00003af9      0x1cb ./src/cr_startup_lpc175x_6x.o
+ .debug_str     0x00003939      0x1b7 ./src/UART.o
+                               0x2f57 (size before relaxing)
+ .debug_str     0x00003af0      0x1cb ./src/cr_startup_lpc175x_6x.o
                                0x268a (size before relaxing)
- .debug_str     0x00003cc4       0xe9 ./src/crp.o
+ .debug_str     0x00003cbb       0xe9 ./src/crp.o
                                0x25a2 (size before relaxing)
 
 .comment        0x00000000       0xdc

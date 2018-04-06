@@ -24,7 +24,7 @@ int main(void) {
 	int ch;
 
     printf("Start\n");
-    UART_Init(9600);
+    UART_Init();
 
     // Force the counter to be placed into memory
     volatile static int i = 0 ;

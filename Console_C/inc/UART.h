@@ -7,9 +7,8 @@
 
 #ifndef UART_H_
 #define UART_H_
-#include "stdutils.h"
 
-void UART_Init(uint32_t baudrate);
+void UART_Init(void);
 int uart_RxChar();
 
 #endif /* UART_H_ */

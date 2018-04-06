@@ -1,71 +1,61 @@
 #include <avr/io.h>
 #include <avr/common.h>
 #include <avr/interrupt.h>
-#include <stdint.h>
 #include "gpio.h"
+#include "usart.h"
+#include "acc.h"
 
-volatile uint8_t old_pins = 0;
+volatile uint8_t old_buttons = 0;
 
- void set_output_gpio(unsigned char port, int pin){
-	DDR(port) &= ~(1 << pin);
-	PORT(port) |= (1 << pin);
-
-	DDR(port) |= (1 << pin);
-	PORT(port) |= (1 << pin);
- }
-
- void clear_output_gpio(unsigned char port, int pin){
-	DDR(port) &= ~(1 << pin);
-	PORT(port) &= ~(1 << pin);
+void gpio_init(){
+	DDR(_PORT) &= ~((1<<B3)|(1<<B2)|(1<<B1)|(1<<B0));	//set buttons as input
+	PORT(_PORT) |= (1<<L0);								//enable pull up on led
+	DDR(_PORT) |= (1<<L0);								//set led as output
 	
-	DDR(port) |= (1 << pin);
-	PORT(port) &= ~(1 << pin);
- }
+	PCMSK0 |= ((1<<B3)|(1<<B2)|(1<<B1)|(1<<B0));		//set buttons as source for pin change interrupt 0
+	GIMSK |= (1<<PCIE0);								//enable pin change interrupt 0
+	SREG |= (1<<SREG_I);								//enable interrupts I in global status register
+}
 
- void toggle_output_gpio(unsigned char port, int pin){
-	 DDR(port) |= (1 << pin);
-	 PORT(port) ^= (1 << pin);//toggle bit om register with exor
- }
+void gpio_set_led(){
+	PORT(_PORT) &= ~(1<<L0); 
+}
 
- void enable_input_gpio(unsigned char port, int pin){
-	DDR(port) &= ~(1 << pin);
- }
+void gpio_reset_led(){
+	PORT(_PORT) |= (1<<L0);
+}
  
- void enable_pullup_gpio(unsigned char port, int pin){
-	PORT(port) |= (1 << pin);
- }
-
- int read_gpio(unsigned char port, int pin){
-	int ret = (PIN(port) & (1 << pin));
-	return(ret);
- }
-
- void init_pin_change_interrupt_gpio(int pcint){
-	if(pcint <= 7){
-		PCMSK0 |= (1 << pcint);
-		GIMSK |= (1 << PCIE0);
+ISR(PCINT0_vect){
+	uint8_t new_buttons = PORT(_PORT) & 0xF;
+	uint8_t temp = new_buttons ^ old_buttons;
+	if(temp & (1<<B0)){
+		PORT(_PORT) ^= (1<<L0);
+		
+		if(!(old_buttons&(1<<B0))){
+			uart_put_com((B0_COM<<2), (PORT(_PORT)>>B0));
+		}
 	}
-	else if(pcint >= 8 && pcint <=10){
-		PCMSK1 |= (1 << pcint);
-		GIMSK |= (1 << PCIE1);
+	if(temp & (1<<B1)){
+		PORT(_PORT) ^= (1<<L0);
+		
+		if(!(old_buttons&(1<<B1))){
+			uart_put_com((B1_COM<<2), (PORT(_PORT)>>B1));
+		}
 	}
-	else if(pcint >= 11 && pcint <=17){
-		PCMSK2 |= (1 << pcint);			//enable interrupt on pin pcint in pin change mask 2 register
-		GIMSK |= (1 << PCIE2);			//enable pin change interrupt 2 in general interrupt mask register	
+	if(temp & (1<<B2)){
+		PORT(_PORT) ^= (1<<L0);
+		
+		if(!(old_buttons&(1<<B2))){
+			uart_put_com((B2_COM<<2), (PORT(_PORT)>>B2));
+		}
 	}
-	SREG |= (1 << SREG_I);				//enable interrupts I in global status register
-	int i;
-	for(i = 0; i < 6; i++){
-		enable_input_gpio('B', i);
+	
+	if(temp & (1<<B3)){									//calibration button
+		PORT(_PORT) ^= (1<<L0);
+		
+		if(!(old_buttons&(1<<B2))){
+			acc_calibrate();
+		}
 	}
- }
- 
- 
- //ISR(PCINT1_vect){						//Pin change interrupt1 service routine
-//	
- //}
-  
-// ISR(PCINT2_vect){						//Pin change interrupt2 service routine 
-//	
-// }
- 
+	old_buttons = new_buttons;
+}

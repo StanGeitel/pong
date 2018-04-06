@@ -13,3 +13,4 @@ void gauge_send_reg_add(uint8_t);
 //uint8_t gauge_single_read(uint8_t);
 void gauge_single_write(uint8_t, uint8_t);
 void gauge_batterylevel(void);
+void ext_int1_init(void);

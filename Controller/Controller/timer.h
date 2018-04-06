@@ -2,7 +2,6 @@
 #define TIMER_H_
 
 
-
 #endif
 
 void init_timer0(void);

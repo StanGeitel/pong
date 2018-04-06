@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include <avr/interrupt.h>
 #include "gauge.h"
 #include "i2c.h"
 // #include "gpio.h"
@@ -53,24 +54,26 @@ void gauge_batterylevel(){
 	
 	if (buffer > 31772){
 		// void dat led constant aan staat
+		gpio_set_led();
 	}
 	else{
 		// void dat led knippert
+		gpio_reset_led();
 	}
 	
 }
 
 /*for AL_CC 
 
- void init_external_interrupt1_gpio(void){
-	 MCUCR |= (1 << ISC10);				//The rising edge of INT1 generates an interrupt request
-	 MCUCR |= (1 << ISC11);
+void ext_int1_init(){
+	MCUCR |= (1<<ISC10);				//The rising edge of INT1 generates an interrupt request
+	MCUCR |= (1<<ISC11);
 	 
-	 GIMSK |= (1 << INT1);				//enable external interrupt 1 in general interrupt mask register
-	 SREG |= (1 << SREG_I);				//enable interrupts I in global status register
- }
+	GIMSK |= (1<<INT1);				//enable external interrupt 1 in general interrupt mask register
+	SREG |= (1<<SREG_I);				//enable interrupts I in global status register
+}
  
- ISR(INT1_vect){						//External interrupt1 service routine
+ISR(INT1_vect){						//External interrupt1 service routine
 	 
- }
+}
 */

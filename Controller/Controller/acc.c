@@ -63,6 +63,7 @@ uint16_t acc_burst_read(uint8_t reg_address){
 	ret |= i2c_get_data();
 	i2c_send_nack();
 	i2c_send_stop();
+	return(ret);
 }
 
 void acc_send_reg_add(uint8_t reg_address){
@@ -100,4 +101,20 @@ ISR(INT0_vect){							//External interrupt0 service routine
 	}
 }
 
+void init_timer0(){
+	TCCR0A = ((0<<COM0A1)|(0<<COM0A0)|(0<<COM0B1)|(0<<COM0B0)|(0<<WGM01)|(0<<WGM00));
+	TCCR0B = ((0<<WGM02)|(0<<CS02)|(0<<CS01)|(1<<CS00));		//Select 8MHz clock with no prescaler
+	OCR0A = 160;
+	OCR0B = 9;													//Set match register on 10 pulses
+	TIMSK |= ((1<<OCIE0A)|(1<<OCIE0B));							//enable interrupts on compare register A and B
+	SREG |= (1<<SREG_I);										//enable global interrupt
+}
+ 
+ISR(TIMER0_COMPA_vect){
+	
+}
+ 
+ISR(TIMER0_COMPB_vect){
+	
+}
  

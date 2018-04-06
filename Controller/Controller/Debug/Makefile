@@ -42,7 +42,6 @@ C_SRCS +=  \
 ../gpio.c \
 ../i2c.c \
 ../main.c \
-../timer.c \
 ../usart.c
 
 
@@ -58,7 +57,6 @@ gauge.o \
 gpio.o \
 i2c.o \
 main.o \
-timer.o \
 usart.o
 
 OBJS_AS_ARGS +=  \
@@ -67,7 +65,6 @@ gauge.o \
 gpio.o \
 i2c.o \
 main.o \
-timer.o \
 usart.o
 
 C_DEPS +=  \
@@ -76,7 +73,6 @@ gauge.d \
 gpio.d \
 i2c.d \
 main.d \
-timer.d \
 usart.d
 
 C_DEPS_AS_ARGS +=  \
@@ -85,7 +81,6 @@ gauge.d \
 gpio.d \
 i2c.d \
 main.d \
-timer.d \
 usart.d
 
 OUTPUT_FILE_PATH +=Controller.elf
@@ -102,8 +97,6 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-
-
 
 
 

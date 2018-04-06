@@ -10,10 +10,11 @@ uint16_t y_acc;
 
 void acc_init(){
 	i2c_init();
-	ext_int0_init();
+//	ext_int0_init();
 	
-	acc_single_write(ACC_CON, 0x00);		//set range on +/- 2g
-	acc_single_write(INT_EN, 0x01);			//enable interrupt pin on data ready
+	acc_single_write(PWR_MAN, 0x00);
+//	acc_single_write(ACC_CON, 0x00);		//set range on +/- 2g
+//	acc_single_write(INT_EN, 0x01);			//enable interrupt pin on data ready
 	
 }
 
@@ -75,7 +76,7 @@ void acc_send_reg_add(uint8_t reg_address){
 }
 
 void acc_calc_x_pos(){
-	
+	16384/x_acc;
 }
 
 void acc_calc_y_pos(){

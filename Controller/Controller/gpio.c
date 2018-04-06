@@ -28,10 +28,9 @@ void gpio_reset_led(){
 ISR(PCINT0_vect){
 	uint8_t new_buttons = PORT(_PORT) & 0xF;
 	uint8_t temp = new_buttons ^ old_buttons;
-	if(temp & (1<<B0)){
-		PORT(_PORT) ^= (1<<L0);
-		
+	if(temp & (1<<B0)){		
 		if(!(old_buttons&(1<<B0))){
+			PORT(_PORT) ^= (1<<L0);
 			uart_put_com((B0_COM<<2), (PORT(_PORT)>>B0));
 		}
 	}

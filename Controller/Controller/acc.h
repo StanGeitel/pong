@@ -7,6 +7,7 @@
 #define ACC_CON		0x1C
 #define INT_CON		0x37
 #define INT_EN		0x38
+#define PWR_MAN		0x6B
 #define X_MSB		0x3B
 #define X_LSB		0x3C
 #define Y_MSB		0x3D

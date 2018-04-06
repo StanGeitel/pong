@@ -34,25 +34,22 @@ ISR(PCINT0_vect){
 			uart_put_com((B0_COM<<2), (PORT(_PORT)>>B0));
 		}
 	}
-	if(temp & (1<<B1)){
-		PORT(_PORT) ^= (1<<L0);
-		
+	if(temp & (1<<B1)){	
 		if(!(old_buttons&(1<<B1))){
+			PORT(_PORT) ^= (1<<L0);
 			uart_put_com((B1_COM<<2), (PORT(_PORT)>>B1));
 		}
 	}
 	if(temp & (1<<B2)){
-		PORT(_PORT) ^= (1<<L0);
-		
 		if(!(old_buttons&(1<<B2))){
+			PORT(_PORT) ^= (1<<L0);
 			uart_put_com((B2_COM<<2), (PORT(_PORT)>>B2));
 		}
 	}
 	
 	if(temp & (1<<B3)){									//calibration button
-		PORT(_PORT) ^= (1<<L0);
-		
 		if(!(old_buttons&(1<<B2))){
+			PORT(_PORT) ^= (1<<L0);
 			acc_calibrate();
 		}
 	}

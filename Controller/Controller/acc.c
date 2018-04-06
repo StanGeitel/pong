@@ -12,7 +12,7 @@ void acc_init(){
 	i2c_init();
 //	ext_int0_init();
 	
-	acc_single_write(PWR_MAN, 0x00);
+	acc_single_write(PWR_MAN, 0x00);		//turn off sleep mode
 //	acc_single_write(ACC_CON, 0x00);		//set range on +/- 2g
 //	acc_single_write(INT_EN, 0x01);			//enable interrupt pin on data ready
 	

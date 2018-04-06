@@ -15,15 +15,8 @@ void uart_init(void) {
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
 }
 
-void uart_transmit(uint8_t command) { //, uint8_t data
-	while (!(UCSRA & (1<<UDRE)));
-	UDR = command;
-	//while (!(UCSRA & (1<<UDRE)));
-	//UDR = data; 
-}
-
 void uart_put_com(uint8_t command, uint8_t data){
-	while(size < 0);
+	while(size > 0);
 	tx_buffer[1] = command;
 	tx_buffer[0] = data;
 	size = 2;
@@ -31,7 +24,7 @@ void uart_put_com(uint8_t command, uint8_t data){
 }
 
 ISR(USART_UDRE_vect){
-	if(size < 0){
+	if(size > 0){
 		UDR = tx_buffer[size-1];
 		size--;
 	}else{

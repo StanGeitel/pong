@@ -2,8 +2,8 @@
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
+#include <avr/interrupt.h>
 
-#include "acc.h"
 #include "usart.h"
 #include "gauge.h"
 #include "gpio.h"
@@ -18,10 +18,7 @@ int main(void)
 	acc_burst_read(X_MSB);
 */
 	uart_init();
-//	_delay_ms(3000);
-//	uart_transmit(0x55);
-	uart_put_com(0x55, 0x55);
-	
+	uart_put_com(0x42, 0xFF);
 	
 //	acc_init();
 //	uart_init();

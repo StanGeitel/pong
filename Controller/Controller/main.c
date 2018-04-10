@@ -17,8 +17,12 @@ int main(void)
 	
 	gpio_init();
 	gauge_init();
+	uart_init();
+	_delay_ms(2000);
+	TCNT0 = 0x00;
+	TCCR0B |= (1<<CS02)|(1<<CS00);
 	
-//	uart_init();
+	
 //	acc_init();
     while (1) 
     {

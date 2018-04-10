@@ -40,7 +40,7 @@ void i2c_send_arp_gauge(){ // naam aanpassen?
 
 ISR(INT1_vect){	//External interrupt1 service routine
 	if((TCCR0B & (1<<CS02)) && (TCCR0B & (1<<CS00))){ // Als led is aan of knipperend , maar dat is geen 1 en 0 dus even kijken hoe detecteren
-		TCCR0B &= ~((<<CS02)|(1<<CS00)); // 000 disconnect clock
+		TCCR0B &= ~((1<<CS02)|(1<<CS00)); // 000 disconnect clock
 		PORT(_PORT) &= ~(1<<L0);
 		i2c_burst_write(GAUGE_ADD, HIGH_TRE_MSB, 0x00, 0x00);
 		i2c_burst_write(GAUGE_ADD, LOW_TRE_MSB, 0x7C, 0x1C); // 30%

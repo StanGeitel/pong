@@ -23,9 +23,3 @@
 void acc_init(void);
 void acc_run(void);
 void acc_calibrate(void);
-void acc_single_write(uint8_t, uint8_t);
-void acc_burst_write(uint8_t, uint8_t, uint8_t);
-uint8_t acc_single_read(uint8_t);
-uint16_t acc_burst_read(uint8_t);
-void acc_send_reg_add(uint8_t);
-

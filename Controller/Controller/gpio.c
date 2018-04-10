@@ -16,9 +16,7 @@ void gpio_init(){
 	SREG |= (1<<SREG_I);											//enable interrupts I in global status register
 }
 
-ISR(PCINT0_vect){
-	TCCR0B &= ~((1<<CS02)|(1<<CS01)|(1<<CS00));					//stop timer
-		
+ISR(PCINT0_vect){		
 	uint8_t new_buttons = (PIN(_PORT) & 0xF);
 	uint8_t temp = (new_buttons ^ old_buttons);
 	if((temp & (1<<B0)) && (old_buttons & (1<<B0))){

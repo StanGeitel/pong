@@ -138,27 +138,3 @@ uint8_t i2c_get_data(){
 	return(ret);
 }
 
-/*
-void delay(){
-	TCNT1H = 0x00;
-	TCNT1L = 0x00;
-	TCCR1B |= (1<<CS10);						//start timer
-}
-
-void timer1_init(){
-	TCCR1A = (0<<COM1A1)|(0<<COM1A0)|(0<<COM1B1)|(0<<COM1B0)|(0<<WGM11)|(0<<WGM10);
-	TCCR1B = (0<<ICNC1)|(0<<ICES1)|(0<<WGM13)|(0<<WGM12)|(0<<CS12)|(0<<CS11)|(0<<CS10);		//no clock, clear timer on compare
-	OCR1AH = 0x00;
-	OCR1AL = 0x05;							//match compare after 5 pulses
-	TIMSK |= (1<<OCIE1A);					//enable interrupt on output compare A match
-	SREG |= (1<<SREG_I);					//enable interrupts I in global status register
-}
-
-ISR(TIMER1_COMPA_vect){
-	PORT(_PORT) &= (1<<L0);
-	
-	TCCR1B &= ~(1<<CS10);						//stop timer
-	timer_count = 1;
-}
-*/
-

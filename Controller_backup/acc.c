@@ -14,12 +14,8 @@ void acc_init(){
 	
 	i2c_single_write(ACC_ADD, PWR_MAN, 0x00);		//turn off sleep mode
 //	i2c_single_write(ACC_ADD, ACC_CON, 0x00);		//set range on +/- 2g
-	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt pin on data ready
+//	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt pin on data ready
 	
-	MCUCR |= (1 << ISC00);
-	MCUCR |= (1 << ISC01);				//The rising edge of INT0 generates an interrupt request
-	GIMSK |= (1 << INT0);				//enable external interrupt 0 in general interrupt mask register
-	SREG |= (1 << SREG_I);				//enable interrupts I in global status register
 //	acc_calibrate();
 }
 
@@ -70,7 +66,14 @@ void acc_calibrate(){
 	x_noise = (x_noise>>10);
 	y_noise = (y_noise>>10);
 }
+
 /*
+void ext_int0_init(){
+	MCUCR |= (1 << ISC00);
+	MCUCR |= (1 << ISC01);				//The rising edge of INT0 generates an interrupt request
+	GIMSK |= (1 << INT0);				//enable external interrupt 0 in general interrupt mask register
+	SREG |= (1 << SREG_I);				//enable interrupts I in global status register
+}
 
 ISR(INT0_vect){							//External interrupt0 service routine
 	uint16_t temp;
@@ -84,6 +87,6 @@ ISR(INT0_vect){							//External interrupt0 service routine
 		}
 	}
 }
-*/
 
+*/
  

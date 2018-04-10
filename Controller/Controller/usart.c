@@ -3,6 +3,7 @@
 #include <avr/interrupt.h>
 
 #include "usart.h"
+#include "gpio.h"
 
 volatile static uint8_t tx_buffer[2];
 volatile static uint8_t size = 0;
@@ -27,7 +28,8 @@ ISR(USART_UDRE_vect){
 	if(size > 0){
 		UDR = tx_buffer[size-1];
 		size--;
-	}else{
+	}
+	if(size == 0){
 		UCSRB &= ~(1<<UDRIE);
 	}
 }

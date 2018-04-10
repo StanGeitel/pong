@@ -3,14 +3,15 @@
 #include <stdint.h>
 
 #define GAUGE_ADD		0b1100100		//gauge address
+#define GAUGE_CON		0x01
 #define CHARGE_MSB		0x02			//accumulated charge MSB
 #define CHARGE_LSB		0x03			//accumulated charge LSB
+#define HIGH_TRE_MSB	0x04
+#define HIGH_TRE_LSB	0x05
+#define LOW_TRE_MSB		0x06
+#define LOW_TRE_LSB		0x07
 
 #endif
 
 void gauge_init(void);
-void gauge_send_reg_add(uint8_t);
-//uint8_t gauge_single_read(uint8_t);
-void gauge_single_write(uint8_t, uint8_t);
-void gauge_batterylevel(void);
-void ext_int1_init(void);
+void gauge_read_charge(void);

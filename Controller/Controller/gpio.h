@@ -8,7 +8,7 @@
 #define B1		1
 #define B2		2
 #define B3		3
-#define L0		5
+#define L0		4
 
 #define B0_COM		0b010
 #define B1_COM		0b011
@@ -21,5 +21,5 @@
 #endif
 
 void gpio_init(void);
-void gpio_set_led(void);
-void gpio_reset_led(void);
+void timer0_init(void);
+

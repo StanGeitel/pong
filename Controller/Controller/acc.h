@@ -4,7 +4,7 @@
 
 #define ACC_ADD		0b1101000		//accelerometer address
 
-#define ACC_CON		0x1C
+#define ACC_CON		0x1C			//register addresses
 #define INT_CON		0x37
 #define INT_EN		0x38
 #define PWR_MAN		0x6B
@@ -13,18 +13,20 @@
 #define Y_MSB		0x3D
 #define Y_LSB		0x3E
 
-#define X_COM		0b000
-#define Y_COM		0b001
+#define LSB_SENS	16384			//lsb sensitivity for +/-2g, +1g = +16384 sensor value 
+
+#define X_COM		0b111000
+#define Y_COM		0b111001
 
 #endif
 
 void acc_init(void);
+void acc_run(void);
+void acc_calibrate(void);
 void ext_int0_init(void);
 void acc_single_write(uint8_t, uint8_t);
 void acc_burst_write(uint8_t, uint8_t, uint8_t);
 uint8_t acc_single_read(uint8_t);
 uint16_t acc_burst_read(uint8_t);
 void acc_send_reg_add(uint8_t);
-void acc_calc_x_pos(void);
-void acc_calc_y_pos(void);
-void acc_calibrate(void);
+

@@ -10,6 +10,7 @@
 #define HIGH_TRE_LSB	0x05
 #define LOW_TRE_MSB		0x06
 #define LOW_TRE_LSB		0x07
+#define ARA				0x0C			//Alert Response Address				
 
 #endif
 

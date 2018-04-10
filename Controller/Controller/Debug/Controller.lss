@@ -3,31 +3,31 @@ Controller.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000406  00000000  00000000  00000074  2**1
+  0 .text         000003f4  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  0000047a  2**0
+  1 .data         00000000  00800060  00800060  00000468  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000005  00800060  00800060  0000047a  2**0
+  2 .bss          00000005  00800060  00800060  00000468  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  0000047a  2**0
+  3 .comment      00000030  00000000  00000000  00000468  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000004ac  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000498  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000170  00000000  00000000  000004ec  2**0
+  5 .debug_aranges 00000170  00000000  00000000  000004d8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001425  00000000  00000000  0000065c  2**0
+  6 .debug_info   00001350  00000000  00000000  00000648  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000a04  00000000  00000000  00001a81  2**0
+  7 .debug_abbrev 000009b4  00000000  00000000  00001998  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000cd3  00000000  00000000  00002485  2**0
+  8 .debug_line   00000be0  00000000  00000000  0000234c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000003b4  00000000  00000000  00003158  2**2
+  9 .debug_frame  00000358  00000000  00000000  00002f2c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000054d  00000000  00000000  0000350c  2**0
+ 10 .debug_str    0000053e  00000000  00000000  00003284  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000b23  00000000  00000000  00003a59  2**0
+ 11 .debug_loc    00000998  00000000  00000000  000037c2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000110  00000000  00000000  0000457c  2**0
+ 12 .debug_ranges 00000110  00000000  00000000  0000415a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -41,7 +41,7 @@ Disassembly of section .text:
    a:	1d c0       	rjmp	.+58     	; 0x46 <__bad_interrupt>
    c:	9d c0       	rjmp	.+314    	; 0x148 <__vector_6>
    e:	1b c0       	rjmp	.+54     	; 0x46 <__bad_interrupt>
-  10:	d3 c1       	rjmp	.+934    	; 0x3b8 <__vector_8>
+  10:	ca c1       	rjmp	.+916    	; 0x3a6 <__vector_8>
   12:	19 c0       	rjmp	.+50     	; 0x46 <__bad_interrupt>
   14:	18 c0       	rjmp	.+48     	; 0x46 <__bad_interrupt>
   16:	c3 c0       	rjmp	.+390    	; 0x19e <__vector_11>
@@ -75,7 +75,7 @@ Disassembly of section .text:
   3e:	b2 07       	cpc	r27, r18
   40:	e1 f7       	brne	.-8      	; 0x3a <.do_clear_bss_loop>
   42:	8e d1       	rcall	.+796    	; 0x360 <main>
-  44:	de c1       	rjmp	.+956    	; 0x402 <_exit>
+  44:	d5 c1       	rjmp	.+938    	; 0x3f0 <_exit>
 
 00000046 <__bad_interrupt>:
   46:	dc cf       	rjmp	.-72     	; 0x0 <__vectors>
@@ -387,7 +387,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0xBB, 0xBB);
  1e2:	6b eb       	ldi	r22, 0xBB	; 187
  1e4:	8b eb       	ldi	r24, 0xBB	; 187
- 1e6:	db d0       	rcall	.+438    	; 0x39e <uart_put_com>
+ 1e6:	d2 d0       	rcall	.+420    	; 0x38c <uart_put_com>
 	}
 	if((temp & (1<<B1)) && (old_buttons & (1<<B1))){
  1e8:	c1 ff       	sbrs	r28, 1
@@ -403,7 +403,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0x44, 0x44);
  1fc:	64 e4       	ldi	r22, 0x44	; 68
  1fe:	84 e4       	ldi	r24, 0x44	; 68
- 200:	ce d0       	rcall	.+412    	; 0x39e <uart_put_com>
+ 200:	c5 d0       	rcall	.+394    	; 0x38c <uart_put_com>
 	}
 	if((temp & (1<<B2)) && (old_buttons & (1<<B2))){
  202:	c2 ff       	sbrs	r28, 2
@@ -419,7 +419,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0x00, 0x00);
  216:	60 e0       	ldi	r22, 0x00	; 0
  218:	80 e0       	ldi	r24, 0x00	; 0
- 21a:	c1 d0       	rcall	.+386    	; 0x39e <uart_put_com>
+ 21a:	b8 d0       	rcall	.+368    	; 0x38c <uart_put_com>
 	}
 	if((temp & (1<<B3)) && (old_buttons & (1<<B3))){
  21c:	c3 ff       	sbrs	r28, 3
@@ -435,7 +435,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0x99, 0x99);
  230:	69 e9       	ldi	r22, 0x99	; 153
  232:	89 e9       	ldi	r24, 0x99	; 153
- 234:	b4 d0       	rcall	.+360    	; 0x39e <uart_put_com>
+ 234:	ab d0       	rcall	.+342    	; 0x38c <uart_put_com>
 		//acc_calibrate();
 	}
 	old_buttons = new_buttons;
@@ -663,123 +663,107 @@ int main(void)
 	gauge_init();
  368:	83 de       	rcall	.-762    	; 0x70 <gauge_init>
 	uart_init();
- 36a:	0e d0       	rcall	.+28     	; 0x388 <uart_init>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 36c:	2f ef       	ldi	r18, 0xFF	; 255
- 36e:	81 e1       	ldi	r24, 0x11	; 17
- 370:	9a e7       	ldi	r25, 0x7A	; 122
- 372:	21 50       	subi	r18, 0x01	; 1
- 374:	80 40       	sbci	r24, 0x00	; 0
- 376:	90 40       	sbci	r25, 0x00	; 0
- 378:	e1 f7       	brne	.-8      	; 0x372 <main+0x12>
- 37a:	00 c0       	rjmp	.+0      	; 0x37c <main+0x1c>
- 37c:	00 00       	nop
-	_delay_ms(5000);
+ 36a:	05 d0       	rcall	.+10     	; 0x376 <uart_init>
 	
 	TCNT0 = 0x00;
- 37e:	12 be       	out	0x32, r1	; 50
+ 36c:	12 be       	out	0x32, r1	; 50
 	TCCR0B |= (1<<CS02)|(1<<CS00);
- 380:	83 b7       	in	r24, 0x33	; 51
- 382:	85 60       	ori	r24, 0x05	; 5
- 384:	83 bf       	out	0x33, r24	; 51
- 386:	ff cf       	rjmp	.-2      	; 0x386 <main+0x26>
+ 36e:	83 b7       	in	r24, 0x33	; 51
+ 370:	85 60       	ori	r24, 0x05	; 5
+ 372:	83 bf       	out	0x33, r24	; 51
+ 374:	ff cf       	rjmp	.-2      	; 0x374 <main+0x14>
 
-00000388 <uart_init>:
+00000376 <uart_init>:
 
 volatile static uint8_t tx_buffer[2];
 volatile static uint8_t size = 0;
 
 void uart_init(void) {
 	UBRRH = (uint8_t)(MYUBBR>>8);								//set baud rate
- 388:	12 b8       	out	0x02, r1	; 2
+ 376:	12 b8       	out	0x02, r1	; 2
 	UBRRL = (uint8_t)(MYUBBR);
- 38a:	83 e3       	ldi	r24, 0x33	; 51
- 38c:	89 b9       	out	0x09, r24	; 9
+ 378:	83 e3       	ldi	r24, 0x33	; 51
+ 37a:	89 b9       	out	0x09, r24	; 9
 	UCSRB = (1<<TXEN);											//enable transmit
- 38e:	88 e0       	ldi	r24, 0x08	; 8
- 390:	8a b9       	out	0x0a, r24	; 10
+ 37c:	88 e0       	ldi	r24, 0x08	; 8
+ 37e:	8a b9       	out	0x0a, r24	; 10
 	UCSRC = (1<<UPM1)|(0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);			//enable even parity, set 8-bit character, set 1 stop bit
- 392:	86 e2       	ldi	r24, 0x26	; 38
- 394:	83 b9       	out	0x03, r24	; 3
+ 380:	86 e2       	ldi	r24, 0x26	; 38
+ 382:	83 b9       	out	0x03, r24	; 3
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
- 396:	8f b7       	in	r24, 0x3f	; 63
- 398:	80 68       	ori	r24, 0x80	; 128
- 39a:	8f bf       	out	0x3f, r24	; 63
- 39c:	08 95       	ret
+ 384:	8f b7       	in	r24, 0x3f	; 63
+ 386:	80 68       	ori	r24, 0x80	; 128
+ 388:	8f bf       	out	0x3f, r24	; 63
+ 38a:	08 95       	ret
 
-0000039e <uart_put_com>:
+0000038c <uart_put_com>:
 }
 
 void uart_put_com(uint8_t command, uint8_t data){
 	while(size > 0);
- 39e:	90 91 62 00 	lds	r25, 0x0062	; 0x800062 <size>
- 3a2:	91 11       	cpse	r25, r1
- 3a4:	fc cf       	rjmp	.-8      	; 0x39e <uart_put_com>
+ 38c:	90 91 62 00 	lds	r25, 0x0062	; 0x800062 <size>
+ 390:	91 11       	cpse	r25, r1
+ 392:	fc cf       	rjmp	.-8      	; 0x38c <uart_put_com>
 	tx_buffer[1] = command;
- 3a6:	e3 e6       	ldi	r30, 0x63	; 99
- 3a8:	f0 e0       	ldi	r31, 0x00	; 0
- 3aa:	81 83       	std	Z+1, r24	; 0x01
+ 394:	e3 e6       	ldi	r30, 0x63	; 99
+ 396:	f0 e0       	ldi	r31, 0x00	; 0
+ 398:	81 83       	std	Z+1, r24	; 0x01
 	tx_buffer[0] = data;
- 3ac:	60 83       	st	Z, r22
+ 39a:	60 83       	st	Z, r22
 	size = 2;
- 3ae:	82 e0       	ldi	r24, 0x02	; 2
- 3b0:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <size>
+ 39c:	82 e0       	ldi	r24, 0x02	; 2
+ 39e:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <size>
 	UCSRB |= (1<<UDRIE);
- 3b4:	55 9a       	sbi	0x0a, 5	; 10
- 3b6:	08 95       	ret
+ 3a2:	55 9a       	sbi	0x0a, 5	; 10
+ 3a4:	08 95       	ret
 
-000003b8 <__vector_8>:
+000003a6 <__vector_8>:
 }
 
 ISR(USART_UDRE_vect){
- 3b8:	1f 92       	push	r1
- 3ba:	0f 92       	push	r0
- 3bc:	0f b6       	in	r0, 0x3f	; 63
- 3be:	0f 92       	push	r0
- 3c0:	11 24       	eor	r1, r1
- 3c2:	8f 93       	push	r24
- 3c4:	ef 93       	push	r30
- 3c6:	ff 93       	push	r31
+ 3a6:	1f 92       	push	r1
+ 3a8:	0f 92       	push	r0
+ 3aa:	0f b6       	in	r0, 0x3f	; 63
+ 3ac:	0f 92       	push	r0
+ 3ae:	11 24       	eor	r1, r1
+ 3b0:	8f 93       	push	r24
+ 3b2:	ef 93       	push	r30
+ 3b4:	ff 93       	push	r31
 	if(size > 0){
- 3c8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
- 3cc:	88 23       	and	r24, r24
- 3ce:	61 f0       	breq	.+24     	; 0x3e8 <__vector_8+0x30>
+ 3b6:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
+ 3ba:	88 23       	and	r24, r24
+ 3bc:	61 f0       	breq	.+24     	; 0x3d6 <__vector_8+0x30>
 		UDR = tx_buffer[size-1];
- 3d0:	e0 91 62 00 	lds	r30, 0x0062	; 0x800062 <size>
- 3d4:	f0 e0       	ldi	r31, 0x00	; 0
- 3d6:	ee 59       	subi	r30, 0x9E	; 158
- 3d8:	ff 4f       	sbci	r31, 0xFF	; 255
- 3da:	80 81       	ld	r24, Z
- 3dc:	8c b9       	out	0x0c, r24	; 12
+ 3be:	e0 91 62 00 	lds	r30, 0x0062	; 0x800062 <size>
+ 3c2:	f0 e0       	ldi	r31, 0x00	; 0
+ 3c4:	ee 59       	subi	r30, 0x9E	; 158
+ 3c6:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3c8:	80 81       	ld	r24, Z
+ 3ca:	8c b9       	out	0x0c, r24	; 12
 		size--;
- 3de:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
- 3e2:	81 50       	subi	r24, 0x01	; 1
- 3e4:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <size>
+ 3cc:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
+ 3d0:	81 50       	subi	r24, 0x01	; 1
+ 3d2:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <size>
 	}
 	if(size == 0){
- 3e8:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
- 3ec:	81 11       	cpse	r24, r1
- 3ee:	01 c0       	rjmp	.+2      	; 0x3f2 <__vector_8+0x3a>
+ 3d6:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <size>
+ 3da:	81 11       	cpse	r24, r1
+ 3dc:	01 c0       	rjmp	.+2      	; 0x3e0 <__vector_8+0x3a>
 		UCSRB &= ~(1<<UDRIE);
- 3f0:	55 98       	cbi	0x0a, 5	; 10
+ 3de:	55 98       	cbi	0x0a, 5	; 10
 	}
 }
- 3f2:	ff 91       	pop	r31
- 3f4:	ef 91       	pop	r30
- 3f6:	8f 91       	pop	r24
- 3f8:	0f 90       	pop	r0
- 3fa:	0f be       	out	0x3f, r0	; 63
- 3fc:	0f 90       	pop	r0
- 3fe:	1f 90       	pop	r1
- 400:	18 95       	reti
+ 3e0:	ff 91       	pop	r31
+ 3e2:	ef 91       	pop	r30
+ 3e4:	8f 91       	pop	r24
+ 3e6:	0f 90       	pop	r0
+ 3e8:	0f be       	out	0x3f, r0	; 63
+ 3ea:	0f 90       	pop	r0
+ 3ec:	1f 90       	pop	r1
+ 3ee:	18 95       	reti
 
-00000402 <_exit>:
- 402:	f8 94       	cli
+000003f0 <_exit>:
+ 3f0:	f8 94       	cli
 
-00000404 <__stop_program>:
- 404:	ff cf       	rjmp	.-2      	; 0x404 <__stop_program>
+000003f2 <__stop_program>:
+ 3f2:	ff cf       	rjmp	.-2      	; 0x3f2 <__stop_program>

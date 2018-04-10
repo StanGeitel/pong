@@ -20,19 +20,15 @@ ISR(PCINT0_vect){
 	uint8_t new_buttons = (PIN(_PORT) & 0xF);
 	uint8_t temp = (new_buttons ^ old_buttons);
 	if((temp & (1<<B0)) && (old_buttons & (1<<B0))){
-		PORT(_PORT) ^= (1<<L0);
 		uart_put_com(0xBB, 0xBB);
 	}
 	if((temp & (1<<B1)) && (old_buttons & (1<<B1))){
-		PORT(_PORT) ^= (1<<L0);
 		uart_put_com(0x44, 0x44);
 	}
 	if((temp & (1<<B2)) && (old_buttons & (1<<B2))){
-		PORT(_PORT) ^= (1<<L0);
 		uart_put_com(0x00, 0x00);
 	}
 	if((temp & (1<<B3)) && (old_buttons & (1<<B3))){
-		PORT(_PORT) ^= (1<<L0);
 		uart_put_com(0x99, 0x99);
 		//acc_calibrate();
 	}

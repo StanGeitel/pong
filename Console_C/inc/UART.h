@@ -9,6 +9,7 @@
 #define UART_H_
 
 void UART_Init(void);
-int uart_RxChar();
+void uart_TxChar(unsigned char ch);
+unsigned char uart_RxChar();
 
 #endif /* UART_H_ */

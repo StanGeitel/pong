@@ -16,7 +16,6 @@ void uart_init(void) {
 }
 
 void uart_put_com(uint8_t command, uint8_t data){
-	while(size > 0);
 	tx_buffer[1] = command;
 	tx_buffer[0] = data;
 	size = 2;

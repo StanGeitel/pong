@@ -16,7 +16,7 @@ void acc_init(){
 	i2c_single_write(ACC_ADD, INT_CON, 0x00);
 //	i2c_single_write(ACC_ADD, FIFO_EN, 0x08);		//write x,y,z to FIFO
 //	i2c_single_write(ACC_ADD, INT_EN, 0x10);		//enable interrupt on FIFO overflow	
-	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt on data ready
+//	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt on data ready
 
 	uart_init();
 /*	
@@ -49,7 +49,12 @@ ISR(INT0_vect){		//External interrupt0 service routine
 	TCNT1 = 0x0000;
 	ovf_counter = 0;
 */	
-	i2c_burst_read(ACC_ADD, X_MSB);
+	uint16_t temp_16;
+	uint8_t temp_8[2];
+	temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
+	temp_8[1] = (temp_16>>8);
+	temp_8[0] = (temp_16&0xFF);
+	uart_put_com(temp_8[1], temp_8[0]);
 }
 
 ISR(TIMER1_OVF_vect){

@@ -25,7 +25,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0x44, 0x44);
 	}
 	if((temp & (1<<PINB2)) && (old_buttons & (1<<PINB2))){
-		uart_put_com(0x00, 0x00);
+		uart_put_com(0x11, 0x11);
 	}
 	if((temp & (1<<PINB3)) && (old_buttons & (1<<PINB3))){
 		uart_put_com(0x99, 0x99);

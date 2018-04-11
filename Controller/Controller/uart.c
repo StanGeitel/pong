@@ -2,7 +2,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#include "usart.h"
+#include "uart.h"
 
 volatile static uint8_t tx_buffer[2];
 volatile static uint8_t size = 0;

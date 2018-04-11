@@ -1,5 +1,5 @@
-#ifndef USART_H_
-#define USART_H_
+#ifndef UART_H_
+#define UART_H_
 #include <stdint.h>
 
 #define BAUD		4800

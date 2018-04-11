@@ -6,6 +6,8 @@
 #define ACC_SAMP	1000			//Hz
 
 #define ACC_CON		0x1C			//register addresses
+#define SMPRT_DIV	0x19
+#define FIFO_EN		0x23
 #define INT_CON		0x37
 #define INT_EN		0x38
 #define PWR_MAN		0x6B

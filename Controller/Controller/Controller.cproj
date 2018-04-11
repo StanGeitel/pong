@@ -170,10 +170,10 @@
     <Compile Include="gauge.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="gpio.c">
+    <Compile Include="buttons.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="gpio.h">
+    <Compile Include="buttons.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="i2c.c">

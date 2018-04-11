@@ -4,10 +4,8 @@
 #include "acc.h"
 #include "i2c.h"
 
-uint16_t x_acc[2], y_acc[2];
-uint16_t x_vel[2], y_vel[2];
-uint16_t x_pos[2], y_pos[2];
 uint16_t x_noise, y_noise;
+uint8_t ovf_counter = 0;
 
 void acc_init(){
 	i2c_init();
@@ -21,19 +19,13 @@ void acc_init(){
 	
 	TCCR1A = (0<<COM1A1)|(0<<COM1A0)|(0<<COM1B1)|(0<<COM1B0)|(0<<WGM11)|(0<<WGM10);
 	TCCR1B = (0<<ICNC1)|(0<<ICES1)|(0<<WGM13)|(0<<WGM12)|(0<<CS12)|(0<<CS11)|(0<<CS10);		//no clock, clear timer on compare
-	OCR1AH = 0x00;
-	OCR1AL = 0x05;							//match compare after 5 pulses
-	TIMSK |= (1<<OCIE1A);					//enable interrupt on output compare A match
-	SREG |= (1 << SREG_I);					//enable interrupts I in global status register
-}
-
-void acc_run(){
+	TIMSK |= (1<<TOIE1);							//enable overflow interrupt
+	SREG |= (1<<SREG_I);							//enable interrupts I in global status register
 	
+//	acc_calibrate();
 }
 
 void acc_calibrate(){
-	x_acc[0] = x_acc[1] = y_acc[0] = y_acc[1] = x_vel[0] = x_vel[1] = y_vel[0] = y_vel[1] =	x_pos[0] = x_pos[1] = y_pos[0] = y_pos[1] = 0;
-	
 	uint16_t count = 0;
 	do{
 		x_noise += i2c_burst_read(ACC_ADD, X_MSB);
@@ -45,13 +37,17 @@ void acc_calibrate(){
 	y_noise = (y_noise>>10);
 }
 
-
 ISR(INT0_vect){		//External interrupt0 service routine
-		
+/*	uint16_t time = 0;
+	time = TCNT1;
+	TCNT1 = 0x0000;
+	ovf_counter = 0;
+*/	
+	i2c_burst_read(ACC_ADD, X_MSB);
 }
 
-ISR(TIMER1_COMPA_vect){
-	
+ISR(TIMER1_OVF_vect){
+	ovf_counter++;
 }
 
  

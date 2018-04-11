@@ -3,7 +3,6 @@
 #include <avr/interrupt.h>
 
 #include "usart.h"
-#include "gpio.h"
 
 volatile static uint8_t tx_buffer[2];
 volatile static uint8_t size = 0;

@@ -2,7 +2,7 @@
 #define USART_H_
 #include <stdint.h>
 
-#define BAUD		9600
+#define BAUD		4800
 #define MYUBBR		((F_CPU/(BAUD*16L))-1)			//16L is for asynchrone mode
 
 #endif

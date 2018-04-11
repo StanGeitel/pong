@@ -3,7 +3,6 @@
 
 #include "gauge.h"
 #include "i2c.h"
-#include "gpio.h"
 
 uint8_t count = 0;
 
@@ -16,7 +15,8 @@ void gauge_init(void){
 	MCUCR |= (1<<ISC11);
 	GIMSK |= (1<<INT1);		//enable external interrupt 1 in general interrupt mask register
 	
-	PORT(_PORT) &= ~(1<<L0); // wat doet led in het begin?
+	PORTB &= ~(1<<PINB4);		//turn led on
+	DDRB |= (1<<PINB4);			//set led as output
 	
 	TCCR0A = (0<<COM0A1)|(0<<COM0A0)|(0<<COM0B1)|(0<<COM0B0)|(0<<WGM01)|(0<<WGM00);
 	TCCR0B = (0<<FOC0A)|(0<<FOC0B)|(0<<WGM02)|(0<<CS02)|(0<<CS01)|(0<<CS00);
@@ -41,7 +41,7 @@ void i2c_send_arp_gauge(){ // naam aanpassen?
 ISR(INT1_vect){	//External interrupt1 service routine
 	if((TCCR0B & (1<<CS02)) && (TCCR0B & (1<<CS00))){ // Als led is aan of knipperend , maar dat is geen 1 en 0 dus even kijken hoe detecteren
 		TCCR0B &= ~((1<<CS02)|(1<<CS00)); // 000 disconnect clock
-		PORT(_PORT) &= ~(1<<L0);
+		PORTB &= ~(1<<PINB4);
 		i2c_burst_write(GAUGE_ADD, HIGH_TRE_MSB, 0x00, 0x00);
 		i2c_burst_write(GAUGE_ADD, LOW_TRE_MSB, 0x7C, 0x1C); // 30%
 		i2c_send_arp_gauge();	
@@ -56,7 +56,7 @@ ISR(INT1_vect){	//External interrupt1 service routine
 
 ISR(TIMER0_OVF_vect){
 	if(count == 17){
-		PORT(_PORT) ^= (1<<L0);
+		PORTB ^= (1<<PINB4);
 		count = 0;
 	}else{
 		count++;

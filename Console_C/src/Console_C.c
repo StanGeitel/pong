@@ -19,9 +19,6 @@
 #include "UART.h"
 #include "stdutils.h"
 // TODO: insert other definitions and declarations here
-//#define PINSEL3		(* (unsigned int* )(0x4002C00C))
-//#define CLKSRCSEL   (* (unsigned int* )(0x400FC10C))
-//#define CLKOUTCFG	(* (unsigned int* )(0x400FC1C8))
 
 int main(void) {
 	unsigned char ch;
@@ -42,12 +39,12 @@ int main(void) {
     while(1) {
     	//uart_TxChar(0xD7);
 
-    	ch = uart_RxChar();
-    	printf("%x \n", ch);
+    	//ch = uart_RxChar();
+    	//printf("%x \n", ch);
     	//ch++;
 
-    	//for(int x =0; x < 10000; x++);
-
+    	//for(int x =0; x < 100000; x++);
+    	//printf("- \n");
     	//uart_TxChar(ch);
         i++ ;
     }

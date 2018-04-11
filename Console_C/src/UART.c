@@ -16,7 +16,7 @@
 
 #define IER1		(* (unsigned int *)(0x4001C004))	//15.4.4 UART Interrupt Enable Register
 
-#define clockCoreFreq (1100000UL)
+#define clockCoreFreq (3000000UL)
 #define pClock (1000000)
 
 #define baudrate 9600
@@ -46,7 +46,7 @@ void UART_Init(void)
 	//DLM1 = Fdiv / 256;
 	//DLL1 = Fdiv % 256;
 
-	Fdiv = ( pClock / (16 * 9600 ));
+	Fdiv = ( pClock / (16 * 4800 ));
 	DLL1 =  Fdiv & 0xFF;
 	DLM1 = (Fdiv >> 0x08) & 0xFF;
 
@@ -58,8 +58,8 @@ void UART_Init(void)
 
 void uart_TxChar(unsigned char ch)
 {
-    while( !(LSR1 & ( 1 << 5)) ); // Wait for Previous transmission
-    THR1=ch;                                  // Load the data to be transmitted
+    while( !(LSR1 & ( 1 << 5)) ); 			// Wait for Previous transmission
+    THR1=ch;                                // Load the data to be transmitted
 }
 
 unsigned char uart_RxChar()

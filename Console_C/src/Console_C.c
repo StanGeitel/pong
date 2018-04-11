@@ -46,8 +46,9 @@ int main(void) {
     	printf("%x \n", ch);
     	//ch++;
 
+    	//for(int x =0; x < 10000; x++);
+
     	//uart_TxChar(ch);
-    	for(int x = 0; x < 100000; x++);
         i++ ;
     }
     return 0 ;

@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 #define ACC_ADD		0b1101000		//accelerometer address
+#define ACC_SAMP	1000			//Hz
 
 #define ACC_CON		0x1C			//register addresses
 #define INT_CON		0x37
@@ -21,5 +22,4 @@
 #endif
 
 void acc_init(void);
-void acc_run(void);
 void acc_calibrate(void);

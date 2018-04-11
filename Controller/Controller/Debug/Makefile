@@ -39,7 +39,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../acc.c \
 ../gauge.c \
-../gpio.c \
+../buttons.c \
 ../i2c.c \
 ../main.c \
 ../usart.c
@@ -54,7 +54,7 @@ ASM_SRCS +=
 OBJS +=  \
 acc.o \
 gauge.o \
-gpio.o \
+buttons.o \
 i2c.o \
 main.o \
 usart.o
@@ -62,7 +62,7 @@ usart.o
 OBJS_AS_ARGS +=  \
 acc.o \
 gauge.o \
-gpio.o \
+buttons.o \
 i2c.o \
 main.o \
 usart.o
@@ -70,7 +70,7 @@ usart.o
 C_DEPS +=  \
 acc.d \
 gauge.d \
-gpio.d \
+buttons.d \
 i2c.d \
 main.d \
 usart.d
@@ -78,7 +78,7 @@ usart.d
 C_DEPS_AS_ARGS +=  \
 acc.d \
 gauge.d \
-gpio.d \
+buttons.d \
 i2c.d \
 main.d \
 usart.d

@@ -6,7 +6,7 @@ acc.c
 
 gauge.c
 
-gpio.c
+buttons.c
 
 i2c.c
 

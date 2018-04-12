@@ -12,5 +12,5 @@ i2c.c
 
 main.c
 
-usart.c
+uart.c
 

@@ -2,7 +2,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#include "usart.h"
+#include "uart.h"
 
 volatile static uint8_t tx_buffer[2];
 volatile static uint8_t size = 0;
@@ -16,7 +16,6 @@ void uart_init(void) {
 }
 
 void uart_put_com(uint8_t command, uint8_t data){
-	while(size > 0);
 	tx_buffer[1] = command;
 	tx_buffer[0] = data;
 	size = 2;

@@ -15,4 +15,4 @@
 #endif
 
 void gauge_init(void);
-void i2c_send_arp_gauge(void);
+void gauge_send_arp(void);

@@ -2,7 +2,11 @@
 #define I2C_H_
 #include <stdint.h>
 
-#define BIT_TIME	0.625	//us
+#define BIT_TIME	0.8
+//5			100kHz
+//1.25		calculated 400kHz
+//0.8		measured 400kHz
+//0.625		400kHz
 
 #endif
 

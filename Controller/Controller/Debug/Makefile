@@ -42,7 +42,7 @@ C_SRCS +=  \
 ../buttons.c \
 ../i2c.c \
 ../main.c \
-../usart.c
+../uart.c
 
 
 PREPROCESSING_SRCS += 
@@ -57,7 +57,7 @@ gauge.o \
 buttons.o \
 i2c.o \
 main.o \
-usart.o
+uart.o
 
 OBJS_AS_ARGS +=  \
 acc.o \
@@ -65,7 +65,7 @@ gauge.o \
 buttons.o \
 i2c.o \
 main.o \
-usart.o
+uart.o
 
 C_DEPS +=  \
 acc.d \
@@ -73,7 +73,7 @@ gauge.d \
 buttons.d \
 i2c.d \
 main.d \
-usart.d
+uart.d
 
 C_DEPS_AS_ARGS +=  \
 acc.d \
@@ -81,7 +81,7 @@ gauge.d \
 buttons.d \
 i2c.d \
 main.d \
-usart.d
+uart.d
 
 OUTPUT_FILE_PATH +=Controller.elf
 

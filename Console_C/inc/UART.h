@@ -13,6 +13,8 @@
 #define PINSEL1		(* (unsigned int* )(0x4002C004))
 #define PCLKSEL0 	(* (unsigned int* )(0x400FC1A8))	//4.7.3 Peripheral Clock Selection register 0
 
+#define ISER0 		(* (unsigned int* )(0xE000E100))	//6.5.1 Interrupt Set-Enable Register
+
 #define THR1		(* (unsigned int *)(0x40010000))	//15.4.2 Transmit Holding Register
 #define LCR1		(* (unsigned int *)(0x4001000C))	//15.4.7 UART Line Control Register
 #define LSR1		(* (unsigned int *)(0x40010014))	//15.4.10 UART Line Status Register

@@ -3,22 +3,36 @@
 #include "UART.h"
 #include "stdutils.h"
 
-void UART1_IRQHandler(void){
-	uint32_t tmp;
-	unsigned char ch;
-	tmp |= (IIR1 & 0xE) ;
+int g = 0;
+double a = 0;
+int count = 0;
 
-	// Receive Data Available
-	if ((tmp == 0x4) || (tmp == 0xC))
-	{
-		ch = uart_RxChar();
-		printf("%x \n", ch);
+void UART1_IRQHandler(void){
+	if(count  == 0){
+		g |= (uart_RxChar()<<8);
+		printf("%d  %x  1\n", g, g);
+		count++;
+	}
+	else if(count == 1){
+		g |= uart_RxChar();
+		printf("%d  %x   2\n", g, g);
+		count++;
+	}
+	if(count == 2){
+		double temp = (double)g;
+		a = ((temp/16384)*9.81);
+		printf("%lf    3\n", a);
+		count = 0;
+		a = 0;
+		g = 0;
 	}
 }
 
 void UART_Init(void)
 {
 	uint32_t Fdiv;
+
+	ISER0 |= (0x1 << 6);
 
 	PINSEL0 &= ~(0x3 << 30);
 	PINSEL0 |=  (0x1 << 30);		//p0.15 als TXD1
@@ -45,7 +59,7 @@ void UART_Init(void)
 	//-------------------------------------------------------
 	LCR1 &= ~(0x1<<7);  	// Clear DLAB after setting DLL,DLM
 
-	IER1 |= (0x5<<0);			//Enable the RDA interrupts.
+	IER1 |= (0x1<<0);			//Enable the RDA interrupts.
 	//IIR1 |= ()
 }
 
@@ -61,6 +75,11 @@ unsigned char uart_RxChar()
     while( !(LSR1 & (1 << 0)) ); 			//wait until any data arrives in Rx FIFO
     ch = RBR1 & (0xFF << 0); 				// Read received data
     return ch;
+}
+
+void acceleratie(unsigned char ch){
+	unsigned char acceleratie;
+
 }
 
 

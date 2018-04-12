@@ -4,6 +4,9 @@
 #include "buttons.h"
 #include "uart.h"
 
+#include "acc.h"
+#include "i2c.h"
+
 volatile uint8_t old_buttons = 0x0;
 
 void buttons_init(){
@@ -28,7 +31,12 @@ ISR(PCINT0_vect){
 		uart_put_com(0x11, 0x11);
 	}
 	if((temp & (1<<PINB3)) && (old_buttons & (1<<PINB3))){
-		uart_put_com(0x99, 0x99);
+		uint16_t temp_16;
+		uint8_t temp_8[2];
+		temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
+		temp_8[1] = (temp_16>>8);
+		temp_8[0] = (temp_16&0xFF);
+		uart_put_com(temp_8[1], temp_8[0]);
 	}
 	old_buttons = new_buttons;
 }

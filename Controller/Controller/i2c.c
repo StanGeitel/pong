@@ -136,4 +136,3 @@ uint8_t i2c_get_data(){
 	DDRB |= (1<<PINB5);					//set as SDA as output
 	return(ret);
 }
-

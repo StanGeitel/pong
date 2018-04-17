@@ -61,4 +61,71 @@ ISR(TIMER1_OVF_vect){
 	ovf_counter++;
 }
 
+/*
+uint16_t x_acc[2], y_acc[2];
+uint16_t x_vel[2], y_vel[2];
+uint16_t x_pos[2], y_pos[2];
+uint16_t x_noise, y_noise;
+
+void acc_init(){
+	i2c_init();
+//	ext_int0_init();
+	
+	i2c_single_write(ACC_ADD, PWR_MAN, 0x00);		//turn off sleep mode
+//	i2c_single_write(ACC_ADD, ACC_CON, 0x00);		//set range on +/- 2g
+//	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt pin on data ready
+	
+//	acc_calibrate();
+}
+
+void acc_run(){
+	uint8_t count = 0;
+	do{
+		x_acc[1] = i2c_burst_read(ACC_ADD, X_MSB) + x_noise;
+		y_acc[1] = i2c_burst_read(ACC_ADD, Y_MSB) + y_noise;
+		count++;
+	}while(count != 0x40);
+	
+	x_acc[1] = (x_acc[1]>>6);
+	y_acc[1] = (y_acc[1]>>6);
+	
+	x_vel[1] = x_vel[0] + (x_acc[0] + ((x_acc[1] - x_acc[0])>>1));
+	y_vel[1] = y_vel[0] + (y_acc[0] + ((y_acc[1] - y_acc[0])>>1));
+	
+	x_pos[1] = x_pos[0] + (x_vel[0] + ((x_vel[1] - x_vel[0])>>1));
+	y_pos[1] = y_pos[0] + (y_vel[0] + ((y_vel[1] - y_vel[0])>>1));
+	
+	if(x_pos[1] != x_pos[0]){
+		uart_put_com()
+	}
+	if(y_pos[1] != y_pos[0]){
+		uart_put_com()
+	}
+		
+	x_acc[0] = x_acc[1];
+	y_acc[0] = y_acc[1];
+	
+	x_vel[0] = x_vel[1];
+	y_vel[0] = y_vel[1];
+	
+	x_pos[0] = x_pos[1];
+	y_pos[0] = y_pos[1];
+}
+
+void acc_calibrate(){
+	x_acc[0] = x_acc[1] = y_acc[0] = y_acc[1] = x_vel[0] = x_vel[1] = y_vel[0] = y_vel[1] =	x_pos[0] = x_pos[1] = y_pos[0] = y_pos[1] = 0;
+	
+	uint16_t count = 0;
+	do{
+		x_noise += i2c_burst_read(ACC_ADD, X_MSB);
+		y_noise += i2c_burst_read(ACC_ADD, Y_MSB);
+		count++;
+	}while(count != 0x0400);
+	
+	x_noise = (x_noise>>10);
+	y_noise = (y_noise>>10);
+}
+*/
+
+
  

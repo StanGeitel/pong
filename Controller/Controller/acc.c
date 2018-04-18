@@ -5,6 +5,9 @@
 #include "i2c.h"
 #include "uart.h"
 
+uint16_t x_acc[2], y_acc[2];
+uint16_t x_vel[2], y_vel[2];
+uint16_t x_pos[2], y_pos[2];
 uint16_t x_noise, y_noise;
 uint8_t ovf_counter = 0;
 
@@ -16,7 +19,7 @@ void acc_init(){
 	i2c_single_write(ACC_ADD, INT_CON, 0x00);
 //	i2c_single_write(ACC_ADD, FIFO_EN, 0x08);		//write x,y,z to FIFO
 //	i2c_single_write(ACC_ADD, INT_EN, 0x10);		//enable interrupt on FIFO overflow	
-//	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt on data ready
+	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt on data ready
 
 	uart_init();
 /*	
@@ -30,7 +33,7 @@ void acc_init(){
 	
 	SREG |= (1<<SREG_I);							//enable interrupts I in global status register
 }
-
+/*
 void acc_calibrate(){
 	uint16_t count = 0;
 	do{
@@ -42,6 +45,7 @@ void acc_calibrate(){
 	x_noise = (x_noise>>10);
 	y_noise = (y_noise>>10);
 }
+*/
 
 ISR(INT0_vect){		//External interrupt0 service routine
 /*	uint16_t time = 0;
@@ -51,7 +55,13 @@ ISR(INT0_vect){		//External interrupt0 service routine
 */	
 	uint16_t temp_16;
 	uint8_t temp_8[2];
+	
 	temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
+	temp_8[1] = (temp_16>>8);
+	temp_8[0] = (temp_16&0xFF);
+	uart_put_com(temp_8[1], temp_8[0]);
+	
+	temp_16 = i2c_burst_read(ACC_ADD, Y_MSB);
 	temp_8[1] = (temp_16>>8);
 	temp_8[0] = (temp_16&0xFF);
 	uart_put_com(temp_8[1], temp_8[0]);
@@ -62,11 +72,6 @@ ISR(TIMER1_OVF_vect){
 }
 
 /*
-uint16_t x_acc[2], y_acc[2];
-uint16_t x_vel[2], y_vel[2];
-uint16_t x_pos[2], y_pos[2];
-uint16_t x_noise, y_noise;
-
 void acc_init(){
 	i2c_init();
 //	ext_int0_init();
@@ -94,14 +99,14 @@ void acc_run(){
 	
 	x_pos[1] = x_pos[0] + (x_vel[0] + ((x_vel[1] - x_vel[0])>>1));
 	y_pos[1] = y_pos[0] + (y_vel[0] + ((y_vel[1] - y_vel[0])>>1));
-	
+
 	if(x_pos[1] != x_pos[0]){
 		uart_put_com()
 	}
 	if(y_pos[1] != y_pos[0]){
 		uart_put_com()
 	}
-		
+	
 	x_acc[0] = x_acc[1];
 	y_acc[0] = y_acc[1];
 	
@@ -125,7 +130,4 @@ void acc_calibrate(){
 	x_noise = (x_noise>>10);
 	y_noise = (y_noise>>10);
 }
-*/
-
-
- 
+ */

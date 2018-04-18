@@ -25,3 +25,4 @@
 
 void acc_init(void);
 void acc_calibrate(void);
+void test(void);

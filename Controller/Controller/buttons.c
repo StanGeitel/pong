@@ -31,12 +31,7 @@ ISR(PCINT0_vect){
 		uart_put_com(0x11, 0x11);
 	}
 	if((temp & (1<<PINB3)) && (old_buttons & (1<<PINB3))){
-		uint16_t temp_16;
-		uint8_t temp_8[2];
-		temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
-		temp_8[1] = (temp_16>>8);
-		temp_8[0] = (temp_16&0xFF);
-		uart_put_com(temp_8[1], temp_8[0]);
+		uart_put_com(0x77, 0x77);
 	}
 	old_buttons = new_buttons;
 }

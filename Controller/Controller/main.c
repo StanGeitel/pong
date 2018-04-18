@@ -16,7 +16,7 @@ int main(void)
 	buttons_init();
 	gauge_init();
 	acc_init();
-	
+
     while (1) 
     {
     }

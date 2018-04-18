@@ -10,18 +10,18 @@ int count = 0;
 void UART1_IRQHandler(void){
 	if(count  == 0){
 		g |= (uart_RxChar()<<8);
-		printf("%d  %x  1\n", g, g);
+		printf("%d  %x\n", g, g);
 		count++;
 	}
 	else if(count == 1){
 		g |= uart_RxChar();
-		printf("%d  %x   2\n", g, g);
+		printf("%d  %x\n", g, g);
 		count++;
 	}
 	if(count == 2){
 		double temp = (double)g;
 		a = ((temp/16384)*9.81);
-		printf("%lf    3\n", a);
+		printf("%lf\n\n", a);
 		count = 0;
 		a = 0;
 		g = 0;

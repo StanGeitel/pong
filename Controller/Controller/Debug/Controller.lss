@@ -813,13 +813,13 @@ void uart_init(void) {
 	UBRRH = (uint8_t)(MYUBBR>>8);								//set baud rate
  448:	12 b8       	out	0x02, r1	; 2
 	UBRRL = (uint8_t)(MYUBBR);
- 44a:	83 e3       	ldi	r24, 0x33	; 51
+ 44a:	89 e1       	ldi	r24, 0x19	; 25
  44c:	89 b9       	out	0x09, r24	; 9
 	UCSRB = (1<<TXEN);											//enable transmit
  44e:	88 e0       	ldi	r24, 0x08	; 8
  450:	8a b9       	out	0x0a, r24	; 10
-	UCSRC = (1<<UPM1)|(0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);			//enable even parity, set 8-bit character, set 1 stop bit
- 452:	86 e2       	ldi	r24, 0x26	; 38
+	UCSRC = (0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);					//set 8-bit character, set 1 stop bit
+ 452:	86 e0       	ldi	r24, 0x06	; 6
  454:	83 b9       	out	0x03, r24	; 3
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
  456:	8f b7       	in	r24, 0x3f	; 63
@@ -866,7 +866,7 @@ void uart_putc(uint8_t c){
 
 00000498 <uart_put_com>:
 	UCSRB = (1<<TXEN);											//enable transmit
-	UCSRC = (1<<UPM1)|(0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);			//enable even parity, set 8-bit character, set 1 stop bit
+	UCSRC = (0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);					//set 8-bit character, set 1 stop bit
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
 }
 

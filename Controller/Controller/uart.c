@@ -8,17 +8,25 @@ volatile static uint8_t tx_buffer[BUFFER_SIZE];
 volatile static uint8_t tx_head = 0;
 volatile static uint8_t tx_tail = 0;
 
+volatile static uint8_t tx_tele[5] = {0x00, 0xFF, 0xFF, 0xFF, 0xFF};
+
 void uart_init(void) {
 	UBRRH = (uint8_t)(MYUBBR>>8);								//set baud rate
 	UBRRL = (uint8_t)(MYUBBR);
 	UCSRB = (1<<TXEN);											//enable transmit
-	UCSRC = (1<<UPM1)|(0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);			//enable even parity, set 8-bit character, set 1 stop bit
+	UCSRC = (0<<USBS)|(1<<UCSZ1)|(1<<UCSZ0);					//set 8-bit character, set 1 stop bit
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
 }
 
-void uart_put_com(uint8_t command, uint8_t data){
-	uart_putc(command);
-	uart_putc(data);
+void uart_set_pos(uint16_t xpos, uint16_t ypos){
+	tx_tele[0] = (xpos&0xFF);
+	tx_tele[1] = (xpos>>8);
+	tx_tele[2] = (ypos&0xFF);
+	tx_tele[3] = (ypos>>8);
+}
+
+void uart_set_button(uint8_t button){
+	tx_tele[4] = (1<<button);
 }
 
 void uart_putc(uint8_t c){

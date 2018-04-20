@@ -103,14 +103,6 @@ void test(){
 	uint8_t temp_8[2];
 	
 	temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
-	temp_8[1] = (temp_16>>8);
-	temp_8[0] = (temp_16&0xFF);
-//	uart_put_com(temp_8[1], temp_8[0]);
-
 	temp_16 = i2c_burst_read(ACC_ADD, Y_MSB);
-	temp_8[1] = (temp_16>>8);
-	temp_8[0] = (temp_16&0xFF);
-//	uart_put_com(temp_8[1], temp_8[0]);
 
-//	uart_put_com(0x11, 0x11);
 }

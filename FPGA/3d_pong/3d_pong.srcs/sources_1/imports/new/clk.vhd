@@ -5,15 +5,25 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity clk is port (
     clk100MHz : in STD_LOGIC;
     clkSPI : in STD_LOGIC;
-    edge : out STD_LOGIC);
+    edge : out STD_LOGIC;
+    clkVGA : out STD_LOGIC);
 end clk;
 
 architecture Behavioral of clk is
+
+component clk_wiz_0 port( 
+    clk_in1 : in STD_LOGIC;
+    clk_out1 : out STD_LOGIC);
+end component;
 
 signal Q1, Q2, Q3 : STD_LOGIC;
 signal clkstate : STD_LOGIC;
 
 begin
+
+clk1 : clk_wiz_0 port map( 
+    clk_in1 => clk100MHz,
+    clk_out1 => clkVGA);
 
 process(clk100MHz)
 begin

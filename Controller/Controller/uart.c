@@ -4,8 +4,9 @@
 
 #include "uart.h"
 
-volatile static uint8_t tx_buffer[2];
-volatile static uint8_t size = 0;
+volatile static uint8_t tx_buffer[BUFFER_SIZE];
+volatile static uint8_t tx_head = 0;
+volatile static uint8_t tx_tail = 0;
 
 void uart_init(void) {
 	UBRRH = (uint8_t)(MYUBBR>>8);								//set baud rate
@@ -16,18 +17,25 @@ void uart_init(void) {
 }
 
 void uart_put_com(uint8_t command, uint8_t data){
-	tx_buffer[1] = command;
-	tx_buffer[0] = data;
-	size = 2;
+	uart_putc(command);
+	uart_putc(data);
+}
+
+void uart_putc(uint8_t c){
+	uint8_t tmp_head = (tx_head + 1) % BUFFER_SIZE;
+	while(tmp_head == tx_tail);
+	tx_buffer[tx_head] = c;
+	tx_head = tmp_head;
 	UCSRB |= (1<<UDRIE);
 }
 
 ISR(USART_UDRE_vect){
-	if(size > 0){
-		UDR = tx_buffer[size-1];
-		size--;
-	}
-	if(size == 0){
+	uint8_t tmp_tail = 0;
+	if(tx_tail != tx_head){
+		tmp_tail = (tx_tail + 1) % BUFFER_SIZE;
+		UDR = tx_buffer[tx_tail];
+		tx_tail = tmp_tail;
+	}else{
 		UCSRB &= ~(1<<UDRIE);
 	}
 }

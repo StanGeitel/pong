@@ -389,7 +389,7 @@ END GROUP
                 0x20084000                __top_RamAHB32 = 0x20084000
                 0x20084000                __top_RAM2 = 0x20084000
 
-.text           0x00000000     0x2d28
+.text           0x00000000     0x2d10
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -398,10 +398,10 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x2d28 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x2d10 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000d4        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x2d28 LOADADDR (.data_RAM2)
+                0x000000d8        0x4 LONG 0x2d10 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
@@ -475,24 +475,25 @@ END GROUP
                 0x00000300                main
  *fill*         0x00000324        0x4 ff
  .text.UART1_IRQHandler
-                0x00000328      0x10c ./src/UART.o
+                0x00000328      0x108 ./src/UART.o
                 0x00000328                UART1_IRQHandler
  .text.UART_Init
-                0x00000434       0xc8 ./src/UART.o
-                0x00000434                UART_Init
+                0x00000430       0xc8 ./src/UART.o
+                0x00000430                UART_Init
  .text.uart_RxChar
-                0x000004fc       0x30 ./src/UART.o
-                0x000004fc                uart_RxChar
- .text.__main   0x0000052c       0x14 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_semihost.a(_cr__main.o)
-                0x0000052c                __CR_SEMIHOST
-                0x0000052c                __main
+                0x000004f8       0x30 ./src/UART.o
+                0x000004f8                uart_RxChar
+ .text.__main   0x00000528       0x14 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_semihost.a(_cr__main.o)
+                0x00000528                __CR_SEMIHOST
+                0x00000528                __main
  .text.fp_round
-                0x00000540       0x4c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x0000053c       0x4c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
  .text.pr_dec.constprop.1
-                0x0000058c       0x26 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
- *fill*         0x000005b2        0x2 ff
- .text.sprintf  0x000005b4       0x6c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
-                0x000005b4                sprintf
+                0x00000588       0x26 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+ *fill*         0x000005ae        0x2 ff
+ .text.sprintf  0x000005b0       0x6c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x000005b0                sprintf
+ *fill*         0x0000061c        0x4 ff
  .text.fp_display
                 0x00000620      0x8ec c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
  .text.vsnprintf
@@ -619,51 +620,51 @@ END GROUP
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata        0x00002c70        0x7 ./src/Console_C.o
  *fill*         0x00002c77        0x1 ff
- .rodata        0x00002c78       0x22 ./src/UART.o
+ .rodata        0x00002c78        0xe ./src/UART.o
  .rodata.str1.1
-                0x00002c9a       0x34 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x00002c86       0x34 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata.str1.1
-                0x00002cce        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(initio.o)
+                0x00002cba        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(initio.o)
  .rodata.str1.1
-                0x00002cd2       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(printf.o)
+                0x00002cbe       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
  .rodata.str1.1
-                0x00002d03       0x18 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(alloc.o)
- *fill*         0x00002d1b        0x5 ff
+                0x00002cef       0x18 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(alloc.o)
+ *fill*         0x00002d07        0x1 ff
  .rodata.__huge_vall
-                0x00002d20        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_hugeval.o)
-                0x00002d20                __huge_vall
-                0x00002d28                . = ALIGN (0x4)
+                0x00002d08        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_hugeval.o)
+                0x00002d08                __huge_vall
+                0x00002d10                . = ALIGN (0x4)
 
-.glue_7         0x00002d28        0x0
- .glue_7        0x00002d28        0x0 linker stubs
+.glue_7         0x00002d10        0x0
+ .glue_7        0x00002d10        0x0 linker stubs
 
-.glue_7t        0x00002d28        0x0
- .glue_7t       0x00002d28        0x0 linker stubs
+.glue_7t        0x00002d10        0x0
+ .glue_7t       0x00002d10        0x0 linker stubs
 
-.vfp11_veneer   0x00002d28        0x0
- .vfp11_veneer  0x00002d28        0x0 linker stubs
+.vfp11_veneer   0x00002d10        0x0
+ .vfp11_veneer  0x00002d10        0x0 linker stubs
 
-.v4_bx          0x00002d28        0x0
- .v4_bx         0x00002d28        0x0 linker stubs
+.v4_bx          0x00002d10        0x0
+ .v4_bx         0x00002d10        0x0 linker stubs
 
-.iplt           0x00002d28        0x0
- .iplt          0x00002d28        0x0 ./src/Console_C.o
+.iplt           0x00002d10        0x0
+ .iplt          0x00002d10        0x0 ./src/Console_C.o
 
-.rel.dyn        0x00002d28        0x0
- .rel.iplt      0x00002d28        0x0 ./src/Console_C.o
+.rel.dyn        0x00002d10        0x0
+ .rel.iplt      0x00002d10        0x0 ./src/Console_C.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00002d28                __exidx_start = .
+                0x00002d10                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002d28                __exidx_end = .
-                0x00002d28                _etext = .
+                0x00002d10                __exidx_end = .
+                0x00002d10                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x00002d28
+.data_RAM2      0x2007c000        0x0 load address 0x00002d10
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -679,7 +680,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x00002d28
+.data           0x10000000        0x0 load address 0x00002d10
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -688,7 +689,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x00002d28
+.igot.plt       0x10000000        0x0 load address 0x00002d10
  .igot.plt      0x10000000        0x0 ./src/Console_C.o
 
 .bss_RAM2       0x2007c000        0x0

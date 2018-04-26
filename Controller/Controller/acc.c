@@ -12,7 +12,6 @@ uint16_t x_noise = 0, y_noise = 0;
 uint8_t ovf_counter = 0;
 
 void acc_init(){
-	i2c_init();
 	i2c_single_write(ACC_ADD, PWR_MAN, 0x00);		//turn off sleep mode
 	i2c_single_write(ACC_ADD, ACC_CON, 0x00);		//set range on +/- 2g
 	i2c_single_write(ACC_ADD, SMPRT_DIV, 0x08);		//1kHz sample rate and interrupt rate
@@ -100,7 +99,6 @@ ISR(TIMER1_OVF_vect){
 
 void test(){
 	uint16_t temp_16;
-	uint8_t temp_8[2];
 	
 	temp_16 = i2c_burst_read(ACC_ADD, X_MSB);
 	temp_16 = i2c_burst_read(ACC_ADD, Y_MSB);

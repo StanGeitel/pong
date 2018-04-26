@@ -11,8 +11,6 @@ void buttons_init(){
 	PCMSK0 |= ((1<<PINB3)|(1<<PINB2)|(1<<PINB1)|(1<<PINB0));			//set buttons as source for pin change interrupt 0
 	GIMSK |= (1<<PCIE0);												//enable pin change interrupt 0
 	SREG |= (1<<SREG_I);												//enable interrupts I in global status register
-	
-	uart_init();
 }
 
 ISR(PCINT0_vect){		

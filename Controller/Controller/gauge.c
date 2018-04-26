@@ -7,7 +7,6 @@
 uint8_t count = 0;
 
 void gauge_init(void){
-	i2c_init();
 	i2c_burst_write(GAUGE_ADD, CHARGE_MSB, 0xFF, 0xFF);
 	i2c_burst_write(GAUGE_ADD, LOW_TRE_MSB, 0x7C, 0x1C);
 	

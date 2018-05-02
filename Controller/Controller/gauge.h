@@ -12,7 +12,6 @@
 #define LOW_TRE_LSB		0x07
 #define ARA				0x0C			//Alert Response Address				
 
-#endif
-
 void gauge_init(void);
 void gauge_send_arp(void);
+#endif

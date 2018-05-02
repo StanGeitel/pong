@@ -17,16 +17,19 @@ void acc_init(){
 	i2c_single_write(ACC_ADD, SMPRT_DIV, 0x08);		//1kHz sample rate and interrupt rate
 	i2c_single_write(ACC_ADD, INT_CON, 0x10);		//clear interrupt on any read
 	i2c_single_write(ACC_ADD, INT_EN, 0x01);		//enable interrupt on data ready
+	
+	acc_calibrate();
 
 	MCUCR |= (1 << ISC00);
 	MCUCR |= (1 << ISC01);							//The rising edge of INT0 generates an interrupt request
 	GIMSK |= (1 << INT0);							//enable external interrupt 0 in general interrupt mask register
+	
 	SREG |= (1<<SREG_I);							//enable interrupts I in global status register
 }
 
 void acc_calibrate(){
-	uint16_t count = 0;
 	x_acc[0] = x_acc[1] = y_acc[0] = y_acc[1] = x_vel[0] = x_vel[1] = y_vel[0] = y_vel[1] =	x_pos[0] = x_pos[1] = y_pos[0] = y_pos[1] = 0;	
+/*	uint16_t count = 0;
 	do{
 		x_noise += i2c_burst_read(ACC_ADD, X_MSB);
 		y_noise += i2c_burst_read(ACC_ADD, Y_MSB);
@@ -34,9 +37,10 @@ void acc_calibrate(){
 	}while(count != 0x0400);
 	x_noise = (x_noise>>10);
 	y_noise = (y_noise>>10);
+*/
 }
 
-ISR(INT0_vect){		//External interrupt0 service routine
+ISR(INT0_vect){
 	x_acc[1] = i2c_burst_read(ACC_ADD, X_MSB) + x_noise;
 	y_acc[1] = i2c_burst_read(ACC_ADD, Y_MSB) + y_noise;
 	
@@ -45,29 +49,24 @@ ISR(INT0_vect){		//External interrupt0 service routine
 	}
 	else{
 		drift_cnt = 0;
+		x_vel[1] = x_vel[0] + (x_acc[0] + ((x_acc[1] - x_acc[0])>>1));
+		y_vel[1] = y_vel[0] + (y_acc[0] + ((y_acc[1] - y_acc[0])>>1));
+		
+		x_pos[1] = x_pos[0] + (x_vel[0] + ((x_vel[1] - x_vel[0])>>1));
+		y_pos[1] = y_pos[0] + (y_vel[0] + ((y_vel[1] - y_vel[0])>>1));
+		
+		uart_set_pos(x_pos[1], y_pos[1]);
 	}
-	if(drift_cnt == 16){
+	if(drift_cnt == 8){
 		x_vel[1] = 0;
 		y_vel[1] = 0;
-		
 	}
-	x_vel[1] = x_vel[0] + (x_acc[0] + ((x_acc[1] - x_acc[0])>>1));
-	y_vel[1] = y_vel[0] + (y_acc[0] + ((y_acc[1] - y_acc[0])>>1));
-	
-	x_pos[1] = x_pos[0] + (x_vel[0] + ((x_vel[1] - x_vel[0])>>1));
-	y_pos[1] = y_pos[0] + (y_vel[0] + ((y_vel[1] - y_vel[0])>>1));
-	
-	uart_set_pos(x_pos[1], y_pos[1]);
-	
 	x_acc[0] = x_acc[1];
 	y_acc[0] = y_acc[1];
-	
+
 	x_vel[0] = x_vel[1];
 	y_vel[0] = y_vel[1];
-	
+
 	x_pos[0] = x_pos[1];
 	y_pos[0] = y_pos[1];
-	
-
-
 }

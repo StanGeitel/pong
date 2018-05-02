@@ -17,8 +17,8 @@ int main(void)
 	
 	i2c_init();
 	uart_init();
-	buttons_init();
 	gauge_init();
+	buttons_init();
 	acc_init();
 
     while (1) 

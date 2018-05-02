@@ -4,7 +4,7 @@
 #include "gauge.h"
 #include "i2c.h"
 
-uint8_t count = 0;
+volatile static uint8_t count = 0;
 
 void gauge_init(void){
 	i2c_burst_write(GAUGE_ADD, CHARGE_MSB, 0xFF, 0xFF);

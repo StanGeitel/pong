@@ -21,7 +21,6 @@
 #define X_COM		0b111000
 #define Y_COM		0b111001
 
-#endif
-
 void acc_init(void);
 void acc_calibrate(void);
+#endif

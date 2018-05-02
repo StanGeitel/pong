@@ -8,8 +8,6 @@
 //0.8		measured 400kHz
 //0.625		400kHz
 
-#endif
-
 void i2c_single_write(uint8_t, uint8_t, uint8_t);
 void i2c_burst_write(uint8_t, uint8_t, uint8_t, uint8_t);
 uint8_t i2c_single_read(uint8_t, uint8_t);
@@ -23,3 +21,4 @@ void i2c_send_nack(void);
 uint8_t i2c_get_ack(void);
 void i2c_send_data(uint8_t);
 uint8_t i2c_get_data(void);
+#endif

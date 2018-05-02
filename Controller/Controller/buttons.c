@@ -4,7 +4,7 @@
 #include "buttons.h"
 #include "uart.h"
 
-volatile uint8_t old_buttons = 0x0;
+volatile static uint8_t old_buttons = 0x0;
 
 void buttons_init(){
 	DDRB &= ~((1<<PINB3)|(1<<PINB2)|(1<<PINB1)|(1<<PINB0));				//set buttons as input

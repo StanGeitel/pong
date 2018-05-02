@@ -4,12 +4,11 @@
 
 #define BAUD		19200
 #define MYUBBR		((F_CPU/(BAUD*16L))-1)			//16L is for asynchrone mode
-#define BUFFER_SIZE 16
+#define BUFFER_SIZE 5
 
 #endif
 
 void uart_init(void);
-void uart_set_pos(uint16_t, uint16_t);
+void uart_set_pos(int16_t, int16_t);
 void uart_set_button(uint8_t);
-void uart_put_com(uint8_t, uint8_t);
 void uart_putc(uint8_t);

@@ -4,12 +4,6 @@
 
 #include "uart.h"
 
-volatile static uint8_t tx_head = 0;
-volatile static uint8_t tx_tail = 0;
-volatile static uint8_t tx_tele[BUFFER_SIZE] = {0x00, 0xFF, 0xFF, 0xFF, 0xFF};
-volatile static uint8_t tx_buffer[BUFFER_SIZE];
-volatile static uint8_t ovf_counter = 0;
-
 void uart_init(void) {
 	UBRRH = (uint8_t)(MYUBBR>>8);								//set baud rate
 	UBRRL = (uint8_t)(MYUBBR);
@@ -24,22 +18,22 @@ void uart_init(void) {
 	SREG |= (1<<SREG_I);										//enable interrupts I in global status register
 }
 
-void uart_set_pos(int16_t xpos, int16_t ypos){
-	tx_tele[0] = (xpos&0xFF);		//x_pos_LSB
-	tx_tele[1] = (xpos>>8);			//x_pos_MSB
-	tx_tele[2] = (ypos&0xFF);		//y_pos_LSB
-	tx_tele[3] = (ypos>>8);			//y_pos_MSB
+void uart_set_pos(Uart *uart, int16_t xpos, int16_t ypos){
+	(*uart).tx_tele[0] = (xpos&0xFF);		//x_pos_LSB
+	(*uart).tx_tele[1] = (xpos>>8);			//x_pos_MSB
+	(*uart).tx_tele[2] = (ypos&0xFF);		//y_pos_LSB
+	(*uart).tx_tele[3] = (ypos>>8);			//y_pos_MSB
 }
 
-void uart_set_button(uint8_t button){
-	tx_tele[4] = (1<<button);		//set one button as pressed
+void uart_set_button(Uart *uart, uint8_t button){
+	(*uart).tx_tele[4] = (1<<button);		//set one button as pressed
 }
 
-void uart_putc(uint8_t c){
-	uint8_t tmp_head = (tx_head + 1) % BUFFER_SIZE;
-	while(tmp_head == tx_tail);
-	tx_buffer[tx_head] = c;
-	tx_head = tmp_head;
+void uart_putc(Uart *uart, uint8_t c){
+	uint8_t (*uart).tmp_head = ((*uart).tx_head + 1) % BUFFER_SIZE;
+	while((*uart).tmp_head == (*uart).tx_tail);
+	(*uart).tx_buffer[tx_head] = c;
+	(*uart).tx_head = (*uart).tmp_head;
 	UCSRB |= (1<<UDRIE);
 }
 

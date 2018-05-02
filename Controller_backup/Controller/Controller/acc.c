@@ -9,7 +9,6 @@ volatile static int16_t x_acc[2], y_acc[2];
 volatile static int16_t x_vel[2], y_vel[2];
 volatile static int16_t x_pos[2], y_pos[2];
 volatile static int16_t x_noise = 0, y_noise = 0;
-volatile static uint8_t drift_cnt = 0;
 
 void acc_init(){
 	i2c_single_write(ACC_ADD, PWR_MAN, 0x00);		//turn off sleep mode
@@ -41,14 +40,6 @@ ISR(INT0_vect){		//External interrupt0 service routine
 	y_acc[1] = i2c_burst_read(ACC_ADD, Y_MSB) + y_noise;
 	
 	if((x_acc[1] <= 50 && x_acc[1] >= -50) && (y_acc[1] <= 50 && y_acc[1] >= -50)){
-		drift_cnt++;
-	}
-	else{
-		drift_cnt = 0;
-	}
-	if(drift_cnt == 16){
-		x_vel[1] = 0;
-		y_vel[1] = 0;
 		
 	}
 	x_vel[1] = x_vel[0] + (x_acc[0] + ((x_acc[1] - x_acc[0])>>1));
@@ -67,7 +58,5 @@ ISR(INT0_vect){		//External interrupt0 service routine
 	
 	x_pos[0] = x_pos[1];
 	y_pos[0] = y_pos[1];
-	
-
 
 }

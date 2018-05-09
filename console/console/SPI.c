@@ -26,9 +26,6 @@ void SPI_Send(uint8_t data){
 	REG_SPI_TDR |= data;
 }
 
-
-
-
 void LocalLoopbackEnable(int enable){	//LLB controls the local loopback on the data shift register for testing
 	if(enable == 1){
 //		REG_SPI_MR |= (0x1 << 7);		//MISO is internally connected on MOSI

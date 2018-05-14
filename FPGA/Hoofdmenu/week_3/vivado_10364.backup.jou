@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Apr 26 14:22:10 2018
+# Process ID: 10364
+# Current directory: D:/Documenten/Avans 2017-2018/Blok 7/Programeerbare hardware/Week 4/week_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13520 D:\Documenten\Avans 2017-2018\Blok 7\Programeerbare hardware\Week 4\week_3\week_3.xpr
+# Log file: D:/Documenten/Avans 2017-2018/Blok 7/Programeerbare hardware/Week 4/week_3/vivado.log
+# Journal file: D:/Documenten/Avans 2017-2018/Blok 7/Programeerbare hardware/Week 4/week_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Documenten/Avans 2017-2018/Blok 7/Programeerbare hardware/Week 4/week_3/week_3.xpr}
+update_compile_order -fileset sources_1

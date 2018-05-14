@@ -5,8 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity image is port( 
-    clk100MHz : in STD_LOGIC;
-    enableVGA : in STD_LOGIC;
+    clk25MHz : in STD_LOGIC; -- Stond eerst op 100MHz. Vragen aan Jasper, zou dat werken? In principe is het namelijk asynchroon
     h_count, v_count : in STD_LOGIC_VECTOR(9 downto 0);
     red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
 end image;
@@ -17,18 +16,9 @@ signal defaultColor : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
 begin 
 
-process(clk100MHz)
+process(clk25MHz)
 begin
-    if rising_edge(clk100MHz) then
-        if enableVGA = '1' then
-            red <= "1111";
-            green <= defaultColor;
-            blue <= defaultColor;
-        else
-            red <= defaultColor;
-            green <= defaultColor;
-            blue <= defaultColor;
-        end if;
+    if rising_edge(clk25MHz) then
     end if;
 end process;
 

@@ -55,8 +55,12 @@ ISR(INT0_vect){
 		x_pos[1] = x_pos[0] + (x_vel[0] + ((x_vel[1] - x_vel[0])>>1));
 		y_pos[1] = y_pos[0] + (y_vel[0] + ((y_vel[1] - y_vel[0])>>1));
 		
-		uart_set_pos(x_pos[1], y_pos[1]);
+		//uart_set_pos(x_pos[1], y_pos[1]);
 	}
+	
+	//uart_set_pos(x_pos[1], y_pos[1]);
+	//uart_set_pos(0x5555,0x5555);
+	
 	if(drift_cnt == 8){
 		x_vel[1] = 0;
 		y_vel[1] = 0;

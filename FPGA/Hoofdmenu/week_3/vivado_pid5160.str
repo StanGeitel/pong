@@ -1,0 +1,607 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 5160
+License: Customer
+
+Current time: 	Tue May 01 10:26:51 CEST 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 6 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Remco Y700
+User home directory: C:/Users/Remco Y700
+User working directory: D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3
+User country: 	NL
+User language: 	nl
+User locale: 	nl_NL
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.4
+RDI_DATADIR: D:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/vivado.log
+Vivado journal file location: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/vivado.jou
+Engine tmp dir: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/.Xil/Vivado-5160-LAPTOP-NJE0O93L
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 493 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 49 MB (+49232kb) [00:00:06]
+// [Engine Memory]: 480 MB (+352107kb) [00:00:06]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: D:\Documenten\Avans 2017-2018\Blok 8\Pong\Week 4\week_3\week_3.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 501 MB. GUI used memory: 38 MB. Current time: 5/1/18 10:26:53 AM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 61 MB (+9756kb) [00:00:20]
+// [Engine Memory]: 530 MB (+26502kb) [00:00:20]
+// [Engine Memory]: 557 MB (+1061kb) [00:00:23]
+// Tcl Message: open_project {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Xilinx/workspace/week_4_werkend/week_3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 782.141 ; gain = 72.832 
+// Project name: week_3; location: D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3; part: xc7a35tcpg236-1
+// [GUI Memory]: 67 MB (+2426kb) [00:00:25]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 71 MB (+772kb) [00:00:31]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 75 MB (+774kb) [00:02:25]
+// Elapsed time: 296 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd)]", 3); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 9); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(Behavioral) (top.vhd)]", 11); // B (D, cj)
+// PAPropertyPanels.initPanels (positiebepaling.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd), positiebepaling1 : positiebepaling(Behavioral) (positiebepaling.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd), positiebepaling1 : positiebepaling(Behavioral) (positiebepaling.vhd)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [Engine Memory]: 586 MB (+806kb) [00:05:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 600 MB. GUI used memory: 43 MB. Current time: 5/1/18 10:32:33 AM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd), kleurregeling1 : kleurregeling(Behavioral) (kleurregeling.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd), kleurregeling1 : kleurregeling(Behavioral) (kleurregeling.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), vga1 : VGA(Behavioral) (vga.vhd)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, top.xdc]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, top.xdc]", 6, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kleurregeling.vhd", 2); // k (j, cj)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "positiebepaling.vhd", 1); // k (j, cj)
+// [GUI Memory]: 83 MB (+4288kb) [00:07:14]
+// Elapsed time: 266 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cv' command handler elapsed time: 15 seconds
+// Elapsed time: 15 seconds
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bs (cj):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bs (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// [Engine Memory]: 618 MB (+2671kb) [00:11:34]
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+// HMemoryUtils.trashcanNow. Engine heap size: 621 MB. GUI used memory: 49 MB. Current time: 5/1/18 10:38:18 AM CEST
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,199 MB (+577541kb) [00:11:40]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bs (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bs (cj)
+// [GUI Memory]: 87 MB (+453kb) [00:12:17]
+// [GUI Memory]: 92 MB (+115kb) [00:12:37]
+// [Engine Memory]: 1,268 MB (+9346kb) [00:14:09]
+// Elapsed time: 140 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// bs (cj):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,273 MB. GUI used memory: 51 MB. Current time: 5/1/18 10:40:53 AM CEST
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top 
+// [Engine Memory]: 1,544 MB (+223100kb) [00:14:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,573 MB. GUI used memory: 51 MB. Current time: 5/1/18 10:41:14 AM CEST
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,584 MB. GUI used memory: 51 MB. Current time: 5/1/18 10:41:31 AM CEST
+// [Engine Memory]: 1,644 MB (+23074kb) [00:14:49]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.7s
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1521.551 ; gain = 49.055 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'kleurregeling' (3#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:20] INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:12] INFO: [Synth 8-256] done synthesizing module 'top' (5#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/new/top.vhd:18] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1529.434 ; gain = 56.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1529.434 ; gain = 56.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'd:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk1' INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.4 INFO: [Device 21-403] Loading part xc7a35tcpg236-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/inst' Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/inst' Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/inst' Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/inst' 
+// Tcl Message: INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc]. Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis. INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/constrs_1/new/top.xdc] Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.srcs/constrs_1/new/top.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:43 . Memory (MB): peak = 1891.012 ; gain = 418.516 
+// Tcl Message: 24 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 1891.012 ; gain = 418.516 
+// 'dO' command handler elapsed time: 45 seconds
+// [GUI Memory]: 97 MB (+415kb) [00:14:55]
+// Elapsed time: 45 seconds
+dismissDialog("Open Elaborated Design"); // bs (cj)
+// [Engine Memory]: 1,730 MB (+3969kb) [00:14:57]
+// [GUI Memory]: 103 MB (+1464kb) [00:15:27]
+// Elapsed time: 94 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kleurregeling.vhd", 3); // k (j, cj)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "positiebepaling.vhd", 2); // k (j, cj)
+selectCodeEditor("positiebepaling.vhd", 124, 470); // cd (w, cj)
+selectCodeEditor("positiebepaling.vhd", 2, 160); // cd (w, cj)
+selectCodeEditor("positiebepaling.vhd", 145, 289, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// Elapsed time: 15 seconds
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // U (ai, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // U (ai, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_COMMANDS_TO_FOLD_TEXT, "Folding"); // U (ai, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_COMMANDS_TO_FOLD_TEXT, "Folding"); // U (ai, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // U (ai, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // U (ai, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ac (ai, Popup.HeavyWeightWindow)
+// [GUI Memory]: 112 MB (+4379kb) [00:17:24]
+selectCodeEditor("positiebepaling.vhd", 309, 478); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kleurregeling.vhd", 3); // k (j, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,750 MB. GUI used memory: 80 MB. Current time: 5/1/18 10:44:14 AM CEST
+// Elapsed time: 31 seconds
+selectCodeEditor("kleurregeling.vhd", 317, 124); // cd (w, cj)
+// Elapsed time: 26 seconds
+selectCodeEditor("kleurregeling.vhd", 258, 363); // cd (w, cj)
+// Elapsed time: 33 seconds
+selectCodeEditor("kleurregeling.vhd", 570, 398); // cd (w, cj)
+// Elapsed time: 44 seconds
+selectCodeEditor("kleurregeling.vhd", 249, 153); // cd (w, cj)
+// [GUI Memory]: 119 MB (+907kb) [00:19:52]
+// Elapsed time: 68 seconds
+selectCodeEditor("kleurregeling.vhd", 109, 143); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 139); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 82, 143); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 113, 189); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 110, 193); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 110, 193, false, false, false, false, true); // cd (w, cj) - Double Click
+// [GUI Memory]: 125 MB (+186kb) [00:24:31]
+// Elapsed time: 585 seconds
+selectCodeEditor("kleurregeling.vhd", 53, 198); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 103, 198); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 150, 196); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 204, 201); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 253, 198); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 300, 197); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 348, 201); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 401, 195); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 449, 193); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 493, 196); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 496, 197); // cd (w, cj)
+// Elapsed time: 208 seconds
+selectCodeEditor("kleurregeling.vhd", 26, 192); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 636, 188); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 198); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 212); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 596, 219); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 20, 214); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 226); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 514, 230); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 22, 213); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 226); // cd (w, cj)
+// [GUI Memory]: 133 MB (+2145kb) [00:35:13]
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 247); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 266); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 67, 266, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// Run Command: RDIResourceCommand.RDICommands_SAVE_ALL_FILES
+// k (cj): Text Changed: addNotify
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_CANCEL, "Cancel"); // a (k)
+dismissDialog("Text Changed"); // k (cj)
+selectCodeEditor("kleurregeling.vhd", 587, 300); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 29, 262); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 189); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 279); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 51, 296); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 57, 293); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 54, 316); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 331); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 347); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 657, 303); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 91); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 591, 254); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 549, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 505, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 93); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 509, 245); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 524, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 24, 95); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 520, 246); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 520, 246); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 512, 249); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 281); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 52, 294); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 57, 297); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 320); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 331); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 349); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 361); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 377); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 402); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 54, 417); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 517, 421); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 143); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 50, 157); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 157); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 52, 180); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 180); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 194); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 212); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 235); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 54, 249); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 54, 266); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 57, 283); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 523, 284); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 57, 163); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 180); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 200); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 53, 216); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 228); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 57, 263); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 55, 279); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 54, 296); // cd (w, cj)
+// [GUI Memory]: 141 MB (+990kb) [00:37:39]
+// Elapsed time: 222 seconds
+selectCodeEditor("kleurregeling.vhd", 27, 91); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 503, 95); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 508, 94); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 30, 101); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 31, 100, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("kleurregeling.vhd", 26, 97); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 92); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 514, 94); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 507, 95); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 432, 70); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 94); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 515, 93); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 25 seconds
+selectCodeEditor("kleurregeling.vhd", 26, 92); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 110); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 556, 112); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 110); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 529, 112); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 24, 113); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 30, 109); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 29, 110); // cd (w, cj)
+// [GUI Memory]: 148 MB (+158kb) [00:42:28]
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 128); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("kleurregeling.vhd", 25, 141); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 556, 299); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 558, 294); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 521, 305); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 18, 170); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 10, 159); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 142); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 139); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 162); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 179); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 606, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 177); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 192); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 209); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 228); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 247); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 1, 265); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 279); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 525, 278); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 509, 280); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 130 seconds
+selectCodeEditor("kleurregeling.vhd", 27, 144); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 164); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 179); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 517, 176); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 512, 175); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 179); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 197); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 542, 204); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 542, 204, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("kleurregeling.vhd", 25, 193); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("kleurregeling.vhd", 25, 383); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("kleurregeling.vhd", 27, 279); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 26, 279); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 30, 297); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 56, 128); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 30, 61); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 515, 316); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 315); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 4, 351); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 28, 312); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 1,753 MB. GUI used memory: 81 MB. Current time: 5/1/18 11:14:14 AM CEST
+// Elapsed time: 14 seconds
+selectCodeEditor("kleurregeling.vhd", 23, 330); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 27, 331); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 46, 195); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 35, 177); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 49, 195); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 48, 211); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 48, 230); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 49, 250); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 46, 265); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 47, 282); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 47, 297); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 48, 315); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 48, 332); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 49, 353); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 46, 366); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 46, 384); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 51, 397); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 49, 419); // cd (w, cj)
+// Elapsed time: 28 seconds
+selectCodeEditor("kleurregeling.vhd", 20, 484); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("kleurregeling.vhd", 170, 28); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 175, 28); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 163, 29); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 617, 33); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 25, 385); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 671, 405); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 177, 369); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 1061, 317); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 1004, 318); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 1009, 318); // cd (w, cj)
+// Elapsed time: 89 seconds
+selectCodeEditor("kleurregeling.vhd", 203, 267); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 202, 283); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 360, 288); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 402, 300); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 94, 384); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 94, 384); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 94, 384, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("kleurregeling.vhd", 99, 384); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 97, 384, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("kleurregeling.vhd", 239, 450); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 234, 450); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 237, 452); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 456, 377); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 201, 77); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 207, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 224, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 274, 80); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 306, 79); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 306, 79); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 273, 79); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 271, 76); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 308, 76); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 308, 76, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("kleurregeling.vhd", 347, 36); // cd (w, cj)
+// Elapsed time: 48 seconds
+selectCodeEditor("kleurregeling.vhd", 306, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 356, 73); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 405, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 454, 72); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 505, 80); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 552, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 603, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 652, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 698, 73); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 749, 77); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 799, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 846, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 894, 75); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 903, 46); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 897, 78); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 943, 80); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 99, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 149, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 197, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 246, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 295, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 342, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 393, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 444, 75); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 444, 75, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("kleurregeling.vhd", 423, 57); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 438, 75); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 488, 73); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 541, 76); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 533, 66); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 537, 76); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 588, 77); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 637, 78); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 686, 76); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 686, 76, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("kleurregeling.vhd", 666, 59); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 685, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 734, 74); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 783, 79); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 927, 77); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 881, 77); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 832, 77); // cd (w, cj)
+typeControlKey((HResource) null, "kleurregeling.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("kleurregeling.vhd", 1086, 78); // cd (w, cj)

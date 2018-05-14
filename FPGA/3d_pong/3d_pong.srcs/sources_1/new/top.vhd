@@ -30,24 +30,24 @@ end component;
 
 component vga is port( 	
     clkVGA : in STD_LOGIC;
-    enableVGA : out STD_LOGIC;
+    red_in, green_in, blue_in : in STD_LOGIC_VECTOR(3 downto 0);
     h_count, v_count : out STD_LOGIC_VECTOR(9 downto 0);
-    hsync, vsync : out STD_LOGIC);
+    hsync, vsync : out STD_LOGIC;
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 component image is port( 
-    clk100MHz : in STD_LOGIC;
-    enableVGA : in STD_LOGIC;
+    clk25MHz : in STD_LOGIC;
     h_count, v_count : in STD_LOGIC_VECTOR(9 downto 0);
     red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 signal tmpedge : STD_LOGIC;
-signal tmpenableVGA : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
 signal tmpnew_frame_ready : STD_LOGIC;
 signal frame : STD_LOGIC_VECTOR(16 downto 0);
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
+signal tmpred, tmpblue, tmpgreen : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
@@ -66,19 +66,23 @@ spi1 : spi port map(
     
 vga1 : vga port map(
     clkVGA => tmpclkVGA,
-    enableVGA => tmpenableVGA,
+    red_in => tmpred,
+    green_in => tmpgreen,
+    blue_in => tmpblue,
     h_count => tmphcount,
     v_count => tmpvcount,
     hsync => hsync,
-    vsync => vsync);
+    vsync => vsync,
+    red => red,
+    green => green,
+    blue => blue);
     
 image1 : image port map(
-    clk100MHz => clk100MHz,
-    enableVGA => tmpenableVGA,  
+    clk25MHz => tmpclkVGA,
     h_count => tmphcount,
     v_count => tmpvcount,
-    red => red,
-    green => green, 
-    blue => blue);
+    red => tmpred,
+    green => tmpgreen, 
+    blue => tmpblue);
 
 end Behavioral;

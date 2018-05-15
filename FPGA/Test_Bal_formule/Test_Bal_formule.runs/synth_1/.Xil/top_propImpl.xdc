@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc rfile:../../../Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc} rfile:../../../Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R19 [get_ports vsync]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]

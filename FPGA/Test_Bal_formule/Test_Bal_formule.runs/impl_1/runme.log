@@ -12,103 +12,103 @@ source top.tcl -notrace
 Command: link_design -top top -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'A1'
-INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'd:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'A1'
+INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'A1/inst'
-Finished Parsing XDC File [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'A1/inst'
-Parsing XDC File [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'A1/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1137.141 ; gain = 552.570
-Finished Parsing XDC File [c:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'A1/inst'
-Parsing XDC File [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc]
-CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:19]
-CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:20]
-CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'green4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:23]
+Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'A1/inst'
+Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'A1/inst'
+Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'A1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1137.070 ; gain = 551.887
+Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'A1/inst'
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:19]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:20]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'green4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'blue2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:24]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'blue3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:25]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'blue4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:26]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'red1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'red2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:28]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'red3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:29]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'red4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:30]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'green1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:31]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'green2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:32]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'green3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:33]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'blue1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:34]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'red1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:35]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'red2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:36]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'red3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'red4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'red4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:38]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'green1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:39]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'green2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:40]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'green3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:41]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'green4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'green4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:42]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue1'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'blue1'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:43]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue2'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'blue2'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:44]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue3'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'blue3'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:45]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'blue4'. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'blue4'. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc:46]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc]
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 10 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1137.141 ; gain = 879.344
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1137.070 ; gain = 879.160
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -119,7 +119,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.960 . Memory (MB): peak = 1137.141 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.749 . Memory (MB): peak = 1137.070 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -127,48 +127,48 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 9427edb9
+Phase 1 Retarget | Checksum: 1b5e9cd42
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.321 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 16013ab21
+Phase 2 Constant propagation | Checksum: f4e9d864
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: d6a491f7
+Phase 3 Sweep | Checksum: ef86270c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.249 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.431 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: d6a491f7
+Phase 4 BUFG optimization | Checksum: ef86270c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.303 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.493 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: d6a491f7
+Phase 5 Shift Register Optimization | Checksum: ef86270c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.311 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.502 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: d6a491f7
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: ef86270c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.340 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.535 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: f6cfdb40
+Ending Power Optimization Task | Checksum: c8b8c8f6
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 25 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
@@ -176,13 +176,13 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1150.738 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1152.691 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
@@ -204,77 +204,77 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7e7a0f3f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6c5d5266
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11095624d
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 17d9be11b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 16eb54d26
+Phase 1.3 Build Placer Netlist Model | Checksum: 27781bdb0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 16eb54d26
+Phase 1.4 Constrain Clocks/Macros | Checksum: 27781bdb0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 16eb54d26
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 27781bdb0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1cd856464
+Phase 2 Global Placement | Checksum: 185a59d72
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1cd856464
+Phase 3.1 Commit Multi Column Macros | Checksum: 185a59d72
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16b4286a6
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f12a6b4b
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1d65dd616
+Phase 3.3 Area Swap Optimization | Checksum: 1c5871538
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1d65dd616
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c5871538
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1ef858a15
+Phase 3.5 Small Shape Detail Placement | Checksum: 1ea845ce3
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 19bc20ecb
+Phase 3.6 Re-assign LUT pins | Checksum: 14f964007
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 19bc20ecb
+Phase 3.7 Pipeline Register Optimization | Checksum: 14f964007
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 19bc20ecb
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 14f964007
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -282,58 +282,58 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 896bf107
+Post Placement Optimization Initialization | Checksum: 1cc3e393b
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 896bf107
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1cc3e393b
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=22.709. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: ec647049
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=20.964. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 17ea0551d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: ec647049
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 17ea0551d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: ec647049
+Phase 4.2 Post Placement Cleanup | Checksum: 17ea0551d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: ec647049
+Phase 4.3 Placer Reporting | Checksum: 17ea0551d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 163850bef
+Phase 4.4 Final Placement Cleanup | Checksum: c391b3b4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 163850bef
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: c391b3b4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
-Ending Placer Task | Checksum: f84937fc
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
+Ending Placer Task | Checksum: 62d455e5
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1150.738 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 47 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1150.738 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.691 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1150.738 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1152.691 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1150.738 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1150.738 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1152.691 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1150.738 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1152.691 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -345,98 +345,107 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 46212329 ConstDB: 0 ShapeSum: b22814d3 RouteDB: 0
+Checksum: PlaceDB: 2e5f9828 ConstDB: 0 ShapeSum: 3474bdbd RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 4863a815
+Phase 1 Build RT Design | Checksum: 10acf263c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1265.945 ; gain = 115.207
-Post Restoration Checksum: NetGraph: 2f0ac029 NumContArr: 1958e7ec Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1273.551 ; gain = 120.859
+Post Restoration Checksum: NetGraph: 78a5aeba NumContArr: 92297782 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 4863a815
+Phase 2.1 Create Timer | Checksum: 10acf263c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 4863a815
+Phase 2.2 Fix Topology Constraints | Checksum: 10acf263c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 4863a815
+Phase 2.3 Pre Route Cleanup | Checksum: 10acf263c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1273.551 ; gain = 120.859
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 16f576faa
+Phase 2.4 Update Timing | Checksum: cb4d6e07
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=22.829 | TNS=0.000  | WHS=-0.143 | THS=-0.926 |
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=21.112 | TNS=0.000  | WHS=-0.084 | THS=-0.552 |
 
-Phase 2 Router Initialization | Checksum: 15f3f55c4
+Phase 2 Router Initialization | Checksum: 13c76655d
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 120a75152
+Phase 3 Initial Routing | Checksum: 2ae49a1e5
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 58
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=20.075 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=18.377 | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 12f5c08a6
+Phase 4.1 Global Iteration 0 | Checksum: 16a61fa52
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
-Phase 4 Rip-up And Reroute | Checksum: 12f5c08a6
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=18.388 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 18acd8140
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
+Phase 4 Rip-up And Reroute | Checksum: 18acd8140
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 12f5c08a6
+Phase 5.1 Delay CleanUp | Checksum: 18acd8140
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 12f5c08a6
+Phase 5.2 Clock Skew Optimization | Checksum: 18acd8140
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
-Phase 5 Delay and Skew Optimization | Checksum: 12f5c08a6
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
+Phase 5 Delay and Skew Optimization | Checksum: 18acd8140
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 158756bf7
+Phase 6.1.1 Update Timing | Checksum: 1935067dd
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=20.154 | TNS=0.000  | WHS=0.178  | THS=0.000  |
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=18.482 | TNS=0.000  | WHS=0.190  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 158756bf7
+Phase 6.1 Hold Fix Iter | Checksum: 16654989a
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
-Phase 6 Post Hold Fix | Checksum: 158756bf7
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
+Phase 6 Post Hold Fix | Checksum: 16654989a
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.195647 %
-  Global Horizontal Routing Utilization  = 0.141983 %
+  Global Vertical Routing Utilization    = 0.219166 %
+  Global Horizontal Routing Utilization  = 0.184149 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -445,56 +454,56 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 158756bf7
+Phase 7 Route finalize | Checksum: 101f3f0c0
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 158756bf7
+Phase 8 Verifying routed nets | Checksum: 101f3f0c0
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 17be62fa4
+Phase 9 Depositing Routes | Checksum: e9c83186
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=20.154 | TNS=0.000  | WHS=0.178  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=18.482 | TNS=0.000  | WHS=0.190  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 17be62fa4
+Phase 10 Post Router Timing | Checksum: e9c83186
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1265.945 ; gain = 115.207
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1273.551 ; gain = 120.859
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-63 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
+64 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1265.945 ; gain = 115.207
+route_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1273.551 ; gain = 120.859
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1265.945 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1273.551 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/impl_1/top_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
@@ -502,7 +511,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-75 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
+76 Infos, 24 Warnings, 27 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -rpx top_timing_summary_routed.rpx -warn_on_violation 
@@ -587,9 +596,8 @@ Creating bitstream...
 Writing bitstream ./top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Apr 28 00:25:13 2018. For additional details about this file, please refer to the WebTalk help file at C:/Proghardware/Vivado/2017.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
 93 Infos, 73 Warnings, 27 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1686.168 ; gain = 393.344
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 28 00:25:13 2018...
+write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1701.973 ; gain = 404.504
+INFO: [Common 17-206] Exiting Vivado at Tue May 15 15:42:34 2018...

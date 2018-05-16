@@ -20,3 +20,5 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Proghardware/Vivado/2017
 open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 794.156 ; gain = 113.137
 update_compile_order -fileset sources_1
 save_project_as Deadline_Spelweergave {C:/Users/ikben/OneDrive/Documents/Blok 8/Project pong/FPGA/Deadline_Spelweergave} -force
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 16 10:02:19 2018...

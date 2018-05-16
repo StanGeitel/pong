@@ -24,44 +24,43 @@ component spi port(
     clk100MHz : in STD_LOGIC;
     edge : in STD_LOGIC;
     dataSPI : in STD_LOGIC;
-    new_frame_ready : buffer STD_LOGIC;
-    rx_data : out STD_LOGIC_VECTOR(16 downto 0));
+    wea : in STD_LOGIC_VECTOR(0 downto 0);
+    addra : out STD_LOGIC_VECTOR(3 downto 0);
+    dina : out STD_LOGIC_VECTOR(9 downto 0));
 end component;
 
-component vga
-   port(clk_25MHz : in STD_LOGIC;
-       red : out STD_LOGIC_VECTOR(3 downto 0);
-       green : out STD_LOGIC_VECTOR(3 downto 0);
-       blue : out STD_LOGIC_VECTOR(3 downto 0);
-       hsync, vsync : out  STD_LOGIC;
-       red_in : in STD_LOGIC_VECTOR(3 downto 0);
-       green_in : in STD_LOGIC_VECTOR(3 downto 0);
-       blue_in : in STD_LOGIC_VECTOR(3 downto 0);
-       hcount_out : out STD_LOGIC_VECTOR(9 downto 0);
-       vcount_out : out STD_LOGIC_VECTOR(9 downto 0));
-       end component;
-       
-signal hcount_out, vcount_out: std_logic_vector(9 downto 0);
+component vga port(
+    clk25MHz : in STD_LOGIC;
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
+    hsync, vsync : out  STD_LOGIC;
+    red_in, green_in, blue_in : in STD_LOGIC_VECTOR(3 downto 0);
+    hcount_out, vcount_out : out STD_LOGIC_VECTOR(9 downto 0));
+end component;
 
-component image 
-    port(clk_25MHz : in STD_LOGIC;
-         red : out STD_LOGIC_VECTOR(3 downto 0);
-         green : out STD_LOGIC_VECTOR(3 downto 0);
-         blue : out STD_LOGIC_VECTOR(3 downto 0);
-         hcount : in std_logic_vector (9 downto 0);
-         vcount : in std_logic_vector (9 downto 0));
-    end component;
-    
-signal red_out : STD_LOGIC_VECTOR(3 downto 0);
-signal green_out : STD_LOGIC_VECTOR(3 downto 0);
-signal blue_out : STD_LOGIC_VECTOR(3 downto 0);
+component image port(
+    clk25MHz : in STD_LOGIC;
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
+    hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0));
+end component;
+
+component memory port (
+    clk25MHz : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR(3 downto 0);
+    dina : in STD_LOGIC_VECTOR(9 downto 0);
+    addr_img : in STD_LOGIC_VECTOR(3 downto 0);
+    wea : in STD_LOGIC_VECTOR(0 downto 0);
+    data_out : out STD_LOGIC_VECTOR(9 downto 0));
+end component;
+
+signal hcount_out, vcount_out: STD_LOGIC_VECTOR(9 downto 0);
 
 signal tmpedge : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
-signal tmpnew_frame_ready : STD_LOGIC;
-signal frame : STD_LOGIC_VECTOR(16 downto 0);
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
 signal tmpred, tmpblue, tmpgreen : STD_LOGIC_VECTOR(3 downto 0);
+signal tmpaddra : STD_LOGIC_VECTOR(3 downto 0);
+signal tmpdina : STD_LOGIC_VECTOR(9 downto 0);
+signal tmpwea : STD_LOGIC_VECTOR(0 downto 0);
 
 begin
 
@@ -75,28 +74,37 @@ spi1 : spi port map(
     clk100MHz => clk100MHz,
     edge => tmpedge,
     dataSPI => dataSPI,
-    new_frame_ready => tmpnew_frame_ready,
-    rx_data => frame);
+    wea => tmpwea,
+    addra => tmpaddra,
+    dina => tmpdina);
     
 vga1 : vga port map(
-    tmpclkVGA,
-    red,
-    green,
-    blue,
-    hsync,
-    vsync,
-    red_out,
-    green_out,
-    blue_out,
-    hcount_out,
-    vcount_out);
+    clk25MHz => tmpclkVGA,
+    red_in => tmpred,
+    green_in => tmpgreen, 
+    blue_in => tmpblue,
+    hsync => hsync,
+    vsync => vsync,
+    red => red,
+    green => green,
+    blue => blue,
+    hcount_out => hcount_out,
+    vcount_out => vcount_out);
     
-image1 : image port map(
-    tmpclkVGA,
-    red_out,
-    green_out,
-    blue_out,
-    hcount_out,
-    vcount_out);
+image1 : image port map(    
+    clk25MHz => tmpclkVGA,
+    red => tmpred,
+    green => tmpgreen,
+    blue => tmpblue,
+    hcount => hcount_out,
+    vcount => vcount_out);
 
+memory1 : memory port map(    
+    clk25MHz => tmpclkVGA,
+    addra => tmpaddra, 
+    dina => tmpdina,
+    addr_img =>, -- welke?
+    wea => tmpwea,
+    data_out =>); -- welke
+    
 end Behavioral;

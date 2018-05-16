@@ -38,8 +38,10 @@ entity image is
         red : out std_logic_vector (3 downto 0);
         green : out std_logic_vector (3 downto 0);
         blue : out std_logic_vector (3 downto 0);
+        addr_ram : out std_logic_vector (3 downto 0);
         hcount : in std_logic_vector (9 downto 0);
-        vcount : in std_logic_vector (9 downto 0));
+        vcount : in std_logic_vector (9 downto 0);
+        data_ram : in std_logic_vector (9 downto 0));
 end image;
 architecture Behavioral of image is
     signal xb : integer:= 390;
@@ -51,14 +53,31 @@ architecture Behavioral of image is
     signal yp2 : integer:= 250;
     signal hcount_int : integer range 0 to 1000;
     signal vcount_int : integer range 0 to 1000;
+    signal data_ram_int : integer range 0 to 1000;
+    signal RamCounter : std_logic_vector (3 downto 0);
+    signal refresh_counter : std_logic;
 begin
-
+    
+    data_ram_int <= to_integer(unsigned(data_ram));
     hcount_int <= to_integer(unsigned(hcount));
     vcount_int <= to_integer(unsigned(vcount)); 
 
 process(clk_25Mhz)
 begin
-if rising_edge(clk_25MHz) then
+if falling_edge(clk_25MHz) then  
+    if vcount > 511 then
+        if RamCounter < 13 and refresh_counter = '0' then
+            addr_ram <= RamCounter;
+            RamCounter <= RamCounter + 1;
+        else 
+            Ramcounter <= (others => '0');
+            refresh_counter <= '1';    
+        end if;
+        if 
+    end if;
+end if;
+    
+if rising_edge(clk_25MHz) then    
     if((hcount_int = xp and (vcount_int <= (yp + 100) and vcount_int >= yp)) or (hcount_int = (xp + 150) and (vcount_int <= (yp + 100) and vcount_int >= yp)) or (vcount_int = yp and (hcount_int <= (xp + 150) and hcount_int >= xp)) or (vcount_int = (yp + 100) and (hcount_int <= (xp + 150) and hcount_int >= xp))) then
         red <= "0000";
         green <= "0000";

@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/.Xil/Vivado-15328-LAPTOP-88VN4TC1/realtime/tmp"
+    set ::env(RT_TMP) "C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-16972-LAPTOP-88VN4TC1/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -25,7 +25,6 @@ set rt::rc [catch {
     rt::delete_design
 
     set rt::partid xc7a35tcpg236-1
-    source $::env(HRT_TCL_PATH)/rtSynthParallelPrep.tcl
 
     set rt::multiChipSynthesisFlow false
     source $::env(SYNTH_COMMON)/common_vhdl.tcl
@@ -33,17 +32,19 @@ set rt::rc [catch {
 
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
-      rt::read_verilog -sv {
-      C:/Proghardware/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv
-      C:/Proghardware/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
+      rt::read_verilog -sv C:/Proghardware/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv
+      rt::read_verilog C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-16972-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v
+      rt::read_vhdl -lib xil_defaultlib {
+      C:/Progh_Opdrachten/hw_week4_bouncing_Ball/hw_week4_bouncing_Ball.srcs/sources_1/new/Positie.vhd
+      C:/Progh_Opdrachten/hw_week4_bouncing_Ball/hw_week4_bouncing_Ball.srcs/sources_1/new/ROM.vhd
+      {C:/Users/ikben/Downloads/Bijlage opdrachten/Bijlage opdrachten/Week 3 + 4 - Bounching Square - Ball/vga.vhd}
+      C:/Progh_Opdrachten/hw_week4_bouncing_Ball/hw_week4_bouncing_Ball.srcs/sources_1/new/top.vhd
     }
-      rt::read_vhdl -lib blk_mem_gen_v8_4_1 c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
-      rt::read_vhdl -lib xil_defaultlib c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd
       rt::read_vhdl -lib xpm C:/Proghardware/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd
       rt::filesetChecksum
     }
     rt::set_parameter usePostFindUniquification false
-    set rt::top blk_mem_gen_0
+    set rt::top top
     set rt::reportTiming false
     rt::set_parameter elaborateOnly true
     rt::set_parameter elaborateRtl true
@@ -54,7 +55,7 @@ set rt::rc [catch {
     rt::set_parameter rstSrlDepthThreshold 4
 # MODE: 
     rt::set_parameter webTalkPath {}
-    rt::set_parameter enableSplitFlowPath "C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/.Xil/Vivado-15328-LAPTOP-88VN4TC1/"
+    rt::set_parameter enableSplitFlowPath "C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-16972-LAPTOP-88VN4TC1/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 
@@ -72,6 +73,11 @@ set rt::rc [catch {
     if { $rt::flowresult == 1 } { return -code error }
 
 
+  set hsKey [rt::get_parameter helper_shm_key] 
+  if { $hsKey != "" && [info exists ::env(BUILTIN_SYNTH)] && [rt::get_parameter enableParallelHelperSpawn] && [info exists rt::doParallel] && $rt::doParallel} { 
+     $rt::db killSynthHelper $hsKey
+  } 
+  rt::set_parameter helper_shm_key "" 
     if { [ info exists ::env(RT_TMP) ] } {
       if { [info exists ok_to_delete_rt_tmp] && $ok_to_delete_rt_tmp } { 
         file delete -force $::env(RT_TMP)

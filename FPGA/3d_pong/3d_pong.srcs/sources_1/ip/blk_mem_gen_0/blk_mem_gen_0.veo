@@ -60,7 +60,6 @@ blk_mem_gen_0 your_instance_name (
   .addra(addra),  // input wire [3 : 0] addra
   .dina(dina),    // input wire [9 : 0] dina
   .clkb(clkb),    // input wire clkb
-  .enb(enb),      // input wire enb
   .addrb(addrb),  // input wire [3 : 0] addrb
   .doutb(doutb)  // output wire [9 : 0] doutb
 );

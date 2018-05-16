@@ -41,3 +41,5 @@ export_simulation -of_objects [get_files C:/Users/ikben/OneDrive/Documents/GitHu
 current_project hw_week4_bouncing_Ball
 current_project 3d_pong
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_project

@@ -1019,3 +1019,209 @@ selectCodeEditor("image.vhd", 285, 387); // cd (w, cj)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 45 seconds
+selectCodeEditor("image.vhd", 44, 279); // cd (w, cj)
+selectCodeEditor("image.vhd", 80, 265); // cd (w, cj)
+// Elapsed time: 284 seconds
+selectCodeEditor("image.vhd", 319, 365); // cd (w, cj)
+// Elapsed time: 73 seconds
+selectCodeEditor("image.vhd", 168, 377); // cd (w, cj)
+selectCodeEditor("image.vhd", 168, 377); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,175 MB. GUI used memory: 137 MB. Current time: 5/16/18 2:49:17 PM CEST
+// Elapsed time: 153 seconds
+selectCodeEditor("image.vhd", 225, 277); // cd (w, cj)
+selectCodeEditor("image.vhd", 358, 404); // cd (w, cj)
+selectCodeEditor("image.vhd", 222, 284); // cd (w, cj)
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("image.vhd", 244, 283); // cd (w, cj)
+selectCodeEditor("image.vhd", 74, 203, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("image.vhd", 80, 417); // cd (w, cj)
+// Elapsed time: 271 seconds
+selectCodeEditor("image.vhd", 469, 417); // cd (w, cj)
+selectCodeEditor("image.vhd", 601, 412); // cd (w, cj)
+// Elapsed time: 91 seconds
+selectCodeEditor("image.vhd", 527, 411); // cd (w, cj)
+// Elapsed time: 987 seconds
+selectCodeEditor("image.vhd", 193, 660); // cd (w, cj)
+// Elapsed time: 35 seconds
+selectCodeEditor("image.vhd", 99, 584); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("image.vhd", 48, 161); // cd (w, cj)
+selectCodeEditor("image.vhd", 82, 282); // cd (w, cj)
+selectCodeEditor("image.vhd", 98, 132); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 316, 277); // cd (w, cj)
+selectCodeEditor("image.vhd", 81, 279); // cd (w, cj)
+selectCodeEditor("image.vhd", 77, 132); // cd (w, cj)
+// Elapsed time: 140 seconds
+selectCodeEditor("image.vhd", 361, 276); // cd (w, cj)
+selectCodeEditor("image.vhd", 150, 620); // cd (w, cj)
+// Elapsed time: 36 seconds
+selectCodeEditor("image.vhd", 365, 624); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 243, 656); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 240, 688); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 365, 282); // cd (w, cj)
+selectCodeEditor("image.vhd", 371, 124); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("image.vhd", 103, 688); // cd (w, cj)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 349, 684); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 361, 684); // cd (w, cj)
+selectCodeEditor("image.vhd", 371, 690); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 172, 727); // cd (w, cj)
+// Elapsed time: 20 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("image.vhd", 13, 607); // cd (w, cj)
+selectCodeEditor("image.vhd", 13, 607); // cd (w, cj)
+selectCodeEditor("image.vhd", 5, 607); // cd (w, cj)
+selectCodeEditor("image.vhd", 1, 607); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,175 MB. GUI used memory: 138 MB. Current time: 5/16/18 3:19:17 PM CEST
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 117, 643); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 105, 661); // cd (w, cj)
+selectCodeEditor("image.vhd", 93, 657); // cd (w, cj)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 79, 688); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 356, 691); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 85, 665); // cd (w, cj)
+selectCodeEditor("image.vhd", 195, 658); // cd (w, cj)
+selectCodeEditor("image.vhd", 105, 675); // cd (w, cj)
+// Elapsed time: 252 seconds
+selectCodeEditor("image.vhd", 246, 264); // cd (w, cj)
+selectCodeEditor("image.vhd", 145, 126); // cd (w, cj)
+selectCodeEditor("image.vhd", 291, 126); // cd (w, cj)
+selectCodeEditor("image.vhd", 218, 210); // cd (w, cj)
+selectCodeEditor("image.vhd", 172, 134); // cd (w, cj)
+selectCodeEditor("image.vhd", 182, 378); // cd (w, cj)
+selectCodeEditor("image.vhd", 101, 675); // cd (w, cj)
+// Elapsed time: 46 seconds
+selectCodeEditor("image.vhd", 96, 450); // cd (w, cj)
+// Elapsed time: 48 seconds
+selectCodeEditor("image.vhd", 89, 501); // cd (w, cj)
+selectCodeEditor("image.vhd", 89, 501); // cd (w, cj)
+// Elapsed time: 135 seconds
+selectCodeEditor("image.vhd", 87, 63); // cd (w, cj)
+selectCodeEditor("image.vhd", 149, 556); // cd (w, cj)
+selectCodeEditor("image.vhd", 144, 568); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("image.vhd", 123, 507); // cd (w, cj)
+selectCodeEditor("image.vhd", 111, 513); // cd (w, cj)
+// Elapsed time: 38 seconds
+selectCodeEditor("image.vhd", 188, 685); // cd (w, cj)
+selectCodeEditor("image.vhd", 172, 661); // cd (w, cj)
+selectCodeEditor("image.vhd", 167, 671); // cd (w, cj)
+// Elapsed time: 235 seconds
+selectCodeEditor("image.vhd", 242, 273); // cd (w, cj)
+// Elapsed time: 122 seconds
+selectCodeEditor("image.vhd", 694, 270); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("image.vhd", 222, 605); // cd (w, cj)
+// Elapsed time: 32 seconds
+selectCodeEditor("image.vhd", 356, 282, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("image.vhd", 88, 343); // cd (w, cj)
+selectCodeEditor("image.vhd", 82, 335); // cd (w, cj)
+selectCodeEditor("image.vhd", 360, 285); // cd (w, cj)
+// Elapsed time: 48 seconds
+selectCodeEditor("image.vhd", 232, 641, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("image.vhd", 196, 643, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_INDENT_SELECTION, "Indent Selection"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("image.vhd", 231, 641, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_INDENT_SELECTION, "Indent Selection"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("image.vhd", 226, 640); // cd (w, cj)
+// Elapsed time: 97 seconds
+selectCodeEditor("image.vhd", 215, 278); // cd (w, cj)
+selectCodeEditor("image.vhd", 491, 281); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("image.vhd", 398, 282); // cd (w, cj)
+selectCodeEditor("image.vhd", 178, 281); // cd (w, cj)
+// Elapsed time: 41 seconds
+selectCodeEditor("image.vhd", 158, 629); // cd (w, cj)
+selectCodeEditor("image.vhd", 98, 635); // cd (w, cj)
+// Elapsed time: 214 seconds
+selectCodeEditor("image.vhd", 347, 303, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("image.vhd", 333, 300); // cd (w, cj)
+selectCodeEditor("image.vhd", 351, 299); // cd (w, cj)
+// Elapsed time: 84 seconds
+selectCodeEditor("image.vhd", 214, 725); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("image.vhd", 127, 723); // cd (w, cj)
+selectCodeEditor("image.vhd", 229, 725); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,175 MB. GUI used memory: 138 MB. Current time: 5/16/18 3:49:17 PM CEST
+// Elapsed time: 149 seconds
+selectCodeEditor("image.vhd", 107, 306); // cd (w, cj)
+// Elapsed time: 203 seconds
+selectCodeEditor("image.vhd", 205, 422); // cd (w, cj)
+selectCodeEditor("image.vhd", 200, 417); // cd (w, cj)
+// Elapsed time: 167 seconds
+selectCodeEditor("image.vhd", 159, 368); // cd (w, cj)
+// Elapsed time: 136 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ba"); // l (aP, cj)
+selectCodeEditor("image.vhd", 175, 594); // cd (w, cj)
+selectCodeEditor("image.vhd", 174, 586); // cd (w, cj)
+// Elapsed time: 325 seconds
+selectCodeEditor("image.vhd", 174, 586); // cd (w, cj)
+selectCodeEditor("image.vhd", 174, 586, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // U (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("image.vhd", 156, 594); // cd (w, cj)
+selectCodeEditor("image.vhd", 182, 588); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 55 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 380 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Elapsed time: 50 seconds
+closeMainWindow("3d_pong - [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr] - Vivado 2017.4"); // cj
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// x (cj): Close Project: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Close Project : addNotify
+dismissDialog("Close Project"); // x (cj)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,175 MB. GUI used memory: 133 MB. Current time: 5/16/18 4:11:35 PM CEST
+// 'b' command handler elapsed time: 4 seconds
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bs (cj)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.

@@ -3,64 +3,47 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
-    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
     <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
     <avrdevice>ATSAM4S8B</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
-    <Language>C</Language>
+    <Language>CPP</Language>
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>console</AssemblyName>
-    <Name>console</Name>
-    <RootNamespace>console</RootNamespace>
+    <AssemblyName>Console_cpp</AssemblyName>
+    <Name>Console_cpp</Name>
+    <RootNamespace>Console_cpp</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <RamSnippetAddress />
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <OverrideVtorValue />
     <BootSegment>2</BootSegment>
     <ResetRule>0</ResetRule>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <EraseKey />
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-        <options />
-        <configurations />
-        <files />
-        <documentation help="" />
-        <offline-documentation help="" />
-        <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.35.1" />
-        </dependencies>
-      </framework-data>
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.35.1" />
+  </dependencies>
+</framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
-    <avrtoolserialnumber>J41800071130</avrtoolserialnumber>
-    <avrdeviceexpectedsignature>0x289C0AE0</avrdeviceexpectedsignature>
-    <com_atmel_avrdbg_tool_atmelice>
-      <ToolOptions>
-        <InterfaceProperties>
-          <SwdClock>2000000</SwdClock>
-          <JtagDbgClock>7500000</JtagDbgClock>
-        </InterfaceProperties>
-        <InterfaceName>SWD</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
-      <ToolNumber>J41800071130</ToolNumber>
-      <ToolName>Atmel-ICE</ToolName>
-    </com_atmel_avrdbg_tool_atmelice>
-    <avrtoolinterface>SWD</avrtoolinterface>
-    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
-      <ArmGcc>
+      <ArmGccCpp>
   <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
   <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
   <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
@@ -80,36 +63,50 @@
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-  <armgcc.linker.libraries.Libraries>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
     </ListValues>
-  </armgcc.linker.libraries.Libraries>
-  <armgcc.linker.libraries.LibrarySearchPaths>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
     <ListValues>
       <Value>%24(ProjectDir)\Device_Startup</Value>
     </ListValues>
-  </armgcc.linker.libraries.LibrarySearchPaths>
-  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4s8b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
-  <armgcc.assembler.general.IncludePaths>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam4s8b_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
     </ListValues>
-  </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.IncludePaths>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
     </ListValues>
-  </armgcc.preprocessingassembler.general.IncludePaths>
-</ArmGcc>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
-      <ArmGcc>
+      <ArmGccCpp>
   <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
   <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
   <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
@@ -130,33 +127,48 @@
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-  <armgcc.linker.libraries.Libraries>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
     </ListValues>
-  </armgcc.linker.libraries.Libraries>
-  <armgcc.linker.libraries.LibrarySearchPaths>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
     <ListValues>
       <Value>%24(ProjectDir)\Device_Startup</Value>
     </ListValues>
-  </armgcc.linker.libraries.LibrarySearchPaths>
-  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4s8b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
-  <armgcc.assembler.general.IncludePaths>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam4s8b_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
     </ListValues>
-  </armgcc.assembler.general.IncludePaths>
-  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.IncludePaths>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.57\sam4s\include</Value>
     </ListValues>
-  </armgcc.preprocessingassembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
-</ArmGcc>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
@@ -166,19 +178,19 @@
     <Compile Include="Device_Startup\system_sam4s.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="main.c">
+    <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="sam4s8b.h">
+    <Compile Include="spi.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="SPI.c">
+    <Compile Include="spi.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart.c">
+    <Compile Include="usart.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart.h">
+    <Compile Include="usart.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

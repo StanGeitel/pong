@@ -38,37 +38,90 @@ entity image is
         red : out std_logic_vector (3 downto 0);
         green : out std_logic_vector (3 downto 0);
         blue : out std_logic_vector (3 downto 0);
+        addr_ram : out std_logic_vector (3 downto 0);
         hcount : in std_logic_vector (9 downto 0);
-        vcount : in std_logic_vector (9 downto 0));
+        vcount : in std_logic_vector (9 downto 0);
+        data_ram : in std_logic_vector (9 downto 0));
 end image;
 architecture Behavioral of image is
-    signal xb : integer:= 390;
-    signal yb : integer:= 300;
-    signal rb : integer:= 15;
-    signal xp : integer:= 250; 
-    signal yp : integer:= 300;
-    signal xp2 : integer:= 450;
-    signal yp2 : integer:= 250;
+--    signal xb : integer:= 390;
+--    signal yb : integer:= 300;
+--    signal rb : integer:= 15;
+--    signal xp : integer:= 250; 
+--    signal yp : integer:= 300;
+--    signal xp2 : integer:= 450;
+--    signal yp2 : integer:= 250;
     signal hcount_int : integer range 0 to 1000;
     signal vcount_int : integer range 0 to 1000;
+    signal RamCounter : std_logic_vector (3 downto 0);
+    signal refresh_counter : std_logic;
+    signal spelmod, moeil, menu, menusel : std_logic_vector (1 downto 0);
+    signal score1, score2 : std_logic_vector (3 downto 0);
+    signal xball, yball, rball, xb1, yb1, xb2, yb2, xb3, yb3, xb4, yb4 : integer range 0 to 1023;
+    
 begin
-
+    
     hcount_int <= to_integer(unsigned(hcount));
     vcount_int <= to_integer(unsigned(vcount)); 
 
 process(clk_25Mhz)
 begin
-if rising_edge(clk_25MHz) then
-    if((hcount_int = xp and (vcount_int <= (yp + 100) and vcount_int >= yp)) or (hcount_int = (xp + 150) and (vcount_int <= (yp + 100) and vcount_int >= yp)) or (vcount_int = yp and (hcount_int <= (xp + 150) and hcount_int >= xp)) or (vcount_int = (yp + 100) and (hcount_int <= (xp + 150) and hcount_int >= xp))) then
+if falling_edge(clk_25MHz) then  
+    if vcount_int > 511 then
+        if RamCounter < 13 and refresh_counter = '0' then
+            addr_ram <= RamCounter;
+            RamCounter <= RamCounter + 1;
+        else 
+            Ramcounter <= (others => '0');
+            refresh_counter <= '1';    
+        end if;
+        if Ramcounter = 1 then
+            menusel <= data_ram (1 downto 0);
+            menu <= data_ram (3 downto 2);
+            moeil <= data_ram (5 downto 4);
+            spelmod <= data_ram (7 downto 6);          
+        elsif Ramcounter = 2 then
+            score2 <= data_ram (3 downto 0);
+            score1 <= data_ram (7 downto 4);
+        elsif Ramcounter = 3 then 
+            xball <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 4 then
+            yball <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 5 then
+            rball <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 6 then
+            xb1 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 7 then
+            yb1 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 8 then
+            xb2 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 9 then
+            yb2 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 10 then
+            xb3 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 11 then
+            yb3 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 12 then
+            xb4 <= to_integer(unsigned(data_ram));
+        elsif Ramcounter = 13 then
+            yb4 <= to_integer(unsigned(data_ram));
+        end if;
+        elsif vcount_int = 0 then
+            refresh_counter <= '0';
+    end if;
+end if;
+    
+if rising_edge(clk_25MHz) then    
+    if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
         red <= "0000";
         green <= "0000";
         blue <= "1000"; 
-    elsif((hcount_int > xp and vcount_int > yp) and (hcount_int < (xp + 150) and vcount < (yp + 100))) then
-        if((xb-hcount_int)*(xb-hcount_int)+(yb-vcount_int)*(yb-vcount_int) <= rb*rb or (hcount_int-xb)*(hcount_int-xb)+(vcount_int-yb)*(vcount_int-yb) <= rb*rb) then
+    elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+        if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
             red <= "0010";
             green <= "0010";
             blue <= "0000";
-        elsif((hcount_int = xp2 and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (hcount_int = (xp2 + 50) and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (vcount_int = yp2 and (hcount_int <= (xp2 + 50) and hcount_int >= xp2)) or (vcount_int = (yp2 + 33) and (hcount_int <= (xp2 + 50) and hcount_int >= xp2))) then
+        elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 33) and vcount_int >= yb2)) or (hcount_int = (xb2 + 50) and (vcount_int <= (yb2 + 33) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 50) and hcount_int >= xb2)) or (vcount_int = (yb2 + 33) and (hcount_int <= (xb2 + 50) and hcount_int >= xb2))) then
             red <= "0010";
             green <= "0000";
             blue <= "0000";
@@ -101,11 +154,11 @@ if rising_edge(clk_25MHz) then
             green <= "0000";
             blue <= "0000";
         end if;       
-    elsif((xb-hcount_int)*(xb-hcount_int)+(yb-vcount_int)*(yb-vcount_int) <= rb*rb or (hcount_int-xb)*(hcount_int-xb)+(vcount_int-yb)*(vcount_int-yb) <= rb*rb) then
+    elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
         red <= "1000";
         green <= "1000";
         blue <= "0000";
-    elsif((hcount_int = xp2 and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (hcount_int = (xp2 + 50) and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (vcount_int = yp2 and (hcount_int <= (xp2 + 50) and hcount_int >= xp2)) or (vcount_int = (yp2 + 33) and (hcount_int <= (xp2 + 50) and hcount_int >= xp2))) then
+    elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 33) and vcount_int >= yb2)) or (hcount_int = (xb2 + 50) and (vcount_int <= (yb2 + 33) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 50) and hcount_int >= xb2)) or (vcount_int = (yb2 + 33) and (hcount_int <= (xb2 + 50) and hcount_int >= xb2))) then
         red <= "1000";
         green <= "0000";
         blue <= "0000"; 

@@ -17,7 +17,7 @@ architecture Behavioral of spi is
 signal bit_number : INTEGER := 0;
 signal new_frame_ready : STD_LOGIC;
 signal frame : STD_LOGIC_VECTOR(15 downto 0);
-signal tmpwea : STD_LOGIC_VECTOR(0 downto 0);
+signal tmpwea : STD_LOGIC_VECTOR(0 downto 0) := "1";
 
 begin
 

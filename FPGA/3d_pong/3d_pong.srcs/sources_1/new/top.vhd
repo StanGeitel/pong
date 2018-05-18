@@ -1,6 +1,5 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
---use IEEE.NUMERIC_STD.ALL;
 
 entity top is port ( 
     clk100MHz : in STD_LOGIC; -- W5
@@ -21,10 +20,10 @@ component clk port(
 end component;
 
 component spi port(
-    clk100MHz : in STD_LOGIC;
+    clk25MHz : in STD_LOGIC;
     edge : in STD_LOGIC;
     dataSPI : in STD_LOGIC;
-    wea : in STD_LOGIC_VECTOR(0 downto 0);
+    wea : out STD_LOGIC_VECTOR(0 downto 0);
     addra : out STD_LOGIC_VECTOR(3 downto 0);
     dina : out STD_LOGIC_VECTOR(9 downto 0));
 end component;
@@ -39,8 +38,10 @@ end component;
 
 component image port(
     clk25MHz : in STD_LOGIC;
-    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
-    hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0));
+    data_ram : in STD_LOGIC_VECTOR(9 downto 0);
+    addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
+    hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 component memory port (
@@ -53,13 +54,12 @@ component memory port (
 end component;
 
 signal hcount_out, vcount_out: STD_LOGIC_VECTOR(9 downto 0);
-
 signal tmpedge : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
 signal tmpred, tmpblue, tmpgreen : STD_LOGIC_VECTOR(3 downto 0);
-signal tmpaddra : STD_LOGIC_VECTOR(3 downto 0);
-signal tmpdina : STD_LOGIC_VECTOR(9 downto 0);
+signal tmpaddra, tmpaddr_img : STD_LOGIC_VECTOR(3 downto 0);
+signal tmpdina, tmpdata_out : STD_LOGIC_VECTOR(9 downto 0);
 signal tmpwea : STD_LOGIC_VECTOR(0 downto 0);
 
 begin
@@ -71,7 +71,7 @@ clk1 : clk port map(
     clkVGA => tmpclkVGA);
 
 spi1 : spi port map(
-    clk100MHz => clk100MHz,
+    clk25MHz => tmpclkVGA,
     edge => tmpedge,
     dataSPI => dataSPI,
     wea => tmpwea,
@@ -93,18 +93,20 @@ vga1 : vga port map(
     
 image1 : image port map(    
     clk25MHz => tmpclkVGA,
+    data_ram => tmpdata_out,
+    addr_ram => tmpaddr_img,
+    hcount => hcount_out,
+    vcount => vcount_out,
     red => tmpred,
     green => tmpgreen,
-    blue => tmpblue,
-    hcount => hcount_out,
-    vcount => vcount_out);
+    blue => tmpblue);
 
 memory1 : memory port map(    
     clk25MHz => tmpclkVGA,
     addra => tmpaddra, 
     dina => tmpdina,
-    addr_img =>, -- welke?
+    addr_img => tmpaddr_img,
     wea => tmpwea,
-    data_out =>); -- welke
+    data_out => tmpdata_out);
     
 end Behavioral;

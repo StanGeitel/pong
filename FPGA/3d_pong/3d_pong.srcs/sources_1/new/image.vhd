@@ -12,13 +12,6 @@ entity image is port(
 end image;
 
 architecture Behavioral of image is
---    signal xb : integer:= 390;
---    signal yb : integer:= 300;
---    signal rb : integer:= 15;
---    signal xp : integer:= 250; 
---    signal yp : integer:= 300;
---    signal xp2 : integer:= 450;
---    signal yp2 : integer:= 250;
     signal hcount_int : integer range 0 to 1000;
     signal vcount_int : integer range 0 to 1000;
     signal RamCounter : STD_LOGIC_VECTOR(3 downto 0);
@@ -113,6 +106,10 @@ begin
                 red <= "0000";
                 green <= "0010";
                 blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 345 and vcount_int >= 204)) or (hcount_int = 570 and (vcount_int <= 345 and vcount_int >= 204)) or (vcount_int = 345 and (hcount_int <= 570 and hcount_int >= 360)) or (vcount_int = 204 and (hcount_int <= 570 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "0010";
+                blue <= "0000";                
             elsif((hcount_int = 382 and (vcount_int <= 329 and vcount_int >= 219)) or (hcount_int = 544 and (vcount_int <= 329 and vcount_int >= 219)) or (vcount_int = 219 and (hcount_int <= 544 and hcount_int >= 382)) or (vcount_int = 329 and (hcount_int <= 544 and hcount_int >= 382))) then
                 red <= "0000";
                 green <= "0010";
@@ -145,11 +142,19 @@ begin
             red <= "0000";
             green <= "1000";
             blue <= "0000";
-        elsif((hcount_int = 224 and (vcount_int <= 435 and vcount_int >= 113)) or (hcount_int = 702 and (vcount_int <= 435 and vcount_int >= 113)) or (vcount_int = 113 and (hcount_int <= 702 and hcount_int >= 224)) or (vcount_int = 435 and (hcount_int <= 702 and hcount_int >= 224))) then
+        elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
             red <= "0000";
             green <= "1000";
             blue <= "0000";
-        elsif((hcount_int = 303 and (vcount_int <= 382 and vcount_int >= 166)) or (hcount_int = 623 and (vcount_int <= 382 and vcount_int >= 166)) or (vcount_int = 166 and (hcount_int <= 623 and hcount_int >= 303)) or (vcount_int = 382 and (hcount_int <= 623 and hcount_int >= 303))) then
+        elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+            red <= "0000";
+            green <= "1000";
+            blue <= "0000";
+        elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+            red <= "0000";
+            green <= "1000";
+            blue <= "0000";
+        elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
             red <= "0000";
             green <= "1000";
             blue <= "0000";

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed May 23 13:22:05 2018
+| Date             : Wed May 23 15:34:15 2018
 | Host             : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -36,8 +36,8 @@ Table of Contents
 | Dynamic (W)              | 0.118        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      915 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      546 |     20800 |            2.63 |
-|   CARRY4       |    <0.001 |       94 |      8150 |            1.15 |
-|   Register     |    <0.001 |      101 |     41600 |            0.24 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      794 |       --- |             --- |
+| Slice Logic    |    <0.001 |      697 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      439 |     20800 |            2.11 |
+|   CARRY4       |    <0.001 |       74 |      8150 |            0.91 |
+|   Register     |    <0.001 |       61 |     41600 |            0.15 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |    <0.001 |      678 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.115 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        5 |        90 |            5.56 |

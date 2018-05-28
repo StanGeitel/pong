@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity image is port(
     clk25MHz : in STD_LOGIC;
     hcount, vcount : in STD_LOGIC_VECTOR(9 downto 0);
-    data_ram : in STD_LOGIC_VECTOR(9 downto 0);
+    data_ram, data_ram2 : in STD_LOGIC_VECTOR(9 downto 0);
     addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
     red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
 end image;
@@ -15,7 +15,7 @@ architecture Behavioral of image is
     signal hcount_int : integer range 0 to 1000;
     signal vcount_int : integer range 0 to 1000;
     signal RamCounter : STD_LOGIC_VECTOR(3 downto 0);
-    signal refresh_counter : STD_LOGIC;
+    signal refresh_counter : STD_LOGIC := '0';
     signal spelmod, moeil, menu, menusel : STD_LOGIC_VECTOR(1 downto 0);
     signal score1, score2 : STD_LOGIC_VECTOR(3 downto 0);
     signal xball, yball, rball, xb1, yb1, xb2, yb2, xb3, yb3, xb4, yb4, xb2raw, yb2raw, xbh1, ybh1, xbh2, ybh2 : integer range 0 to 1023;
@@ -42,35 +42,35 @@ begin
             end if;
             
             if Ramcounter = 1 then
-                menusel <= data_ram (1 downto 0);
-                menu <= data_ram (3 downto 2);
-                moeil <= data_ram (5 downto 4);
-                spelmod <= data_ram (7 downto 6);          
+                menusel <= data_ram(1 downto 0);
+                menu <= data_ram(3 downto 2);
+                moeil <= data_ram(5 downto 4);
+                spelmod <= data_ram(7 downto 6);          
             elsif Ramcounter = 2 then
-                score2 <= data_ram (3 downto 0);
-                score1 <= data_ram (7 downto 4);
+                score2 <= data_ram2(4 downto 0);
+                score1 <= data_ram2(9 downto 5);
             elsif Ramcounter = 3 then 
-                xball <= to_integer(unsigned(data_ram));
+                xball <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 4 then
-                yball <= to_integer(unsigned(data_ram));
+                yball <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 5 then
-                rball <= to_integer(unsigned(data_ram));
+                rball <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 6 then
-                xb1 <= to_integer(unsigned(data_ram));
+                xb1 <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 7 then
-                yb1 <= to_integer(unsigned(data_ram));
+                yb1 <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 8 then
-                xb2raw <= to_integer(unsigned(data_ram));
+                xb2raw <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 9 then
-                yb2raw <= to_integer(unsigned(data_ram));
+                yb2raw <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 10 then
-                xb3 <= to_integer(unsigned(data_ram));
+                xb3 <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 11 then
-                yb3 <= to_integer(unsigned(data_ram));
+                yb3 <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 12 then
-                xb4 <= to_integer(unsigned(data_ram));
+                xb4 <= to_integer(unsigned(data_ram2));
             elsif Ramcounter = 13 then
-                yb4 <= to_integer(unsigned(data_ram));
+                yb4 <= to_integer(unsigned(data_ram2));
             end if;
         elsif vcount_int = 0 then
             refresh_counter <= '0';

@@ -46,11 +46,11 @@ end component;
 
 component memory port (
     clk25MHz : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR(3 downto 0);
-    dina : in STD_LOGIC_VECTOR(9 downto 0);
+    addra, addra2 : in STD_LOGIC_VECTOR(3 downto 0);
+    dina, dina2 : in STD_LOGIC_VECTOR(9 downto 0);
     addr_img : in STD_LOGIC_VECTOR(3 downto 0);
-    wea : in STD_LOGIC_VECTOR(0 downto 0);
-    data_out : out STD_LOGIC_VECTOR(9 downto 0));
+    wea, wea2 : in STD_LOGIC_VECTOR(0 downto 0);
+    data_out, data_out2 : out STD_LOGIC_VECTOR(9 downto 0));
 end component;
 
 signal hcount_out, vcount_out: STD_LOGIC_VECTOR(9 downto 0);
@@ -58,9 +58,9 @@ signal tmpedge : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
 signal tmpred, tmpblue, tmpgreen : STD_LOGIC_VECTOR(3 downto 0);
-signal tmpaddra, tmpaddr_img : STD_LOGIC_VECTOR(3 downto 0);
-signal tmpdina, tmpdata_out : STD_LOGIC_VECTOR(9 downto 0);
-signal tmpwea : STD_LOGIC_VECTOR(0 downto 0);
+signal tmpaddra, tmpaddra2, tmpaddr_img : STD_LOGIC_VECTOR(3 downto 0);
+signal tmpdina, tmpdina2, tmpdata_out, tmpdata_out2 : STD_LOGIC_VECTOR(9 downto 0);
+signal tmpwea, tmpwea2 : STD_LOGIC_VECTOR(0 downto 0);
 
 begin
 
@@ -104,9 +104,13 @@ image1 : image port map(
 memory1 : memory port map(    
     clk25MHz => tmpclkVGA,
     addra => tmpaddra, 
+    addra2 => tmpaddra2,
+    dina2 => tmpdina2,
     dina => tmpdina,
     addr_img => tmpaddr_img,
     wea => tmpwea,
+    wea2 => tmpwea2,
+    data_out2 => tmpdata_out2,
     data_out => tmpdata_out);
     
 end Behavioral;

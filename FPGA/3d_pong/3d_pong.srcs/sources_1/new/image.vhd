@@ -31,6 +31,8 @@ begin
     rball <= 0;
     xball <= 0;
     yball <= 0;
+    spelmod <= "00";
+    menu <= "00";
 
 process(clk25Mhz)
 begin
@@ -87,249 +89,584 @@ begin
         ybh1 <= (yb1-62)/2+161;
         xbh2 <= (xb2raw-145)/3+360;
         ybh2 <= (yb2raw-62)/3+206;
-        if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+        
+        --Handbal
+        if(spelmod = "01" and menu = "00") then
+            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "1000"; 
+            elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "0010";
+                    green <= "0010";
+                    blue <= "0000";
+          
+            --Schuine lijnen  
+                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                                
+                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+            --handbal
+                elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+            --einde handbal
+                else
+                    red <= "0000";
+                    green <= "0000";
+                    blue <= "0000";
+                end if;                  
+        --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";               
+            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                red <= "1000";
+                green <= "1000";
+                blue <= "0000";        
+            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+       --handbal
+            elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+       --einde handbal
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
+        end if;
+        
+        --Hockey
+        if(spelmod = "10" and menu = "00") then
+            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "1000"; 
+            elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "0010";
+                    green <= "0010";
+                    blue <= "0000";
+                
+        -- hockey batje 1 begin  
+            elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0100";
+            elsif((hcount_int > xbh1 and vcount_int > ybh1) and (hcount_int < (xbh1 + 75) and vcount < (ybh1 + 50))) then
+                -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+               if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "0001";
+                    green <= "0001";
+                    blue <= "0000";
+               elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
+                    red <= "0001";
+                    green <= "0000";
+                    blue <= "0000";
+               elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                    red <= "0001";
+                    green <= "0000";
+                    blue <= "0000";
+               elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                   red <= "0000";
+                   green <= "0001";
+                   blue <= "0000";
+               elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                   red <= "0000";
+                   green <= "0001";
+                   blue <= "0000";
+               elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                   red <= "0000";
+                   green <= "0001";
+                   blue <= "0000";
+               else
+                   red <= "0000";
+                   green <= "0000";
+                   blue <= "0000";
+               end if; -- einde hockey batje 1
+               
+            -- hockey batje 2 begin
+             elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
+                   red <= "0100";
+                   green <= "0000";
+                   blue <= "0000";
+             elsif((hcount_int > xbh2 and vcount_int > ybh2) and (hcount_int < (xbh2 + 50) and vcount < (ybh2 + 33))) then
+             -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                   red <= "0001";
+                   green <= "0001";
+                   blue <= "0000";
+                elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                   red <= "0001";
+                   green <= "0000";
+                   blue <= "0000";
+                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                   red <= "0000";
+                   green <= "0001";
+                   blue <= "0000";
+                else
+                   red <= "0000";
+                   green <= "0000";
+                   blue <= "0000";
+                end if; -- einde hockey batje 2
+           
+            elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                red <= "0100";
+                green <= "0000";
+                blue <= "0000";
+          
+            --Schuine lijnen  
+                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                                
+                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                else
+                    red <= "0000";
+                    green <= "0000";
+                    blue <= "0000";
+                end if;   
+        --hockey batje 1     
+        elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
             red <= "0000";
             green <= "0000";
-            blue <= "1000"; 
-        elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+            blue <= "1000";    
+        --hockey batje 1 einde
+               
+        --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+          
+            -- hockey batje begin  1
+        elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
+            red <= "0000";
+            green <= "0000";
+            blue <= "1000";
+        elsif((hcount_int > xbh1 and vcount_int > ybh1) and (hcount_int < (xbh1 + 75) and vcount < (ybh1 + 50))) then
+            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
             if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
                 red <= "0010";
                 green <= "0010";
                 blue <= "0000";
-                
---        -- hockey batje 1 begin  
---            elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
---                red <= "0000";
---                green <= "0000";
---                blue <= "0100";
---            elsif((hcount_int > xbh1 and vcount_int > ybh1) and (hcount_int < (xbh1 + 75) and vcount < (ybh1 + 50))) then
---                -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
---               if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
---                    red <= "0001";
---                    green <= "0001";
---                    blue <= "0000";
---               elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
---                    red <= "0001";
---                    green <= "0000";
---                    blue <= "0000";
---               elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---                    red <= "0001";
---                    green <= "0000";
---                    blue <= "0000";
---               elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
---                   red <= "0000";
---                   green <= "0001";
---                   blue <= "0000";
---               elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
---                   red <= "0000";
---                   green <= "0001";
---                   blue <= "0000";
---               elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
---                   red <= "0000";
---                   green <= "0001";
---                   blue <= "0000";
---               else
---                   red <= "0000";
---                   green <= "0000";
---                   blue <= "0000";
---               end if; -- einde hockey batje 1
-               
---            -- hockey batje 2 begin
---             elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
---                   red <= "0100";
---                   green <= "0000";
---                   blue <= "0000";
---             elsif((hcount_int > xbh2 and vcount_int > ybh2) and (hcount_int < (xbh2 + 50) and vcount < (ybh2 + 33))) then
---             -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
---                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
---                   red <= "0001";
---                   green <= "0001";
---                   blue <= "0000";
---                elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---                   red <= "0001";
---                   green <= "0000";
---                   blue <= "0000";
---                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
---                   red <= "0000";
---                   green <= "0001";
---                   blue <= "0000";
---                else
---                   red <= "0000";
---                   green <= "0000";
---                   blue <= "0000";
---                end if; -- einde hockey batje 2
-           
---            elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---                red <= "0100";
---                green <= "0000";
---                blue <= "0000";
-          
-            --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "0010"; 
+           elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
+                red <= "0010";
+                green <= "0000";
                 blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "0010"; 
+           elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                red <= "0010";
+                green <= "0000";
                 blue <= "0000";
-                                
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+           elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
                 red <= "0000";
                 green <= "0010";
                 blue <= "0000";
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+           elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
                 red <= "0000";
                 green <= "0010";
                 blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+           elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
                 red <= "0000";
                 green <= "0010";
                 blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-           --handbal
-            elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-            --einde handbal
-            else
+           else
                 red <= "0000";
                 green <= "0000";
                 blue <= "0000";
-            end if;   
---        --hockey batje 1     
---        elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
---            red <= "0000";
---            green <= "0000";
---            blue <= "1000";    
---        --hockey batje 1 einde
-               
-        --Schuine lijnen  
-        elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-            red <= "0000";
-            green <= "1000"; 
-            blue <= "0000";
-        elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-            red <= "0000";
-            green <= "1000"; 
-            blue <= "0000";
-          
---            -- hockey batje begin  1
---        elsif((hcount_int = xbh1 and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (hcount_int = (xbh1 + 75) and (vcount_int <= (ybh1 + 50) and vcount_int >= ybh1)) or (vcount_int = ybh1 and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1)) or (vcount_int = (ybh1 + 50) and (hcount_int <= (xbh1 + 75) and hcount_int >= xbh1))) then
---            red <= "0000";
---            green <= "0000";
---            blue <= "1000";
---        elsif((hcount_int > xbh1 and vcount_int > ybh1) and (hcount_int < (xbh1 + 75) and vcount < (ybh1 + 50))) then
---            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
---            if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
---                red <= "0010";
---                green <= "0010";
---                blue <= "0000";
---           elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
---                red <= "0010";
---                green <= "0000";
---                blue <= "0000";
---           elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---                red <= "0010";
---                green <= "0000";
---                blue <= "0000";
---           elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
---                red <= "0000";
---                green <= "0010";
---                blue <= "0000";
---           elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
---                red <= "0000";
---                green <= "0010";
---                blue <= "0000";
---           elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
---                red <= "0000";
---                green <= "0010";
---                blue <= "0000";
---           else
---                red <= "0000";
---                green <= "0000";
---                blue <= "0000";
---           end if; -- einde hockey batje 1
+           end if; -- einde hockey batje 1
            
---           -- hockey batje 2 begin
---           elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
---                red <= "1000";
---                green <= "0000";
---                blue <= "0000";
---           elsif((hcount_int > xbh2 and vcount_int > ybh2) and (hcount_int < (xbh2 + 50) and vcount < (ybh2 + 33))) then
---            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
---                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
---                    red <= "0010";
---                    green <= "0010";
---                    blue <= "0000";
---                elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---                    red <= "0010";
---                    green <= "0000";
---                    blue <= "0000";
---                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
---                    red <= "0000";
---                    green <= "0010";
---                    blue <= "0000";
---               else
---                    red <= "0000";
---                    green <= "0000";
---                    blue <= "0000";
---               end if; -- einde hockey batje 2
+           -- hockey batje 2 begin
+           elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
+                red <= "1000";
+                green <= "0000";
+                blue <= "0000";
+           elsif((hcount_int > xbh2 and vcount_int > ybh2) and (hcount_int < (xbh2 + 50) and vcount < (ybh2 + 33))) then
+            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "0010";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                    red <= "0010";
+                    green <= "0000";
+                    blue <= "0000";
+                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+               else
+                    red <= "0000";
+                    green <= "0000";
+                    blue <= "0000";
+               end if; -- einde hockey batje 2
                
-        elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                red <= "1000";
+                green <= "1000";
+                blue <= "0000";
+       elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
            red <= "1000";
-           green <= "1000";
-           blue <= "0000";
---       elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
---           red <= "1000";
---           green <= "0000";
---           blue <= "0000";            
-        elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-        elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-        elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-        elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-        elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-        elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-       --handbal
-        elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
-            red <= "0000";
-            green <= "1000";
-            blue <= "0000";
-       --einde handbal
-        elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-            red <= "0000";
-            green <= "0000";
-            blue <= "0000";
+           green <= "0000";
+           blue <= "0000";            
+            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
+        end if;
+        
+        --Tennis en Demo
+        if((spelmod = "11" or spelmod = "00") and menu = "00") then
+            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "1000"; 
+            elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "0010";
+                    green <= "0010";
+                    blue <= "0000";          
+                elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                    red <= "0100";
+                    green <= "0000";
+                    blue <= "0000";
+          
+            --Schuine lijnen  
+                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0010"; 
+                    blue <= "0000";
+                                
+                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                    red <= "0000";
+                    green <= "0010";
+                    blue <= "0000";
+                else
+                    red <= "0000";
+                    green <= "0000";
+                    blue <= "0000";
+                end if;   
+        --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+               
+            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                red <= "1000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
+                red <= "1000";
+                green <= "0000";
+                blue <= "0000";            
+            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
+        end if;
+        
+        --HoofdMenu
+        if(menu = "01") then
+            --ROM hoofdmenu moet er nog worden ingezet
+            
+            if((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+                
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
+        end if;
+        --Moeilijkheidsgraad
+        if(menu = "10") then
+            --ROM Moeilijkheidsgraad moet er nog worden ingezet
+            
+            if((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
+        end if;
+        --Pauze
+        if(menu = "11") then
+            --ROM Pauze moet er nog worden ingezet
+            
+            if((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            --Schuine lijnen  
+            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                red <= "0000";
+                green <= "1000"; 
+                blue <= "0000";
+                
+            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+                red <= "0000";
+                green <= "1000";
+                blue <= "0000";
+            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+                red <= "0000";
+                green <= "0000";
+                blue <= "0000";
+            end if;
         end if;
     end if;
 end process;

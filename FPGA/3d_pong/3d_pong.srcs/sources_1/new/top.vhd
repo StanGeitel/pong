@@ -7,7 +7,8 @@ entity top is port (
     dataSPI : in STD_LOGIC;
     hsync : out STD_LOGIC;
     vsync : out STD_LOGIC;
-    red, green, blue : out STD_LOGIC_VECTOR (3 downto 0));
+    red, green, blue : out STD_LOGIC_VECTOR (3 downto 0);
+    up, down, left, right, go, forward, backward : in STD_LOGIC);
 end top;
 
 architecture Behavioral of top is
@@ -38,7 +39,7 @@ end component;
 
 component image port(
     clk25MHz : in STD_LOGIC;
-    data_ram : in STD_LOGIC_VECTOR(9 downto 0);
+    data_ram, data_ram2 : in STD_LOGIC_VECTOR(9 downto 0);
     addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
     hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
     red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
@@ -53,7 +54,15 @@ component memory port (
     data_out, data_out2 : out STD_LOGIC_VECTOR(9 downto 0));
 end component;
 
-signal hcount_out, vcount_out: STD_LOGIC_VECTOR(9 downto 0);
+component buttons is port(
+    clk25MHz : in STD_LOGIC;
+    vcount : in STD_LOGIC_VECTOR(9 downto 0);
+    up, down, left, right, go, forward, backward : in STD_LOGIC;
+    wea2 : out STD_LOGIC_VECTOR(0 downto 0);
+    addra2 : out STD_LOGIC_VECTOR(3 downto 0);
+    dina2 : out STD_LOGIC_VECTOR(9 downto 0));
+end component;
+
 signal tmpedge : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
@@ -88,15 +97,16 @@ vga1 : vga port map(
     red => red,
     green => green,
     blue => blue,
-    hcount_out => hcount_out,
-    vcount_out => vcount_out);
+    hcount_out => tmphcount,
+    vcount_out => tmpvcount);
     
 image1 : image port map(    
     clk25MHz => tmpclkVGA,
     data_ram => tmpdata_out,
+    data_ram2 => tmpdata_out2,
     addr_ram => tmpaddr_img,
-    hcount => hcount_out,
-    vcount => vcount_out,
+    hcount => tmphcount,
+    vcount => tmpvcount,
     red => tmpred,
     green => tmpgreen,
     blue => tmpblue);
@@ -112,5 +122,19 @@ memory1 : memory port map(
     wea2 => tmpwea2,
     data_out2 => tmpdata_out2,
     data_out => tmpdata_out);
+
+buttons1 : buttons port map(
+    clk25MHz => tmpclkVGA,
+    vcount => tmpvcount,
+    up => up, 
+    down => down, 
+    left => left, 
+    right => right, 
+    go => go, 
+    forward => forward,
+    backward => backward,
+    wea2 => tmpwea2,
+    addra2 => tmpaddra2,
+    dina2 => tmpdina2);
     
 end Behavioral;

@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity buttons is port (
     clk25MHz : in STD_LOGIC;
@@ -15,13 +15,13 @@ end buttons;
 architecture Behavioral of buttons is
 
 signal score1, score2 : STD_LOGIC_VECTOR(3 downto 0);
-signal xball : STD_LOGIC_VECTOR(9 downto 0); -- wanneer het niet werkt proberen om 
-signal yball : STD_LOGIC_VECTOR(9 downto 0);
-signal rball : STD_LOGIC_VECTOR(9 downto 0);
-signal xb1 : STD_LOGIC_VECTOR(9 downto 0);
-signal yb1 : STD_LOGIC_VECTOR(9 downto 0);
-signal xb2 : STD_LOGIC_VECTOR(9 downto 0);
-signal yb2 : STD_LOGIC_VECTOR(9 downto 0);
+signal xball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10)); -- wanneer het niet werkt proberen om 
+signal yball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
+signal rball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(10, 10));
+signal xb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10));
+signal yb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
+signal xb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10));
+signal yb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
 signal prevxball, prevyball, prevrball, prevxb1, prevyb1, prevxb2, prevyb2 : STD_LOGIC_VECTOR(9 downto 0);
 signal upcount, downcount, leftcount, rightcount, forwardcount, backwardcount : INTEGER;
 signal gocount : STD_LOGIC_VECTOR(2 downto 0); -- gocount bepaalt of batje 1, batje 2, ball of menu wordt bediend

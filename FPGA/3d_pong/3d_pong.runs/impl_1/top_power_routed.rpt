@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri May 25 15:48:38 2018
+| Date             : Tue May 29 12:44:30 2018
 | Host             : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.190        |
+| Total On-Chip Power (W)  | 0.189        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.118        |
+| Dynamic (W)              | 0.117        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,18 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      932 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      585 |     20800 |            2.81 |
-|   CARRY4       |    <0.001 |      109 |      8150 |            1.34 |
-|   Register     |    <0.001 |       63 |     41600 |            0.15 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      781 |       --- |             --- |
-| Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
+| Slice Logic    |    <0.001 |      551 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      392 |     20800 |            1.88 |
+|   CARRY4       |    <0.001 |       50 |      8150 |            0.61 |
+|   Register     |    <0.001 |       32 |     41600 |            0.08 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |      595 |       --- |             --- |
 | MMCM           |     0.115 |        1 |         5 |           20.00 |
-| DSPs           |    <0.001 |        5 |        90 |            5.56 |
+| DSPs           |    <0.001 |        4 |        90 |            4.44 |
 | I/O            |    <0.001 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.190 |          |           |                 |
+| Total          |     0.189 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
 | Vccaux    |       1.800 |     0.076 |       0.064 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,23 +141,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------------------------------------+-----------+
-| Name                                           | Power (W) |
-+------------------------------------------------+-----------+
-| top                                            |     0.118 |
-|   clk1                                         |     0.115 |
-|     clk1                                       |     0.115 |
-|       inst                                     |     0.115 |
-|   image1                                       |     0.002 |
-|   memory1                                      |    <0.001 |
-|     ram1                                       |    <0.001 |
-|       U0                                       |    <0.001 |
-|         inst_blk_mem_gen                       |    <0.001 |
-|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
-|             valid.cstr                         |    <0.001 |
-|               ramloop[0].ram.r                 |    <0.001 |
-|                 prim_noinit.ram                |    <0.001 |
-|   vga1                                         |    <0.001 |
-+------------------------------------------------+-----------+
++------------+-----------+
+| Name       | Power (W) |
++------------+-----------+
+| top        |     0.117 |
+|   clk1     |     0.115 |
+|     clk1   |     0.115 |
+|       inst |     0.115 |
+|   image1   |     0.001 |
+|   vga1     |    <0.001 |
++------------+-----------+
 
 

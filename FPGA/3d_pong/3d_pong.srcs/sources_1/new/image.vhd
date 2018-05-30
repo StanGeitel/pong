@@ -19,7 +19,7 @@ architecture Behavioral of image is
     signal spelmod, moeil, menu, menusel, menuselmem : STD_LOGIC_VECTOR(1 downto 0);
     signal score1, score2 : STD_LOGIC_VECTOR(4 downto 0);
     signal xball, yball, rball, xb1, yb1, xb2, yb2, xb3, yb3, xb4, yb4, xb2raw, yb2raw, xbh1, ybh1, xbh2, ybh2 : integer range 0 to 1023;
-    signal testcounter : integer range 0 to 26000000;
+    signal soundcounter : integer range 0 to 26000000;
     
 begin
     
@@ -90,31 +90,22 @@ begin
         xbh2 <= (xb2raw-145)/3+360;
         ybh2 <= (yb2raw-62)/3+206;
 
-        if(testcounter = 1000000) then
-            menusel <= menusel +1;
-        end if;
-        
-        if(menusel = "11") then
-            menusel <= "00";   
-        end if;
-        
-        if(testcounter = 25000000) then
+                
+        if(soundcounter = 25000000) then
             menuselmem <= menusel;
-            testcounter <= 0;
+            soundcounter <= 0;
         end if;    
         
-        
-        testcounter <= testcounter + 1;
+       soundcounter <= soundcounter + 1;
         
         --Geluid afspelen
-          if(testcounter = 2500000) then
-           if(menuselmem /= menusel) then
-                xb1 <= xb1 + 2;
-                --Geluid remco
+         if(soundcounter = 2500000) then
+            if (menuselmem /= menusel) then
+            --remco geluid
             end if;
-            end if;
-        
-        
+         end if;
+         
+
         --Handbal
         if(spelmod = "01" and menu = "00") then
             if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then

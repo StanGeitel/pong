@@ -16,9 +16,10 @@ architecture Behavioral of image is
     signal vcount_int : integer range 0 to 1000;
     signal RamCounter : STD_LOGIC_VECTOR(3 downto 0);
     signal refresh_counter : STD_LOGIC := '0';
-    signal spelmod, moeil, menu, menusel : STD_LOGIC_VECTOR(1 downto 0);
+    signal spelmod, moeil, menu, menusel, menuselmem : STD_LOGIC_VECTOR(1 downto 0);
     signal score1, score2 : STD_LOGIC_VECTOR(4 downto 0);
     signal xball, yball, rball, xb1, yb1, xb2, yb2, xb3, yb3, xb4, yb4, xb2raw, yb2raw, xbh1, ybh1, xbh2, ybh2 : integer range 0 to 1023;
+    signal testcounter : integer range 0 to 26000000;
     
 begin
     
@@ -26,7 +27,6 @@ begin
     vcount_int <= to_integer(unsigned(vcount)); 
     xb2raw <= 480;
     yb2raw <= 186;
-    xb1 <= 450;
     yb1 <= 186;
     rball <= 0;
     xball <= 0;
@@ -89,6 +89,31 @@ begin
         ybh1 <= (yb1-62)/2+161;
         xbh2 <= (xb2raw-145)/3+360;
         ybh2 <= (yb2raw-62)/3+206;
+
+        if(testcounter = 1000000) then
+            menusel <= menusel +1;
+        end if;
+        
+        if(menusel = "11") then
+            menusel <= "00";   
+        end if;
+        
+        if(testcounter = 25000000) then
+            menuselmem <= menusel;
+            testcounter <= 0;
+        end if;    
+        
+        
+        testcounter <= testcounter + 1;
+        
+        --Geluid afspelen
+          if(testcounter = 2500000) then
+           if(menuselmem /= menusel) then
+                xb1 <= xb1 + 2;
+                --Geluid remco
+            end if;
+            end if;
+        
         
         --Handbal
         if(spelmod = "01" and menu = "00") then

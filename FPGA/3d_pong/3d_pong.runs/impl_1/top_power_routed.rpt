@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed May 30 17:24:50 2018
-| Host             : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
+| Date             : Thu May 31 12:21:18 2018
+| Host             : LAPTOP-NJE0O93L running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a35tcpg236-1
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1488 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      728 |     20800 |            3.50 |
-|   CARRY4       |    <0.001 |      152 |      8150 |            1.87 |
-|   Register     |    <0.001 |      368 |     41600 |            0.88 |
-|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
-|   Others       |     0.000 |       15 |       --- |             --- |
-| Signals        |    <0.001 |     1161 |       --- |             --- |
+| Slice Logic    |    <0.001 |     1793 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      930 |     20800 |            4.47 |
+|   CARRY4       |    <0.001 |      164 |      8150 |            2.01 |
+|   Register     |    <0.001 |      437 |     41600 |            1.05 |
+|   F7/F8 Muxes  |    <0.001 |       13 |     32600 |            0.04 |
+|   Others       |     0.000 |       14 |       --- |             --- |
+| Signals        |    <0.001 |     1382 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.115 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        4 |        90 |            4.44 |

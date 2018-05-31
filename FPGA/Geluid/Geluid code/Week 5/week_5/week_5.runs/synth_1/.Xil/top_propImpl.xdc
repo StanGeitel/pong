@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Geluid code/Week 5/week_5/week_5.srcs/constrs_1/new/top.xdc} rfile:../../../week_5.srcs/constrs_1/new/top.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN A14 [get_ports PWM]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W5 [get_ports clk100MHz]

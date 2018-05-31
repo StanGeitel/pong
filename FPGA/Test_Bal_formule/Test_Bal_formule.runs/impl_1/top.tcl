@@ -70,14 +70,14 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.cache/wt [current_project]
-  set_property parent.project_path C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.xpr [current_project]
-  set_property ip_output_repo C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.cache/ip [current_project]
+  set_property webtalk.parent_dir {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.cache/wt} [current_project]
+  set_property parent.project_path {D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.xpr} [current_project]
+  set_property ip_output_repo {{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.runs/synth_1/top.dcp
-  read_ip -quiet C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc
+  add_files -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.runs/synth_1/top.dcp}}
+  read_ip -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+  read_xdc {{D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.srcs/constrs_1/new/ding_xdc.xdc}}
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

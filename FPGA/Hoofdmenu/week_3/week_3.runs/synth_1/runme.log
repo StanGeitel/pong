@@ -1,0 +1,338 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11936 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 366.254 ; gain = 98.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/top.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:6' bound to instance 'vga1' of component 'vga' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/top.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:13]
+INFO: [Synth 8-3491] module 'kleurregeling' declared at 'C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:13' bound to instance 'kleurregeling1' of component 'kleurregeling' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'kleurregeling' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:20]
+WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:136]
+INFO: [Synth 8-4471] merging register 'blue_reg[3:0]' into 'red_reg[3:0]' [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:145]
+WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:145]
+INFO: [Synth 8-256] done synthesizing module 'kleurregeling' (2#1) [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/top.vhd:19]
+WARNING: [Synth 8-3331] design kleurregeling has unconnected port button
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 419.406 ; gain = 151.395
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 419.406 ; gain = 151.395
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/dcp1/clk_wiz_0_in_context.xdc] for cell 'clk1'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/dcp1/clk_wiz_0_in_context.xdc] for cell 'clk1'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 759.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 759.918 ; gain = 491.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 759.918 ; gain = 491.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/dcp1/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/.Xil/Vivado-9444-DESKTOP-UBGEV9I/dcp1/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for clk1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 759.918 ; gain = 491.906
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element place1_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element place2_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:154]
+WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 759.918 ; gain = 491.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module kleurregeling 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+Module VGA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Debug: swapped A/B pins for adder 000002B26529F970
+WARNING: [Synth 8-6014] Unused sequential element place1_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element place2_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/new/kleurregeling.vhd:154]
+WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.srcs/sources_1/imports/Week 3 + 4 - Bounching Square - Ball/vga.vhd:33]
+WARNING: [Synth 8-3331] design kleurregeling has unconnected port button
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/green_reg[0]' (FD) to 'vga1/kleurregeling1/green_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/green_reg[1]' (FD) to 'vga1/kleurregeling1/green_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/green_reg[2]' (FD) to 'vga1/kleurregeling1/green_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/red_reg[0]' (FD) to 'vga1/kleurregeling1/red_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/red_reg[1]' (FD) to 'vga1/kleurregeling1/red_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/kleurregeling1/red_reg[2]' (FD) to 'vga1/kleurregeling1/red_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[0]' (FD) to 'vga1/blue_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[1]' (FD) to 'vga1/blue_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[2]' (FD) to 'vga1/blue_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga1/green_reg[0]' (FD) to 'vga1/green_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga1/green_reg[1]' (FD) to 'vga1/green_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/green_reg[2]' (FD) to 'vga1/green_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga1/red_reg[0]' (FD) to 'vga1/red_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga1/red_reg[1]' (FD) to 'vga1/red_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/red_reg[2]' (FD) to 'vga1/red_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[3]' (FD) to 'vga1/red_reg[3]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 759.918 ; gain = 491.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk_out1' to pin 'clk1/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 765.359 ; gain = 497.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 780.715 ; gain = 512.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |    68|
+|3     |LUT1      |   162|
+|4     |LUT2      |   123|
+|5     |LUT3      |    25|
+|6     |LUT4      |    24|
+|7     |LUT5      |    72|
+|8     |LUT6      |   204|
+|9     |MUXF7     |    41|
+|10    |MUXF8     |     3|
+|11    |FDRE      |    77|
+|12    |FDSE      |    13|
+|13    |OBUF      |    14|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------+--------------+------+
+|      |Instance           |Module        |Cells |
++------+-------------------+--------------+------+
+|1     |top                |              |   827|
+|2     |  vga1             |VGA           |   812|
+|3     |    kleurregeling1 |kleurregeling |   755|
++------+-------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 798.855 ; gain = 190.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 798.855 ; gain = 530.844
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 798.855 ; gain = 542.313
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jobgr/stack/Computer/Downloads/week_3/week_3.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 798.855 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  7 15:55:10 2018...

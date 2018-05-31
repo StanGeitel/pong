@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 #define F_CPU		8000000UL		//8MHz
-#define BAUD		19200			//9600//14400//38400
+#define BAUD		9600		//9600//14400//19200//38400
 #define MYUBBR		((F_CPU/(BAUD*16L))-1)			//16L is for asynchrone mode
 #define X_L			0
 #define X_H			1
@@ -16,4 +16,5 @@
 void uart_init(void);
 void uart_set_pos(int16_t, int16_t);
 void uart_set_button(uint8_t);
+void uart_putc(uint8_t);
 #endif

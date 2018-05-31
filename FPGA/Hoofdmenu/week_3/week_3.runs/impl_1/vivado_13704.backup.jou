@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May  7 14:48:34 2018
+# Process ID: 13704
+# Current directory: D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.runs/impl_1/top.vdi
+# Journal file: D:/Documenten/Avans 2017-2018/Blok 8/Pong/Week 4/week_3/week_3.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

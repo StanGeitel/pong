@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 15 16:43:46 2018
+# Process ID: 9036
+# Current directory: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4228 C:\Users\ikben\OneDrive\Documents\GitHub\pong\FPGA\Test_Bal_formule\Test_Bal_formule.xpr
+# Log file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule/vivado.log
+# Journal file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule/Test_Bal_formule.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Proghardware/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 794.156 ; gain = 113.137
+update_compile_order -fileset sources_1
+save_project_as Deadline_Spelweergave {C:/Users/ikben/OneDrive/Documents/Blok 8/Project pong/FPGA/Deadline_Spelweergave} -force
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 16 10:02:19 2018...

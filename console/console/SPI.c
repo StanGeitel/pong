@@ -31,9 +31,18 @@ void SPI_init(void){
 	 REG_SPI_CR |= SPI_CR_SPIEN;
 }
 
+<<<<<<< HEAD
 void SPI_Send(uint16_t data){
 	//wait for transmit register to be empty
 	while (!(REG_SPI_SR & SPI_SR_TDRE));
 	//send data to transmit register
 	REG_SPI_TDR |= data;
+=======
+void LocalLoopbackEnable(int enable){	//LLB controls the local loopback on the data shift register for testing
+	if(enable == 1){
+//		REG_SPI_MR |= (0x1 << 7);		//MISO is internally connected on MOSI
+	}else{
+//		REG_SPI_MR &= ~(0x1 << 7);
+	}
+>>>>>>> 29987dacf30faabcb92c71c3bf118d9604c7c403
 }

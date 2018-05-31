@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Progh_Opdrachten/Test_Bal_formule/Test_Bal_formule.xpr">
+<Project Version="7" Minor="35" Path="D:/Documenten/Avans 2017-2018/Blok 8/Pong/Spelweergave deadline/Test_Bal_formule/Test_Bal_formule.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7d9d4135be804ef6a4742d916a60690e"/>

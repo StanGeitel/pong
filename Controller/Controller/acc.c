@@ -41,9 +41,12 @@ void acc_calibrate(){
 }
 
 ISR(INT0_vect){
+	x_pos[1] = 0xFFFF;
+	y_pos[1] = 0xFFFF;
+		
 	x_acc[1] = i2c_burst_read(ACC_ADD, X_MSB) + x_noise;
 	y_acc[1] = i2c_burst_read(ACC_ADD, Y_MSB) + y_noise;
-	
+
 	if((x_acc[1] <= 50 && x_acc[1] >= -50) && (y_acc[1] <= 50 && y_acc[1] >= -50)){
 		drift_cnt++;
 	}
@@ -57,6 +60,7 @@ ISR(INT0_vect){
 		
 		uart_set_pos(x_pos[1], y_pos[1]);
 	}
+
 	if(drift_cnt == 8){
 		x_vel[1] = 0;
 		y_vel[1] = 0;

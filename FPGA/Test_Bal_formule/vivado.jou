@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 15 16:43:46 2018
+# Process ID: 9036
+# Current directory: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4228 C:\Users\ikben\OneDrive\Documents\GitHub\pong\FPGA\Test_Bal_formule\Test_Bal_formule.xpr
+# Log file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule/vivado.log
+# Journal file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Test_Bal_formule/Test_Bal_formule.xpr
+update_compile_order -fileset sources_1
+save_project_as Deadline_Spelweergave {C:/Users/ikben/OneDrive/Documents/Blok 8/Project pong/FPGA/Deadline_Spelweergave} -force

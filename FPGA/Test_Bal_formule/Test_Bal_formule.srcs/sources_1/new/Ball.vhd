@@ -72,6 +72,18 @@ if rising_edge(clk_in) then
             red <= "0010";
             green <= "0000";
             blue <= "0000";
+          
+          --Schuine lijnen  
+        elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+             red <= "0000";
+             green <= "0010"; 
+             blue <= "0000";
+        elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+             red <= "0000";
+             green <= "0010"; 
+             blue <= "0000";
+                
+                 
         elsif((hcount_int = 224 and (vcount_int <= 435 and vcount_int >= 113)) or (hcount_int = 702 and (vcount_int <= 435 and vcount_int >= 113)) or (vcount_int = 113 and (hcount_int <= 702 and hcount_int >= 224)) or (vcount_int = 435 and (hcount_int <= 702 and hcount_int >= 224))) then
             red <= "0000";
             green <= "0010";
@@ -96,7 +108,18 @@ if rising_edge(clk_in) then
     elsif((hcount_int = xp2 and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (hcount_int = (xp2 + 50) and (vcount_int <= (yp2 + 33) and vcount_int >= yp2)) or (vcount_int = yp2 and (hcount_int <= (xp2 + 50) and hcount_int >= xp2)) or (vcount_int = (yp2 + 33) and (hcount_int <= (xp2 + 50) and hcount_int >= xp2))) then
         red <= "1000";
         green <= "0000";
-        blue <= "0000";   
+        blue <= "0000"; 
+        
+     --Schuine lijnen  
+    elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+          red <= "0000";
+          green <= "1000"; 
+          blue <= "0000";
+     elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+          red <= "0000";
+          green <= "1000"; 
+          blue <= "0000";
+                       
     elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
         red <= "0000";
         green <= "1000";

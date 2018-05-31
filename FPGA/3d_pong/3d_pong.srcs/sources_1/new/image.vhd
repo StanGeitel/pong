@@ -290,11 +290,11 @@ constant Rom10: Rom10Type := (
 '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
 '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',
 '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',
-'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
-'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
-'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '1', '1', '1', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',
-'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '1', '1', '1', '0', '0', '0', '0',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',
-'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '1', '1', '1', '0', '0', '0', '0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0'
+'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '1', '1', '1', '0', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
+'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
+'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',
+'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',
+'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0'
 );
 
 type Rom11Type is array (143 downto 0) of std_logic;
@@ -514,9 +514,10 @@ begin
     rball <= 0;
     xball <= 0;
     yball <= 0;
-    spelmod <= "00";
-    menu <= "11";
+    spelmod <= "11";
+    menu <= "00";
     adressound <= tmpadressound;
+    score1 <= "00000";
 
 process(clk25Mhz)
     variable color : STD_LOGIC;
@@ -544,6 +545,23 @@ process(clk25Mhz)
     variable place_pauze : INTEGER := 1235;
     variable x_pauze : INTEGER := 413;
     variable y_pauze : INTEGER := 250;
+    
+    variable place_score : INTEGER := 803;
+    variable x_score : INTEGER := 146;
+    variable y_score : INTEGER := 42;
+    
+    variable place_score1 : INTEGER := 143;
+    variable x_score1 : INTEGER := 214;
+    variable y_score1 : INTEGER := 42;
+    
+    variable place_streep : INTEGER := 143;
+    variable x_streep : INTEGER := 227;
+    variable y_streep : INTEGER := 42;
+    
+    variable place_score2 : INTEGER := 143;
+    variable x_score2 : INTEGER := 240;
+    variable y_score2 : INTEGER := 42;
+    
     
     
 begin
@@ -632,6 +650,7 @@ begin
                     end if;     
                     if tmpadressound = 980 then -- begint telkens opnieuw met ceo-file -- length is 6668 dus elementen 0 t/m 6667
                         tmpadressound <= "0000000000";
+                        geluid_trigger <= '0';
                     end if;       
                 end if;
          end if;  
@@ -982,7 +1001,71 @@ begin
         
         --Tennis en Demo
         if((spelmod = "11" or spelmod = "00") and menu = "00") then
-            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+            if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+               color := Rom10(place_score); -- 144 binair -- "0000";
+               red(0) <= color;
+               red(1) <= color;
+               red(2) <= color;
+               red(3) <= color;
+               green(0) <= color;
+               green(1) <= color;
+               green(2) <= color;
+               green(3) <= color;
+               blue(0) <= color;
+               blue(1) <= color;
+               blue(2) <= color;
+               blue(3) <= color;
+               place_score := place_score - 1;   
+            elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+                if score1 = 0 and place_score1 < 144 then
+                       color := Rom11(place_score1); -- 144 binair -- "0000";
+                       red(0) <= color;
+                       red(1) <= color;
+                       red(2) <= color;
+                       red(3) <= color;
+                       green(0) <= color;
+                       green(1) <= color;
+                       green(2) <= color;
+                       green(3) <= color;
+                       blue(0) <= color;
+                       blue(1) <= color;
+                       blue(2) <= color;
+                       blue(3) <= color;
+                       place_score1 := place_score1 - 1; 
+                 end if;
+            elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
+                color := Rom21(place_streep); -- 144 binair -- "0000";
+                   red(0) <= color;
+                   red(1) <= color;
+                   red(2) <= color;
+                   red(3) <= color;
+                   green(0) <= color;
+                   green(1) <= color;
+                   green(2) <= color;
+                   green(3) <= color;
+                   blue(0) <= color;
+                   blue(1) <= color;
+                   blue(2) <= color;
+                   blue(3) <= color;
+                   place_streep := place_streep - 1; 
+            elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
+               if score2 = 0 and place_score2 < 144 then
+                      color := Rom11(place_score2); -- 144 binair -- "0000";
+                      red(0) <= color;
+                      red(1) <= color;
+                      red(2) <= color;
+                      red(3) <= color;
+                      green(0) <= color;
+                      green(1) <= color;
+                      green(2) <= color;
+                      green(3) <= color;
+                      blue(0) <= color;
+                      blue(1) <= color;
+                      blue(2) <= color;
+                      blue(3) <= color;
+                      place_score2 := place_score2 - 1; 
+                end if;
+            elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";
                 blue <= "1000"; 
@@ -1082,7 +1165,14 @@ begin
                 green <= "0000";
                 blue <= "0000";
             end if;
+              if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+                  place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+                  place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+                  place_streep := 143;
+                  place_score2 := 143;
+              end if; 
         end if;
+        
         
         --HoofdMenu
         if(menu = "01") then

@@ -8,6 +8,7 @@ entity top is port (
     hsync : out STD_LOGIC;
     vsync : out STD_LOGIC;
     red, green, blue : out STD_LOGIC_VECTOR (3 downto 0);
+    pwmsound : out STD_LOGIC;
     up, down, left, right, go, forward, backward : in STD_LOGIC);
 end top;
 
@@ -39,10 +40,13 @@ end component;
 
 component image port(
     clk25MHz : in STD_LOGIC;
+    hcount, vcount : in STD_LOGIC_VECTOR(9 downto 0);
     data_ram, data_ram2 : in STD_LOGIC_VECTOR(9 downto 0);
+    datasound : in STD_LOGIC_VECTOR(7 downto 0);
     addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
-    hcount, vcount : in STD_LOGIC_VECTOR (9 downto 0);
-    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
+    adressound : out STD_LOGIC_VECTOR(9 downto 0);
+    PWM : out STD_LOGIC);
 end component;
 
 component memory port (
@@ -63,6 +67,14 @@ component buttons is port(
     dina2 : out STD_LOGIC_VECTOR(9 downto 0));
 end component;
 
+component rom_geluid is port(
+    clk : in STD_LOGIC;
+    adress : in STD_LOGIC_VECTOR(9 downto 0);
+    datas : out STD_LOGIC_VECTOR(7 downto 0));
+end component;
+
+signal tmpadressound : STD_LOGIC_VECTOR(9 downto 0);
+signal tmpdatasound : STD_LOGIC_VECTOR(7 downto 0);
 signal tmpedge : STD_LOGIC;
 signal tmpclkVGA : STD_LOGIC;
 signal tmphcount,tmpvcount : STD_LOGIC_VECTOR(9 downto 0);
@@ -104,12 +116,15 @@ image1 : image port map(
     clk25MHz => tmpclkVGA,
     data_ram => tmpdata_out,
     data_ram2 => tmpdata_out2,
+    datasound => tmpdatasound,
     addr_ram => tmpaddr_img,
     hcount => tmphcount,
     vcount => tmpvcount,
     red => tmpred,
     green => tmpgreen,
-    blue => tmpblue);
+    blue => tmpblue,
+    adressound => tmpadressound,
+    PWM => pwmsound);
 
 memory1 : memory port map(    
     clk25MHz => tmpclkVGA,
@@ -136,5 +151,9 @@ buttons1 : buttons port map(
     wea2 => tmpwea2,
     addra2 => tmpaddra2,
     dina2 => tmpdina2);
-    
+
+rom_Geluid1 : rom_Geluid port map(
+    clk => tmpclkVGA,
+    adress => tmpadressound,
+    datas => tmpdatasound);
 end Behavioral;

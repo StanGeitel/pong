@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu May 31 13:53:44 2018
+| Date         : Thu May 31 16:37:55 2018
 | Host         : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    32 |
-| Unused register locations in slices containing registers |   131 |
+| Number of unique control sets                            |    37 |
+| Unused register locations in slices containing registers |   140 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               7 |            4 |
+| No           | No                    | No                     |              44 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              24 |           13 |
-| Yes          | No                    | No                     |             160 |           50 |
+| No           | Yes                   | No                     |              24 |           14 |
+| Yes          | No                    | No                     |             176 |           53 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             246 |           65 |
+| Yes          | Yes                   | No                     |             320 |           89 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -50,36 +50,41 @@ Table of Contents
 +--------------------------+-------------------------------+----------------------------------+------------------+----------------+
 |  clk1/clk1/inst/clk_out1 |                               | vga1/ltOp                        |                1 |              1 |
 |  clk1/clk1/inst/clk_out1 |                               | vga1/vsync_i_1_n_0               |                1 |              1 |
-| ~clk1/clk1/inst/clk_out1 |                               |                                  |                2 |              2 |
-|  clk1/clk1/inst/clk_out1 | vga1/red0                     | image1/red[3]_i_1_n_0            |                2 |              4 |
-| ~clk1/clk1/inst/clk_out1 | image1/addr_ram[3]_i_1_n_0    |                                  |                1 |              4 |
-| ~clk1/clk1/inst/clk_out1 | vga1/E[0]                     | buttons1/ramcounter              |                1 |              4 |
-| ~clk1/clk1/inst/clk_out1 | vga1/Q[1]                     | image1/RamCounter_reg[3]_0[0]    |                2 |              4 |
+| ~clk1/clk1/inst/clk_out1 | image1/addr_ram[3]_i_1_n_0    |                                  |                2 |              4 |
+| ~clk1/clk1/inst/clk_out1 |                               |                                  |                3 |              4 |
+| ~clk1/clk1/inst/clk_out1 | vga1/E[0]                     | buttons1/ramcounter              |                2 |              4 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/addra2[3]_i_1_n_0    |                                  |                1 |              4 |
-|  clk1/clk1/inst/clk_out1 |                               |                                  |                2 |              5 |
-|  clk1/clk1/inst/clk_out1 |                               | vga1/hcount_reg[9]_0[0]          |                5 |             10 |
-|  clk1/clk1/inst/clk_out1 | buttons1/yb1[9]_i_1_n_0       |                                  |                4 |             10 |
+| ~clk1/clk1/inst/clk_out1 | vga1/Q[1]                     | image1/RamCounter                |                2 |              4 |
+|  clk1/clk1/inst/clk_out1 | vga1/red_reg[3]_0             | image1/red[3]_i_1_n_0            |                4 |              4 |
+| ~clk1/clk1/inst/clk_out1 | image1/score2[4]_i_1_n_0      |                                  |                1 |              5 |
+| ~clk1/clk1/inst/clk_out1 | buttons1/dina2[9]_i_1_n_0     |                                  |                3 |             10 |
+|  clk1/clk1/inst/clk_out1 |                               | vga1/hcount_reg[9]_0[0]          |                6 |             10 |
+|  clk1/clk1/inst/clk_out1 | buttons1/xb1[9]_i_1__0_n_0    |                                  |                4 |             10 |
+|  clk1/clk1/inst/clk_out1 | buttons1/xball[9]_i_1_n_0     |                                  |                4 |             10 |
+|  clk1/clk1/inst/clk_out1 | buttons1/yb1[9]_i_1_n_0       |                                  |                3 |             10 |
 |  clk1/clk1/inst/clk_out1 | buttons1/yball[9]_i_1_n_0     |                                  |                4 |             10 |
 |  clk1/clk1/inst/clk_out1 | buttons1/rball[9]_i_1_n_0     |                                  |                3 |             10 |
-|  clk1/clk1/inst/clk_out1 | buttons1/xb1[9]_i_1__0_n_0    |                                  |                4 |             10 |
-|  clk1/clk1/inst/clk_out1 | buttons1/xball[9]_i_1_n_0     |                                  |                3 |             10 |
-|  clk1/clk1/inst/clk_out1 | vga1/hcount_reg[9]_0[0]       | vga1/SR[0]                       |                4 |             10 |
 | ~clk1/clk1/inst/clk_out1 | image1/xb1[9]_i_1_n_0         |                                  |                2 |             10 |
-| ~clk1/clk1/inst/clk_out1 | buttons1/prevrball[9]_i_1_n_0 |                                  |                4 |             10 |
+|  clk1/clk1/inst/clk_out1 | vga1/hcount_reg[9]_0[0]       | vga1/SR[0]                       |                6 |             10 |
+|  clk1/clk1/inst/clk_out1 | image1/tmpadressound          | image1/tmpadressound[9]_i_1_n_0  |                3 |             10 |
+| ~clk1/clk1/inst/clk_out1 | buttons1/prevrball[9]_i_1_n_0 |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevxb1[9]_i_1_n_0   |                                  |                3 |             10 |
-| ~clk1/clk1/inst/clk_out1 | buttons1/prevxball[9]_i_1_n_0 |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevyball[9]_i_1_n_0 |                                  |                3 |             10 |
+| ~clk1/clk1/inst/clk_out1 | buttons1/prevxball[9]_i_1_n_0 |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevyb1[9]_i_1_n_0   |                                  |                3 |             10 |
-| ~clk1/clk1/inst/clk_out1 | buttons1/dina2[9]_i_1_n_0     |                                  |                4 |             10 |
+|  clk1/clk1/inst/clk_out1 | image1/geluid_trigger         |                                  |                3 |             11 |
 |  clk1/clk1/inst/clk_out1 |                               | vga1/red[3]_i_1__0_n_0           |                6 |             12 |
-|  clk1/clk1/inst/clk_out1 | vga1/place_pauze              | vga1/place_hoofdmenu0            |                8 |             32 |
-|  clk1/clk1/inst/clk_out1 | vga1/red1249_out              | vga1/place_hoofdmenu0            |                8 |             32 |
-|  clk1/clk1/inst/clk_out1 | buttons1/backwardcount0       |                                  |                8 |             32 |
-|  clk1/clk1/inst/clk_out1 | buttons1/forwardcount0        | buttons1/forwardcount[0]_i_1_n_0 |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | vga1/place_score1_reg[0]      | vga1/place_score0                |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | down_IBUF                     | buttons1/yb11_carry__2_n_0       |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | left_IBUF                     | buttons1/leftcount0_carry__2_n_0 |                8 |             32 |
-|  clk1/clk1/inst/clk_out1 | right_IBUF                    | buttons1/xb11_carry__2_n_0       |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | up_IBUF                       | buttons1/upcount0_carry__2_n_0   |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | right_IBUF                    | buttons1/xb11_carry__2_n_0       |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | buttons1/backwardcount0       |                                  |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | vga1/place_streep             | vga1/place_score0                |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | vga1/red1125_out              | vga1/place_score0                |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | buttons1/forwardcount0        | buttons1/forwardcount[0]_i_1_n_0 |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | vga1/place_score2_reg[0]      | vga1/place_score0                |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 |                               |                                  |               13 |             40 |
 +--------------------------+-------------------------------+----------------------------------+------------------+----------------+
 
 
@@ -87,12 +92,12 @@ Table of Contents
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
 | 1      |                     2 |
-| 2      |                     1 |
-| 4      |                     5 |
+| 4      |                     6 |
 | 5      |                     1 |
-| 10     |                    14 |
+| 10     |                    15 |
+| 11     |                     1 |
 | 12     |                     1 |
-| 16+    |                     8 |
+| 16+    |                    11 |
 +--------+-----------------------+
 
 

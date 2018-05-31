@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May 31 12:18:57 2018
-# Process ID: 13852
+# Start of session at: Thu May 31 13:29:54 2018
+# Process ID: 15104
 # Current directory: C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.vds

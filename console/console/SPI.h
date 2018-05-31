@@ -13,7 +13,7 @@
 #define SPI_clk_speed		4000000UL
 
 void SPI_init(void);
-void SPI_Send(uint8_t data);
+void SPI_Send(uint16_t data);
 void LocalLoopbackEnable(int enable);
 
 

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="24f71a4f976947789898b477ab2d87f8"/>

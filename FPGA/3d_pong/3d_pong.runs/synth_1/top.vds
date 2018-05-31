@@ -2,12 +2,12 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May 31 13:29:54 2018
-# Process ID: 15104
-# Current directory: C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1
+# Start of session at: Thu May 31 13:51:43 2018
+# Process ID: 17636
+# Current directory: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.vds
-# Journal file: C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1\vivado.jou
+# Log file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.vds
+# Journal file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a35tcpg236-1
@@ -15,67 +15,65 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14292 
+INFO: Helper process launched with PID 14272 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 368.852 ; gain = 100.102
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 369.746 ; gain = 100.867
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:14]
-INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
-INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:14]
-WARNING: [Synth 8-6014] Unused sequential element menusel_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:553]
-WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:555]
-WARNING: [Synth 8-6014] Unused sequential element score2_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
-WARNING: [Synth 8-6014] Unused sequential element score1_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:559]
-WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:575]
-WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:577]
-WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:579]
-WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:581]
-WARNING: [Synth 8-6014] Unused sequential element menuselmem_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:598]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:597]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1063]
-INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:14]
-INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:114]
-INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:126]
-INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
-WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:14]
+INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+WARNING: [Synth 8-5640] Port 'datasound' is missing in component declaration [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:40]
+WARNING: [Synth 8-5640] Port 'adressound' is missing in component declaration [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:40]
+WARNING: [Synth 8-5640] Port 'pwm' is missing in component declaration [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:40]
+INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:563]
+WARNING: [Synth 8-6014] Unused sequential element score2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:566]
+WARNING: [Synth 8-6014] Unused sequential element score1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:567]
+WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:583]
+WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:585]
+WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:587]
+WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:589]
+WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1091]
+INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
+WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
+WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:14]
 WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 438.098 ; gain = 169.348
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 442.121 ; gain = 173.242
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -84,66 +82,77 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[7] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[6] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[5] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[4] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[3] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[2] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[1] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
+WARNING: [Synth 8-3295] tying undriven pin image1:datasound[0] to constant 0 [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:103]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 438.098 ; gain = 169.348
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 442.121 ; gain = 173.242
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp2/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Finished Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp2/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Finished Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Finished Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Finished Parsing XDC File [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp2/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp2/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 783.922 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 783.574 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 783.922 ; gain = 515.172
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 783.574 ; gain = 514.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 783.922 ; gain = 515.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 783.574 ; gain = 514.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp2/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-15104-LAPTOP-NJE0O93L/dcp2/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp2/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-17636-LAPTOP-88VN4TC1/dcp2/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk1/clk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 783.922 ; gain = 515.172
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 783.574 ; gain = 514.695
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
-WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:590]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:589]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:592]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:591]
+WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
+WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:598]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:597]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:600]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:599]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:544]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1062]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1078]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1147]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1163]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1229]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1245]
+WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:552]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:605]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:620]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1090]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1106]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1175]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1191]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1257]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1273]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -156,22 +165,22 @@ INFO: [Synth 8-5544] ROM "green" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
-WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element downcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
-WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
-WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
-WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
-WARNING: [Synth 8-6014] Unused sequential element ramcounter_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
-WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
-WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
+WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element downcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
+WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element ramcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
+WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 783.922 ; gain = 515.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 783.574 ; gain = 514.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -188,15 +197,16 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit       Adders := 2     
 	   3 Input     11 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 8     
-	   2 Input     10 Bit       Adders := 21    
+	   2 Input     10 Bit       Adders := 23    
 	   3 Input     10 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               10 Bit    Registers := 13    
+	               10 Bit    Registers := 15    
 	                4 Bit    Registers := 8     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 8     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
@@ -251,11 +261,15 @@ Detailed RTL Component Info :
 	   3 Input     11 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 8     
 	   3 Input     10 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 5     
+	   2 Input     10 Bit       Adders := 7     
 	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 6     
+	               10 Bit    Registers := 8     
 	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 10    
@@ -303,14 +317,17 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 000001F485BACAC0
-WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:544]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1062]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1078]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1147]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1163]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1229]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1245]
+DSP Debug: swapped A/B pins for adder 000001DF59A65090
+WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:552]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1090]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1106]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1175]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1191]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1257]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1273]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:605]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:620]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
 DSP Report: Generating DSP red4, operation Mode is: A*B.
 DSP Report: operator red4 is absorbed into DSP red4.
 DSP Report: Generating DSP red3, operation Mode is: PCIN+A*B.
@@ -322,26 +339,24 @@ DSP Report: Generating DSP red3, operation Mode is: PCIN+A*B.
 DSP Report: operator red3 is absorbed into DSP red3.
 DSP Report: operator red4 is absorbed into DSP red3.
 INFO: [Synth 8-5545] ROM "spi1/bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element buttons1/ramcounter_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
-WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
-WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/leftcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/rightcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/xb1_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/xball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/upcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/downcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/yb1_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/yball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/backwardcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/forwardcount_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/rball_reg was removed.  [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/ramcounter_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
+WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
+WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/leftcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/rightcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/xb1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/xball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/upcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/downcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/yb1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/yball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/backwardcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/forwardcount_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element buttons1/rball_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
 INFO: [Synth 8-3886] merging instance 'image1/blue_reg[0]' (FDE) to 'image1/blue_reg[1]'
 INFO: [Synth 8-3886] merging instance 'image1/blue_reg[1]' (FDE) to 'image1/blue_reg[2]'
 INFO: [Synth 8-3886] merging instance 'image1/green_reg[0]' (FDE) to 'image1/green_reg[2]'
@@ -353,234 +368,236 @@ INFO: [Synth 8-3886] merging instance 'vga1/red_reg[0]' (FD) to 'vga1/red_reg[2]
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[15]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (menu_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
 WARNING: [Synth 8-3332] Sequential element (menu_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
 WARNING: [Synth 8-3332] Sequential element (spelmod_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
 WARNING: [Synth 8-3332] Sequential element (spelmod_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:510]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[9]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[9]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[8]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[8]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[7]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[7]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[6]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[6]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[5]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[5]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[4]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[4]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[3]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[3]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[2]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[2]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (rball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:507]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[9]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[9]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[8]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[8]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[7]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[7]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[6]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[6]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[5]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[5]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[4]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[4]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[3]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[3]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[2]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[2]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (xball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:508]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[9]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[9]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[8]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[8]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[7]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[7]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[6]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[6]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[5]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[5]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[4]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[4]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[3]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[3]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[2]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[2]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[9]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[9]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[8]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[8]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[7]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[7]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[6]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[6]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[5]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[5]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[4]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[4]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[3]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[3]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[2]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[2]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[1]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[1]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (yb1_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[0]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:506]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[0]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[9]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[9]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[8]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[8]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[7]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[7]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[6]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[6]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[5]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[5]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[4]/Q' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[4]/Q' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (xb2raw_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:504]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
 WARNING: [Synth 8-3332] Sequential element (yb2raw_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:505]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
+WARNING: [Synth 8-3332] Sequential element (menusel_reg[1]) is unused and will be removed from module image.
+WARNING: [Synth 8-3332] Sequential element (menusel_reg[0]) is unused and will be removed from module image.
 WARNING: [Synth 8-3332] Sequential element (xb2_reg[9]) is unused and will be removed from module image.
 WARNING: [Synth 8-3332] Sequential element (xb2_reg[8]) is unused and will be removed from module image.
 WARNING: [Synth 8-3332] Sequential element (xb2_reg[7]) is unused and will be removed from module image.
@@ -613,8 +630,6 @@ WARNING: [Synth 8-3332] Sequential element (ybh2_reg[1]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (ybh2_reg[0]) is unused and will be removed from module image.
 WARNING: [Synth 8-3332] Sequential element (xbh2_reg[9]) is unused and will be removed from module image.
 WARNING: [Synth 8-3332] Sequential element (xbh2_reg[8]) is unused and will be removed from module image.
-WARNING: [Synth 8-3332] Sequential element (xbh2_reg[7]) is unused and will be removed from module image.
-WARNING: [Synth 8-3332] Sequential element (xbh2_reg[6]) is unused and will be removed from module image.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'image1/blue_reg[2]' (FDE) to 'image1/green_reg[2]'
 INFO: [Synth 8-3886] merging instance 'image1/green_reg[2]' (FDE) to 'image1/red_reg[2]'
@@ -623,7 +638,7 @@ INFO: [Synth 8-3886] merging instance 'vga1/green_reg[2]' (FD) to 'vga1/red_reg[
 INFO: [Synth 8-3886] merging instance 'image1/green_reg[1]' (FDE) to 'image1/red_reg[1]'
 INFO: [Synth 8-3886] merging instance 'vga1/green_reg[1]' (FD) to 'vga1/red_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 783.922 ; gain = 515.172
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 783.574 ; gain = 514.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -655,13 +670,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk1/clk_out1' to pin 'clk1/clk1/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 845.426 ; gain = 576.676
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 841.691 ; gain = 572.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 878.613 ; gain = 609.863
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 874.281 ; gain = 605.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -673,7 +688,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -697,7 +712,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -710,7 +725,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -722,25 +737,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -789,11 +804,11 @@ Report Instance Areas:
 |6     |  vga1     |VGA     |   331|
 +------+-----------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 896.230 ; gain = 627.480
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 192 critical warnings and 371 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:51 . Memory (MB): peak = 896.230 ; gain = 281.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 896.230 ; gain = 627.480
+Synthesis finished with 0 errors, 192 critical warnings and 429 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 890.961 ; gain = 280.629
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 890.961 ; gain = 622.082
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 188 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -803,10 +818,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-77 Infos, 178 Warnings, 164 Critical Warnings and 0 Errors encountered.
+77 Infos, 188 Warnings, 164 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 896.230 ; gain = 638.945
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 890.961 ; gain = 633.547
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 896.230 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 31 13:31:03 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 890.961 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 31 13:52:53 2018...

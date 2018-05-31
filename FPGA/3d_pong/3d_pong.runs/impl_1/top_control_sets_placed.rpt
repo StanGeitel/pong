@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu May 31 13:31:56 2018
-| Host         : LAPTOP-NJE0O93L running 64-bit major release  (build 9200)
+| Date         : Thu May 31 13:53:44 2018
+| Host         : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a35t
@@ -52,10 +52,10 @@ Table of Contents
 |  clk1/clk1/inst/clk_out1 |                               | vga1/vsync_i_1_n_0               |                1 |              1 |
 | ~clk1/clk1/inst/clk_out1 |                               |                                  |                2 |              2 |
 |  clk1/clk1/inst/clk_out1 | vga1/red0                     | image1/red[3]_i_1_n_0            |                2 |              4 |
+| ~clk1/clk1/inst/clk_out1 | image1/addr_ram[3]_i_1_n_0    |                                  |                1 |              4 |
 | ~clk1/clk1/inst/clk_out1 | vga1/E[0]                     | buttons1/ramcounter              |                1 |              4 |
 | ~clk1/clk1/inst/clk_out1 | vga1/Q[1]                     | image1/RamCounter_reg[3]_0[0]    |                2 |              4 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/addra2[3]_i_1_n_0    |                                  |                1 |              4 |
-| ~clk1/clk1/inst/clk_out1 | image1/addr_ram[3]_i_1_n_0    |                                  |                1 |              4 |
 |  clk1/clk1/inst/clk_out1 |                               |                                  |                2 |              5 |
 |  clk1/clk1/inst/clk_out1 |                               | vga1/hcount_reg[9]_0[0]          |                5 |             10 |
 |  clk1/clk1/inst/clk_out1 | buttons1/yb1[9]_i_1_n_0       |                                  |                4 |             10 |
@@ -64,16 +64,16 @@ Table of Contents
 |  clk1/clk1/inst/clk_out1 | buttons1/xb1[9]_i_1__0_n_0    |                                  |                4 |             10 |
 |  clk1/clk1/inst/clk_out1 | buttons1/xball[9]_i_1_n_0     |                                  |                3 |             10 |
 |  clk1/clk1/inst/clk_out1 | vga1/hcount_reg[9]_0[0]       | vga1/SR[0]                       |                4 |             10 |
+| ~clk1/clk1/inst/clk_out1 | image1/xb1[9]_i_1_n_0         |                                  |                2 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevrball[9]_i_1_n_0 |                                  |                4 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevxb1[9]_i_1_n_0   |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevxball[9]_i_1_n_0 |                                  |                3 |             10 |
-| ~clk1/clk1/inst/clk_out1 | buttons1/prevyb1[9]_i_1_n_0   |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/prevyball[9]_i_1_n_0 |                                  |                3 |             10 |
+| ~clk1/clk1/inst/clk_out1 | buttons1/prevyb1[9]_i_1_n_0   |                                  |                3 |             10 |
 | ~clk1/clk1/inst/clk_out1 | buttons1/dina2[9]_i_1_n_0     |                                  |                4 |             10 |
-| ~clk1/clk1/inst/clk_out1 | image1/xb1[9]_i_1_n_0         |                                  |                2 |             10 |
 |  clk1/clk1/inst/clk_out1 |                               | vga1/red[3]_i_1__0_n_0           |                6 |             12 |
 |  clk1/clk1/inst/clk_out1 | vga1/place_pauze              | vga1/place_hoofdmenu0            |                8 |             32 |
-|  clk1/clk1/inst/clk_out1 | vga1/red1248_out              | vga1/place_hoofdmenu0            |                8 |             32 |
+|  clk1/clk1/inst/clk_out1 | vga1/red1249_out              | vga1/place_hoofdmenu0            |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | buttons1/backwardcount0       |                                  |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | buttons1/forwardcount0        | buttons1/forwardcount[0]_i_1_n_0 |                8 |             32 |
 |  clk1/clk1/inst/clk_out1 | down_IBUF                     | buttons1/yb11_carry__2_n_0       |                8 |             32 |

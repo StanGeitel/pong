@@ -1,0 +1,165 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 12924
+License: Customer
+
+Current time: 	Thu May 31 13:45:59 CEST 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 749 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Proghardware/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Proghardware/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	ikben
+User home directory: C:/Users/ikben
+User working directory: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong
+User country: 	NL
+User language: 	nl
+User locale: 	nl_NL
+
+RDI_BASEROOT: C:/Proghardware/Vivado
+HDI_APPROOT: C:/Proghardware/Vivado/2017.4
+RDI_DATADIR: C:/Proghardware/Vivado/2017.4/data
+RDI_BINDIR: C:/Proghardware/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/ikben/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/ikben/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/ikben/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Proghardware/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/vivado.log
+Vivado journal file location: 	C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/vivado.jou
+Engine tmp dir: 	C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 514 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 47 MB (+46325kb) [00:00:11]
+// [Engine Memory]: 475 MB (+346216kb) [00:00:11]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ikben\OneDrive\Documents\GitHub\pong\FPGA\3d_pong\3d_pong.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 53 MB (+4699kb) [00:00:15]
+// [Engine Memory]: 546 MB (+49681kb) [00:00:15]
+// [GUI Memory]: 60 MB (+4450kb) [00:00:16]
+// [Engine Memory]: 586 MB (+13503kb) [00:00:18]
+// [GUI Memory]: 66 MB (+2479kb) [00:00:19]
+// Tcl Message: open_project C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Proghardware/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 41 MB. Current time: 5/31/18 1:46:07 PM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 774.074 ; gain = 83.668 
+// Project name: 3d_pong; location: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 31 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // B (D, cj)
+// PAPropertyPanels.initPanels (image.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), image1 : image(Behavioral) (image.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), image1 : image(Behavioral) (image.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 70 MB (+1108kb) [00:00:56]
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+// Elapsed time: 32 seconds
+selectCodeEditor("image.vhd", 385, 364); // cd (w, cj)
+selectCodeEditor("image.vhd", 385, 364); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 53, 365); // cd (w, cj)
+// [GUI Memory]: 75 MB (+1530kb) [00:01:42]
+// HMemoryUtils.trashcanNow. Engine heap size: 612 MB. GUI used memory: 44 MB. Current time: 5/31/18 1:47:32 PM CEST
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 429, 186); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 55, 200); // cd (w, cj)
+// [GUI Memory]: 83 MB (+3828kb) [00:02:06]
+// Elapsed time: 17 seconds
+selectCodeEditor("image.vhd", 351, 158); // cd (w, cj)
+selectCodeEditor("image.vhd", 431, 142); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 28 seconds
+selectCodeEditor("image.vhd", 129, 215); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 69 seconds
+selectCodeEditor("image.vhd", 58, 58); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 70, 260); // cd (w, cj)
+typeControlKey(null, null, 'z');
+// [GUI Memory]: 92 MB (+5992kb) [00:04:04]
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// [Engine Memory]: 617 MB (+1815kb) [00:04:10]
+selectCodeEditor("image.vhd", 125, 210); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 136, 174); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 27 seconds
+selectCodeEditor("image.vhd", 359, 97); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// [GUI Memory]: 98 MB (+1276kb) [00:05:03]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+// Elapsed time: 44 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 46 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu May 31 13:51:41 2018] Launched synth_1... Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Thu May 31 13:51:41 2018] Launched impl_1... Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 646 MB. GUI used memory: 44 MB. Current time: 5/31/18 1:51:42 PM CEST
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify

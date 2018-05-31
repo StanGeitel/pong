@@ -69,15 +69,15 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/ip}} [current_project]
+  set_property webtalk.parent_dir C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/wt [current_project]
+  set_property parent.project_path C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr [current_project]
+  set_property ip_output_repo C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet {{C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp}}
-  read_ip -quiet {{C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
-  read_ip -quiet {{C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
-  read_xdc {{C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc}}
+  add_files -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp
+  read_ip -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_xdc C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

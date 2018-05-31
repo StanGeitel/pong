@@ -7,8 +7,11 @@ entity image is port(
     clk25MHz : in STD_LOGIC;
     hcount, vcount : in STD_LOGIC_VECTOR(9 downto 0);
     data_ram, data_ram2 : in STD_LOGIC_VECTOR(9 downto 0);
+    datasound : in STD_LOGIC_VECTOR(7 downto 0);
     addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
-    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0));
+    red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
+    adressound : out STD_LOGIC_VECTOR(9 downto 0);
+    PWM : out STD_LOGIC);
 end image;
 
 architecture Behavioral of image is
@@ -16,10 +19,14 @@ architecture Behavioral of image is
     signal vcount_int : integer range 0 to 1000;
     signal RamCounter : STD_LOGIC_VECTOR(3 downto 0);
     signal refresh_counter : STD_LOGIC := '0';
+    signal geluid_trigger : STD_LOGIC := '0';
     signal spelmod, moeil, menu, menusel, menuselmem : STD_LOGIC_VECTOR(1 downto 0);
     signal score1, score2 : STD_LOGIC_VECTOR(4 downto 0);
     signal xball, yball, rball, xb1, yb1, xb2, yb2, xb3, yb3, xb4, yb4, xb2raw, yb2raw, xbh1, ybh1, xbh2, ybh2 : integer range 0 to 1023;
-    signal soundcounter : integer range 0 to 26000000;
+    signal clkcounter : integer range 0 to 26000000;
+    signal soundcounter : STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
+    signal times : STD_LOGIC_VECTOR(2 downto 0) := "000";
+    signal tmpadressound : STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
     
     --Rom met sprites
     
@@ -509,6 +516,7 @@ begin
     yball <= 0;
     spelmod <= "00";
     menu <= "11";
+    adressound <= tmpadressound;
 
 process(clk25Mhz)
     variable color : STD_LOGIC;
@@ -594,19 +602,39 @@ begin
         ybh2 <= (yb2raw-62)/3+206;
 
                 
-        if(soundcounter = 25000000) then
+        if(clkcounter = 25000000) then
             menuselmem <= menusel;
-            soundcounter <= 0;
+            clkcounter <= 0;
         end if;    
         
-       soundcounter <= soundcounter + 1;
+       clkcounter <= clkcounter + 1;
         
         --Geluid afspelen
-         if(soundcounter = 2500000) then
-            if (menuselmem /= menusel) then
-            --remco geluid
+         if(clkcounter = 2500000) then
+            if (menuselmem /= menusel and geluid_trigger <= '0') then
+                geluid_trigger <= '1';
             end if;
          end if;
+         
+         if(geluid_trigger = '1') then
+             soundcounter <= soundcounter + 1;      
+                if soundcounter < datasound then -- < of <= ?
+                        PWM <= '1';
+                    else    
+                        PWM <= '0';
+                end if;
+                if soundcounter = 255 then
+                    if times = 4 then
+                            tmpadressound <= tmpadressound + 1;
+                            times <= "000";
+                        else    
+                            times <= times + 1;       
+                    end if;     
+                    if tmpadressound = 980 then -- begint telkens opnieuw met ceo-file -- length is 6668 dus elementen 0 t/m 6667
+                        tmpadressound <= "0000000000";
+                    end if;       
+                end if;
+         end if;  
          
 
         --Handbal

@@ -597,6 +597,18 @@ process(clk25Mhz)
     variable x_score2 : INTEGER := 240;
     variable y_score2 : INTEGER := 42;
     
+    variable place_moeilijkheid_spelweergave : INTEGER := 1643;
+    variable x_moeilijkheid_spelweergave : INTEGER := 510;
+    variable y_moeilijkheid_spelweergave : INTEGER := 42;
+   
+    variable place_dubbele_punt : INTEGER := 35;
+    variable x_dubbele_punt : INTEGER := 647;
+    variable y_dubbele_punt : INTEGER := 42;
+   
+    variable place_gekozen_moeilijheid : INTEGER := 1319;
+    variable x_gekozen_moeilijheid : INTEGER := 651;
+    variable y_gekozen_moeilijheid : INTEGER := 42;
+    
 begin
     
     if rising_edge(clk25MHz) then   
@@ -832,6 +844,90 @@ begin
                          blue(3) <= color;
                          place_score1 := place_score1 - 1; 
                    end if;
+                   
+            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+                          color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+                         
+                    elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+                          color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_dubbele_punt := place_dubbele_punt - 1;  
+                          
+                   elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+                       if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+                           color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                           red(0) <= color;
+                           red(1) <= color;
+                           red(2) <= color;
+                           red(3) <= color;
+                           green(0) <= color;
+                           green(1) <= color;
+                           green(2) <= color;
+                           green(3) <= color;
+                           blue(0) <= color;
+                           blue(1) <= color;
+                           blue(2) <= color;
+                           blue(3) <= color;
+                           place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+                     end if;
+                     
+                     if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+                             color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+                       end if;
+                       
+                       if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+                               color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                               red(0) <= color;
+                               red(1) <= color;
+                               red(2) <= color;
+                               red(3) <= color;
+                               green(0) <= color;
+                               green(1) <= color;
+                               green(2) <= color;
+                               green(3) <= color;
+                               blue(0) <= color;
+                               blue(1) <= color;
+                               blue(2) <= color;
+                               blue(3) <= color;
+                               place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+                         end if;
 
             elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
@@ -939,6 +1035,9 @@ begin
              if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
                  place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
                  place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+                 place_moeilijkheid_spelweergave := 1643;
+                 place_gekozen_moeilijheid := 1319;
+                 place_dubbele_punt := 35;
              end if; 
         end if;
         
@@ -1183,6 +1282,90 @@ begin
                                 place_score2 := place_score2 - 1; 
                           end if;
                           
+            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+                color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+                red(0) <= color;
+                red(1) <= color;
+                red(2) <= color;
+                red(3) <= color;
+                green(0) <= color;
+                green(1) <= color;
+                green(2) <= color;
+                green(3) <= color;
+                blue(0) <= color;
+                blue(1) <= color;
+                blue(2) <= color;
+                blue(3) <= color;
+                place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+               
+          elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+                color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+                red(0) <= color;
+                red(1) <= color;
+                red(2) <= color;
+                red(3) <= color;
+                green(0) <= color;
+                green(1) <= color;
+                green(2) <= color;
+                green(3) <= color;
+                blue(0) <= color;
+                blue(1) <= color;
+                blue(2) <= color;
+                blue(3) <= color;
+                place_dubbele_punt := place_dubbele_punt - 1;  
+                
+         elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+             if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+                 color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                 red(0) <= color;
+                 red(1) <= color;
+                 red(2) <= color;
+                 red(3) <= color;
+                 green(0) <= color;
+                 green(1) <= color;
+                 green(2) <= color;
+                 green(3) <= color;
+                 blue(0) <= color;
+                 blue(1) <= color;
+                 blue(2) <= color;
+                 blue(3) <= color;
+                 place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+           end if;
+           
+           if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+                   color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                   red(0) <= color;
+                   red(1) <= color;
+                   red(2) <= color;
+                   red(3) <= color;
+                   green(0) <= color;
+                   green(1) <= color;
+                   green(2) <= color;
+                   green(3) <= color;
+                   blue(0) <= color;
+                   blue(1) <= color;
+                   blue(2) <= color;
+                   blue(3) <= color;
+                   place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+             end if;
+             
+             if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+                     color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                     red(0) <= color;
+                     red(1) <= color;
+                     red(2) <= color;
+                     red(3) <= color;
+                     green(0) <= color;
+                     green(1) <= color;
+                     green(2) <= color;
+                     green(3) <= color;
+                     blue(0) <= color;
+                     blue(1) <= color;
+                     blue(2) <= color;
+                     blue(3) <= color;
+                     place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+               end if;
+                          
             elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";
@@ -1420,6 +1603,9 @@ begin
               place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
               place_streep := 143;
               place_score2 := 143;
+              place_moeilijkheid_spelweergave := 1643;
+               place_gekozen_moeilijheid := 1319;
+               place_dubbele_punt := 35;
           end if; 
         end if;
         
@@ -1663,6 +1849,91 @@ begin
                                        blue(3) <= color;
                                        place_score2 := place_score2 - 1; 
                                  end if;
+                                 
+            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+                   color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+                   red(0) <= color;
+                   red(1) <= color;
+                   red(2) <= color;
+                   red(3) <= color;
+                   green(0) <= color;
+                   green(1) <= color;
+                   green(2) <= color;
+                   green(3) <= color;
+                   blue(0) <= color;
+                   blue(1) <= color;
+                   blue(2) <= color;
+                   blue(3) <= color;
+                   place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+                  
+             elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+                   color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+                   red(0) <= color;
+                   red(1) <= color;
+                   red(2) <= color;
+                   red(3) <= color;
+                   green(0) <= color;
+                   green(1) <= color;
+                   green(2) <= color;
+                   green(3) <= color;
+                   blue(0) <= color;
+                   blue(1) <= color;
+                   blue(2) <= color;
+                   blue(3) <= color;
+                   place_dubbele_punt := place_dubbele_punt - 1;  
+                   
+            elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+                if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+                    color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                    red(0) <= color;
+                    red(1) <= color;
+                    red(2) <= color;
+                    red(3) <= color;
+                    green(0) <= color;
+                    green(1) <= color;
+                    green(2) <= color;
+                    green(3) <= color;
+                    blue(0) <= color;
+                    blue(1) <= color;
+                    blue(2) <= color;
+                    blue(3) <= color;
+                    place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+              end if;
+              
+              if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+                      color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                      red(0) <= color;
+                      red(1) <= color;
+                      red(2) <= color;
+                      red(3) <= color;
+                      green(0) <= color;
+                      green(1) <= color;
+                      green(2) <= color;
+                      green(3) <= color;
+                      blue(0) <= color;
+                      blue(1) <= color;
+                      blue(2) <= color;
+                      blue(3) <= color;
+                      place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+                end if;
+                
+                if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+                        color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+                        red(0) <= color;
+                        red(1) <= color;
+                        red(2) <= color;
+                        red(3) <= color;
+                        green(0) <= color;
+                        green(1) <= color;
+                        green(2) <= color;
+                        green(3) <= color;
+                        blue(0) <= color;
+                        blue(1) <= color;
+                        blue(2) <= color;
+                        blue(3) <= color;
+                        place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+                  end if;
+                  
             elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";
@@ -1768,6 +2039,9 @@ begin
                   place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
                   place_streep := 143;
                   place_score2 := 143;
+                  place_moeilijkheid_spelweergave := 1643;
+                   place_gekozen_moeilijheid := 1319;
+                   place_dubbele_punt := 35;
               end if; 
         end if;
         

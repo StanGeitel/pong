@@ -501,6 +501,23 @@ constant Rom22: Rom22Type := (
 '0', '0', '0'
 );
 
+type Rom23Type is array (71 downto 0) of std_logic;
+
+constant Rom23: Rom23Type := (  
+'1', '0', '0', '0', '0', '0', 
+'1', '1', '0', '0', '0', '0', 
+'1', '1', '1', '0', '0', '0', 
+'1', '1', '1', '1', '0', '0', 
+'1', '1', '1', '1', '1', '0', 
+'1', '1', '1', '1', '1', '1', 
+'1', '1', '1', '1', '1', '1', 
+'1', '1', '1', '1', '1', '0', 
+'1', '1', '1', '1', '0', '0', 
+'1', '1', '1', '0', '0', '0', 
+'1', '1', '0', '0', '0', '0', 
+'1', '0', '0', '0', '0', '0'             
+);
+
 
 begin
     
@@ -608,6 +625,23 @@ process(clk25Mhz)
     variable place_gekozen_moeilijheid : INTEGER := 1319;
     variable x_gekozen_moeilijheid : INTEGER := 651;
     variable y_gekozen_moeilijheid : INTEGER := 42;
+    
+    variable place_cursor : INTEGER := 71;
+    variable x_cursor_hoofdmenu : INTEGER := 408;
+    variable y_cursor_hoofdmenu_0 : INTEGER := 257;
+    variable y_cursor_hoofdmenu_1 : INTEGER := 271;
+    variable y_cursor_hoofdmenu_2 : INTEGER := 285;
+    variable y_cursor_hoofdmenu_3 : INTEGER := 299;
+    
+    variable x_cursor_moeilijkheid : INTEGER := 388;
+    variable y_cursor_moeilijkheid_0 : INTEGER := 238;
+    variable y_cursor_moeilijkheid_1 : INTEGER := 252;
+    variable y_cursor_moeilijkheid_2 : INTEGER := 266;
+    
+    variable x_cursor_pauze : INTEGER := 423;
+    variable y_cursor_pauze_0 : INTEGER := 272;
+    variable y_cursor_pauze_1 : INTEGER := 286;
+       
     
 begin
     
@@ -2080,6 +2114,70 @@ begin
                blue(2) <= color;
                blue(3) <= color;
                place_pong := place_pong - 1;
+               
+             elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_0 and vcount <= (y_cursor_hoofdmenu_0 + 11) and menusel = 0 then
+                 color := Rom23(place_cursor); -- 144 binair -- "0000";
+                 red(0) <= color;
+                 red(1) <= color;
+                 red(2) <= color;
+                 red(3) <= color;
+                 green(0) <= color;
+                 green(1) <= color;
+                 green(2) <= color;
+                 green(3) <= color;
+                 blue(0) <= color;
+                 blue(1) <= color;
+                 blue(2) <= color;
+                 blue(3) <= color;
+                 place_cursor := place_cursor - 1;
+                 
+            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_1 and vcount <= (y_cursor_hoofdmenu_1 + 11) and menusel = 1 then
+                  color := Rom23(place_cursor); -- 144 binair -- "0000";
+                  red(0) <= color;
+                  red(1) <= color;
+                  red(2) <= color;
+                  red(3) <= color;
+                  green(0) <= color;
+                  green(1) <= color;
+                  green(2) <= color;
+                  green(3) <= color;
+                  blue(0) <= color;
+                  blue(1) <= color;
+                  blue(2) <= color;
+                  blue(3) <= color;
+                  place_cursor := place_cursor - 1;
+                  
+            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_2 and vcount <= (y_cursor_hoofdmenu_2 + 11) and menusel = 2 then
+                    color := Rom23(place_cursor); -- 144 binair -- "0000";
+                    red(0) <= color;
+                    red(1) <= color;
+                    red(2) <= color;
+                    red(3) <= color;
+                    green(0) <= color;
+                    green(1) <= color;
+                    green(2) <= color;
+                    green(3) <= color;
+                    blue(0) <= color;
+                    blue(1) <= color;
+                    blue(2) <= color;
+                    blue(3) <= color;
+                    place_cursor := place_cursor - 1;
+                    
+            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_3 and vcount <= (y_cursor_hoofdmenu_3 + 11) and menusel = 3 then
+                    color := Rom23(place_cursor); -- 144 binair -- "0000";
+                    red(0) <= color;
+                    red(1) <= color;
+                    red(2) <= color;
+                    red(3) <= color;
+                    green(0) <= color;
+                    green(1) <= color;
+                    green(2) <= color;
+                    green(3) <= color;
+                    blue(0) <= color;
+                    blue(1) <= color;
+                    blue(2) <= color;
+                    blue(3) <= color;
+                    place_cursor := place_cursor - 1;
             
             elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
                 red <= "0000";
@@ -2127,6 +2225,7 @@ begin
                            
             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
                 place_pong := 611; -- waarom werkt vcount = 0 and hcount = 0 niet
+                place_cursor := 71;
             end if;                
     end if;
         
@@ -2165,6 +2264,54 @@ begin
                 blue(2) <= color;
                 blue(3) <= color;
                 place_moeilijkheid := place_moeilijkheid - 1;
+                
+            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_0 and vcount <= (y_cursor_moeilijkheid_0 + 11) and menusel = 0 then
+                   color := Rom23(place_cursor); -- 144 binair -- "0000";
+                   red(0) <= color;
+                   red(1) <= color;
+                   red(2) <= color;
+                   red(3) <= color;
+                   green(0) <= color;
+                   green(1) <= color;
+                   green(2) <= color;
+                   green(3) <= color;
+                   blue(0) <= color;
+                   blue(1) <= color;
+                   blue(2) <= color;
+                   blue(3) <= color;
+                   place_cursor := place_cursor - 1;
+                   
+            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_1 and vcount <= (y_cursor_moeilijkheid_1 + 11) and menusel = 1 then
+                  color := Rom23(place_cursor); -- 144 binair -- "0000";
+                  red(0) <= color;
+                  red(1) <= color;
+                  red(2) <= color;
+                  red(3) <= color;
+                  green(0) <= color;
+                  green(1) <= color;
+                  green(2) <= color;
+                  green(3) <= color;
+                  blue(0) <= color;
+                  blue(1) <= color;
+                  blue(2) <= color;
+                  blue(3) <= color;
+                  place_cursor := place_cursor - 1;
+                  
+            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_2 and vcount <= (y_cursor_moeilijkheid_2 + 11) and menusel = 2 then
+                color := Rom23(place_cursor); -- 144 binair -- "0000";
+                red(0) <= color;
+                red(1) <= color;
+                red(2) <= color;
+                red(3) <= color;
+                green(0) <= color;
+                green(1) <= color;
+                green(2) <= color;
+                green(3) <= color;
+                blue(0) <= color;
+                blue(1) <= color;
+                blue(2) <= color;
+                blue(3) <= color;
+                place_cursor := place_cursor - 1;    
             
             elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
                 red <= "0000";
@@ -2211,6 +2358,7 @@ begin
             
             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
                place_moeilijkheid := 1643; -- waarom werkt vcount = 0 and hcount = 0 niet
+               place_cursor := 71;
             end if;   
         end if;
         --Pauze
@@ -2246,6 +2394,38 @@ begin
                 blue(2) <= color;
                 blue(3) <= color;
                 place_pauze := place_pauze - 1;
+                
+            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_0 and vcount <= (y_cursor_pauze_0 + 11) and menusel = 0 then
+                color := Rom23(place_cursor); -- 144 binair -- "0000";
+                red(0) <= color;
+                red(1) <= color;
+                red(2) <= color;
+                red(3) <= color;
+                green(0) <= color;
+                green(1) <= color;
+                green(2) <= color;
+                green(3) <= color;
+                blue(0) <= color;
+                blue(1) <= color;
+                blue(2) <= color;
+                blue(3) <= color;
+                place_cursor := place_cursor - 1; 
+                
+            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_1 and vcount <= (y_cursor_pauze_1 + 11) and menusel = 1 then
+               color := Rom23(place_cursor); -- 144 binair -- "0000";
+               red(0) <= color;
+               red(1) <= color;
+               red(2) <= color;
+               red(3) <= color;
+               green(0) <= color;
+               green(1) <= color;
+               green(2) <= color;
+               green(3) <= color;
+               blue(0) <= color;
+               blue(1) <= color;
+               blue(2) <= color;
+               blue(3) <= color;
+               place_cursor := place_cursor - 1;    
             
             elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
                 red <= "0000";
@@ -2293,6 +2473,7 @@ begin
             
             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
                 place_pauze := 1235; -- waarom werkt vcount = 0 and hcount = 0 niet
+                place_cursor := 71;
             end if;     
         end if;
     end if;

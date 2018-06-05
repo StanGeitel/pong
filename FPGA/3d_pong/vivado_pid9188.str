@@ -1,0 +1,988 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 9188
+License: Customer
+
+Current time: 	Tue Jun 05 16:38:21 CEST 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 2 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Remco Y700
+User home directory: C:/Users/Remco Y700
+User working directory: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong
+User country: 	NL
+User language: 	nl
+User locale: 	nl_NL
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.4
+RDI_DATADIR: D:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Remco Y700/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/vivado.log
+Vivado journal file location: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/vivado.jou
+Engine tmp dir: 	D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-9188-LAPTOP-NJE0O93L
+
+GUI allocated memory:	191 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 647 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Documenten\Avans 2017-2018\Blok 8\Pong github\pong\FPGA\3d_pong\3d_pong.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// Tcl Message: open_project {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.xpr} 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 58 MB (+58382kb) [00:00:06]
+// [Engine Memory]: 516 MB (+389364kb) [00:00:06]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 92 MB (+32369kb) [00:00:08]
+// [Engine Memory]: 595 MB (+55597kb) [00:00:08]
+// [GUI Memory]: 102 MB (+5614kb) [00:00:09]
+// [GUI Memory]: 109 MB (+1683kb) [00:00:11]
+// [Engine Memory]: 647 MB (+23856kb) [00:00:11]
+// Tcl Message: open_project {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 647 MB. GUI used memory: 44 MB. Current time: 6/5/18 4:38:22 PM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 802.441 ; gain = 74.984 
+// Project name: 3d_pong; location: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong; part: xc7a35tcpg236-1
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), image1 : image(Behavioral) (image.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), image1 : image(Behavioral) (image.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("image.vhd", 443, 351); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 209, 261); // cd (w, cj)
+selectCodeEditor("image.vhd", 482, 257); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 667 MB. GUI used memory: 47 MB. Current time: 6/5/18 4:39:45 PM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 156 seconds
+selectCodeEditor("image.vhd", 370, 113); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 56, 162); // cd (w, cj)
+selectCodeEditor("image.vhd", 52, 178); // cd (w, cj)
+selectCodeEditor("image.vhd", 54, 178); // cd (w, cj)
+// Elapsed time: 53 seconds
+selectCodeEditor("image.vhd", 134, 244); // cd (w, cj)
+selectCodeEditor("image.vhd", 104, 266); // cd (w, cj)
+// Elapsed time: 58 seconds
+selectCodeEditor("image.vhd", 106, 281); // cd (w, cj)
+// Elapsed time: 84 seconds
+selectCodeEditor("image.vhd", 59, 331); // cd (w, cj)
+// Elapsed time: 71 seconds
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 64, 227); // cd (w, cj)
+selectCodeEditor("image.vhd", 88, 210); // cd (w, cj)
+selectCodeEditor("image.vhd", 140, 210); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("image.vhd", 28, 225); // cd (w, cj)
+selectCodeEditor("image.vhd", 320, 310); // cd (w, cj)
+selectCodeEditor("image.vhd", 275, 247); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+// [Engine Memory]: 681 MB (+1328kb) [00:09:14]
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// TclEventType: RUN_LAUNCH
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jun  5 16:47:25 2018] Launched synth_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Tue Jun  5 16:47:25 2018] Launched impl_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 692 MB. GUI used memory: 49 MB. Current time: 6/5/18 4:47:30 PM CEST
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 340 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bs (cj):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bs (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 1,278 MB (+590621kb) [00:15:09]
+dismissDialog("Auto Connect"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,278 MB. GUI used memory: 53 MB. Current time: 6/5/18 4:53:20 PM CEST
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bs (cj)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 103 seconds
+selectCodeEditor("image.vhd", 575, 239); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), memory1 : memory(Behavioral) (memory.vhd)]", 6); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), memory1 : memory(Behavioral) (memory.vhd), ram1 : blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), memory1 : memory(Behavioral) (memory.vhd), ram1 : blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// N (cj):  Re-customize IP : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tcpg236-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,380 MB. GUI used memory: 54 MB. Current time: 6/5/18 4:55:20 PM CEST
+// [Engine Memory]: 1,446 MB (+108531kb) [00:17:12]
+// r (cj): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // N (cj)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // bb (C, r)
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a (C, r)
+// Elapsed time: 36 seconds
+setFileChooser("D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// [Engine Memory]: 1,526 MB (+8530kb) [00:18:06]
+dismissDialog("Re-customize IP"); // r (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.Coe_File {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe}] [get_ips blk_mem_gen_0] 
+// Tcl Message: INFO: [IP_Flow 19-3484] Absolute path of file 'd:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe' provided. It will be converted relative to IP Instance files '../../../../3d_pong.ip_user_files/mem_init_files/registers.coe' 
+// au (cj): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 115 MB (+1452kb) [00:18:09]
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// bs (cj):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run blk_mem_gen_0_synth_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 8 blk_mem_gen_0_synth_1 
+// Tcl Message: [Tue Jun  5 16:56:23 2018] Launched blk_mem_gen_0_synth_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jun  5 16:56:34 2018] Launched blk_mem_gen_0_synth_1, synth_1... Run output will be captured here: blk_mem_gen_0_synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/runme.log synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Tue Jun  5 16:56:35 2018] Launched impl_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 132, 368); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 634, 286); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 231, 311); // cd (w, cj)
+selectCodeEditor("image.vhd", 241, 299); // cd (w, cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 124 MB (+2866kb) [00:21:30]
+// [GUI Memory]: 132 MB (+1720kb) [00:21:45]
+// [GUI Memory]: 140 MB (+1404kb) [00:22:00]
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 149 MB (+2784kb) [00:22:48]
+// [GUI Memory]: 157 MB (+225kb) [00:22:48]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 428 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bA (cj)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 70 seconds
+selectCodeEditor("image.vhd", 79, 158); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 326, 266); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 223, 263); // cd (w, cj)
+selectCodeEditor("image.vhd", 474, 356); // cd (w, cj)
+selectCodeEditor("image.vhd", 105, 246); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 584, 362); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jun  5 17:06:19 2018] Launched synth_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Tue Jun  5 17:06:19 2018] Launched impl_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 344 seconds
+selectCodeEditor("image.vhd", 92, 198); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 379, 436); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 234, 265); // cd (w, cj)
+selectCodeEditor("image.vhd", 396, 331); // cd (w, cj)
+selectCodeEditor("image.vhd", 1091, 245); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("image.vhd", 220, 231); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 168, 235); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 452, 229); // cd (w, cj)
+selectCodeEditor("image.vhd", 447, 229); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bA (cj)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bs (cj)
+selectCodeEditor("image.vhd", 516, 232); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 506, 237); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 759, 229); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 127, 250); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 98, 264); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 99, 281); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 259, 246); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 305, 262); // cd (w, cj)
+selectCodeEditor("image.vhd", 301, 266); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("image.vhd", 306, 179); // cd (w, cj)
+selectCodeEditor("image.vhd", 221, 179); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 203, 399); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 384, 397); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 208, 228); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 315, 248); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 210, 468); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("image.vhd", 209, 468); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 390, 464); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 283, 225); // cd (w, cj)
+selectCodeEditor("image.vhd", 282, 282); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 477, 278); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 727, 279); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 1007, 283); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 875, 284); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 21, 229); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 379, 243); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("image.vhd", 49, 281); // cd (w, cj)
+selectCodeEditor("image.vhd", 37, 266); // cd (w, cj)
+selectCodeEditor("image.vhd", 23, 277); // cd (w, cj)
+selectCodeEditor("image.vhd", 230, 265); // cd (w, cj)
+selectCodeEditor("image.vhd", 377, 285); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 36, 299); // cd (w, cj)
+selectCodeEditor("image.vhd", 46, 313); // cd (w, cj)
+selectCodeEditor("image.vhd", 56, 330); // cd (w, cj)
+selectCodeEditor("image.vhd", 69, 349); // cd (w, cj)
+selectCodeEditor("image.vhd", 232, 297); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("image.vhd", 230, 229); // cd (w, cj)
+selectCodeEditor("image.vhd", 28, 266); // cd (w, cj)
+selectCodeEditor("image.vhd", 27, 278); // cd (w, cj)
+selectCodeEditor("image.vhd", 25, 295); // cd (w, cj)
+// Elapsed time: 36 seconds
+selectCodeEditor("image.vhd", 348, 277); // cd (w, cj)
+selectCodeEditor("image.vhd", 348, 262); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("image.vhd", 350, 280); // cd (w, cj)
+selectCodeEditor("image.vhd", 351, 297); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("image.vhd", 566, 210); // cd (w, cj)
+selectCodeEditor("image.vhd", 804, 213); // cd (w, cj)
+selectCodeEditor("image.vhd", 559, 229); // cd (w, cj)
+selectCodeEditor("image.vhd", 800, 227); // cd (w, cj)
+selectCodeEditor("image.vhd", 82, 127); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 517, 367); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 243, 262); // cd (w, cj)
+selectCodeEditor("image.vhd", 334, 301); // cd (w, cj)
+selectCodeEditor("image.vhd", 792, 243); // cd (w, cj)
+selectCodeEditor("image.vhd", 1041, 248); // cd (w, cj)
+selectCodeEditor("image.vhd", 1195, 247); // cd (w, cj)
+// Elapsed time: 36 seconds
+selectCodeEditor("image.vhd", 40, 195); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 489, 438); // cd (w, cj)
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking too long to process. Increasing delay to 4000 ms.
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 281, 159); // cd (w, cj)
+selectCodeEditor("image.vhd", 1066, 141); // cd (w, cj)
+selectCodeEditor("image.vhd", 952, 146); // cd (w, cj)
+selectCodeEditor("image.vhd", 1103, 144); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 279, 145); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 197, 227); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 210, 145); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 320, 162); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 213, 380); // cd (w, cj)
+selectCodeEditor("image.vhd", 213, 381); // cd (w, cj)
+selectCodeEditor("image.vhd", 216, 384); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 399, 385); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("image.vhd", 244, 233); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("image.vhd", 288, 244); // cd (w, cj)
+selectCodeEditor("image.vhd", 134, 248); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 377, 266); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 272, 332); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 384, 336); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 230, 178); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 280, 166); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 281, 400); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 393, 403); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 280, 128); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 398, 147); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 294, 372); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 406, 366); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 279, 246); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 281, 243); // cd (w, cj)
+selectCodeEditor("image.vhd", 279, 249); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 396, 264); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 291, 334); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 403, 330); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 266, 333); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 284, 231); // cd (w, cj)
+selectCodeEditor("image.vhd", 276, 230); // cd (w, cj)
+selectCodeEditor("image.vhd", 287, 231); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 396, 233); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 391, 112); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 280, 141); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("image.vhd", 404, 294); // cd (w, cj)
+selectCodeEditor("image.vhd", 495, 298); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 663, 298); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 951, 300); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 932, 298); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 494, 212); // cd (w, cj)
+selectCodeEditor("image.vhd", 1046, 218); // cd (w, cj)
+selectCodeEditor("image.vhd", 1055, 213); // cd (w, cj)
+selectCodeEditor("image.vhd", 1052, 214); // cd (w, cj)
+selectCodeEditor("image.vhd", 490, 213); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 383, 311); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 26, 315); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 178, 351); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 234, 353); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+// Elapsed time: 14 seconds
+selectCodeEditor("image.vhd", 28, 348); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 26, 353); // cd (w, cj)
+selectCodeEditor("image.vhd", 40, 349); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 94, 351); // cd (w, cj)
+selectCodeEditor("image.vhd", 100, 350); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,529 MB. GUI used memory: 74 MB. Current time: 6/5/18 5:25:20 PM CEST
+selectCodeEditor("image.vhd", 250, 351); // cd (w, cj)
+selectCodeEditor("image.vhd", 28, 369); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 387, 363); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 252, 387); // cd (w, cj)
+selectCodeEditor("image.vhd", 250, 397); // cd (w, cj)
+// Elapsed time: 34 seconds
+selectCodeEditor("image.vhd", 355, 351); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("image.vhd", 369, 367); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("image.vhd", 367, 381); // cd (w, cj)
+selectCodeEditor("image.vhd", 370, 379, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("image.vhd", 367, 388); // cd (w, cj)
+selectCodeEditor("image.vhd", 369, 384, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("image.vhd", 370, 402); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 34 seconds
+selectCodeEditor("image.vhd", 597, 161); // cd (w, cj)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), memory1 : memory(Behavioral) (memory.vhd), ram1 : blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), memory1 : memory(Behavioral) (memory.vhd), ram1 : blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cj): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // bb (C, r)
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a (C, r)
+setFileChooser("D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // r (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.Coe_File {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe}] [get_ips blk_mem_gen_0] 
+// Tcl Message: INFO: [IP_Flow 19-3484] Absolute path of file 'd:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe' provided. It will be converted relative to IP Instance files '../../../../3d_pong.ip_user_files/mem_init_files/registers.coe' 
+// au (cj): Generate Output Products: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// TclEventType: DG_GRAPH_GENERATED
+// bs (cj):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run blk_mem_gen_0_synth_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 8 blk_mem_gen_0_synth_1 
+// Tcl Message: [Tue Jun  5 17:27:54 2018] Launched blk_mem_gen_0_synth_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jun  5 17:28:05 2018] Launched blk_mem_gen_0_synth_1, synth_1... Run output will be captured here: blk_mem_gen_0_synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_0_synth_1/runme.log synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Tue Jun  5 17:28:05 2018] Launched impl_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 166 MB (+1112kb) [00:54:03]
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 174 MB (+52kb) [00:54:32]
+// [GUI Memory]: 186 MB (+2819kb) [00:54:57]
+// [GUI Memory]: 198 MB (+2733kb) [00:55:17]
+// [GUI Memory]: 208 MB (+142kb) [00:55:42]
+// [GUI Memory]: 221 MB (+2825kb) [00:56:17]
+// [GUI Memory]: 232 MB (+231kb) [00:56:37]
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 246 MB (+2350kb) [00:56:49]
+// ah (cj): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 261 MB (+2306kb) [00:56:54]
+// Elapsed time: 423 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// [GUI Memory]: 278 MB (+4152kb) [00:57:01]
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bA (cj)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 84 seconds
+selectCodeEditor("image.vhd", 27, 211); // cd (w, cj)
+selectCodeEditor("image.vhd", 77, 226); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("image.vhd", 29, 211); // cd (w, cj)
+selectCodeEditor("image.vhd", 480, 250); // cd (w, cj)
+selectCodeEditor("image.vhd", 24, 210); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 32, 288); // cd (w, cj)
+selectCodeEditor("image.vhd", 28, 280); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 48, 315); // cd (w, cj)
+selectCodeEditor("image.vhd", 35, 301); // cd (w, cj)
+selectCodeEditor("image.vhd", 18, 310); // cd (w, cj)
+selectCodeEditor("image.vhd", 49, 328); // cd (w, cj)
+selectCodeEditor("image.vhd", 49, 345); // cd (w, cj)
+selectCodeEditor("image.vhd", 238, 299); // cd (w, cj)
+selectCodeEditor("image.vhd", 237, 312); // cd (w, cj)
+selectCodeEditor("image.vhd", 239, 329); // cd (w, cj)
+selectCodeEditor("image.vhd", 236, 351); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("image.vhd", 304, 397); // cd (w, cj)
+// Elapsed time: 33 seconds
+selectCodeEditor("image.vhd", 319, 334); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("image.vhd", 323, 354); // cd (w, cj)
+selectCodeEditor("image.vhd", 324, 367); // cd (w, cj)
+selectCodeEditor("image.vhd", 330, 366); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 30 seconds
+selectCodeEditor("image.vhd", 83, 162); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 411, 407); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 260, 261); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("image.vhd", 450, 91); // cd (w, cj)
+selectCodeEditor("image.vhd", 496, 95); // cd (w, cj)
+selectCodeEditor("image.vhd", 706, 94); // cd (w, cj)
+selectCodeEditor("image.vhd", 945, 97); // cd (w, cj)
+selectCodeEditor("image.vhd", 1167, 98); // cd (w, cj)
+// Elapsed time: 45 seconds
+selectCodeEditor("image.vhd", 272, 28); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 273, 299); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 532, 300); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 818, 303); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 656, 300); // cd (w, cj)
+selectCodeEditor("image.vhd", 670, 293); // cd (w, cj)
+selectCodeEditor("image.vhd", 635, 301); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 785, 304); // cd (w, cj)
+selectCodeEditor("image.vhd", 939, 298); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("image.vhd", 81, 143); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 395, 382); // cd (w, cj)
+selectCodeEditor("image.vhd", 366, 381); // cd (w, cj)
+selectCodeEditor("image.vhd", 357, 378); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 250, 261); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("image.vhd", 237, 143); // cd (w, cj)
+selectCodeEditor("image.vhd", 511, 143); // cd (w, cj)
+selectCodeEditor("image.vhd", 666, 151); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 80 seconds
+selectCodeEditor("image.vhd", 755, 348); // cd (w, cj)
+selectCodeEditor("image.vhd", 420, 330); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("image.vhd", 85, 143); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 378, 246); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 226, 265); // cd (w, cj)
+selectCodeEditor("image.vhd", 495, 144); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 706, 303); // cd (w, cj)
+selectCodeEditor("image.vhd", 654, 303); // cd (w, cj)
+selectCodeEditor("image.vhd", 615, 297); // cd (w, cj)
+selectCodeEditor("image.vhd", 874, 300); // cd (w, cj)
+selectCodeEditor("image.vhd", 841, 302); // cd (w, cj)
+selectCodeEditor("image.vhd", 994, 298); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("image.vhd", 78, 142); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 370, 380); // cd (w, cj)
+selectCodeEditor("image.vhd", 347, 383); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 214, 262); // cd (w, cj)
+selectCodeEditor("image.vhd", 585, 255); // cd (w, cj)
+selectCodeEditor("image.vhd", 584, 295); // cd (w, cj)
+selectCodeEditor("image.vhd", 808, 298); // cd (w, cj)
+selectCodeEditor("image.vhd", 968, 299); // cd (w, cj)
+selectCodeEditor("image.vhd", 963, 302); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("image.vhd", 126, 40); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("image.vhd", 593, 420); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("image.vhd", 247, 436); // cd (w, cj)
+typeControlKey((HResource) null, "image.vhd", 'c'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jun  5 17:46:02 2018] Launched synth_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log [Tue Jun  5 17:46:03 2018] Launched impl_1... Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 303 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 86 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bs (cj)

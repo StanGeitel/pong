@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jun  5 15:58:11 2018
-# Process ID: 16916
+# Start of session at: Tue Jun  5 17:46:04 2018
+# Process ID: 2760
 # Current directory: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.vds
@@ -12,19 +12,22 @@
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a35tcpg236-1
 Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10796 
+INFO: Helper process launched with PID 11504 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 370.156 ; gain = 101.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 370.039 ; gain = 101.277
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
 INFO: [Synth 8-3491] module 'clk' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
 INFO: [Synth 8-638] synthesizing module 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
 INFO: [Synth 8-3491] module 'spi' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
 INFO: [Synth 8-638] synthesizing module 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
@@ -40,14 +43,14 @@ INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Documenten/Avans 2017-2018/Blo
 INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
 INFO: [Synth 8-3491] module 'image' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
 INFO: [Synth 8-638] synthesizing module 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:662]
+WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:696]
 INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
 INFO: [Synth 8-3491] module 'memory' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
 INFO: [Synth 8-638] synthesizing module 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
 INFO: [Synth 8-3491] module 'buttons' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
 INFO: [Synth 8-638] synthesizing module 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
@@ -57,9 +60,9 @@ WARNING: [Synth 8-3848] Net dina2 in module/entity buttons does not have driver.
 INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
 INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
 INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
 WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
@@ -106,7 +109,7 @@ WARNING: [Synth 8-3331] design image has unconnected port data_ram[2]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 457.117 ; gain = 188.547
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 460.578 ; gain = 191.816
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,21 +119,21 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 457.117 ; gain = 188.547
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 460.578 ; gain = 191.816
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
 Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
 Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -140,47 +143,47 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 805.125 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 808.918 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 805.125 ; gain = 536.555
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 808.918 ; gain = 540.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 805.125 ; gain = 536.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 808.918 ; gain = 540.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-16916-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-2760-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for clk1/clk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom_Geluid1/rom. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 805.125 ; gain = 536.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 808.918 ; gain = 540.156
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
 WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:616]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:615]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:618]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:617]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:650]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:649]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:652]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:651]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:541]
-WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:623]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:638]
-WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2052]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2068]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2137]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2153]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2218]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2234]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:657]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:672]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:526]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2086]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2102]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2236]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2252]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2366]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2382]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -193,55 +196,61 @@ INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address siz
 WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 805.125 ; gain = 536.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 808.918 ; gain = 540.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |image__GB0    |           1|     30490|
+|2     |image__GB1    |           1|     10492|
+|3     |image__GB2    |           1|      9856|
+|4     |top__GC0      |           1|      1763|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 55    
+	   2 Input     32 Bit       Adders := 58    
 	   2 Input     31 Bit       Adders := 2     
-	   3 Input     11 Bit       Adders := 4     
 	   2 Input     11 Bit       Adders := 12    
+	   3 Input     11 Bit       Adders := 4     
 	   2 Input     10 Bit       Adders := 12    
 	   3 Input     10 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 7     
+	               32 Bit    Registers := 8     
 	               10 Bit    Registers := 15    
 	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 124   
+	   2 Input     32 Bit        Muxes := 134   
+	   5 Input     32 Bit        Muxes := 2     
 	   4 Input     32 Bit        Muxes := 2     
 	   6 Input     32 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 2     
 	   7 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 10    
-	   2 Input      4 Bit        Muxes := 285   
+	   2 Input      4 Bit        Muxes := 294   
 	   4 Input      4 Bit        Muxes := 1     
-	  12 Input      4 Bit        Muxes := 6     
+	  14 Input      4 Bit        Muxes := 3     
+	  16 Input      4 Bit        Muxes := 3     
 	  11 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 30    
 	   6 Input      2 Bit        Muxes := 2     
 	  11 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 127   
-	  12 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 130   
+	  16 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -249,6 +258,46 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module image 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 57    
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 12    
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 10    
+	   3 Input     10 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 8     
+	               10 Bit    Registers := 13    
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 133   
+	   5 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   7 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 291   
+	   4 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 3     
+	  16 Input      4 Bit        Muxes := 3     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 30    
+	   6 Input      2 Bit        Muxes := 2     
+	  11 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 130   
+	  16 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
 Module clk 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -270,44 +319,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
-Module image 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 54    
-	   2 Input     31 Bit       Adders := 2     
-	   3 Input     11 Bit       Adders := 4     
-	   2 Input     11 Bit       Adders := 12    
-	   2 Input     10 Bit       Adders := 10    
-	   3 Input     10 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 7     
-	               10 Bit    Registers := 13    
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 123   
-	   4 Input     32 Bit        Muxes := 2     
-	   6 Input     32 Bit        Muxes := 1     
-	   8 Input     32 Bit        Muxes := 2     
-	   7 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
-	   2 Input     31 Bit        Muxes := 2     
-	   2 Input     10 Bit        Muxes := 10    
-	   2 Input      4 Bit        Muxes := 282   
-	   4 Input      4 Bit        Muxes := 1     
-	  12 Input      4 Bit        Muxes := 6     
-	  11 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 6     
-	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 30    
-	   6 Input      2 Bit        Muxes := 2     
-	  11 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 127   
-	  12 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -323,39 +334,24 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'xball_reg[9:0]' into 'xball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:537]
-INFO: [Synth 8-4471] merging register 'yball_reg[9:0]' into 'yball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:539]
-INFO: [Synth 8-4471] merging register 'rball_reg[9:0]' into 'rball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:541]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:537]
-WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:539]
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:541]
+DSP Debug: swapped A/B pins for adder 000001F7145CE0A0
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2382]
+INFO: [Synth 8-4471] merging register 'yball_reg[9:0]' into 'yball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
+INFO: [Synth 8-4471] merging register 'xball_reg[9:0]' into 'xball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:554]
+INFO: [Synth 8-4471] merging register 'rball_reg[9:0]' into 'rball_reg[9:0]' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
+WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:554]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 000002451A669A80
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:541]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:537]
-WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:539]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2052]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2068]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2137]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2153]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2218]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2234]
-WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:623]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:638]
-WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:509]
+WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:554]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:526]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:657]
 DSP Report: Generating DSP red3, operation Mode is: A2*B2.
 DSP Report: register rball_reg is absorbed into DSP red3.
 DSP Report: register rball_reg is absorbed into DSP red3.
 DSP Report: operator red3 is absorbed into DSP red3.
-DSP Report: Generating DSP red4, operation Mode is: (D-A2)*B.
-DSP Report: register xball_reg is absorbed into DSP red4.
-DSP Report: operator red4 is absorbed into DSP red4.
-DSP Report: operator red5 is absorbed into DSP red4.
-DSP Report: Generating DSP red3, operation Mode is: PCIN+(D-A2)*B.
-DSP Report: register yball_reg is absorbed into DSP red3.
-DSP Report: operator red3 is absorbed into DSP red3.
-DSP Report: operator red4 is absorbed into DSP red3.
-DSP Report: operator red5 is absorbed into DSP red3.
 DSP Report: Generating DSP red4, operation Mode is: (D'-A)*B.
 DSP Report: register xball_reg is absorbed into DSP red4.
 DSP Report: operator red4 is absorbed into DSP red4.
@@ -365,36 +361,46 @@ DSP Report: register yball_reg is absorbed into DSP red3.
 DSP Report: operator red3 is absorbed into DSP red3.
 DSP Report: operator red4 is absorbed into DSP red3.
 DSP Report: operator red5 is absorbed into DSP red3.
+DSP Report: Generating DSP red4, operation Mode is: (D-A2)*B.
+DSP Report: register xball_reg is absorbed into DSP red4.
+DSP Report: operator red4 is absorbed into DSP red4.
+DSP Report: operator red5 is absorbed into DSP red4.
+DSP Report: Generating DSP red3, operation Mode is: PCIN+(D-A2)*B.
+DSP Report: register yball_reg is absorbed into DSP red3.
+DSP Report: operator red3 is absorbed into DSP red3.
+DSP Report: operator red4 is absorbed into DSP red3.
+DSP Report: operator red5 is absorbed into DSP red3.
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2366]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:672]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2252]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2236]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2102]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2086]
 INFO: [Synth 8-5545] ROM "spi1/bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
 WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[7]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[6]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[3]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[2]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
-WARNING: [Synth 8-3331] design top has unconnected port up
-WARNING: [Synth 8-3331] design top has unconnected port down
-WARNING: [Synth 8-3331] design top has unconnected port left
-WARNING: [Synth 8-3331] design top has unconnected port right
-WARNING: [Synth 8-3331] design top has unconnected port go
-WARNING: [Synth 8-3331] design top has unconnected port forward
-WARNING: [Synth 8-3331] design top has unconnected port backward
-INFO: [Synth 8-3886] merging instance 'image1/blue_reg[0]' (FDE) to 'image1/blue_reg[1]'
-INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[0]' (FD) to 'vga1/blue_reg[1]'
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[15]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[14]) is unused and will be removed from module top.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (image1/\yb2_reg[9] )
-INFO: [Synth 8-3886] merging instance 'image1/blue_reg[1]' (FDE) to 'image1/green_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[1]' (FD) to 'vga1/green_reg[2]'
-WARNING: [Synth 8-3332] Sequential element (yb2_reg[9]) is unused and will be removed from module image.
+INFO: [Synth 8-3886] merging instance 'image1i_1/blue_reg[0]' (FDE) to 'image1i_1/blue_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/new_frame_ready_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_3/\spi1/tmpwea_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/dina_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/addra_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/addra_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/addra_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\spi1/addra_reg[3] )
+INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[0]' (FD) to 'i_3/vga1/blue_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (image1i_1/\yb2_reg[9] )
+INFO: [Synth 8-3886] merging instance 'image1i_1/green_reg[2]' (FDE) to 'image1i_1/blue_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 917.688 ; gain = 649.117
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:18 . Memory (MB): peak = 848.270 ; gain = 579.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -405,10 +411,10 @@ DSP: Preliminary Mapping  Report (see note below)
 |Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |image       | A2*B2         | 10     | 10     | -      | -      | 20     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|image       | (D-A2)*B      | 10     | 11     | -      | 10     | 22     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
-|image       | PCIN+(D-A2)*B | 10     | 11     | -      | 10     | 23     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
 |image       | (D'-A)*B      | 10     | 11     | -      | 10     | 22     | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
 |image       | PCIN+(D'-A)*B | 10     | 11     | -      | 10     | 23     | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
+|image       | (D-A2)*B      | 10     | 11     | -      | 10     | 22     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
+|image       | PCIN+(D-A2)*B | 10     | 11     | -      | 10     | 23     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -417,102 +423,43 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |image__GB0    |           1|     12506|
+|2     |image__GB1    |           1|      4581|
+|3     |image__GB2    |           1|      5463|
+|4     |top__GC0      |           1|       157|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk1/clk_out1' to pin 'clk1/clk1/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 932.254 ; gain = 663.684
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:31 ; elapsed = 00:02:35 . Memory (MB): peak = 935.406 ; gain = 666.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[1]' (FD) to 'i_3/vga1/green_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 1229.129 ; gain = 960.559
+Finished Timing Optimization : Time (s): cpu = 00:03:00 ; elapsed = 00:03:04 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |image__GB2    |           1|      5463|
+|2     |top__GC0      |           1|       155|
+|3     |top_GT0       |           1|     17083|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (spi1/tmpwea_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/new_frame_ready_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[13]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[10]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[31]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[30]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[29]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[28]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[27]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[26]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[25]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[24]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[23]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[22]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[21]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[20]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[19]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[18]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[17]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[16]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[15]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[14]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[13]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[10]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (clk1/Q1_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (clk1/Q2_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (clk1/Q3_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (clk1/clkstate_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (clk1/edge_reg) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:00 ; elapsed = 00:02:03 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Technology Mapping : Time (s): cpu = 00:03:07 ; elapsed = 00:03:11 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,7 +483,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished IO Insertion : Time (s): cpu = 00:03:09 ; elapsed = 00:03:13 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -549,7 +496,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:09 ; elapsed = 00:03:13 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -561,25 +508,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:03 ; elapsed = 00:02:06 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:06 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -602,20 +549,20 @@ Report Cell Usage:
 |2     |blk_mem_gen_0__1 |     1|
 |3     |blk_mem_gen_1    |     1|
 |4     |clk_wiz_0        |     1|
-|5     |CARRY4           |   863|
+|5     |CARRY4           |   899|
 |6     |DSP48E1          |     1|
 |7     |DSP48E1_1        |     2|
 |8     |DSP48E1_2        |     2|
-|9     |LUT1             |  1688|
-|10    |LUT2             |  1422|
-|11    |LUT3             |   188|
-|12    |LUT4             |   976|
-|13    |LUT5             |   685|
-|14    |LUT6             |  2407|
-|15    |MUXF7            |   116|
-|16    |MUXF8            |     8|
-|17    |FDRE             |   572|
-|18    |FDSE             |    84|
+|9     |LUT1             |  1762|
+|10    |LUT2             |  1348|
+|11    |LUT3             |   198|
+|12    |LUT4             |   872|
+|13    |LUT5             |   811|
+|14    |LUT6             |  2347|
+|15    |MUXF7            |   202|
+|16    |MUXF8            |    12|
+|17    |FDRE             |   600|
+|18    |FDSE             |    90|
 |19    |OBUF             |    15|
 +------+-----------------+------+
 
@@ -623,32 +570,32 @@ Report Instance Areas:
 +------+--------------+-----------+------+
 |      |Instance      |Module     |Cells |
 +------+--------------+-----------+------+
-|1     |top           |           |  9058|
+|1     |top           |           |  9190|
 |2     |  clk1        |clk        |     1|
-|3     |  image1      |image      |  6126|
+|3     |  image1      |image      |  5776|
 |4     |  memory1     |memory     |    20|
-|5     |  rom_Geluid1 |rom_Geluid |    12|
-|6     |  vga1        |VGA        |   997|
+|5     |  rom_Geluid1 |rom_Geluid |    18|
+|6     |  vga1        |VGA        |  1468|
 +------+--------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:10 ; elapsed = 00:03:14 . Memory (MB): peak = 1106.902 ; gain = 838.141
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 118 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:42 ; elapsed = 00:01:57 . Memory (MB): peak = 1299.848 ; gain = 683.270
-Synthesis Optimization Complete : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 1299.848 ; gain = 1031.277
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:51 ; elapsed = 00:03:06 . Memory (MB): peak = 1106.902 ; gain = 489.801
+Synthesis Optimization Complete : Time (s): cpu = 00:03:11 ; elapsed = 00:03:15 . Memory (MB): peak = 1106.902 ; gain = 838.141
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 992 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1118 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 5 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+88 Infos, 85 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:13 . Memory (MB): peak = 1299.848 ; gain = 1042.742
+synth_design: Time (s): cpu = 00:03:15 ; elapsed = 00:03:21 . Memory (MB): peak = 1106.902 ; gain = 849.609
 INFO: [Common 17-1381] The checkpoint 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1299.848 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  5 16:00:32 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1106.902 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  5 17:49:33 2018...

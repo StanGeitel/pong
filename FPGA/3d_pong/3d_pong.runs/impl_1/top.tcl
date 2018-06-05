@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -68,21 +69,21 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/incrSyn
+  set_param synth.incrementalSynthesisCache {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/incrSyn}
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/wt [current_project]
-  set_property parent.project_path C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr [current_project]
-  set_property ip_output_repo C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/ip [current_project]
+  set_property webtalk.parent_dir {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.cache/wt} [current_project]
+  set_property parent.project_path {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.xpr} [current_project]
+  set_property ip_output_repo {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp
-  read_ip -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_ip -quiet c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-  read_xdc C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc
+  add_files -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp}}
+  read_ip -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+  read_ip -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+  read_ip -quiet {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
+  read_xdc {{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc}}
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

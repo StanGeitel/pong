@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Proghardware/SDK/2017.4/bin;C:/Proghardware/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Proghardware/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Proghardware/Vivado/2017.4/bin
+  PATH=D:/Xilinx/SDK/2017.4/bin;D:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2017.4/bin
 else
-  PATH=C:/Proghardware/SDK/2017.4/bin;C:/Proghardware/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Proghardware/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Proghardware/Vivado/2017.4/bin:$PATH
+  PATH=D:/Xilinx/SDK/2017.4/bin;D:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1'
+HD_PWD='D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

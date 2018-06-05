@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Thu May 31 14:11:45 2018
 -- Host        : LAPTOP-88VN4TC1 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top blk_mem_gen_1 -prefix
+--               blk_mem_gen_1_ blk_mem_gen_1_stub.vhdl
 -- Design      : blk_mem_gen_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

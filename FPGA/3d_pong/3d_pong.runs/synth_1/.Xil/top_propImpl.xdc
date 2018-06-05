@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc rfile:../../../3d_pong.srcs/constrs_1/new/top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc} rfile:../../../3d_pong.srcs/constrs_1/new/top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk100MHz]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

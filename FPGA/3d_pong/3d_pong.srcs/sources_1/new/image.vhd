@@ -294,7 +294,7 @@ constant Rom10: Rom10Type := (
 '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',
 '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',
 '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1',	'0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0',
-'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0'
+'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0',	'0',	'1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0',	'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0'
 );
 
 type Rom11Type is array (143 downto 0) of std_logic;
@@ -514,10 +514,11 @@ begin
     rball <= 0;
     xball <= 0;
     yball <= 0;
-    spelmod <= "11";
+    spelmod <= "01";
     menu <= "00";
     adressound <= tmpadressound;
-    score1 <= "00000";
+    score1 <= "00111";
+    score2 <= "00100";
 
 process(clk25Mhz)
     variable color : STD_LOGIC;
@@ -658,7 +659,194 @@ begin
 
         --Handbal
         if(spelmod = "01" and menu = "00") then
-            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+                 color := Rom10(place_score); -- 144 binair -- "0000";
+                 red(0) <= color;
+                 red(1) <= color;
+                 red(2) <= color;
+                 red(3) <= color;
+                 green(0) <= color;
+                 green(1) <= color;
+                 green(2) <= color;
+                 green(3) <= color;
+                 blue(0) <= color;
+                 blue(1) <= color;
+                 blue(2) <= color;
+                 blue(3) <= color;
+                 place_score := place_score - 1;   
+              
+          elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+                   if score1 = 0 and place_score1 < 144 then
+                         color := Rom11(place_score1); -- 144 binair -- "0000";
+                         red(0) <= color;
+                         red(1) <= color;
+                         red(2) <= color;
+                         red(3) <= color;
+                         green(0) <= color;
+                         green(1) <= color;
+                         green(2) <= color;
+                         green(3) <= color;
+                         blue(0) <= color;
+                         blue(1) <= color;
+                         blue(2) <= color;
+                         blue(3) <= color;
+                         place_score1 := place_score1 - 1; 
+                   end if;
+                   
+                   if score1 = 1 and place_score1 < 144 then
+                          color := Rom12(place_score1); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_score1 := place_score1 - 1; 
+                    end if;
+                    
+                     if score1 = 2 and place_score1 < 144 then
+                           color := Rom13(place_score1); -- 144 binair -- "0000";
+                           red(0) <= color;
+                           red(1) <= color;
+                           red(2) <= color;
+                           red(3) <= color;
+                           green(0) <= color;
+                           green(1) <= color;
+                           green(2) <= color;
+                           green(3) <= color;
+                           blue(0) <= color;
+                           blue(1) <= color;
+                           blue(2) <= color;
+                           blue(3) <= color;
+                           place_score1 := place_score1 - 1; 
+                     end if;
+                     
+                     if score1 = 3 and place_score1 < 144 then
+                          color := Rom14(place_score1); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_score1 := place_score1 - 1; 
+                      end if;
+                    
+                      if score1 = 4 and place_score1 < 144 then
+                           color := Rom15(place_score1); -- 144 binair -- "0000";
+                           red(0) <= color;
+                           red(1) <= color;
+                           red(2) <= color;
+                           red(3) <= color;
+                           green(0) <= color;
+                           green(1) <= color;
+                           green(2) <= color;
+                           green(3) <= color;
+                           blue(0) <= color;
+                           blue(1) <= color;
+                           blue(2) <= color;
+                           blue(3) <= color;
+                           place_score1 := place_score1 - 1; 
+                     end if;
+                     
+                      if score1 = 5 and place_score1 < 144 then
+                             color := Rom16(place_score1); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_score1 := place_score1 - 1; 
+                       end if;
+                       
+                       if score1 = 6 and place_score1 < 144 then
+                            color := Rom17(place_score1); -- 144 binair -- "0000";
+                            red(0) <= color;
+                            red(1) <= color;
+                            red(2) <= color;
+                            red(3) <= color;
+                            green(0) <= color;
+                            green(1) <= color;
+                            green(2) <= color;
+                            green(3) <= color;
+                            blue(0) <= color;
+                            blue(1) <= color;
+                            blue(2) <= color;
+                            blue(3) <= color;
+                            place_score1 := place_score1 - 1; 
+                      end if;
+                      
+                      if score1 = 7 and place_score1 < 144 then
+                           color := Rom18(place_score1); -- 144 binair -- "0000";
+                           red(0) <= color;
+                           red(1) <= color;
+                           red(2) <= color;
+                           red(3) <= color;
+                           green(0) <= color;
+                           green(1) <= color;
+                           green(2) <= color;
+                           green(3) <= color;
+                           blue(0) <= color;
+                           blue(1) <= color;
+                           blue(2) <= color;
+                           blue(3) <= color;
+                           place_score1 := place_score1 - 1; 
+                     end if;
+                     
+                     if score1 = 8 and place_score1 < 144 then
+                          color := Rom19(place_score1); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_score1 := place_score1 - 1; 
+                    end if;
+                    
+                    if score1 = 9 and place_score1 < 144 then
+                         color := Rom20(place_score1); -- 144 binair -- "0000";
+                         red(0) <= color;
+                         red(1) <= color;
+                         red(2) <= color;
+                         red(3) <= color;
+                         green(0) <= color;
+                         green(1) <= color;
+                         green(2) <= color;
+                         green(3) <= color;
+                         blue(0) <= color;
+                         blue(1) <= color;
+                         blue(2) <= color;
+                         blue(3) <= color;
+                         place_score1 := place_score1 - 1; 
+                   end if;
+
+            elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";
                 blue <= "1000"; 
@@ -761,11 +949,254 @@ begin
                 green <= "0000";
                 blue <= "0000";
             end if;
+             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+                 place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+                 place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+             end if; 
         end if;
         
         --Hockey
         if(spelmod = "10" and menu = "00") then
-            if((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+                      color := Rom10(place_score); -- 144 binair -- "0000";
+                      red(0) <= color;
+                      red(1) <= color;
+                      red(2) <= color;
+                      red(3) <= color;
+                      green(0) <= color;
+                      green(1) <= color;
+                      green(2) <= color;
+                      green(3) <= color;
+                      blue(0) <= color;
+                      blue(1) <= color;
+                      blue(2) <= color;
+                      blue(3) <= color;
+                      place_score := place_score - 1;   
+                   
+               elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+                        if score1 = 0 and place_score1 < 144 then
+                              color := Rom11(place_score1); -- 144 binair -- "0000";
+                              red(0) <= color;
+                              red(1) <= color;
+                              red(2) <= color;
+                              red(3) <= color;
+                              green(0) <= color;
+                              green(1) <= color;
+                              green(2) <= color;
+                              green(3) <= color;
+                              blue(0) <= color;
+                              blue(1) <= color;
+                              blue(2) <= color;
+                              blue(3) <= color;
+                              place_score1 := place_score1 - 1; 
+                        end if;
+                        
+                        if score1 = 1 and place_score1 < 144 then
+                               color := Rom12(place_score1); -- 144 binair -- "0000";
+                               red(0) <= color;
+                               red(1) <= color;
+                               red(2) <= color;
+                               red(3) <= color;
+                               green(0) <= color;
+                               green(1) <= color;
+                               green(2) <= color;
+                               green(3) <= color;
+                               blue(0) <= color;
+                               blue(1) <= color;
+                               blue(2) <= color;
+                               blue(3) <= color;
+                               place_score1 := place_score1 - 1; 
+                         end if;
+                         
+                          if score1 = 2 and place_score1 < 144 then
+                                color := Rom13(place_score1); -- 144 binair -- "0000";
+                                red(0) <= color;
+                                red(1) <= color;
+                                red(2) <= color;
+                                red(3) <= color;
+                                green(0) <= color;
+                                green(1) <= color;
+                                green(2) <= color;
+                                green(3) <= color;
+                                blue(0) <= color;
+                                blue(1) <= color;
+                                blue(2) <= color;
+                                blue(3) <= color;
+                                place_score1 := place_score1 - 1; 
+                          end if;
+                          
+                          if score1 = 3 and place_score1 < 144 then
+                               color := Rom14(place_score1); -- 144 binair -- "0000";
+                               red(0) <= color;
+                               red(1) <= color;
+                               red(2) <= color;
+                               red(3) <= color;
+                               green(0) <= color;
+                               green(1) <= color;
+                               green(2) <= color;
+                               green(3) <= color;
+                               blue(0) <= color;
+                               blue(1) <= color;
+                               blue(2) <= color;
+                               blue(3) <= color;
+                               place_score1 := place_score1 - 1; 
+                           end if;
+                         
+                           if score1 = 4 and place_score1 < 144 then
+                                color := Rom15(place_score1); -- 144 binair -- "0000";
+                                red(0) <= color;
+                                red(1) <= color;
+                                red(2) <= color;
+                                red(3) <= color;
+                                green(0) <= color;
+                                green(1) <= color;
+                                green(2) <= color;
+                                green(3) <= color;
+                                blue(0) <= color;
+                                blue(1) <= color;
+                                blue(2) <= color;
+                                blue(3) <= color;
+                                place_score1 := place_score1 - 1; 
+                          end if;
+                          
+                           if score1 = 5 and place_score1 < 144 then
+                                  color := Rom16(place_score1); -- 144 binair -- "0000";
+                                  red(0) <= color;
+                                  red(1) <= color;
+                                  red(2) <= color;
+                                  red(3) <= color;
+                                  green(0) <= color;
+                                  green(1) <= color;
+                                  green(2) <= color;
+                                  green(3) <= color;
+                                  blue(0) <= color;
+                                  blue(1) <= color;
+                                  blue(2) <= color;
+                                  blue(3) <= color;
+                                  place_score1 := place_score1 - 1; 
+                            end if;
+                          
+                   elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
+                       color := Rom21(place_streep); -- 144 binair -- "0000";
+                          red(0) <= color;
+                          red(1) <= color;
+                          red(2) <= color;
+                          red(3) <= color;
+                          green(0) <= color;
+                          green(1) <= color;
+                          green(2) <= color;
+                          green(3) <= color;
+                          blue(0) <= color;
+                          blue(1) <= color;
+                          blue(2) <= color;
+                          blue(3) <= color;
+                          place_streep := place_streep - 1; 
+                  
+                   elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
+                      if score2 = 0 and place_score2 < 144 then
+                             color := Rom11(place_score2); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_score2 := place_score2 - 1; 
+                       end if;
+                       
+                        
+                      if score2 = 1 and place_score2 < 144 then
+                             color := Rom12(place_score2); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_score2 := place_score2 - 1; 
+                       end if;
+                       
+                        if score2 = 2 and place_score2 < 144 then
+                              color := Rom13(place_score2); -- 144 binair -- "0000";
+                              red(0) <= color;
+                              red(1) <= color;
+                              red(2) <= color;
+                              red(3) <= color;
+                              green(0) <= color;
+                              green(1) <= color;
+                              green(2) <= color;
+                              green(3) <= color;
+                              blue(0) <= color;
+                              blue(1) <= color;
+                              blue(2) <= color;
+                              blue(3) <= color;
+                              place_score2 := place_score2 - 1; 
+                        end if;
+                        
+                        if score2 = 3 and place_score2 < 144 then
+                             color := Rom14(place_score2); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_score2 := place_score2 - 1; 
+                         end if;
+                       
+                         if score2 = 4 and place_score2 < 144 then
+                              color := Rom15(place_score2); -- 144 binair -- "0000";
+                              red(0) <= color;
+                              red(1) <= color;
+                              red(2) <= color;
+                              red(3) <= color;
+                              green(0) <= color;
+                              green(1) <= color;
+                              green(2) <= color;
+                              green(3) <= color;
+                              blue(0) <= color;
+                              blue(1) <= color;
+                              blue(2) <= color;
+                              blue(3) <= color;
+                              place_score2 := place_score2 - 1; 
+                        end if;
+                        
+                         if score2 = 5 and place_score2 < 144 then
+                                color := Rom16(place_score2); -- 144 binair -- "0000";
+                                red(0) <= color;
+                                red(1) <= color;
+                                red(2) <= color;
+                                red(3) <= color;
+                                green(0) <= color;
+                                green(1) <= color;
+                                green(2) <= color;
+                                green(3) <= color;
+                                blue(0) <= color;
+                                blue(1) <= color;
+                                blue(2) <= color;
+                                blue(3) <= color;
+                                place_score2 := place_score2 - 1; 
+                          end if;
+                          
+            elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";
                 blue <= "1000"; 
@@ -997,74 +1428,254 @@ begin
                 green <= "0000";
                 blue <= "0000";
             end if;
+            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+              place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+              place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+              place_streep := 143;
+              place_score2 := 143;
+          end if; 
         end if;
         
         --Tennis en Demo
         if((spelmod = "11" or spelmod = "00") and menu = "00") then
-            if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
-               color := Rom10(place_score); -- 144 binair -- "0000";
-               red(0) <= color;
-               red(1) <= color;
-               red(2) <= color;
-               red(3) <= color;
-               green(0) <= color;
-               green(1) <= color;
-               green(2) <= color;
-               green(3) <= color;
-               blue(0) <= color;
-               blue(1) <= color;
-               blue(2) <= color;
-               blue(3) <= color;
-               place_score := place_score - 1;   
-            elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
-                if score1 = 0 and place_score1 < 144 then
-                       color := Rom11(place_score1); -- 144 binair -- "0000";
-                       red(0) <= color;
-                       red(1) <= color;
-                       red(2) <= color;
-                       red(3) <= color;
-                       green(0) <= color;
-                       green(1) <= color;
-                       green(2) <= color;
-                       green(3) <= color;
-                       blue(0) <= color;
-                       blue(1) <= color;
-                       blue(2) <= color;
-                       blue(3) <= color;
-                       place_score1 := place_score1 - 1; 
-                 end if;
-            elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
-                color := Rom21(place_streep); -- 144 binair -- "0000";
-                   red(0) <= color;
-                   red(1) <= color;
-                   red(2) <= color;
-                   red(3) <= color;
-                   green(0) <= color;
-                   green(1) <= color;
-                   green(2) <= color;
-                   green(3) <= color;
-                   blue(0) <= color;
-                   blue(1) <= color;
-                   blue(2) <= color;
-                   blue(3) <= color;
-                   place_streep := place_streep - 1; 
-            elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
-               if score2 = 0 and place_score2 < 144 then
-                      color := Rom11(place_score2); -- 144 binair -- "0000";
-                      red(0) <= color;
-                      red(1) <= color;
-                      red(2) <= color;
-                      red(3) <= color;
-                      green(0) <= color;
-                      green(1) <= color;
-                      green(2) <= color;
-                      green(3) <= color;
-                      blue(0) <= color;
-                      blue(1) <= color;
-                      blue(2) <= color;
-                      blue(3) <= color;
-                      place_score2 := place_score2 - 1; 
-                end if;
+             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+                             color := Rom10(place_score); -- 144 binair -- "0000";
+                             red(0) <= color;
+                             red(1) <= color;
+                             red(2) <= color;
+                             red(3) <= color;
+                             green(0) <= color;
+                             green(1) <= color;
+                             green(2) <= color;
+                             green(3) <= color;
+                             blue(0) <= color;
+                             blue(1) <= color;
+                             blue(2) <= color;
+                             blue(3) <= color;
+                             place_score := place_score - 1;   
+                          
+                      elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+                               if score1 = 0 and place_score1 < 144 then
+                                     color := Rom11(place_score1); -- 144 binair -- "0000";
+                                     red(0) <= color;
+                                     red(1) <= color;
+                                     red(2) <= color;
+                                     red(3) <= color;
+                                     green(0) <= color;
+                                     green(1) <= color;
+                                     green(2) <= color;
+                                     green(3) <= color;
+                                     blue(0) <= color;
+                                     blue(1) <= color;
+                                     blue(2) <= color;
+                                     blue(3) <= color;
+                                     place_score1 := place_score1 - 1; 
+                               end if;
+                               
+                               if score1 = 1 and place_score1 < 144 then
+                                      color := Rom12(place_score1); -- 144 binair -- "0000";
+                                      red(0) <= color;
+                                      red(1) <= color;
+                                      red(2) <= color;
+                                      red(3) <= color;
+                                      green(0) <= color;
+                                      green(1) <= color;
+                                      green(2) <= color;
+                                      green(3) <= color;
+                                      blue(0) <= color;
+                                      blue(1) <= color;
+                                      blue(2) <= color;
+                                      blue(3) <= color;
+                                      place_score1 := place_score1 - 1; 
+                                end if;
+                                
+                                 if score1 = 2 and place_score1 < 144 then
+                                       color := Rom13(place_score1); -- 144 binair -- "0000";
+                                       red(0) <= color;
+                                       red(1) <= color;
+                                       red(2) <= color;
+                                       red(3) <= color;
+                                       green(0) <= color;
+                                       green(1) <= color;
+                                       green(2) <= color;
+                                       green(3) <= color;
+                                       blue(0) <= color;
+                                       blue(1) <= color;
+                                       blue(2) <= color;
+                                       blue(3) <= color;
+                                       place_score1 := place_score1 - 1; 
+                                 end if;
+                                 
+                                 if score1 = 3 and place_score1 < 144 then
+                                      color := Rom14(place_score1); -- 144 binair -- "0000";
+                                      red(0) <= color;
+                                      red(1) <= color;
+                                      red(2) <= color;
+                                      red(3) <= color;
+                                      green(0) <= color;
+                                      green(1) <= color;
+                                      green(2) <= color;
+                                      green(3) <= color;
+                                      blue(0) <= color;
+                                      blue(1) <= color;
+                                      blue(2) <= color;
+                                      blue(3) <= color;
+                                      place_score1 := place_score1 - 1; 
+                                  end if;
+                                
+                                  if score1 = 4 and place_score1 < 144 then
+                                       color := Rom15(place_score1); -- 144 binair -- "0000";
+                                       red(0) <= color;
+                                       red(1) <= color;
+                                       red(2) <= color;
+                                       red(3) <= color;
+                                       green(0) <= color;
+                                       green(1) <= color;
+                                       green(2) <= color;
+                                       green(3) <= color;
+                                       blue(0) <= color;
+                                       blue(1) <= color;
+                                       blue(2) <= color;
+                                       blue(3) <= color;
+                                       place_score1 := place_score1 - 1; 
+                                 end if;
+                                 
+                                  if score1 = 5 and place_score1 < 144 then
+                                         color := Rom16(place_score1); -- 144 binair -- "0000";
+                                         red(0) <= color;
+                                         red(1) <= color;
+                                         red(2) <= color;
+                                         red(3) <= color;
+                                         green(0) <= color;
+                                         green(1) <= color;
+                                         green(2) <= color;
+                                         green(3) <= color;
+                                         blue(0) <= color;
+                                         blue(1) <= color;
+                                         blue(2) <= color;
+                                         blue(3) <= color;
+                                         place_score1 := place_score1 - 1; 
+                                   end if;
+                                 
+                          elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
+                              color := Rom21(place_streep); -- 144 binair -- "0000";
+                                 red(0) <= color;
+                                 red(1) <= color;
+                                 red(2) <= color;
+                                 red(3) <= color;
+                                 green(0) <= color;
+                                 green(1) <= color;
+                                 green(2) <= color;
+                                 green(3) <= color;
+                                 blue(0) <= color;
+                                 blue(1) <= color;
+                                 blue(2) <= color;
+                                 blue(3) <= color;
+                                 place_streep := place_streep - 1; 
+                         
+                          elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
+                             if score2 = 0 and place_score2 < 144 then
+                                    color := Rom11(place_score2); -- 144 binair -- "0000";
+                                    red(0) <= color;
+                                    red(1) <= color;
+                                    red(2) <= color;
+                                    red(3) <= color;
+                                    green(0) <= color;
+                                    green(1) <= color;
+                                    green(2) <= color;
+                                    green(3) <= color;
+                                    blue(0) <= color;
+                                    blue(1) <= color;
+                                    blue(2) <= color;
+                                    blue(3) <= color;
+                                    place_score2 := place_score2 - 1; 
+                              end if;
+                              
+                               
+                             if score2 = 1 and place_score2 < 144 then
+                                    color := Rom12(place_score2); -- 144 binair -- "0000";
+                                    red(0) <= color;
+                                    red(1) <= color;
+                                    red(2) <= color;
+                                    red(3) <= color;
+                                    green(0) <= color;
+                                    green(1) <= color;
+                                    green(2) <= color;
+                                    green(3) <= color;
+                                    blue(0) <= color;
+                                    blue(1) <= color;
+                                    blue(2) <= color;
+                                    blue(3) <= color;
+                                    place_score2 := place_score2 - 1; 
+                              end if;
+                              
+                               if score2 = 2 and place_score2 < 144 then
+                                     color := Rom13(place_score2); -- 144 binair -- "0000";
+                                     red(0) <= color;
+                                     red(1) <= color;
+                                     red(2) <= color;
+                                     red(3) <= color;
+                                     green(0) <= color;
+                                     green(1) <= color;
+                                     green(2) <= color;
+                                     green(3) <= color;
+                                     blue(0) <= color;
+                                     blue(1) <= color;
+                                     blue(2) <= color;
+                                     blue(3) <= color;
+                                     place_score2 := place_score2 - 1; 
+                               end if;
+                               
+                               if score2 = 3 and place_score2 < 144 then
+                                    color := Rom14(place_score2); -- 144 binair -- "0000";
+                                    red(0) <= color;
+                                    red(1) <= color;
+                                    red(2) <= color;
+                                    red(3) <= color;
+                                    green(0) <= color;
+                                    green(1) <= color;
+                                    green(2) <= color;
+                                    green(3) <= color;
+                                    blue(0) <= color;
+                                    blue(1) <= color;
+                                    blue(2) <= color;
+                                    blue(3) <= color;
+                                    place_score2 := place_score2 - 1; 
+                                end if;
+                              
+                                if score2 = 4 and place_score2 < 144 then
+                                     color := Rom15(place_score2); -- 144 binair -- "0000";
+                                     red(0) <= color;
+                                     red(1) <= color;
+                                     red(2) <= color;
+                                     red(3) <= color;
+                                     green(0) <= color;
+                                     green(1) <= color;
+                                     green(2) <= color;
+                                     green(3) <= color;
+                                     blue(0) <= color;
+                                     blue(1) <= color;
+                                     blue(2) <= color;
+                                     blue(3) <= color;
+                                     place_score2 := place_score2 - 1; 
+                               end if;
+                               
+                                if score2 = 5 and place_score2 < 144 then
+                                       color := Rom16(place_score2); -- 144 binair -- "0000";
+                                       red(0) <= color;
+                                       red(1) <= color;
+                                       red(2) <= color;
+                                       red(3) <= color;
+                                       green(0) <= color;
+                                       green(1) <= color;
+                                       green(2) <= color;
+                                       green(3) <= color;
+                                       blue(0) <= color;
+                                       blue(1) <= color;
+                                       blue(2) <= color;
+                                       blue(3) <= color;
+                                       place_score2 := place_score2 - 1; 
+                                 end if;
             elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
                 red <= "0000";
                 green <= "0000";

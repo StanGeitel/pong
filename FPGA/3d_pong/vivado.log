@@ -2,394 +2,34 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May 31 13:45:40 2018
-# Process ID: 12924
-# Current directory: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10088 C:\Users\ikben\OneDrive\Documents\GitHub\pong\FPGA\3d_pong\3d_pong.xpr
-# Log file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/vivado.log
-# Journal file: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong\vivado.jou
+# Start of session at: Tue Jun  5 11:02:14 2018
+# Process ID: 5356
+# Current directory: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15936 D:\Documenten\Avans 2017-2018\Blok 8\Pong github\pong\FPGA\3d_pong\3d_pong.xpr
+# Log file: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/vivado.log
+# Journal file: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Remco Y700/Documents/GitHub/pong/FPGA/3d_pong' since last save.
+open_project {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Proghardware/Vivado/2017.4/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 774.074 ; gain = 83.668
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 746.387 ; gain = 83.133
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 13:51:41 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 13:51:41 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_1 -dir c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip
-set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {981} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Geluid/Retro.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_1]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/Geluid/Retro.coe' provided. It will be converted relative to IP Instance files '../../../../../Geluid/Retro.coe'
-generate_target {instantiation_template} [get_files c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_1'...
-update_compile_order -fileset sources_1
-generate_target all [get_files  c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
+reset_run blk_mem_gen_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_1'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_1'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_1'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_1'...
-catch { config_ip_cache -export [get_ips -all blk_mem_gen_1] }
-export_ip_user_files -of_objects [get_files c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
-launch_runs -jobs 4 blk_mem_gen_1_synth_1
-[Thu May 31 14:09:22 2018] Launched blk_mem_gen_1_synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_1_synth_1/runme.log
-export_simulation -of_objects [get_files c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci] -directory C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.ip_user_files -ipstatic_source_dir C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/compile_simlib/modelsim} {questa=C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/compile_simlib/questa} {riviera=C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/compile_simlib/riviera} {activehdl=C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-close [ open C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd w ]
-add_files C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 14:26:36 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 14:26:37 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 14:29:56 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 14:31:35 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 14:31:35 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a35tcpg236-1
-Top: top
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1163.777 ; gain = 107.109
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
-INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:563]
-WARNING: [Synth 8-6014] Unused sequential element score2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:566]
-WARNING: [Synth 8-6014] Unused sequential element score1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:567]
-WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:583]
-WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:585]
-WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:587]
-WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:589]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1091]
-INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
-WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid2' of component 'rom_geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1235.719 ; gain = 179.051
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1235.719 ; gain = 179.051
----------------------------------------------------------------------------------
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk1/clk1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'memory1/ram1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'rom_Geluid2/rom'
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1399.848 ; gain = 343.180
-44 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.848 ; gain = 343.949
-set_property IOSTANDARD LVCMOS33 [get_ports [list pwmsound]]
-place_ports pwmsound R18
-set_property target_constrs_file C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc [current_fileset -constrset]
-save_constraints -force
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1399.848 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
-INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:563]
-WARNING: [Synth 8-6014] Unused sequential element score2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:566]
-WARNING: [Synth 8-6014] Unused sequential element score1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:567]
-WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:583]
-WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:585]
-WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:587]
-WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:589]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1091]
-INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
-WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1447.027 ; gain = 47.180
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1447.027 ; gain = 47.180
----------------------------------------------------------------------------------
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk1/clk1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'memory1/ram1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'rom_Geluid1/rom'
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 1447.027 ; gain = 47.180
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 14:36:55 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 14:36:55 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1447.027 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
-INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:563]
-WARNING: [Synth 8-6014] Unused sequential element score2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:566]
-WARNING: [Synth 8-6014] Unused sequential element score1_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:567]
-WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:583]
-WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:585]
-WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:587]
-WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:589]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1092]
-INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
-WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/.Xil/Vivado-12924-LAPTOP-88VN4TC1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
-WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1458.605 ; gain = 11.578
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1458.605 ; gain = 11.578
----------------------------------------------------------------------------------
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk1/clk1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'memory1/ram1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'rom_Geluid1/rom'
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
-Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-Finished Parsing XDC File [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Finished Parsing XDC File [C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1477.543 ; gain = 30.516
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 14:45:10 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 14:45:10 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 15:35:24 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 15:35:24 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+[Tue Jun  5 11:13:44 2018] Launched blk_mem_gen_1_synth_1, synth_1...
+Run output will be captured here:
+blk_mem_gen_1_synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/blk_mem_gen_1_synth_1/runme.log
+synth_1: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 11:13:45 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 782.848 ; gain = 14.820
 open_hw
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -403,7 +43,7 @@ INFO: [Labtools 27-2221] Launch Output:
 
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
@@ -414,7 +54,7 @@ Resolution:
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -425,21 +65,363 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 15:43:16 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 15:43:16 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 11:34:14 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 11:34:14 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 11:45:55 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 11:45:55 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1510.465 ; gain = 110.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
+INFO: [Synth 8-3491] module 'clk' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'spi' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+INFO: [Synth 8-3491] module 'VGA' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+INFO: [Synth 8-3491] module 'image' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:581]
+WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:601]
+WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:603]
+WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:605]
+WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:607]
+WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:769]
+INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+INFO: [Synth 8-3491] module 'memory' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'buttons' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
+WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
+WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
+INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/.Xil/Vivado-5356-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
+WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1583.922 ; gain = 184.141
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1583.922 ; gain = 184.141
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk1/clk1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'memory1/ram1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'rom_Geluid1/rom'
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
+Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk1/clk1/inst'
+Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
+Finished Parsing XDC File [d:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk1/clk1/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+46 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:32 . Memory (MB): peak = 1931.371 ; gain = 531.930
+INFO: [Common 17-344] 'synth_design' was cancelled
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 11:50:54 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 11:50:54 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:03:24 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:03:24 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:09:07 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:10:22 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:10:22 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:19:17 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:21:04 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:21:04 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:35:17 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:35:17 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:38:51 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:38:51 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
 reset_run impl_1
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 15:45:29 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 15:45:29 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:41:07 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:41:08 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:46:24 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:46:24 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:49:53 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:49:53 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 12:54:33 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 12:54:33 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -450,22 +432,9 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 15:56:58 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 15:56:58 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-reset_run synth_1
-update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 15:58:28 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 15:58:28 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -476,14 +445,14 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 16:11:18 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 16:11:18 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 13:02:57 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 13:02:57 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -494,41 +463,14 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 16:16:33 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 16:16:33 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38940A
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jun  5 13:07:44 2018] Launched synth_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
+[Tue Jun  5 13:07:44 2018] Launched impl_1...
+Run output will be captured here: D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -538,42 +480,3 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 16:26:38 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 16:26:38 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Thu May 31 16:35:11 2018] Launched synth_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/runme.log
-[Thu May 31 16:35:11 2018] Launched impl_1...
-Run output will be captured here: C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/ikben/OneDrive/Documents/GitHub/pong/FPGA/3d_pong/3d_pong.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A38940A
-exit
-INFO: [Common 17-206] Exiting Vivado at Thu May 31 16:40:20 2018...

@@ -583,11 +583,11 @@ process(clk25Mhz)
     variable y_pong : INTEGER := 233;
     
     variable place_moeilijkheidmenu : INTEGER := 4399;
-    variable x_moeilijkheidmenu : INTEGER := 398;
+    variable x_moeilijkheidmenu : INTEGER := 403;
     variable y_moeilijkheidmenu : INTEGER := 262;
     
     variable place_moeilijkheid : INTEGER := 1643;
-    variable x_moeilijkheid : INTEGER := 398;
+    variable x_moeilijkheid : INTEGER := 403;
     variable y_moeilijkheid : INTEGER := 238;
     
     variable place_pauzemenu : INTEGER := 2677;
@@ -633,10 +633,10 @@ process(clk25Mhz)
     variable y_cursor_hoofdmenu_2 : INTEGER := 285;
     variable y_cursor_hoofdmenu_3 : INTEGER := 299;
     
-    variable x_cursor_moeilijkheid : INTEGER := 388;
-    variable y_cursor_moeilijkheid_0 : INTEGER := 238;
-    variable y_cursor_moeilijkheid_1 : INTEGER := 252;
-    variable y_cursor_moeilijkheid_2 : INTEGER := 266;
+    variable x_cursor_moeilijkheid : INTEGER := 393;
+    variable y_cursor_moeilijkheid_0 : INTEGER := 262;
+    variable y_cursor_moeilijkheid_1 : INTEGER := 276;
+    variable y_cursor_moeilijkheid_2 : INTEGER := 290;
     
     variable x_cursor_pauze : INTEGER := 423;
     variable y_cursor_pauze_0 : INTEGER := 272;

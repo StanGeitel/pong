@@ -17,7 +17,6 @@ end image;
 architecture Behavioral of image is
     signal hcount_int : integer range 0 to 1000;
     signal vcount_int : integer range 0 to 1000;
-    signal RamCounter : STD_LOGIC_VECTOR(3 downto 0);
     signal refresh_counter : STD_LOGIC := '0';
     signal geluid_trigger : STD_LOGIC := '0';
     signal spelmod, moeil, menu, menusel, menuselmem : STD_LOGIC_VECTOR(1 downto 0);
@@ -503,22 +502,57 @@ constant Rom22: Rom22Type := (
 );
 
 
-
 begin
     
     hcount_int <= to_integer(unsigned(hcount));
     vcount_int <= to_integer(unsigned(vcount)); 
-    xb2raw <= 480;
-    yb2raw <= 186;
-    yb1 <= 186;
-    rball <= 0;
-    xball <= 0;
-    yball <= 0;
-    spelmod <= "01";
-    menu <= "00";
     adressound <= tmpadressound;
-    score1 <= "00111";
-    score2 <= "00100";
+
+
+process(clk25Mhz)
+    variable ramcounter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+begin
+    if falling_edge(clk25MHz) then  
+        if vcount_int > 511 then
+            --if RamCounter < 13 and refresh_counter = '0' then
+            if RamCounter < 12 and refresh_counter = '0' then
+                addr_ram <= RamCounter;
+                --RamCounter <= RamCounter + 1;
+                RamCounter := RamCounter + 1;
+            else 
+                --Ramcounter <= (others => '0');
+                RamCounter := "0000";
+                refresh_counter <= '1';    
+            end if;
+            
+            if Ramcounter = 3 then
+                menusel <= data_ram2(1 downto 0);
+                menu <= data_ram2(3 downto 2);
+                moeil <= data_ram2(5 downto 4);
+                spelmod <= data_ram2(7 downto 6);          
+            elsif Ramcounter = 4 then
+                score2 <= data_ram2(4 downto 0);
+                score1 <= data_ram2(9 downto 5);
+            elsif Ramcounter = 5 then 
+                xball <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 6 then
+                yball <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 7 then
+                rball <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 8 then
+                xb1 <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 9 then
+                yb1 <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 10 then
+                xb2raw <= to_integer(unsigned(data_ram2));
+            elsif Ramcounter = 11 then
+                yb2raw <= to_integer(unsigned(data_ram2));
+            end if;
+        elsif vcount_int = 0 then
+            refresh_counter <= '0';
+        end if;
+    end if;
+end process;
 
 process(clk25Mhz)
     variable color : STD_LOGIC;
@@ -563,54 +597,7 @@ process(clk25Mhz)
     variable x_score2 : INTEGER := 240;
     variable y_score2 : INTEGER := 42;
     
-    
-    
 begin
-    if falling_edge(clk25MHz) then  
-        if vcount_int > 511 then
-            if RamCounter < 13 and refresh_counter = '0' then
-                addr_ram <= RamCounter;
-                RamCounter <= RamCounter + 1;
-            else 
-                Ramcounter <= (others => '0');
-                refresh_counter <= '1';    
-            end if;
-            
-            if Ramcounter = 1 then
-                menusel <= data_ram(1 downto 0);
-                menu <= data_ram(3 downto 2);
-                moeil <= data_ram(5 downto 4);
-                spelmod <= data_ram(7 downto 6);          
-            elsif Ramcounter = 2 then
-                score2 <= data_ram2(4 downto 0);
-                score1 <= data_ram2(9 downto 5);
-            elsif Ramcounter = 3 then 
-                xball <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 4 then
-                yball <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 5 then
-                rball <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 6 then
-                xb1 <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 7 then
-                yb1 <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 8 then
-                xb2raw <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 9 then
-                yb2raw <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 10 then
-                xb3 <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 11 then
-                yb3 <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 12 then
-                xb4 <= to_integer(unsigned(data_ram2));
-            elsif Ramcounter = 13 then
-                yb4 <= to_integer(unsigned(data_ram2));
-            end if;
-        elsif vcount_int = 0 then
-            refresh_counter <= '0';
-        end if;
-    end if;
     
     if rising_edge(clk25MHz) then   
         xb2 <= (xb2raw-145)/4+385;
@@ -1954,7 +1941,6 @@ begin
         end if;
         --Pauze
         if(menu = "11") then
-            --ROM Pauze moet er nog worden ingezet
             if place_pauzemenu < 2678 and hcount >= x_pauzemenu and hcount <= (x_pauzemenu + 102) and vcount >= y_pauzemenu and vcount <= (y_pauzemenu + 25)then    
                 color := Rom5(place_pauzemenu); -- 144 binair -- "0000";
                 red(0) <= color;

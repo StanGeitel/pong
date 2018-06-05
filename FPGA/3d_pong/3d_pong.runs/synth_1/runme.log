@@ -14,66 +14,99 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13120 
+INFO: Helper process launched with PID 10552 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 369.535 ; gain = 101.113
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 369.883 ; gain = 102.824
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
-INFO: [Synth 8-3491] module 'clk' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'clk' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'spi' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
-INFO: [Synth 8-638] synthesizing module 'image' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:582]
-WARNING: [Synth 8-6014] Unused sequential element xb3_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:602]
-WARNING: [Synth 8-6014] Unused sequential element yb3_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:604]
-WARNING: [Synth 8-6014] Unused sequential element xb4_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:606]
-WARNING: [Synth 8-6014] Unused sequential element yb4_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:608]
-WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:663]
-INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
-INFO: [Synth 8-3491] module 'memory' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'memory' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'buttons' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element tmpwea2_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:173]
-WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:15]
-INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
+INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
+INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'bit_number' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
+WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
+INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element moeil_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:543]
+WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:662]
+INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:17]
+INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram1' of component 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
+INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
+WARNING: [Synth 8-3848] Net wea2 in module/entity buttons does not have driver. [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:10]
+WARNING: [Synth 8-3848] Net addra2 in module/entity buttons does not have driver. [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:11]
+WARNING: [Synth 8-3848] Net dina2 in module/entity buttons does not have driver. [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
+INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:15]
 WARNING: [Synth 8-3331] design buttons has unconnected port wea2[0]
+WARNING: [Synth 8-3331] design buttons has unconnected port addra2[3]
+WARNING: [Synth 8-3331] design buttons has unconnected port addra2[2]
+WARNING: [Synth 8-3331] design buttons has unconnected port addra2[1]
+WARNING: [Synth 8-3331] design buttons has unconnected port addra2[0]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[9]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[8]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[7]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[6]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[5]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[4]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[3]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[2]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[1]
+WARNING: [Synth 8-3331] design buttons has unconnected port dina2[0]
+WARNING: [Synth 8-3331] design buttons has unconnected port clk25MHz
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[9]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[8]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[7]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[6]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[5]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[4]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[3]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[2]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[1]
+WARNING: [Synth 8-3331] design buttons has unconnected port vcount[0]
+WARNING: [Synth 8-3331] design buttons has unconnected port up
+WARNING: [Synth 8-3331] design buttons has unconnected port down
+WARNING: [Synth 8-3331] design buttons has unconnected port left
+WARNING: [Synth 8-3331] design buttons has unconnected port right
+WARNING: [Synth 8-3331] design buttons has unconnected port go
+WARNING: [Synth 8-3331] design buttons has unconnected port forward
+WARNING: [Synth 8-3331] design buttons has unconnected port backward
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[7]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[6]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[3]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[2]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 449.660 ; gain = 181.238
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 449.051 ; gain = 181.992
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -83,71 +116,73 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 449.660 ; gain = 181.238
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 449.051 ; gain = 181.992
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp4/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
-Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-Finished Parsing XDC File [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram1'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 797.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 794.328 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 797.898 ; gain = 529.477
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 794.328 ; gain = 527.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 797.898 ; gain = 529.477
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 794.328 ; gain = 527.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  {D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14392-LAPTOP-NJE0O93L/dcp3/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-14268-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk1/clk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom_Geluid1/rom. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 797.898 ; gain = 529.477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 794.328 ; gain = 527.270
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
-WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:617]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:616]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:619]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:618]
+WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
+WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:616]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:615]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:618]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:617]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:571]
-WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:624]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:639]
-WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1791]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1807]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1876]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1892]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1958]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1974]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:553]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:623]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:638]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1790]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1806]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1875]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1891]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1956]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1972]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -158,22 +193,10 @@ INFO: [Synth 8-5544] ROM "green" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "green" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
-WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element downcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
-WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
-WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
-WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
-WARNING: [Synth 8-6014] Unused sequential element ramcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
-WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
-WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 797.898 ; gain = 529.477
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 794.328 ; gain = 527.270
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -188,37 +211,37 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 40    
 	   2 Input     31 Bit       Adders := 2     
-	   3 Input     11 Bit       Adders := 2     
-	   2 Input     11 Bit       Adders := 8     
-	   2 Input     10 Bit       Adders := 23    
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 12    
+	   2 Input     10 Bit       Adders := 12    
 	   3 Input     10 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
 	               10 Bit    Registers := 15    
-	                4 Bit    Registers := 8     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 73    
 	   4 Input     32 Bit        Muxes := 2     
 	   5 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 30    
-	   2 Input      4 Bit        Muxes := 244   
+	   2 Input     10 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 248   
 	   4 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 6     
 	  11 Input      4 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 8     
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 19    
+	   2 Input      2 Bit        Muxes := 20    
 	  11 Input      2 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 130   
+	   2 Input      1 Bit        Muxes := 110   
 	  12 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -253,16 +276,16 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 39    
 	   2 Input     31 Bit       Adders := 2     
-	   3 Input     11 Bit       Adders := 2     
-	   2 Input     11 Bit       Adders := 8     
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 12    
+	   2 Input     10 Bit       Adders := 10    
 	   3 Input     10 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 7     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
-	               10 Bit    Registers := 8     
-	                4 Bit    Registers := 4     
+	               10 Bit    Registers := 13    
+	                4 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
@@ -272,32 +295,18 @@ Detailed RTL Component Info :
 	   5 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 10    
-	   2 Input      4 Bit        Muxes := 241   
+	   2 Input      4 Bit        Muxes := 245   
 	   4 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 6     
 	  11 Input      4 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 8     
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 19    
+	   2 Input      2 Bit        Muxes := 20    
 	  11 Input      2 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 109   
+	   2 Input      1 Bit        Muxes := 110   
 	  12 Input      1 Bit        Muxes := 2     
-Module buttons 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 14    
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 5     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 20    
-	   2 Input      1 Bit        Muxes := 21    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -313,72 +322,129 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'xball_reg[9:0]' into 'xball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:549]
+INFO: [Synth 8-4471] merging register 'yball_reg[9:0]' into 'yball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:551]
+INFO: [Synth 8-4471] merging register 'rball_reg[9:0]' into 'rball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:553]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:549]
+WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:551]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:553]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 000001BE649EF4F0
-WARNING: [Synth 8-6014] Unused sequential element RamCounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:571]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1791]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1807]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1876]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1892]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1958]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1974]
-WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:624]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:639]
-WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
-DSP Report: Generating DSP red4, operation Mode is: A*B.
+DSP Debug: swapped A/B pins for adder 000002465C3CA4E0
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:553]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:549]
+WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:551]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1790]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1806]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1875]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1891]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1956]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:1972]
+WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:623]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:638]
+WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:519]
+DSP Report: Generating DSP red3, operation Mode is: A2*B2.
+DSP Report: register rball_reg is absorbed into DSP red3.
+DSP Report: register rball_reg is absorbed into DSP red3.
+DSP Report: operator red3 is absorbed into DSP red3.
+DSP Report: Generating DSP red4, operation Mode is: (D-A2)*B.
+DSP Report: register xball_reg is absorbed into DSP red4.
 DSP Report: operator red4 is absorbed into DSP red4.
-DSP Report: Generating DSP red3, operation Mode is: PCIN+A*B.
+DSP Report: operator red5 is absorbed into DSP red4.
+DSP Report: Generating DSP red3, operation Mode is: PCIN+(D-A2)*B.
+DSP Report: register yball_reg is absorbed into DSP red3.
 DSP Report: operator red3 is absorbed into DSP red3.
 DSP Report: operator red4 is absorbed into DSP red3.
-DSP Report: Generating DSP red4, operation Mode is: A*B.
+DSP Report: operator red5 is absorbed into DSP red3.
+DSP Report: Generating DSP red4, operation Mode is: (D'-A)*B.
+DSP Report: register xball_reg is absorbed into DSP red4.
 DSP Report: operator red4 is absorbed into DSP red4.
-DSP Report: Generating DSP red3, operation Mode is: PCIN+A*B.
+DSP Report: operator red5 is absorbed into DSP red4.
+DSP Report: Generating DSP red3, operation Mode is: PCIN+(D'-A)*B.
+DSP Report: register yball_reg is absorbed into DSP red3.
 DSP Report: operator red3 is absorbed into DSP red3.
 DSP Report: operator red4 is absorbed into DSP red3.
+DSP Report: operator red5 is absorbed into DSP red3.
 INFO: [Synth 8-5545] ROM "spi1/bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element buttons1/ramcounter_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:158]
-WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
-WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/leftcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:93]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/rightcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/xb1_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:97]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/xball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/upcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:53]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/downcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:73]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/yb1_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/yball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/backwardcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:143]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/forwardcount_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element buttons1/rball_reg was removed.  [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/buttons.vhd:136]
+WARNING: [Synth 8-6014] Unused sequential element vga1/hcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
+WARNING: [Synth 8-6014] Unused sequential element vga1/vcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[9]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[8]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[7]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[6]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[5]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[4]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/new_frame_ready_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\spi1/tmpwea_reg[0] )
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[3]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[2]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
+WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
+WARNING: [Synth 8-3331] design top has unconnected port up
+WARNING: [Synth 8-3331] design top has unconnected port down
+WARNING: [Synth 8-3331] design top has unconnected port left
+WARNING: [Synth 8-3331] design top has unconnected port right
+WARNING: [Synth 8-3331] design top has unconnected port go
+WARNING: [Synth 8-3331] design top has unconnected port forward
+WARNING: [Synth 8-3331] design top has unconnected port backward
 INFO: [Synth 8-3886] merging instance 'image1/blue_reg[0]' (FDE) to 'image1/blue_reg[1]'
-INFO: [Synth 8-3886] merging instance 'image1/blue_reg[1]' (FDE) to 'image1/blue_reg[2]'
-INFO: [Synth 8-3886] merging instance 'image1/green_reg[0]' (FDE) to 'image1/green_reg[2]'
-INFO: [Synth 8-3886] merging instance 'image1/red_reg[0]' (FDE) to 'image1/red_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/dina_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/addra_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/addra_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/addra_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi1/addra_reg[3] )
 INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[0]' (FD) to 'vga1/blue_reg[1]'
-INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[1]' (FD) to 'vga1/blue_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga1/green_reg[0]' (FD) to 'vga1/green_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga1/red_reg[0]' (FD) to 'vga1/red_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[14]) is unused and will be removed from module top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (image1/\yb2_reg[9] )
+INFO: [Synth 8-3886] merging instance 'image1/blue_reg[1]' (FDE) to 'image1/green_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga1/blue_reg[1]' (FD) to 'vga1/green_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (yb2_reg[9]) is unused and will be removed from module image.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 794.328 ; gain = 527.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|image       | A2*B2         | 10     | 10     | -      | -      | 20     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|image       | (D-A2)*B      | 10     | 11     | -      | 10     | 22     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
+|image       | PCIN+(D-A2)*B | 10     | 11     | -      | 10     | 23     | 1    | 0    | -    | 0    | 0     | 0    | 0    | 
+|image       | (D'-A)*B      | 10     | 11     | -      | 10     | 22     | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
+|image       | PCIN+(D'-A)*B | 10     | 11     | -      | 10     | 23     | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk1/clk_out1' to pin 'clk1/clk1/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 887.895 ; gain = 620.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1069.367 ; gain = 802.309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (spi1/tmpwea_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (spi1/new_frame_ready_reg) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[3]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/addra_reg[1]) is unused and will be removed from module top.
@@ -393,8 +459,6 @@ WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[3]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/dina_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[15]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[13]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[12]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[11]) is unused and will be removed from module top.
@@ -409,7 +473,6 @@ WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[3]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/frame_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (spi1/new_frame_ready_reg) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[31]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[30]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[29]) is unused and will be removed from module top.
@@ -442,272 +505,13 @@ WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[3]) is unused an
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (spi1/bit_number_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (menu_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-WARNING: [Synth 8-3332] Sequential element (menu_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/menu_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:518]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[9]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[8]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[7]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[6]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[5]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[4]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[3]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[2]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (rball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/rball_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:514]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[9]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[8]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[7]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[6]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[5]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[4]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[3]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[2]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (xball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xball_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:515]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[9]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[8]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[7]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[6]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[6]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[5]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[5]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[4]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[4]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[3]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[3]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[2]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[2]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[1]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yball_reg[0]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yball_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:516]
-WARNING: [Synth 8-3332] Sequential element (yb1_reg[9]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[9]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-WARNING: [Synth 8-3332] Sequential element (yb1_reg[8]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[8]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-WARNING: [Synth 8-3332] Sequential element (yb1_reg[7]) is unused and will be removed from module image.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[7]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-WARNING: [Synth 8-3332] Sequential element (yb1_reg[6]) is unused and will be removed from module image.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[6]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[5]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[4]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[3]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[2]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/yb1_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:513]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/score1_reg[4]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/score1_reg[3]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/score1_reg[2]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/score1_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/score1_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:520]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[1]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/spelmod_reg[0]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'image1/xb2raw_reg[9]/Q' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:511]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:512]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:521]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:521]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:521]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:521]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:521]
-INFO: [Synth 8-3886] merging instance 'image1/green_reg[2]' (FDE) to 'image1/red_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga1/green_reg[2]' (FD) to 'vga1/red_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (clk1/Q1_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (clk1/Q2_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (clk1/Q3_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (clk1/clkstate_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (clk1/edge_reg) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 797.898 ; gain = 529.477
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-DSP: Preliminary Mapping  Report (see note below)
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|image       | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|image       | PCIN+A*B    | 11     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|image       | A*B         | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|image       | PCIN+A*B    | 11     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk1/clk_out1' to pin 'clk1/clk1/bbstub_clk_out1/O'
-INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 839.078 ; gain = 570.656
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 872.523 ; gain = 604.102
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -731,7 +535,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -744,7 +548,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -756,25 +560,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:29 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -797,20 +601,20 @@ Report Cell Usage:
 |2     |blk_mem_gen_0__1 |     1|
 |3     |blk_mem_gen_1    |     1|
 |4     |clk_wiz_0        |     1|
-|5     |CARRY4           |   173|
-|6     |DSP48E1          |     2|
+|5     |CARRY4           |   683|
+|6     |DSP48E1          |     1|
 |7     |DSP48E1_1        |     2|
-|8     |LUT1             |   179|
-|9     |LUT2             |   351|
-|10    |LUT3             |    83|
-|11    |LUT4             |   122|
-|12    |LUT5             |   163|
-|13    |LUT6             |   263|
-|14    |MUXF7            |    11|
-|15    |MUXF8            |     1|
-|16    |FDRE             |   474|
-|17    |FDSE             |    14|
-|18    |IBUF             |     7|
+|8     |DSP48E1_2        |     2|
+|9     |LUT1             |  1408|
+|10    |LUT2             |  1030|
+|11    |LUT3             |   151|
+|12    |LUT4             |   619|
+|13    |LUT5             |   477|
+|14    |LUT6             |  1426|
+|15    |MUXF7            |    57|
+|16    |MUXF8            |     2|
+|17    |FDRE             |   491|
+|18    |FDSE             |    67|
 |19    |OBUF             |    15|
 +------+-----------------+------+
 
@@ -818,33 +622,32 @@ Report Instance Areas:
 +------+--------------+-----------+------+
 |      |Instance      |Module     |Cells |
 +------+--------------+-----------+------+
-|1     |top           |           |  1889|
-|2     |  buttons1    |buttons    |   763|
-|3     |  clk1        |clk        |     1|
-|4     |  image1      |image      |   658|
-|5     |  memory1     |memory     |    20|
-|6     |  rom_Geluid1 |rom_Geluid |    18|
-|7     |  vga1        |VGA        |   390|
+|1     |top           |           |  6460|
+|2     |  clk1        |clk        |     1|
+|3     |  image1      |image      |  4311|
+|4     |  memory1     |memory     |    20|
+|5     |  rom_Geluid1 |rom_Geluid |    12|
+|6     |  vga1        |VGA        |   557|
 +------+--------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 888.656 ; gain = 620.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1112.090 ; gain = 845.031
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 222 critical warnings and 513 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 888.656 ; gain = 271.996
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 888.656 ; gain = 620.234
+Synthesis finished with 0 errors, 0 critical warnings and 118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:21 . Memory (MB): peak = 1112.090 ; gain = 499.754
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 1112.090 ; gain = 845.031
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 747 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 5 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-93 Infos, 175 Warnings, 174 Critical Warnings and 0 Errors encountered.
+73 Infos, 172 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 888.656 ; gain = 631.703
-INFO: [Common 17-1381] The checkpoint 'D:/Documenten/Avans 2017-2018/Blok 8/Pong github/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:36 . Memory (MB): peak = 1112.090 ; gain = 856.504
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 888.656 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  5 13:08:53 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1112.090 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  5 14:48:51 2018...

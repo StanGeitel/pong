@@ -15,13 +15,13 @@ end buttons;
 architecture Behavioral of buttons is
 
 signal score1, score2 : STD_LOGIC_VECTOR(3 downto 0);
-signal xball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10)); -- wanneer het niet werkt proberen om 
-signal yball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
-signal rball : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(10, 10));
-signal xb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10));
-signal yb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
-signal xb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10));
-signal yb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
+signal xball : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(146, 10)); -- wanneer het niet werkt proberen om 
+signal yball : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(62, 10));
+signal rball : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(10, 10));
+signal xb1 : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(146, 10));
+signal yb1 : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(62, 10));
+signal xb2 : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(146, 10));
+signal yb2 : STD_LOGIC_VECTOR(9 downto 0);-- := std_logic_vector(to_unsigned(62, 10));
 signal prevxball, prevyball, prevrball, prevxb1, prevyb1, prevxb2, prevyb2 : STD_LOGIC_VECTOR(9 downto 0);
 signal upcount, downcount, leftcount, rightcount, forwardcount, backwardcount : INTEGER;
 signal gocount : STD_LOGIC_VECTOR(2 downto 0); -- gocount bepaalt of batje 1, batje 2, ball of menu wordt bediend
@@ -151,74 +151,88 @@ begin
     end if;
 end process;
 
-process(clk25Mhz)
-begin
-    if falling_edge(clk25MHz) then  
-        if vcount > 0 then  
-            if ramcounter < 13 and refresh_counter = '0' then
-                addra2 <= ramcounter;
-                ramcounter <= ramcounter + 1;
-            else 
-                ramcounter <= (others => '0');
-                refresh_counter <= '1'; 
-            end if;     
-        elsif vcount = 0 then
-            refresh_counter <= '0';
-        end if;
+--process(clk25Mhz)
+--begin
+--    if falling_edge(clk25MHz) then  
+--        if vcount > 0 then  
+--            if ramcounter < 13 and refresh_counter = '0' then
+--                ramcounter <= ramcounter + 1;
+--            else 
+--                ramcounter <= (others => '0');
+--                refresh_counter <= '1'; 
+--            end if;     
+--        elsif vcount = 0 then
+--            refresh_counter <= '0';
+--        end if;
         
-        if ramcounter = 3 then
-            if (prevxball = not xball) then 
-                dina2 <= xball;  
-                prevxball <= xball;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-            end if;
-        elsif ramcounter = 4 then
-            if (prevyball = not yball) then 
-                dina2 <= yball;  
-                prevyball <= yball;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-            end if;
-        elsif ramcounter = 5 then
-            if (prevrball = not rball) then 
-                dina2 <= rball;  
-                prevrball <= rball;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-            end if;
-        elsif ramcounter = 6 then
-            if (prevxb1 = not xb1) then 
-                dina2 <= xb1;  
-                prevxb1 <= xb1;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-            end if;  
-        elsif ramcounter = 7 then
-            if (prevyb1 = not yb1) then 
-                dina2 <= yb1;  
-                prevyb1 <= yb1;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-                end if;  
-        elsif ramcounter = 8 then
-            if (prevxb1 = not xb1) then 
-                dina2 <= xb1;  
-                prevxball <= xb1;
-                tmpwea2 <= "0";
-            else 
-                tmpwea2 <= "1";
-            end if;
-        else
-            tmpwea2 <= "1"; -- na adres 7 zit niets dus we kan hier al uit worden gezet
-        end if;
-    end if;
-end process;
+--        if ramcounter = 3 then
+--            if (prevxball = not xball) then 
+--                dina2 <= xball;  
+--                addra2 <= "0010";
+--                prevxball <= xball;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--            end if;
+--        elsif ramcounter = 4 then
+--            if (prevyball = not yball) then 
+--                dina2 <= yball;  
+--                addra2 <= "0011";
+--                prevyball <= yball;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--            end if;
+--        elsif ramcounter = 5 then
+--            if (prevrball = not rball) then 
+--                dina2 <= rball; 
+--                addra2 <= "0100"; 
+--                prevrball <= rball;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--            end if;
+--        elsif ramcounter = 6 then
+--            if (prevxb1 = not xb1) then 
+--                dina2 <= "0011111010"; --xb1; 250
+--                addra2 <= "0101"; 
+--                prevxb1 <= xb1;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--            end if;  
+--        elsif ramcounter = 7 then
+--            if (prevyb1 = not yb1) then 
+--                dina2 <= "0001100100"; --yb1; 100
+--                addra2 <= "0110"; 
+--                prevyb1 <= yb1;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--                end if;  
+--        elsif ramcounter = 8 then
+--            if (prevxb2 = not xb2) then 
+--                dina2 <= xb2;  
+--                addra2 <= "0111";
+--                prevxb2 <= xb2;
+--                tmpwea2 <= "0";
+--            else 
+--                tmpwea2 <= "1";
+--            end if;
+--        elsif ramcounter = 9 then
+--            if (prevyb2 = not yb2) then
+--                dina2 <= yb2;
+--                addra2 <= "1000";
+--                prevyb2 <= yb2;
+--                tmpwea2 <= "0";
+--            else
+--                tmpwea2 <= "1";
+--            end if;
+--        else
+--            tmpwea2 <= "1"; -- na adres 7 zit niets dus we kan hier al uit worden gezet
+--        end if;
+--    end if;
+--end process;
 
 end Behavioral;
 

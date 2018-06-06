@@ -11,7 +11,7 @@ entity top is port (
     red, green, blue : out STD_LOGIC_VECTOR (3 downto 0);
     pwmsound : out STD_LOGIC;
     up, down, left, right, go, forward, backward : in STD_LOGIC;
-    sw : in std_logic_vector (7 downto 0));
+    sw : in std_logic_vector (8 downto 0));
 end top;
 
 architecture Behavioral of top is

@@ -72,6 +72,7 @@ set_property PACKAGE_PIN W2 [get_ports {sw[3]}]
 set_property PACKAGE_PIN R3 [get_ports {sw[4]}]
 set_property PACKAGE_PIN T2 [get_ports {sw[5]}]
 set_property PACKAGE_PIN T3 [get_ports {sw[6]}]
-set_property PACKAGE_PIN W13 [get_ports {sw[8]}]
 set_property PACKAGE_PIN V2 [get_ports {sw[7]}]
+set_property PACKAGE_PIN W13 [get_ports {sw[8]}]
+
 

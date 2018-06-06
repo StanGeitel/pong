@@ -22,19 +22,19 @@ signal xb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 1
 signal yb1 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
 signal xb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(146, 10));
 signal yb2 : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(62, 10));
-signal control : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(4, 10)); -- 4 "0000000100" hoofdmenu
+signal control : STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(8, 10)); -- 4 "0000000100" hoofdmenu
 signal score :  STD_LOGIC_VECTOR(9 downto 0) := std_logic_vector(to_unsigned(37, 10)); -- 1-5
-signal upcount, downcount, leftcount, rightcount, forwardcount, backwardcount : INTEGER;
+signal upcount, downcount, leftcount, rightcount, forwardcount, backwardcount, selcount : INTEGER;
 signal gocount : STD_LOGIC_VECTOR(1 downto 0); -- gocount bepaalt of batje 1, batje 2, ball of menu wordt bediend
-signal gopressed, uppressed, downpressed : STD_LOGIC; -- uppressed en downpressed toegevoegd
-signal refresh_counter, tmpfirst : STD_LOGIC := '0'; -- tmpfirst toegevoegd
+signal gopressed : STD_LOGIC;
+signal refresh_counter : STD_LOGIC := '0';
 signal tmpwea2 : STD_LOGIC_VECTOR(0 downto 0);
 
-        -- menu bedienen en scrollen tussen opties met FPGA
+        -- Job: menu bedienen en scrollen tussen opties met FPGA
         -- Remco: full adder toevoegen voor score
         -- Lucah: ball voor schuine lijnen ipv schuine lijnen voor bal
         -- Lucah: transparantie van bal bij goede straal (die diepte voorstelt)
-        -- Bij samenvoegen op letten dat andere entity nog extra in- en outputs heeft voor de tweede ram
+
 component two_bit_adder
         Port( A0 : in STD_LOGIC;
               A1 : in STD_LOGIC;
@@ -74,23 +74,65 @@ begin
     if rising_edge(clk25MHz) then
         
         if (control(3 downto 2) = "01") then
-            tmpcontrol := control and "1111111100";
-            if (down = '1' and downpressed = '0') then
-                downpressed <= '1';
+            tmpcontrol := control;
+            if (down = '1') then 
+                downcount <= downcount + 1;
+            end if;
+            if (downcount > 25000000) then
                 if (control(1 downto 0) = "00") then
                     tmpcontrol(1 downto 0) := "01";
                 elsif (control(1 downto 0) = "01") then
                     tmpcontrol(1 downto 0) := "10";
                 elsif (control(1 downto 0) = "10") then
-                        tmpcontrol(1 downto 0) := "11";
+                    tmpcontrol(1 downto 0) := "11";
                 elsif (control(1 downto 0) = "11") then
-                            tmpcontrol(1 downto 0) := "00";                
+                    tmpcontrol(1 downto 0) := "00";                
                 end if;
+                downcount <= 0;
             end if;
-            if (down = '0' and downpressed = '1') then
-                downpressed <= '0';
-            end if; 
+            control <= tmpcontrol; 
             
+--            if (go = '1') then 
+--                selcount <= selcount + 1;
+--            end if;
+--            if (selcount > 25000000) then
+--            end if;
+        end if; 
+        
+        if (control(3 downto 2) = "10") then
+            tmpcontrol := control;
+            if (down = '1') then 
+                downcount <= downcount + 1;
+            end if;
+            if (downcount > 25000000) then
+                if (control(1 downto 0) = "00") then
+                    tmpcontrol(1 downto 0) := "01";
+                elsif (control(1 downto 0) = "01") then
+                    tmpcontrol(1 downto 0) := "10";
+                elsif (control(1 downto 0) = "10") then
+                    tmpcontrol(1 downto 0) := "00";               
+                end if;
+                downcount <= 0;
+            end if;
+            control <= tmpcontrol; 
+        end if;
+                
+        if (control(3 downto 2) = "11") then
+            tmpcontrol := control;
+            if (down = '1') then 
+                downcount <= downcount + 1;
+            end if;
+            if (downcount > 25000000) then
+                if (control(1 downto 0) = "00") then
+                    tmpcontrol(1 downto 0) := "01";
+                elsif (control(1 downto 0) = "01") then
+                    tmpcontrol(1 downto 0) := "00";               
+                end if;
+                downcount <= 0;
+            end if;
+            control <= tmpcontrol; 
+        end if;       
+                            
 --            if (go = '1' and gopressed = '0') then 
 --                gopressed <= '1';
 --                if (control(1 downto 0) = "00") then
@@ -103,12 +145,9 @@ begin
 --                    tmpcontrol(1 downto 0) := "0000"; 
 --                end if;
 --            end if;
-            if (go = '0' and gopressed = '1') then
-                gopressed <= '0';
-            end if;
-            
-            control <= tmpcontrol; 
-        end if; 
+--            if (go = '0' and gopressed = '1') then
+--                gopressed <= '0';
+--            end if;
 
         if (control(3 downto 2) = "00") then  
         
@@ -120,54 +159,31 @@ begin
                 gopressed <= '0';
             end if;
             
-        if (gocount = 3) then
-            if (tmpfirst = '0') then
-                tmpcontrol := (control and "1111110000") or "0000001100"; -- eerst twee losse regels
-                tmpfirst <= '1';
-            end if;
-            if (down = '1' and downpressed = '0') then
-                downpressed <= '1';
-                tmpcontrol := control and "1111111101"; -- tweede select in menu (uitbreiden naar door blijven scrollen!)
-            end if;
-            if (down = '0' and downpressed = '1') then
-                downpressed <= '0';
-            end if;
-            
-            if (tmpfirst = '1' and go = '1' and gopressed = '0') then -- als het goed is gaat gocount automatisch verder vanwege andere if statement hierboven
---                gopressed <= '1'; -- eventueel weghalen
-                tmpfirst <= '0';
-                if (control(1 downto 0) = "00") then
-                    tmpcontrol := control and "1111110000";  
-                elsif (control(1 downto 0) = "01") then
-                    tmpcontrol := control and "1111110100";
-                end if;
-            end if;
---            if (go = '0' and gopressed = '1') then -- evt weghalen
---                gopressed <= '0';  -- eventueel weghalen vanwege andere if statement
---            end if;                   
-            control <= tmpcontrol;         
-        end if;
-        -- TOT HIER
+            if (gocount = 3) then
+                tmpcontrol := control;
+                tmpcontrol(3 downto 0) := "1100";
+                control <= tmpcontrol;         
+            end if;               
         
-        if (down = '1') then 
-            downcount <= downcount + 1;
-        end if;
-        if (downcount > 250000) then
-            if (gocount = 0) then
-                if (yb1 < 385) then
-                    yb1 <= yb1 + "1";
-                end if;
-            elsif (gocount = 1) then 
-                if (yb2 < 385) then
-                    yb2 <= yb2 + "1";
-                end if;
-            elsif (gocount = 2) then 
-                if ( (yball + rball) < 485) then
-                    yball <= yball + "1";
-                end if; 
+            if (down = '1') then 
+                downcount <= downcount + 1;
             end if;
-            downcount <= 0;
-        end if;
+            if (downcount > 250000) then
+                if (gocount = 0) then
+                    if (yb1 < 385) then
+                        yb1 <= yb1 + "1";
+                    end if;
+                elsif (gocount = 1) then 
+                    if (yb2 < 385) then
+                        yb2 <= yb2 + "1";
+                    end if;
+                elsif (gocount = 2) then 
+                    if ( (yball + rball) < 485) then
+                        yball <= yball + "1";
+                    end if; 
+                end if;               
+                downcount <= 0;
+            end if;
 
         if (up = '1') then 
             upcount <= upcount + 1;
@@ -270,7 +286,6 @@ wea2 <= tmpwea2;
             refresh_counter <= '0';
         end if;
         
-        -- NIEUW TOEGEVOEGD
         if ramcounter = 1 then
             dina2 <= control;  
             addra2 <= "0000";
@@ -281,8 +296,6 @@ wea2 <= tmpwea2;
             addra2 <= "0001";
             tmpwea2 <= "1";
         end if;
-        -- TOT HIER
-        
         if ramcounter = 3 then
                 dina2 <= xball;  
                 addra2 <= "0010";

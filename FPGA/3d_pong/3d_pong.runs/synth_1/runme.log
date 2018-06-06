@@ -14,18 +14,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6004 
+INFO: Helper process launched with PID 1320 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 369.270 ; gain = 101.266
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 369.945 ; gain = 102.164
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:16]
-INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:17]
+INFO: [Synth 8-3491] module 'clk' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:5' bound to instance 'clk1' of component 'clk' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'clk' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk1' of component 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'clk' (2#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd:12]
-INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:96]
+INFO: [Synth 8-3491] module 'spi' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:6' bound to instance 'spi1' of component 'spi' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:98]
 INFO: [Synth 8-638] synthesizing module 'spi' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
 WARNING: [Synth 8-614] signal 'edge' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
 WARNING: [Synth 8-614] signal 'dataSPI' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
@@ -34,10 +34,10 @@ WARNING: [Synth 8-614] signal 'new_frame_ready' is read in the process but is no
 WARNING: [Synth 8-614] signal 'tmpwea' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:26]
 WARNING: [Synth 8-6014] Unused sequential element tmpwea_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'spi' (3#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:15]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:104]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga1' of component 'vga' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:15]
-INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:117]
+INFO: [Synth 8-3491] module 'image' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:6' bound to instance 'image1' of component 'image' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:119]
 INFO: [Synth 8-638] synthesizing module 'image' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:18]
 WARNING: [Synth 8-6014] Unused sequential element xb1raw_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:657]
 WARNING: [Synth 8-6014] Unused sequential element yb1raw_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:658]
@@ -47,24 +47,33 @@ WARNING: [Synth 8-6014] Unused sequential element xbh2raw_reg was removed.  [C:/
 WARNING: [Synth 8-6014] Unused sequential element ybh2raw_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:662]
 WARNING: [Synth 8-6014] Unused sequential element color_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:704]
 INFO: [Synth 8-256] done synthesizing module 'image' (5#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:18]
-INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:132]
+INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:5' bound to instance 'memory1' of component 'memory' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:134]
 INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ram2' of component 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_0_stub.v:6]
 WARNING: [Synth 8-3848] Net data_out in module/entity memory does not have driver. [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd:14]
-INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:144]
-INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
-WARNING: [Synth 8-614] signal 'tmpwea2' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:208]
-INFO: [Synth 8-256] done synthesizing module 'buttons' (8#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:15]
-INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:158]
+INFO: [Synth 8-3491] module 'buttons' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:6' bound to instance 'buttons1' of component 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:16]
+INFO: [Synth 8-3491] module 'two_bit_adder' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:34' bound to instance 'FBA0' of component 'two_bit_adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'two_bit_adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:45]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/adder.vhd:33' bound to instance 'FBA0' of component 'adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/adder.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'adder' (8#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/adder.vhd:41]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/adder.vhd:33' bound to instance 'FBA1' of component 'adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'two_bit_adder' (9#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:45]
+INFO: [Synth 8-3491] module 'two_bit_adder' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd:34' bound to instance 'FBA1' of component 'two_bit_adder' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:61]
+WARNING: [Synth 8-614] signal 'tmpwea2' is read in the process but is not in the sensitivity list [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:272]
+WARNING: [Synth 8-6014] Unused sequential element tmpcontrol_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'buttons' (10#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:16]
+INFO: [Synth 8-3491] module 'rom_Geluid' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:5' bound to instance 'rom_Geluid1' of component 'rom_geluid' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'rom_Geluid' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (10#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'rom' of component 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (11#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_Geluid' (12#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'top' (13#1) [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd:17]
 WARNING: [Synth 8-3331] design memory has unconnected port data_out[9]
 WARNING: [Synth 8-3331] design memory has unconnected port data_out[8]
 WARNING: [Synth 8-3331] design memory has unconnected port data_out[7]
@@ -101,7 +110,7 @@ WARNING: [Synth 8-3331] design image has unconnected port data_ram[2]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[1]
 WARNING: [Synth 8-3331] design image has unconnected port data_ram[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 461.094 ; gain = 193.090
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 462.922 ; gain = 195.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -111,19 +120,19 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 461.094 ; gain = 193.090
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 462.922 ; gain = 195.141
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
-Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
-Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
-Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'memory1/ram2'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk1/clk1'
+Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
+Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'rom_Geluid1/rom'
 Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
 Finished Parsing XDC File [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -135,27 +144,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 813.512 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 812.152 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 813.512 ; gain = 545.508
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 812.152 ; gain = 544.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 813.512 ; gain = 545.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 812.152 ; gain = 544.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-7264-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100MHz. (constraint file  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/.Xil/Vivado-3784-DESKTOP-UBGEV9I/dcp4/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk1/clk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for memory1/ram2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom_Geluid1/rom. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 813.512 ; gain = 545.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 812.152 ; gain = 544.371
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "bit_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:22]
@@ -168,12 +177,12 @@ INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is 
 WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:665]
 WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:680]
 WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:528]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2094]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2110]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2244]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2260]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2374]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2390]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2119]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2135]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2269]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2285]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2399]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2415]
 INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -184,81 +193,81 @@ INFO: [Synth 8-5544] ROM "green" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "green" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "tmpwea2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element downcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:109]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:125]
-WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:145]
-WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:149]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:153]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:157]
-WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:165]
-WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:185]
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:117]
-WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:195]
+WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:177]
+WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:189]
+WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:209]
+WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:213]
+WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:221]
+WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:249]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:181]
+WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:259]
 WARNING: [Synth 8-327] inferring latch for variable 'frame_reg' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 WARNING: [Synth 8-327] inferring latch for variable 'bit_number_reg' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 813.512 ; gain = 545.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 812.152 ; gain = 544.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |image__GB0    |           1|     29852|
-|2     |image__GB1    |           1|      8774|
-|3     |image__GB2    |           1|     12295|
-|4     |top__GC0      |           1|      6526|
+|1     |image__GB0    |           1|     20077|
+|2     |image__GB1    |           1|     19263|
+|3     |image__GB2    |           1|     11538|
+|4     |top__GC0      |           1|      6672|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 59    
+	   2 Input     32 Bit       Adders := 60    
 	   2 Input     31 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 12    
 	   3 Input     11 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 33    
 	   3 Input     10 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 33    
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
 +---Registers : 
-	               32 Bit    Registers := 8     
-	               10 Bit    Registers := 24    
+	               32 Bit    Registers := 9     
+	               10 Bit    Registers := 23    
 	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 13    
+	                1 Bit    Registers := 11    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 142   
-	   5 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 147   
 	   4 Input     32 Bit        Muxes := 2     
-	   6 Input     32 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 2     
 	   7 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 47    
-	   8 Input     10 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 294   
-	   4 Input      4 Bit        Muxes := 1     
-	  16 Input      4 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 38    
+	   9 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 296   
 	  14 Input      4 Bit        Muxes := 3     
 	  11 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 6     
+	  16 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 33    
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 48    
 	   6 Input      2 Bit        Muxes := 2     
 	  11 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 164   
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 172   
 	  16 Input      1 Bit        Muxes := 1     
 	  14 Input      1 Bit        Muxes := 1     
-	   9 Input      1 Bit        Muxes := 3     
-	   8 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -273,8 +282,8 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 12    
 	   3 Input     11 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 10    
 	   3 Input     10 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 10    
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
@@ -285,24 +294,23 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 133   
-	   5 Input     32 Bit        Muxes := 2     
 	   4 Input     32 Bit        Muxes := 2     
-	   6 Input     32 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 2     
 	   7 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 10    
 	   2 Input      4 Bit        Muxes := 291   
-	   4 Input      4 Bit        Muxes := 1     
-	  16 Input      4 Bit        Muxes := 3     
 	  14 Input      4 Bit        Muxes := 3     
 	  11 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 6     
+	  16 Input      4 Bit        Muxes := 3     
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 30    
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 33    
 	   6 Input      2 Bit        Muxes := 2     
 	  11 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 134   
+	   2 Input      1 Bit        Muxes := 135   
 	  16 Input      1 Bit        Muxes := 1     
 	  14 Input      1 Bit        Muxes := 1     
 Module clk 
@@ -326,26 +334,44 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
+Module adder__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module adder__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module adder__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
 Module buttons 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 21    
 	   3 Input     10 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 9     
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 8     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 8     
-	   2 Input     10 Bit        Muxes := 37    
-	   8 Input     10 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 30    
-	   9 Input      1 Bit        Muxes := 3     
-	   8 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 13    
+	   2 Input     10 Bit        Muxes := 28    
+	   9 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 15    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 37    
+	   9 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -361,25 +387,26 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Debug: swapped A/B pins for adder 0000024986475670
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2244]
-WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2260]
-WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2374]
-WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2390]
-WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:680]
+WARNING: [Synth 8-6014] Unused sequential element place_pauzemenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2399]
+WARNING: [Synth 8-6014] Unused sequential element place_pauze_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2415]
+INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
+DSP Debug: swapped A/B pins for adder 0000021085512CB0
+INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'yball_reg[9:0]' into 'yball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
 INFO: [Synth 8-4471] merging register 'xball_reg[9:0]' into 'xball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
 INFO: [Synth 8-4471] merging register 'rball_reg[9:0]' into 'rball_reg[9:0]' [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:560]
 WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
 WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
 WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:560]
-INFO: [Synth 8-5546] ROM "refresh_counter" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element yball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:558]
 WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:556]
 WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:560]
-WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2094]
-WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2110]
+WARNING: [Synth 8-6014] Unused sequential element place_hoofdmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2119]
+WARNING: [Synth 8-6014] Unused sequential element place_pong_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2135]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheidmenu_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2269]
+WARNING: [Synth 8-6014] Unused sequential element place_moeilijkheid_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:2285]
 WARNING: [Synth 8-6014] Unused sequential element clkcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:665]
+WARNING: [Synth 8-6014] Unused sequential element soundcounter_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:680]
 WARNING: [Synth 8-6014] Unused sequential element tmpadressound_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd:528]
 DSP Report: Generating DSP red3, operation Mode is: A2*B2.
 DSP Report: register rball_reg is absorbed into DSP red3.
@@ -408,26 +435,74 @@ WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/U
 WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd:23]
 INFO: [Synth 8-5545] ROM "tmpwea2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element downcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:105]
-WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:125]
-WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:113]
-WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:145]
-WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:165]
-WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:153]
-WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:109]
-WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:149]
-WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:185]
-WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:195]
-WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:117]
-WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:157]
-INFO: [Synth 8-3886] merging instance 'image1i_2/blue_reg[0]' (FDE) to 'image1i_2/blue_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[0]' (FD) to 'i_3/vga1/blue_reg[1]'
+WARNING: [Synth 8-6014] Unused sequential element upcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:189]
+WARNING: [Synth 8-6014] Unused sequential element yb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:177]
+WARNING: [Synth 8-6014] Unused sequential element leftcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:209]
+WARNING: [Synth 8-6014] Unused sequential element rightcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element xb2_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element yb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element xb1_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:213]
+WARNING: [Synth 8-6014] Unused sequential element forwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:249]
+WARNING: [Synth 8-6014] Unused sequential element backwardcount_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:259]
+WARNING: [Synth 8-6014] Unused sequential element rball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:181]
+WARNING: [Synth 8-6014] Unused sequential element xball_reg was removed.  [C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd:221]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_3/\buttons1/control_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/gocount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/gocount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb1_inferred__1 /\buttons1/yb1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb2_inferred__1 /\buttons1/yb2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/control_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb1_inferred__1 /\buttons1/yb1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb2_inferred__1 /\buttons1/yb2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb1_inferred__1 /\buttons1/yb1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb2_inferred__1 /\buttons1/yb2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb1_inferred__1 /\buttons1/yb1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb2_inferred__1 /\buttons1/yb2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xball_inferred__1 /\buttons1/xball_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb1_inferred__1 /\buttons1/yb1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb1_inferred__1 /\buttons1/xb1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/rball_inferred__0 /\buttons1/rball_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yb2_inferred__1 /\buttons1/yb2_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/yball_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/xb2_inferred__1 /\buttons1/xb2_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_3/buttons1/dina2_reg[8]' (FDE_1) to 'i_3/buttons1/dina2_reg[9]'
+INFO: [Synth 8-3886] merging instance 'image1i_0/blue_reg[0]' (FDE) to 'image1i_0/blue_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (image1i_2/\yb2_reg[9] )
-INFO: [Synth 8-3886] merging instance 'image1i_2/blue_reg[1]' (FDE) to 'image1i_2/green_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[1]' (FD) to 'i_3/vga1/green_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\buttons1/dina2_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[0]' (FD) to 'i_3/vga1/blue_reg[1]'
+INFO: [Synth 8-3886] merging instance 'image1i_0/green_reg[2]' (FDE) to 'image1i_0/blue_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:13 ; elapsed = 00:02:15 . Memory (MB): peak = 909.457 ; gain = 641.453
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:20 ; elapsed = 00:03:22 . Memory (MB): peak = 1159.664 ; gain = 891.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -453,10 +528,10 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |image__GB0    |           1|     12339|
-|2     |image__GB1    |           1|      5689|
-|3     |image__GB2    |           1|      4742|
-|4     |top__GC0      |           1|      1794|
+|1     |image__GB0    |           1|      9227|
+|2     |image__GB1    |           1|      7845|
+|3     |image__GB2    |           1|      6029|
+|4     |top__GC0      |           1|       642|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -464,229 +539,54 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/clk1/clk_out1' to pin 'clk1/clk1/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:28 ; elapsed = 00:02:29 . Memory (MB): peak = 1100.613 ; gain = 832.609
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:34 ; elapsed = 00:03:36 . Memory (MB): peak = 1295.617 ; gain = 1027.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_3/vga1/blue_reg[1]' (FD) to 'i_3/vga1/green_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:58 ; elapsed = 00:02:59 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Timing Optimization : Time (s): cpu = 00:05:09 ; elapsed = 00:05:11 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |image__GB1    |           1|      5689|
-|2     |top__GC0      |           1|      1794|
-|3     |top_GT0       |           1|     17195|
+|1     |image__GB1    |           1|      7845|
+|2     |top__GC0      |           1|       640|
+|3     |top_GT0       |           1|     15069|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpfirst_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/tmpcontrol_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/control_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/gopressed_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[10]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[13]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[14]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[15]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[16]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[17]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[18]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[19]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[20]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[21]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[22]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[23]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[24]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[25]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[26]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[27]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[28]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[29]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[30]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/downcount_reg[31]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[10]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[13]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[14]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[15]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[16]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[17]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[18]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[19]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[20]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[21]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[22]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[23]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[24]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[25]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[26]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[27]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[28]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[29]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[30]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/leftcount_reg[31]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[10]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[13]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[14]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (buttons1/forwardcount_reg[15]) is unused and will be removed from module top.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/upcount_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/backwardcount_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/rightcount_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/gocount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/gocount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buttons1/xball_reg[0] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yball_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yball_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb2_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb2_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb2_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb2_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb2_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb2_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb2_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb2_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb1_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb1_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb1_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb1_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/yb1_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb1_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb1_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xb1_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/rball_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/rball_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/rball_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xball_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xball_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xball_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (buttons1/xball_reg[1]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:07 ; elapsed = 00:03:09 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Technology Mapping : Time (s): cpu = 00:05:17 ; elapsed = 00:05:19 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -710,7 +610,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:09 ; elapsed = 00:03:11 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished IO Insertion : Time (s): cpu = 00:05:18 ; elapsed = 00:05:21 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -723,7 +623,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:09 ; elapsed = 00:03:11 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:18 ; elapsed = 00:05:21 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -735,25 +635,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:03:12 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:19 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:10 ; elapsed = 00:03:12 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:19 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:10 ; elapsed = 00:03:12 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:10 ; elapsed = 00:03:12 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -775,21 +675,21 @@ Report Cell Usage:
 |1     |blk_mem_gen_0 |     1|
 |2     |blk_mem_gen_1 |     1|
 |3     |clk_wiz_0     |     1|
-|4     |CARRY4        |   911|
+|4     |CARRY4        |   923|
 |5     |DSP48E1       |     1|
 |6     |DSP48E1_1     |     2|
 |7     |DSP48E1_2     |     2|
-|8     |LUT1          |  1692|
-|9     |LUT2          |  1370|
-|10    |LUT3          |   253|
-|11    |LUT4          |  1141|
-|12    |LUT5          |   812|
-|13    |LUT6          |  2399|
-|14    |MUXF7         |   194|
-|15    |MUXF8         |    10|
-|16    |FDRE          |   653|
-|17    |FDSE          |    93|
-|18    |IBUF          |     2|
+|8     |LUT1          |  1757|
+|9     |LUT2          |  1553|
+|10    |LUT3          |   263|
+|11    |LUT4          |  1037|
+|12    |LUT5          |   879|
+|13    |LUT6          |  2479|
+|14    |MUXF7         |    96|
+|15    |MUXF8         |     3|
+|16    |FDRE          |   696|
+|17    |FDSE          |    81|
+|18    |IBUF          |    11|
 |19    |OBUF          |    15|
 +------+--------------+------+
 
@@ -797,33 +697,34 @@ Report Instance Areas:
 +------+--------------+-----------+------+
 |      |Instance      |Module     |Cells |
 +------+--------------+-----------+------+
-|1     |top           |           |  9569|
-|2     |  buttons1    |buttons    |   186|
+|1     |top           |           |  9817|
+|2     |  buttons1    |buttons    |   226|
 |3     |  clk1        |clk        |     1|
-|4     |  image1      |image      |  6877|
+|4     |  image1      |image      |  8171|
 |5     |  memory1     |memory     |    10|
-|6     |  rom_Geluid1 |rom_Geluid |    18|
-|7     |  vga1        |VGA        |  1150|
+|6     |  rom_Geluid1 |rom_Geluid |    12|
+|7     |  vga1        |VGA        |   881|
 +------+--------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:10 ; elapsed = 00:03:12 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 340 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:49 ; elapsed = 00:03:04 . Memory (MB): peak = 1264.605 ; gain = 644.184
-Synthesis Optimization Complete : Time (s): cpu = 00:03:11 ; elapsed = 00:03:13 . Memory (MB): peak = 1264.605 ; gain = 996.602
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:59 ; elapsed = 00:05:13 . Memory (MB): peak = 1550.391 ; gain = 933.379
+Synthesis Optimization Complete : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1550.391 ; gain = 1282.609
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1122 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1038 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'image' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 5 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-176 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 1264.605 ; gain = 1008.074
+synth_design: Time (s): cpu = 00:05:24 ; elapsed = 00:05:27 . Memory (MB): peak = 1550.391 ; gain = 1294.082
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1264.605 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  6 10:43:47 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1550.391 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  6 11:42:33 2018...

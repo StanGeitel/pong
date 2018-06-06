@@ -640,7 +640,7 @@ process(clk25Mhz)
     variable y_cursor_moeilijkheid_1 : INTEGER := 276;
     variable y_cursor_moeilijkheid_2 : INTEGER := 290;
     
-    variable x_cursor_pauze : INTEGER := 423;
+    variable x_cursor_pauze : INTEGER := 403;
     variable y_cursor_pauze_0 : INTEGER := 272;
     variable y_cursor_pauze_1 : INTEGER := 286;
        

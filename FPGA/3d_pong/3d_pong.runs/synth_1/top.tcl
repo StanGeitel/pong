@@ -16,7 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/jobgr/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3508-DESKTOP-UBGEV9I/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,12 +36,14 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/registers.coe
 add_files C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.ip_user_files/mem_init_files/Retro.coe
 read_vhdl -library xil_defaultlib {
+  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/adder.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/buttons.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/imports/new/clk.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/image.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/memory.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/rom_Geluid.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/spi.vhd
+  C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/two_bit_adder.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/vga.vhd
   C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/new/top.vhd
 }

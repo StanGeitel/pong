@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Jun  6 10:46:02 2018
+| Date         : Wed Jun  6 11:44:43 2018
 | Host         : DESKTOP-UBGEV9I running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,1134 +23,1094 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 224
+             Violations found: 216
 +-----------+----------+---------------------------+------------+
 | Rule      | Severity | Description               | Violations |
 +-----------+----------+---------------------------+------------+
-| SYNTH-11  | Warning  | DSP output not registered | 4          |
-| TIMING-16 | Warning  | Large setup violation     | 220        |
+| SYNTH-11  | Warning  | DSP output not registered | 5          |
+| TIMING-16 | Warning  | Large setup violation     | 211        |
 +-----------+----------+---------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 SYNTH-11#1 Warning
 DSP output not registered  
-DSP instance image1/red3__1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance image1/red3 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#2 Warning
 DSP output not registered  
-DSP instance image1/red3__2 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance image1/red3__1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#3 Warning
 DSP output not registered  
-DSP instance image1/red4 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance image1/red3__2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#4 Warning
+DSP output not registered  
+DSP instance image1/red4 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#5 Warning
 DSP output not registered  
 DSP instance image1/red4__1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.157 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.013 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.187 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.268 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.209 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.270 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.211 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.322 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.376 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.324 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.380 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.327 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.398 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.352 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -1.502 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.386 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -1.530 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.396 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -1.540 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.474 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -1.546 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.526 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.563 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.542 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.567 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.616 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -1.571 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.637 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -1.571 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.639 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -1.573 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.655 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -1.586 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.665 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -1.659 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.703 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -1.687 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.729 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -1.732 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.750 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -1.736 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.752 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -1.752 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.768 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -1.759 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.800 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -1.775 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.802 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -1.791 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.842 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -1.832 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.844 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -1.836 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.847 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -1.881 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.863 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -1.907 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.866 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -1.981 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.882 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -2.014 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.956 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -2.019 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.977 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -2.030 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.979 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -2.038 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.995 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -2.076 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.069 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -2.117 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.090 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -2.130 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.092 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -2.143 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.108 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -2.179 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.116 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -2.182 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.118 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -2.194 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.126 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -2.195 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.174 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -2.205 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.182 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -2.235 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.193 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -2.237 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.202 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -2.258 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.203 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -2.274 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.203 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -2.301 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.205 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -2.308 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.221 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -2.333 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.278 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -2.384 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.295 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -2.404 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.316 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -2.406 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.353 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -2.465 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.356 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -2.475 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.363 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -2.476 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.444 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -2.480 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.446 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -2.488 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.477 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -2.501 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.483 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -2.521 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.507 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#61 Warning
 Large setup violation  
-There is a large setup violation of -2.581 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.654 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#62 Warning
 Large setup violation  
-There is a large setup violation of -2.597 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.836 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#63 Warning
 Large setup violation  
-There is a large setup violation of -2.605 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.836 ns between image1/menu_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#64 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -22.111 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#65 Warning
 Large setup violation  
-There is a large setup violation of -2.618 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -22.630 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#66 Warning
 Large setup violation  
-There is a large setup violation of -2.625 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -22.937 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#67 Warning
 Large setup violation  
-There is a large setup violation of -2.627 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_moeilijkheid_spelweergave_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.067 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#68 Warning
 Large setup violation  
-There is a large setup violation of -2.637 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.073 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#69 Warning
 Large setup violation  
-There is a large setup violation of -2.672 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.096 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#70 Warning
 Large setup violation  
-There is a large setup violation of -2.713 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.220 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#71 Warning
 Large setup violation  
-There is a large setup violation of -2.721 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.221 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#72 Warning
 Large setup violation  
-There is a large setup violation of -2.725 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.224 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#73 Warning
 Large setup violation  
-There is a large setup violation of -2.728 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.227 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#74 Warning
 Large setup violation  
-There is a large setup violation of -2.732 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.227 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#75 Warning
 Large setup violation  
-There is a large setup violation of -2.752 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.231 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#76 Warning
 Large setup violation  
-There is a large setup violation of -2.828 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.270 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#77 Warning
 Large setup violation  
-There is a large setup violation of -2.836 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.276 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#78 Warning
 Large setup violation  
-There is a large setup violation of -2.848 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.282 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#79 Warning
 Large setup violation  
-There is a large setup violation of -2.868 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.296 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#80 Warning
 Large setup violation  
-There is a large setup violation of -2.944 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.299 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#81 Warning
 Large setup violation  
-There is a large setup violation of -2.952 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.423 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#82 Warning
 Large setup violation  
-There is a large setup violation of -2.957 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.442 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#83 Warning
 Large setup violation  
-There is a large setup violation of -2.964 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.446 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#84 Warning
 Large setup violation  
-There is a large setup violation of -2.984 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.467 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#85 Warning
 Large setup violation  
-There is a large setup violation of -21.575 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.507 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#86 Warning
 Large setup violation  
-There is a large setup violation of -23.211 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.521 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#87 Warning
 Large setup violation  
-There is a large setup violation of -23.366 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.686 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#88 Warning
 Large setup violation  
-There is a large setup violation of -23.437 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -23.839 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#89 Warning
 Large setup violation  
-There is a large setup violation of -23.446 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.028 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#90 Warning
 Large setup violation  
-There is a large setup violation of -23.522 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.153 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#91 Warning
 Large setup violation  
-There is a large setup violation of -23.605 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.157 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#92 Warning
 Large setup violation  
-There is a large setup violation of -23.652 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.171 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#93 Warning
 Large setup violation  
-There is a large setup violation of -23.726 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.208 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#94 Warning
 Large setup violation  
-There is a large setup violation of -23.761 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.248 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#95 Warning
 Large setup violation  
-There is a large setup violation of -23.840 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.259 ns between image1/moeil_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#96 Warning
 Large setup violation  
-There is a large setup violation of -23.842 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.372 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#97 Warning
 Large setup violation  
-There is a large setup violation of -23.846 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.391 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#98 Warning
 Large setup violation  
-There is a large setup violation of -23.908 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.408 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#99 Warning
 Large setup violation  
-There is a large setup violation of -23.913 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.411 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#100 Warning
 Large setup violation  
-There is a large setup violation of -23.914 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.733 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#101 Warning
 Large setup violation  
-There is a large setup violation of -23.927 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.791 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#102 Warning
 Large setup violation  
-There is a large setup violation of -24.006 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.835 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#103 Warning
 Large setup violation  
-There is a large setup violation of -24.028 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.835 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#104 Warning
 Large setup violation  
-There is a large setup violation of -24.068 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.911 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#105 Warning
 Large setup violation  
-There is a large setup violation of -24.189 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.982 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#106 Warning
 Large setup violation  
-There is a large setup violation of -24.196 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.985 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#107 Warning
 Large setup violation  
-There is a large setup violation of -24.263 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.989 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#108 Warning
 Large setup violation  
-There is a large setup violation of -24.356 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.083 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#109 Warning
 Large setup violation  
-There is a large setup violation of -24.418 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.229 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#110 Warning
 Large setup violation  
-There is a large setup violation of -24.475 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.329 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#111 Warning
 Large setup violation  
-There is a large setup violation of -24.510 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.443 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#112 Warning
 Large setup violation  
-There is a large setup violation of -24.522 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.445 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#113 Warning
 Large setup violation  
-There is a large setup violation of -24.634 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.462 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#114 Warning
 Large setup violation  
-There is a large setup violation of -24.666 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.464 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#115 Warning
 Large setup violation  
-There is a large setup violation of -24.691 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.470 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#116 Warning
 Large setup violation  
-There is a large setup violation of -24.850 ns between image1/moeil_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_gekozen_moeilijheid_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.480 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#117 Warning
 Large setup violation  
-There is a large setup violation of -3.060 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.501 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#118 Warning
 Large setup violation  
-There is a large setup violation of -3.068 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.650 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#119 Warning
 Large setup violation  
-There is a large setup violation of -3.080 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.664 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#120 Warning
 Large setup violation  
-There is a large setup violation of -3.099 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.668 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#121 Warning
 Large setup violation  
-There is a large setup violation of -3.100 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.673 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#122 Warning
 Large setup violation  
-There is a large setup violation of -3.114 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.721 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#123 Warning
 Large setup violation  
-There is a large setup violation of -3.166 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.728 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#124 Warning
 Large setup violation  
-There is a large setup violation of -3.176 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.774 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#125 Warning
 Large setup violation  
-There is a large setup violation of -3.184 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.774 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#126 Warning
 Large setup violation  
-There is a large setup violation of -3.184 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_dubbele_punt_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.778 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#127 Warning
 Large setup violation  
-There is a large setup violation of -3.592 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.787 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#128 Warning
 Large setup violation  
-There is a large setup violation of -3.607 ns between image1/menu_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.807 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#129 Warning
 Large setup violation  
-There is a large setup violation of -33.584 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.850 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#130 Warning
 Large setup violation  
-There is a large setup violation of -33.584 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.868 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#131 Warning
 Large setup violation  
-There is a large setup violation of -33.589 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.868 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#132 Warning
 Large setup violation  
-There is a large setup violation of -33.590 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.941 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#133 Warning
 Large setup violation  
-There is a large setup violation of -33.701 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -34.947 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#134 Warning
 Large setup violation  
-There is a large setup violation of -33.732 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.033 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#135 Warning
 Large setup violation  
-There is a large setup violation of -33.813 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.033 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#136 Warning
 Large setup violation  
-There is a large setup violation of -33.824 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.136 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#137 Warning
 Large setup violation  
-There is a large setup violation of -33.827 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.287 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#138 Warning
 Large setup violation  
-There is a large setup violation of -33.858 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.301 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#139 Warning
 Large setup violation  
-There is a large setup violation of -33.863 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -35.807 ns between image1/score2_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#140 Warning
 Large setup violation  
-There is a large setup violation of -33.881 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.131 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#141 Warning
 Large setup violation  
-There is a large setup violation of -33.892 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.132 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#142 Warning
 Large setup violation  
-There is a large setup violation of -33.898 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.134 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#143 Warning
 Large setup violation  
-There is a large setup violation of -33.899 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.254 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#144 Warning
 Large setup violation  
-There is a large setup violation of -33.903 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.283 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#145 Warning
 Large setup violation  
-There is a large setup violation of -33.905 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.283 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#146 Warning
 Large setup violation  
-There is a large setup violation of -33.997 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.325 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#147 Warning
 Large setup violation  
-There is a large setup violation of -33.997 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.493 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#148 Warning
 Large setup violation  
-There is a large setup violation of -33.999 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.494 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#149 Warning
 Large setup violation  
-There is a large setup violation of -34.055 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.542 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#150 Warning
 Large setup violation  
-There is a large setup violation of -34.063 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.594 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#151 Warning
 Large setup violation  
-There is a large setup violation of -34.084 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.596 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#152 Warning
 Large setup violation  
-There is a large setup violation of -34.088 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.660 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#153 Warning
 Large setup violation  
-There is a large setup violation of -34.113 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.660 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#154 Warning
 Large setup violation  
-There is a large setup violation of -34.119 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.731 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#155 Warning
 Large setup violation  
-There is a large setup violation of -34.193 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.749 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#156 Warning
 Large setup violation  
-There is a large setup violation of -34.261 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.778 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#157 Warning
 Large setup violation  
-There is a large setup violation of -34.263 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.796 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#158 Warning
 Large setup violation  
-There is a large setup violation of -34.273 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.934 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#159 Warning
 Large setup violation  
-There is a large setup violation of -34.274 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.290 ns between image1/menusel_reg[0]/C (clocked by clk_out1_clk_wiz_0) and image1/place_cursor_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#160 Warning
 Large setup violation  
-There is a large setup violation of -34.526 ns between image1/score2_reg[1]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score2_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.389 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#161 Warning
 Large setup violation  
-There is a large setup violation of -66.855 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.391 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#162 Warning
 Large setup violation  
-There is a large setup violation of -66.860 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.404 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#163 Warning
 Large setup violation  
-There is a large setup violation of -66.964 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.405 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#164 Warning
 Large setup violation  
-There is a large setup violation of -66.965 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.407 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#165 Warning
 Large setup violation  
-There is a large setup violation of -66.965 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.411 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#166 Warning
 Large setup violation  
-There is a large setup violation of -66.975 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.412 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#167 Warning
 Large setup violation  
-There is a large setup violation of -66.986 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.412 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#168 Warning
 Large setup violation  
-There is a large setup violation of -66.986 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.418 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#169 Warning
 Large setup violation  
-There is a large setup violation of -67.004 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[21]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.422 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[31]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#170 Warning
 Large setup violation  
-There is a large setup violation of -67.008 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[20]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.423 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#171 Warning
 Large setup violation  
-There is a large setup violation of -67.009 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.428 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#172 Warning
 Large setup violation  
-There is a large setup violation of -67.013 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.480 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#173 Warning
 Large setup violation  
-There is a large setup violation of -67.046 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.485 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#174 Warning
 Large setup violation  
-There is a large setup violation of -67.046 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.488 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[27]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#175 Warning
 Large setup violation  
-There is a large setup violation of -67.053 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.492 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#176 Warning
 Large setup violation  
-There is a large setup violation of -67.134 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.523 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#177 Warning
 Large setup violation  
-There is a large setup violation of -67.139 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[28]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.525 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[29]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#178 Warning
 Large setup violation  
-There is a large setup violation of -67.171 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[16]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.527 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[24]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#179 Warning
 Large setup violation  
-There is a large setup violation of -67.175 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.532 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#180 Warning
 Large setup violation  
-There is a large setup violation of -67.179 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.539 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#181 Warning
 Large setup violation  
-There is a large setup violation of -67.184 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.545 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#182 Warning
 Large setup violation  
-There is a large setup violation of -67.186 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[15]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.558 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[22]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#183 Warning
 Large setup violation  
-There is a large setup violation of -67.191 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.562 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#184 Warning
 Large setup violation  
-There is a large setup violation of -67.193 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.570 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[26]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#185 Warning
 Large setup violation  
-There is a large setup violation of -67.200 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.574 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#186 Warning
 Large setup violation  
-There is a large setup violation of -67.200 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.577 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[25]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#187 Warning
 Large setup violation  
-There is a large setup violation of -67.216 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.580 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[18]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#188 Warning
 Large setup violation  
-There is a large setup violation of -67.220 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.581 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[17]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#189 Warning
 Large setup violation  
-There is a large setup violation of -67.238 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.585 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[30]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#190 Warning
 Large setup violation  
-There is a large setup violation of -67.243 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.609 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[23]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#191 Warning
 Large setup violation  
-There is a large setup violation of -67.260 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.706 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#192 Warning
 Large setup violation  
-There is a large setup violation of -67.271 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[19]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.188 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#193 Warning
 Large setup violation  
-There is a large setup violation of -67.291 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/place_score1_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.324 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#194 Warning
 Large setup violation  
-There is a large setup violation of -67.580 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.328 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#195 Warning
 Large setup violation  
-There is a large setup violation of -67.719 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.328 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#196 Warning
 Large setup violation  
-There is a large setup violation of -67.818 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.328 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#197 Warning
 Large setup violation  
-There is a large setup violation of -67.822 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.333 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#198 Warning
 Large setup violation  
-There is a large setup violation of -67.825 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.470 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#199 Warning
 Large setup violation  
-There is a large setup violation of -67.880 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.472 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[0]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#200 Warning
 Large setup violation  
-There is a large setup violation of -67.917 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.475 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#201 Warning
 Large setup violation  
-There is a large setup violation of -67.929 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.475 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[0]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#202 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.635 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#203 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.811 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#204 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[0]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.822 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#205 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.857 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#206 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[0]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.867 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#207 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.893 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#208 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.903 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#209 Warning
 Large setup violation  
-There is a large setup violation of -68.475 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -69.923 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#210 Warning
 Large setup violation  
-There is a large setup violation of -68.597 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -70.175 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#211 Warning
 Large setup violation  
-There is a large setup violation of -68.747 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#212 Warning
-Large setup violation  
-There is a large setup violation of -68.986 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[2]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#213 Warning
-Large setup violation  
-There is a large setup violation of -68.994 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[2]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#214 Warning
-Large setup violation  
-There is a large setup violation of -68.994 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[1]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#215 Warning
-Large setup violation  
-There is a large setup violation of -68.994 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[1]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#216 Warning
-Large setup violation  
-There is a large setup violation of -68.994 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[2]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#217 Warning
-Large setup violation  
-There is a large setup violation of -68.998 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/blue_reg[3]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#218 Warning
-Large setup violation  
-There is a large setup violation of -68.998 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[0]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#219 Warning
-Large setup violation  
-There is a large setup violation of -68.998 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[0]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#220 Warning
-Large setup violation  
-There is a large setup violation of -68.998 ns between image1/score1_reg[2]/C (clocked by clk_out1_clk_wiz_0) and image1/red_reg[3]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -70.403 ns between image1/score1_reg[3]/C (clocked by clk_out1_clk_wiz_0) and image1/green_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

@@ -25,14 +25,14 @@ end component;
 
 begin
 
-ram1 : blk_mem_gen_0 port map(
-    clka => clk25MHz,
-    wea => wea,
-    addra => addra,
-    dina => dina,
-    clkb => clk25MHz,
-    addrb => addr_img,
-    doutb => data_out);
+--ram1 : blk_mem_gen_0 port map(
+--    clka => clk25MHz,
+--    wea => wea,
+--    addra => addra,
+--    dina => dina,
+--    clkb => clk25MHz,
+--    addrb => addr_img,
+--    doutb => data_out);
     
 ram2 : blk_mem_gen_0 port map(
     clka => clk25MHz,
@@ -42,15 +42,5 @@ ram2 : blk_mem_gen_0 port map(
     clkb => clk25MHz,
     addrb => addr_img,
     doutb => data_out2);
-
---process(clk25MHz)                 Dit toepassen als block WE niet gebruikt
---begin 
---    if rising_edge(clk25MHz) then
---        if (wea = "0") then
---            dina <= data_in;
---            addra <= addr_spi;
---        end if;
---     end if;
---end process;
 
 end Behavioral;

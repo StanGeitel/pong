@@ -2487,1793 +2487,1793 @@ begin
 
 
 
-        --TWEEDE SCHERM
-        --Handbal
-        if(spelmod = "01" and menu = "00") then
-             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
-                 color := Rom10(place_score); -- 144 binair -- "0000";
-                 red(0) <= color;
-                 red(1) <= color;
-                 red(2) <= color;
-                 red(3) <= color;
-                 green(0) <= color;
-                 green(1) <= color;
-                 green(2) <= color;
-                 green(3) <= color;
-                 blue(0) <= color;
-                 blue(1) <= color;
-                 blue(2) <= color;
-                 blue(3) <= color;
-                 place_score := place_score - 1;   
+--        --TWEEDE SCHERM
+--        --Handbal
+--        if(spelmod = "01" and menu = "00") then
+--             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+--                 color := Rom10(place_score); -- 144 binair -- "0000";
+--                 red(0) <= color;
+--                 red(1) <= color;
+--                 red(2) <= color;
+--                 red(3) <= color;
+--                 green(0) <= color;
+--                 green(1) <= color;
+--                 green(2) <= color;
+--                 green(3) <= color;
+--                 blue(0) <= color;
+--                 blue(1) <= color;
+--                 blue(2) <= color;
+--                 blue(3) <= color;
+--                 place_score := place_score - 1;   
               
-          elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
-                   if score1 = 0 and place_score1 < 144 then
-                         color := Rom11(place_score1); -- 144 binair -- "0000";
-                         red(0) <= color;
-                         red(1) <= color;
-                         red(2) <= color;
-                         red(3) <= color;
-                         green(0) <= color;
-                         green(1) <= color;
-                         green(2) <= color;
-                         green(3) <= color;
-                         blue(0) <= color;
-                         blue(1) <= color;
-                         blue(2) <= color;
-                         blue(3) <= color;
-                         place_score1 := place_score1 - 1; 
-                   end if;
+--          elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+--                   if score1 = 0 and place_score1 < 144 then
+--                         color := Rom11(place_score1); -- 144 binair -- "0000";
+--                         red(0) <= color;
+--                         red(1) <= color;
+--                         red(2) <= color;
+--                         red(3) <= color;
+--                         green(0) <= color;
+--                         green(1) <= color;
+--                         green(2) <= color;
+--                         green(3) <= color;
+--                         blue(0) <= color;
+--                         blue(1) <= color;
+--                         blue(2) <= color;
+--                         blue(3) <= color;
+--                         place_score1 := place_score1 - 1; 
+--                   end if;
                    
-                   if score1 = 1 and place_score1 < 144 then
-                          color := Rom12(place_score1); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_score1 := place_score1 - 1; 
-                    end if;
+--                   if score1 = 1 and place_score1 < 144 then
+--                          color := Rom12(place_score1); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_score1 := place_score1 - 1; 
+--                    end if;
                     
-                     if score1 = 2 and place_score1 < 144 then
-                           color := Rom13(place_score1); -- 144 binair -- "0000";
-                           red(0) <= color;
-                           red(1) <= color;
-                           red(2) <= color;
-                           red(3) <= color;
-                           green(0) <= color;
-                           green(1) <= color;
-                           green(2) <= color;
-                           green(3) <= color;
-                           blue(0) <= color;
-                           blue(1) <= color;
-                           blue(2) <= color;
-                           blue(3) <= color;
-                           place_score1 := place_score1 - 1; 
-                     end if;
+--                     if score1 = 2 and place_score1 < 144 then
+--                           color := Rom13(place_score1); -- 144 binair -- "0000";
+--                           red(0) <= color;
+--                           red(1) <= color;
+--                           red(2) <= color;
+--                           red(3) <= color;
+--                           green(0) <= color;
+--                           green(1) <= color;
+--                           green(2) <= color;
+--                           green(3) <= color;
+--                           blue(0) <= color;
+--                           blue(1) <= color;
+--                           blue(2) <= color;
+--                           blue(3) <= color;
+--                           place_score1 := place_score1 - 1; 
+--                     end if;
                      
-                     if score1 = 3 and place_score1 < 144 then
-                          color := Rom14(place_score1); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_score1 := place_score1 - 1; 
-                      end if;
+--                     if score1 = 3 and place_score1 < 144 then
+--                          color := Rom14(place_score1); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_score1 := place_score1 - 1; 
+--                      end if;
                     
-                      if score1 = 4 and place_score1 < 144 then
-                           color := Rom15(place_score1); -- 144 binair -- "0000";
-                           red(0) <= color;
-                           red(1) <= color;
-                           red(2) <= color;
-                           red(3) <= color;
-                           green(0) <= color;
-                           green(1) <= color;
-                           green(2) <= color;
-                           green(3) <= color;
-                           blue(0) <= color;
-                           blue(1) <= color;
-                           blue(2) <= color;
-                           blue(3) <= color;
-                           place_score1 := place_score1 - 1; 
-                     end if;
+--                      if score1 = 4 and place_score1 < 144 then
+--                           color := Rom15(place_score1); -- 144 binair -- "0000";
+--                           red(0) <= color;
+--                           red(1) <= color;
+--                           red(2) <= color;
+--                           red(3) <= color;
+--                           green(0) <= color;
+--                           green(1) <= color;
+--                           green(2) <= color;
+--                           green(3) <= color;
+--                           blue(0) <= color;
+--                           blue(1) <= color;
+--                           blue(2) <= color;
+--                           blue(3) <= color;
+--                           place_score1 := place_score1 - 1; 
+--                     end if;
                      
-                      if score1 = 5 and place_score1 < 144 then
-                             color := Rom16(place_score1); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_score1 := place_score1 - 1; 
-                       end if;
+--                      if score1 = 5 and place_score1 < 144 then
+--                             color := Rom16(place_score1); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_score1 := place_score1 - 1; 
+--                       end if;
                        
-                       if score1 = 6 and place_score1 < 144 then
-                            color := Rom17(place_score1); -- 144 binair -- "0000";
-                            red(0) <= color;
-                            red(1) <= color;
-                            red(2) <= color;
-                            red(3) <= color;
-                            green(0) <= color;
-                            green(1) <= color;
-                            green(2) <= color;
-                            green(3) <= color;
-                            blue(0) <= color;
-                            blue(1) <= color;
-                            blue(2) <= color;
-                            blue(3) <= color;
-                            place_score1 := place_score1 - 1; 
-                      end if;
+--                       if score1 = 6 and place_score1 < 144 then
+--                            color := Rom17(place_score1); -- 144 binair -- "0000";
+--                            red(0) <= color;
+--                            red(1) <= color;
+--                            red(2) <= color;
+--                            red(3) <= color;
+--                            green(0) <= color;
+--                            green(1) <= color;
+--                            green(2) <= color;
+--                            green(3) <= color;
+--                            blue(0) <= color;
+--                            blue(1) <= color;
+--                            blue(2) <= color;
+--                            blue(3) <= color;
+--                            place_score1 := place_score1 - 1; 
+--                      end if;
                       
-                      if score1 = 7 and place_score1 < 144 then
-                           color := Rom18(place_score1); -- 144 binair -- "0000";
-                           red(0) <= color;
-                           red(1) <= color;
-                           red(2) <= color;
-                           red(3) <= color;
-                           green(0) <= color;
-                           green(1) <= color;
-                           green(2) <= color;
-                           green(3) <= color;
-                           blue(0) <= color;
-                           blue(1) <= color;
-                           blue(2) <= color;
-                           blue(3) <= color;
-                           place_score1 := place_score1 - 1; 
-                     end if;
+--                      if score1 = 7 and place_score1 < 144 then
+--                           color := Rom18(place_score1); -- 144 binair -- "0000";
+--                           red(0) <= color;
+--                           red(1) <= color;
+--                           red(2) <= color;
+--                           red(3) <= color;
+--                           green(0) <= color;
+--                           green(1) <= color;
+--                           green(2) <= color;
+--                           green(3) <= color;
+--                           blue(0) <= color;
+--                           blue(1) <= color;
+--                           blue(2) <= color;
+--                           blue(3) <= color;
+--                           place_score1 := place_score1 - 1; 
+--                     end if;
                      
-                     if score1 = 8 and place_score1 < 144 then
-                          color := Rom19(place_score1); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_score1 := place_score1 - 1; 
-                    end if;
+--                     if score1 = 8 and place_score1 < 144 then
+--                          color := Rom19(place_score1); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_score1 := place_score1 - 1; 
+--                    end if;
                     
-                    if score1 = 9 and place_score1 < 144 then
-                         color := Rom20(place_score1); -- 144 binair -- "0000";
-                         red(0) <= color;
-                         red(1) <= color;
-                         red(2) <= color;
-                         red(3) <= color;
-                         green(0) <= color;
-                         green(1) <= color;
-                         green(2) <= color;
-                         green(3) <= color;
-                         blue(0) <= color;
-                         blue(1) <= color;
-                         blue(2) <= color;
-                         blue(3) <= color;
-                         place_score1 := place_score1 - 1; 
-                   end if;
+--                    if score1 = 9 and place_score1 < 144 then
+--                         color := Rom20(place_score1); -- 144 binair -- "0000";
+--                         red(0) <= color;
+--                         red(1) <= color;
+--                         red(2) <= color;
+--                         red(3) <= color;
+--                         green(0) <= color;
+--                         green(1) <= color;
+--                         green(2) <= color;
+--                         green(3) <= color;
+--                         blue(0) <= color;
+--                         blue(1) <= color;
+--                         blue(2) <= color;
+--                         blue(3) <= color;
+--                         place_score1 := place_score1 - 1; 
+--                   end if;
                    
-            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
-                          color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+--            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+--                          color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
                          
-                    elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
-                          color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_dubbele_punt := place_dubbele_punt - 1;  
+--                    elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+--                          color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_dubbele_punt := place_dubbele_punt - 1;  
                           
-                   elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
-                       if moeil = 0 and place_gekozen_moeilijheid < 1320 then
-                           color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                           red(0) <= color;
-                           red(1) <= color;
-                           red(2) <= color;
-                           red(3) <= color;
-                           green(0) <= color;
-                           green(1) <= color;
-                           green(2) <= color;
-                           green(3) <= color;
-                           blue(0) <= color;
-                           blue(1) <= color;
-                           blue(2) <= color;
-                           blue(3) <= color;
-                           place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-                     end if;
+--                   elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+--                       if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+--                           color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                           red(0) <= color;
+--                           red(1) <= color;
+--                           red(2) <= color;
+--                           red(3) <= color;
+--                           green(0) <= color;
+--                           green(1) <= color;
+--                           green(2) <= color;
+--                           green(3) <= color;
+--                           blue(0) <= color;
+--                           blue(1) <= color;
+--                           blue(2) <= color;
+--                           blue(3) <= color;
+--                           place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--                     end if;
                      
-                     if moeil = 1 and place_gekozen_moeilijheid < 1320 then
-                             color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-                       end if;
+--                     if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+--                             color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--                       end if;
                        
-                       if moeil = 2 and place_gekozen_moeilijheid < 1320 then
-                               color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                               red(0) <= color;
-                               red(1) <= color;
-                               red(2) <= color;
-                               red(3) <= color;
-                               green(0) <= color;
-                               green(1) <= color;
-                               green(2) <= color;
-                               green(3) <= color;
-                               blue(0) <= color;
-                               blue(1) <= color;
-                               blue(2) <= color;
-                               blue(3) <= color;
-                               place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-                         end if;
+--                       if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+--                               color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                               red(0) <= color;
+--                               red(1) <= color;
+--                               red(2) <= color;
+--                               red(3) <= color;
+--                               green(0) <= color;
+--                               green(1) <= color;
+--                               green(2) <= color;
+--                               green(3) <= color;
+--                               blue(0) <= color;
+--                               blue(1) <= color;
+--                               blue(2) <= color;
+--                               blue(3) <= color;
+--                               place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--                         end if;
 
-            elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "1000"; 
-            elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
-                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                    red <= "0010";
-                    green <= "0010";
-                    blue <= "0000";
+--            elsif((hcount_int = xb1 and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (hcount_int = (xb1 + 150) and (vcount_int <= (yb1 + 100) and vcount_int >= yb1)) or (vcount_int = yb1 and (hcount_int <= (xb1 + 150) and hcount_int >= xb1)) or (vcount_int = (yb1 + 100) and (hcount_int <= (xb1 + 150) and hcount_int >= xb1))) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "1000"; 
+--            elsif((hcount_int > xb1 and vcount_int > yb1) and (hcount_int < (xb1 + 150) and vcount < (yb1 + 100))) then
+--                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                    red <= "0010";
+--                    green <= "0010";
+--                    blue <= "0000";
           
-            --Schuine lijnen  
-                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
-                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
+--            --Schuine lijnen  
+--                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
+--                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
                                 
-                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-            --handbal
-                elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-            --einde handbal
-                else
-                    red <= "0000";
-                    green <= "0000";
-                    blue <= "0000";
-                end if;                  
-        --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";               
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";        
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-       --handbal
-            elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-       --einde handbal
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
-             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                 place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
-                 place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
-                 place_moeilijkheid_spelweergave := 1643;
-                 place_gekozen_moeilijheid := 1319;
-                 place_dubbele_punt := 35;
-             end if; 
-        end if;
+--                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--            --handbal
+--                elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--            --einde handbal
+--                else
+--                    red <= "0000";
+--                    green <= "0000";
+--                    blue <= "0000";
+--                end if;                  
+--        --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";               
+--            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                red <= "1000";
+--                green <= "1000";
+--                blue <= "0000";        
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--       --handbal
+--            elsif((hcount_int > 384 and hcount_int < 543) and (vcount_int > 221 and vcount_int < 327)) then 
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--       --einde handbal
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
+--             if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                 place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                 place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                 place_moeilijkheid_spelweergave := 1643;
+--                 place_gekozen_moeilijheid := 1319;
+--                 place_dubbele_punt := 35;
+--             end if; 
+--        end if;
         
-        --Hockey
-        if(spelmod = "10" and menu = "00") then
-             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
-                      color := Rom10(place_score); -- 144 binair -- "0000";
-                      red(0) <= color;
-                      red(1) <= color;
-                      red(2) <= color;
-                      red(3) <= color;
-                      green(0) <= color;
-                      green(1) <= color;
-                      green(2) <= color;
-                      green(3) <= color;
-                      blue(0) <= color;
-                      blue(1) <= color;
-                      blue(2) <= color;
-                      blue(3) <= color;
-                      place_score := place_score - 1;   
+--        --Hockey
+--        if(spelmod = "10" and menu = "00") then
+--             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+--                      color := Rom10(place_score); -- 144 binair -- "0000";
+--                      red(0) <= color;
+--                      red(1) <= color;
+--                      red(2) <= color;
+--                      red(3) <= color;
+--                      green(0) <= color;
+--                      green(1) <= color;
+--                      green(2) <= color;
+--                      green(3) <= color;
+--                      blue(0) <= color;
+--                      blue(1) <= color;
+--                      blue(2) <= color;
+--                      blue(3) <= color;
+--                      place_score := place_score - 1;   
                    
-               elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
-                        if score1 = 0 and place_score1 < 144 then
-                              color := Rom11(place_score1); -- 144 binair -- "0000";
-                              red(0) <= color;
-                              red(1) <= color;
-                              red(2) <= color;
-                              red(3) <= color;
-                              green(0) <= color;
-                              green(1) <= color;
-                              green(2) <= color;
-                              green(3) <= color;
-                              blue(0) <= color;
-                              blue(1) <= color;
-                              blue(2) <= color;
-                              blue(3) <= color;
-                              place_score1 := place_score1 - 1; 
-                        end if;
+--               elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+--                        if score1 = 0 and place_score1 < 144 then
+--                              color := Rom11(place_score1); -- 144 binair -- "0000";
+--                              red(0) <= color;
+--                              red(1) <= color;
+--                              red(2) <= color;
+--                              red(3) <= color;
+--                              green(0) <= color;
+--                              green(1) <= color;
+--                              green(2) <= color;
+--                              green(3) <= color;
+--                              blue(0) <= color;
+--                              blue(1) <= color;
+--                              blue(2) <= color;
+--                              blue(3) <= color;
+--                              place_score1 := place_score1 - 1; 
+--                        end if;
                         
-                        if score1 = 1 and place_score1 < 144 then
-                               color := Rom12(place_score1); -- 144 binair -- "0000";
-                               red(0) <= color;
-                               red(1) <= color;
-                               red(2) <= color;
-                               red(3) <= color;
-                               green(0) <= color;
-                               green(1) <= color;
-                               green(2) <= color;
-                               green(3) <= color;
-                               blue(0) <= color;
-                               blue(1) <= color;
-                               blue(2) <= color;
-                               blue(3) <= color;
-                               place_score1 := place_score1 - 1; 
-                         end if;
+--                        if score1 = 1 and place_score1 < 144 then
+--                               color := Rom12(place_score1); -- 144 binair -- "0000";
+--                               red(0) <= color;
+--                               red(1) <= color;
+--                               red(2) <= color;
+--                               red(3) <= color;
+--                               green(0) <= color;
+--                               green(1) <= color;
+--                               green(2) <= color;
+--                               green(3) <= color;
+--                               blue(0) <= color;
+--                               blue(1) <= color;
+--                               blue(2) <= color;
+--                               blue(3) <= color;
+--                               place_score1 := place_score1 - 1; 
+--                         end if;
                          
-                          if score1 = 2 and place_score1 < 144 then
-                                color := Rom13(place_score1); -- 144 binair -- "0000";
-                                red(0) <= color;
-                                red(1) <= color;
-                                red(2) <= color;
-                                red(3) <= color;
-                                green(0) <= color;
-                                green(1) <= color;
-                                green(2) <= color;
-                                green(3) <= color;
-                                blue(0) <= color;
-                                blue(1) <= color;
-                                blue(2) <= color;
-                                blue(3) <= color;
-                                place_score1 := place_score1 - 1; 
-                          end if;
+--                          if score1 = 2 and place_score1 < 144 then
+--                                color := Rom13(place_score1); -- 144 binair -- "0000";
+--                                red(0) <= color;
+--                                red(1) <= color;
+--                                red(2) <= color;
+--                                red(3) <= color;
+--                                green(0) <= color;
+--                                green(1) <= color;
+--                                green(2) <= color;
+--                                green(3) <= color;
+--                                blue(0) <= color;
+--                                blue(1) <= color;
+--                                blue(2) <= color;
+--                                blue(3) <= color;
+--                                place_score1 := place_score1 - 1; 
+--                          end if;
                           
-                          if score1 = 3 and place_score1 < 144 then
-                               color := Rom14(place_score1); -- 144 binair -- "0000";
-                               red(0) <= color;
-                               red(1) <= color;
-                               red(2) <= color;
-                               red(3) <= color;
-                               green(0) <= color;
-                               green(1) <= color;
-                               green(2) <= color;
-                               green(3) <= color;
-                               blue(0) <= color;
-                               blue(1) <= color;
-                               blue(2) <= color;
-                               blue(3) <= color;
-                               place_score1 := place_score1 - 1; 
-                           end if;
+--                          if score1 = 3 and place_score1 < 144 then
+--                               color := Rom14(place_score1); -- 144 binair -- "0000";
+--                               red(0) <= color;
+--                               red(1) <= color;
+--                               red(2) <= color;
+--                               red(3) <= color;
+--                               green(0) <= color;
+--                               green(1) <= color;
+--                               green(2) <= color;
+--                               green(3) <= color;
+--                               blue(0) <= color;
+--                               blue(1) <= color;
+--                               blue(2) <= color;
+--                               blue(3) <= color;
+--                               place_score1 := place_score1 - 1; 
+--                           end if;
                          
-                           if score1 = 4 and place_score1 < 144 then
-                                color := Rom15(place_score1); -- 144 binair -- "0000";
-                                red(0) <= color;
-                                red(1) <= color;
-                                red(2) <= color;
-                                red(3) <= color;
-                                green(0) <= color;
-                                green(1) <= color;
-                                green(2) <= color;
-                                green(3) <= color;
-                                blue(0) <= color;
-                                blue(1) <= color;
-                                blue(2) <= color;
-                                blue(3) <= color;
-                                place_score1 := place_score1 - 1; 
-                          end if;
+--                           if score1 = 4 and place_score1 < 144 then
+--                                color := Rom15(place_score1); -- 144 binair -- "0000";
+--                                red(0) <= color;
+--                                red(1) <= color;
+--                                red(2) <= color;
+--                                red(3) <= color;
+--                                green(0) <= color;
+--                                green(1) <= color;
+--                                green(2) <= color;
+--                                green(3) <= color;
+--                                blue(0) <= color;
+--                                blue(1) <= color;
+--                                blue(2) <= color;
+--                                blue(3) <= color;
+--                                place_score1 := place_score1 - 1; 
+--                          end if;
                           
-                           if score1 = 5 and place_score1 < 144 then
-                                  color := Rom16(place_score1); -- 144 binair -- "0000";
-                                  red(0) <= color;
-                                  red(1) <= color;
-                                  red(2) <= color;
-                                  red(3) <= color;
-                                  green(0) <= color;
-                                  green(1) <= color;
-                                  green(2) <= color;
-                                  green(3) <= color;
-                                  blue(0) <= color;
-                                  blue(1) <= color;
-                                  blue(2) <= color;
-                                  blue(3) <= color;
-                                  place_score1 := place_score1 - 1; 
-                            end if;
+--                           if score1 = 5 and place_score1 < 144 then
+--                                  color := Rom16(place_score1); -- 144 binair -- "0000";
+--                                  red(0) <= color;
+--                                  red(1) <= color;
+--                                  red(2) <= color;
+--                                  red(3) <= color;
+--                                  green(0) <= color;
+--                                  green(1) <= color;
+--                                  green(2) <= color;
+--                                  green(3) <= color;
+--                                  blue(0) <= color;
+--                                  blue(1) <= color;
+--                                  blue(2) <= color;
+--                                  blue(3) <= color;
+--                                  place_score1 := place_score1 - 1; 
+--                            end if;
                           
-                   elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
-                       color := Rom21(place_streep); -- 144 binair -- "0000";
-                          red(0) <= color;
-                          red(1) <= color;
-                          red(2) <= color;
-                          red(3) <= color;
-                          green(0) <= color;
-                          green(1) <= color;
-                          green(2) <= color;
-                          green(3) <= color;
-                          blue(0) <= color;
-                          blue(1) <= color;
-                          blue(2) <= color;
-                          blue(3) <= color;
-                          place_streep := place_streep - 1; 
+--                   elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
+--                       color := Rom21(place_streep); -- 144 binair -- "0000";
+--                          red(0) <= color;
+--                          red(1) <= color;
+--                          red(2) <= color;
+--                          red(3) <= color;
+--                          green(0) <= color;
+--                          green(1) <= color;
+--                          green(2) <= color;
+--                          green(3) <= color;
+--                          blue(0) <= color;
+--                          blue(1) <= color;
+--                          blue(2) <= color;
+--                          blue(3) <= color;
+--                          place_streep := place_streep - 1; 
                   
-                   elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
-                      if score2 = 0 and place_score2 < 144 then
-                             color := Rom11(place_score2); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_score2 := place_score2 - 1; 
-                       end if;
+--                   elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
+--                      if score2 = 0 and place_score2 < 144 then
+--                             color := Rom11(place_score2); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_score2 := place_score2 - 1; 
+--                       end if;
                        
                         
-                      if score2 = 1 and place_score2 < 144 then
-                             color := Rom12(place_score2); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_score2 := place_score2 - 1; 
-                       end if;
+--                      if score2 = 1 and place_score2 < 144 then
+--                             color := Rom12(place_score2); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_score2 := place_score2 - 1; 
+--                       end if;
                        
-                        if score2 = 2 and place_score2 < 144 then
-                              color := Rom13(place_score2); -- 144 binair -- "0000";
-                              red(0) <= color;
-                              red(1) <= color;
-                              red(2) <= color;
-                              red(3) <= color;
-                              green(0) <= color;
-                              green(1) <= color;
-                              green(2) <= color;
-                              green(3) <= color;
-                              blue(0) <= color;
-                              blue(1) <= color;
-                              blue(2) <= color;
-                              blue(3) <= color;
-                              place_score2 := place_score2 - 1; 
-                        end if;
+--                        if score2 = 2 and place_score2 < 144 then
+--                              color := Rom13(place_score2); -- 144 binair -- "0000";
+--                              red(0) <= color;
+--                              red(1) <= color;
+--                              red(2) <= color;
+--                              red(3) <= color;
+--                              green(0) <= color;
+--                              green(1) <= color;
+--                              green(2) <= color;
+--                              green(3) <= color;
+--                              blue(0) <= color;
+--                              blue(1) <= color;
+--                              blue(2) <= color;
+--                              blue(3) <= color;
+--                              place_score2 := place_score2 - 1; 
+--                        end if;
                         
-                        if score2 = 3 and place_score2 < 144 then
-                             color := Rom14(place_score2); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_score2 := place_score2 - 1; 
-                         end if;
+--                        if score2 = 3 and place_score2 < 144 then
+--                             color := Rom14(place_score2); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_score2 := place_score2 - 1; 
+--                         end if;
                        
-                         if score2 = 4 and place_score2 < 144 then
-                              color := Rom15(place_score2); -- 144 binair -- "0000";
-                              red(0) <= color;
-                              red(1) <= color;
-                              red(2) <= color;
-                              red(3) <= color;
-                              green(0) <= color;
-                              green(1) <= color;
-                              green(2) <= color;
-                              green(3) <= color;
-                              blue(0) <= color;
-                              blue(1) <= color;
-                              blue(2) <= color;
-                              blue(3) <= color;
-                              place_score2 := place_score2 - 1; 
-                        end if;
+--                         if score2 = 4 and place_score2 < 144 then
+--                              color := Rom15(place_score2); -- 144 binair -- "0000";
+--                              red(0) <= color;
+--                              red(1) <= color;
+--                              red(2) <= color;
+--                              red(3) <= color;
+--                              green(0) <= color;
+--                              green(1) <= color;
+--                              green(2) <= color;
+--                              green(3) <= color;
+--                              blue(0) <= color;
+--                              blue(1) <= color;
+--                              blue(2) <= color;
+--                              blue(3) <= color;
+--                              place_score2 := place_score2 - 1; 
+--                        end if;
                         
-                         if score2 = 5 and place_score2 < 144 then
-                                color := Rom16(place_score2); -- 144 binair -- "0000";
-                                red(0) <= color;
-                                red(1) <= color;
-                                red(2) <= color;
-                                red(3) <= color;
-                                green(0) <= color;
-                                green(1) <= color;
-                                green(2) <= color;
-                                green(3) <= color;
-                                blue(0) <= color;
-                                blue(1) <= color;
-                                blue(2) <= color;
-                                blue(3) <= color;
-                                place_score2 := place_score2 - 1; 
-                          end if;
+--                         if score2 = 5 and place_score2 < 144 then
+--                                color := Rom16(place_score2); -- 144 binair -- "0000";
+--                                red(0) <= color;
+--                                red(1) <= color;
+--                                red(2) <= color;
+--                                red(3) <= color;
+--                                green(0) <= color;
+--                                green(1) <= color;
+--                                green(2) <= color;
+--                                green(3) <= color;
+--                                blue(0) <= color;
+--                                blue(1) <= color;
+--                                blue(2) <= color;
+--                                blue(3) <= color;
+--                                place_score2 := place_score2 - 1; 
+--                          end if;
                           
-            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
-                color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+--            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+--                color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
                
-          elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
-                color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_dubbele_punt := place_dubbele_punt - 1;  
+--          elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+--                color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_dubbele_punt := place_dubbele_punt - 1;  
                 
-         elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
-             if moeil = 0 and place_gekozen_moeilijheid < 1320 then
-                 color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                 red(0) <= color;
-                 red(1) <= color;
-                 red(2) <= color;
-                 red(3) <= color;
-                 green(0) <= color;
-                 green(1) <= color;
-                 green(2) <= color;
-                 green(3) <= color;
-                 blue(0) <= color;
-                 blue(1) <= color;
-                 blue(2) <= color;
-                 blue(3) <= color;
-                 place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-           end if;
+--         elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+--             if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+--                 color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                 red(0) <= color;
+--                 red(1) <= color;
+--                 red(2) <= color;
+--                 red(3) <= color;
+--                 green(0) <= color;
+--                 green(1) <= color;
+--                 green(2) <= color;
+--                 green(3) <= color;
+--                 blue(0) <= color;
+--                 blue(1) <= color;
+--                 blue(2) <= color;
+--                 blue(3) <= color;
+--                 place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--           end if;
            
-           if moeil = 1 and place_gekozen_moeilijheid < 1320 then
-                   color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                   red(0) <= color;
-                   red(1) <= color;
-                   red(2) <= color;
-                   red(3) <= color;
-                   green(0) <= color;
-                   green(1) <= color;
-                   green(2) <= color;
-                   green(3) <= color;
-                   blue(0) <= color;
-                   blue(1) <= color;
-                   blue(2) <= color;
-                   blue(3) <= color;
-                   place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-             end if;
+--           if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+--                   color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                   red(0) <= color;
+--                   red(1) <= color;
+--                   red(2) <= color;
+--                   red(3) <= color;
+--                   green(0) <= color;
+--                   green(1) <= color;
+--                   green(2) <= color;
+--                   green(3) <= color;
+--                   blue(0) <= color;
+--                   blue(1) <= color;
+--                   blue(2) <= color;
+--                   blue(3) <= color;
+--                   place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--             end if;
              
-             if moeil = 2 and place_gekozen_moeilijheid < 1320 then
-                     color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                     red(0) <= color;
-                     red(1) <= color;
-                     red(2) <= color;
-                     red(3) <= color;
-                     green(0) <= color;
-                     green(1) <= color;
-                     green(2) <= color;
-                     green(3) <= color;
-                     blue(0) <= color;
-                     blue(1) <= color;
-                     blue(2) <= color;
-                     blue(3) <= color;
-                     place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-               end if;
+--             if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+--                     color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                     red(0) <= color;
+--                     red(1) <= color;
+--                     red(2) <= color;
+--                     red(3) <= color;
+--                     green(0) <= color;
+--                     green(1) <= color;
+--                     green(2) <= color;
+--                     green(3) <= color;
+--                     blue(0) <= color;
+--                     blue(1) <= color;
+--                     blue(2) <= color;
+--                     blue(3) <= color;
+--                     place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--               end if;
                           
-            elsif((hcount_int = xb2raw and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (hcount_int = (xb2raw + 150) and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (vcount_int = yb2raw and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw)) or (vcount_int = (yb2raw + 100) and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw))) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "1000"; 
-            elsif((hcount_int > xb2raw and vcount_int > yb2raw) and (hcount_int < (xb2raw + 150) and vcount < (yb2raw + 100))) then
-                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                    red <= "0010";
-                    green <= "0010";
-                    blue <= "0000";
+--            elsif((hcount_int = xb2raw and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (hcount_int = (xb2raw + 150) and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (vcount_int = yb2raw and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw)) or (vcount_int = (yb2raw + 100) and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw))) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "1000"; 
+--            elsif((hcount_int > xb2raw and vcount_int > yb2raw) and (hcount_int < (xb2raw + 150) and vcount < (yb2raw + 100))) then
+--                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                    red <= "0010";
+--                    green <= "0010";
+--                    blue <= "0000";
                 
-        -- hockey batje 1 begin  
-            elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0100";
-            elsif((hcount_int > xbh2raw and vcount_int > ybh2raw) and (hcount_int < (xbh2raw + 75) and vcount < (ybh2raw + 50))) then
-                -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
-               if(rball = 35 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
-                    red <= "0001";
-                    green <= "0001";
-                    blue <= "0000";
-               elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
-                    red <= "0001";
-                    green <= "0000";
-                    blue <= "0000";
-               elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw+ 38) and hcount_int >= xb1raw))) then
-                    red <= "0001";
-                    green <= "0000";
-                    blue <= "0000";
-               elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                   red <= "0000";
-                   green <= "0001";
-                   blue <= "0000";
-               elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                   red <= "0000";
-                   green <= "0001";
-                   blue <= "0000";
-               elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                   red <= "0000";
-                   green <= "0001";
-                   blue <= "0000";
-               else
-                   red <= "0000";
-                   green <= "0000";
-                   blue <= "0000";
-               end if; -- einde hockey batje 1
+--        -- hockey batje 1 begin  
+--            elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0100";
+--            elsif((hcount_int > xbh2raw and vcount_int > ybh2raw) and (hcount_int < (xbh2raw + 75) and vcount < (ybh2raw + 50))) then
+--                -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+--               if(rball = 35 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
+--                    red <= "0001";
+--                    green <= "0001";
+--                    blue <= "0000";
+--               elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
+--                    red <= "0001";
+--                    green <= "0000";
+--                    blue <= "0000";
+--               elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw+ 38) and hcount_int >= xb1raw))) then
+--                    red <= "0001";
+--                    green <= "0000";
+--                    blue <= "0000";
+--               elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                   red <= "0000";
+--                   green <= "0001";
+--                   blue <= "0000";
+--               elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                   red <= "0000";
+--                   green <= "0001";
+--                   blue <= "0000";
+--               elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                   red <= "0000";
+--                   green <= "0001";
+--                   blue <= "0000";
+--               else
+--                   red <= "0000";
+--                   green <= "0000";
+--                   blue <= "0000";
+--               end if; -- einde hockey batje 1
                
-            -- hockey batje 2 begin
-             elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
-                   red <= "0100";
-                   green <= "0000";
-                   blue <= "0000";
-             elsif((hcount_int > xbh1raw and vcount_int > ybh1raw) and (hcount_int < (xbh1raw + 50) and vcount_int < (ybh1raw + 33))) then
-             -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
-                if(rball = 15 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
-                   red <= "0001";
-                   green <= "0001";
-                   blue <= "0000";
-                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                   red <= "0001";
-                   green <= "0000";
-                   blue <= "0000";
-                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                   red <= "0000";
-                   green <= "0001";
-                   blue <= "0000";
-                else
-                   red <= "0000";
-                   green <= "0000";
-                   blue <= "0000";
-                end if; -- einde hockey batje 2
+--            -- hockey batje 2 begin
+--             elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
+--                   red <= "0100";
+--                   green <= "0000";
+--                   blue <= "0000";
+--             elsif((hcount_int > xbh1raw and vcount_int > ybh1raw) and (hcount_int < (xbh1raw + 50) and vcount_int < (ybh1raw + 33))) then
+--             -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+--                if(rball = 15 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
+--                   red <= "0001";
+--                   green <= "0001";
+--                   blue <= "0000";
+--                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                   red <= "0001";
+--                   green <= "0000";
+--                   blue <= "0000";
+--                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                   red <= "0000";
+--                   green <= "0001";
+--                   blue <= "0000";
+--                else
+--                   red <= "0000";
+--                   green <= "0000";
+--                   blue <= "0000";
+--                end if; -- einde hockey batje 2
            
-            elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                red <= "0100";
-                green <= "0000";
-                blue <= "0000";
+--            elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                red <= "0100";
+--                green <= "0000";
+--                blue <= "0000";
           
-            --Schuine lijnen  
-                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
-                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
+--            --Schuine lijnen  
+--                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
+--                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
                                 
-                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                else
-                    red <= "0000";
-                    green <= "0000";
-                    blue <= "0000";
-                end if;   
-        --hockey batje 1     
-        elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
-            red <= "0000";
-            green <= "0000";
-            blue <= "1000";    
-        --hockey batje 1 einde
+--                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                else
+--                    red <= "0000";
+--                    green <= "0000";
+--                    blue <= "0000";
+--                end if;   
+--        --hockey batje 1     
+--        elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
+--            red <= "0000";
+--            green <= "0000";
+--            blue <= "1000";    
+--        --hockey batje 1 einde
                
-        --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
+--        --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
           
-            -- hockey batje begin  1
-        elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
-            red <= "0000";
-            green <= "0000";
-            blue <= "1000";
-        elsif((hcount_int > xbh2raw and vcount_int > ybh2raw) and (hcount_int < (xbh2raw + 75) and vcount < (ybh2raw + 50))) then
-            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
-           if(rball = 35 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
-                red <= "0010";
-                green <= "0010";
-                blue <= "0000";
-           elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
-                red <= "0010";
-                green <= "0000";
-                blue <= "0000";
-           elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                red <= "0010";
-                green <= "0000";
-                blue <= "0000";
-           elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-           elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-           elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "0010";
-                blue <= "0000";
-           else
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-           end if; -- einde hockey batje 1
+--            -- hockey batje begin  1
+--        elsif((hcount_int = xbh2raw and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (hcount_int = (xbh2raw + 75) and (vcount_int <= (ybh2raw + 50) and vcount_int >= ybh2raw)) or (vcount_int = ybh2raw and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw)) or (vcount_int = (ybh2raw + 50) and (hcount_int <= (xbh2raw + 75) and hcount_int >= xbh2raw))) then
+--            red <= "0000";
+--            green <= "0000";
+--            blue <= "1000";
+--        elsif((hcount_int > xbh2raw and vcount_int > ybh2raw) and (hcount_int < (xbh2raw + 75) and vcount < (ybh2raw + 50))) then
+--            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+--           if(rball = 35 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
+--                red <= "0010";
+--                green <= "0010";
+--                blue <= "0000";
+--           elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
+--                red <= "0010";
+--                green <= "0000";
+--                blue <= "0000";
+--           elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                red <= "0010";
+--                green <= "0000";
+--                blue <= "0000";
+--           elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "0010";
+--                blue <= "0000";
+--           elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "0010";
+--                blue <= "0000";
+--           elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "0010";
+--                blue <= "0000";
+--           else
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--           end if; -- einde hockey batje 1
            
-           -- hockey batje 2 begin
-           elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
-                red <= "1000";
-                green <= "0000";
-                blue <= "0000";
-           elsif((hcount_int > xbh1raw and vcount_int > ybh1raw) and (hcount_int < (xbh1raw + 50) and vcount < (ybh1raw + 33))) then
-            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
-               if(rball = 15 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
-                    red <= "0010";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                    red <= "0010";
-                    green <= "0000";
-                    blue <= "0000";
-                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-               else
-                    red <= "0000";
-                    green <= "0000";
-                    blue <= "0000";
-               end if; -- einde hockey batje 2
+--           -- hockey batje 2 begin
+--           elsif((hcount_int = xbh1raw and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (hcount_int = (xbh1raw + 50) and (vcount_int <= (ybh1raw + 33) and vcount_int >= ybh1raw)) or (vcount_int = ybh1raw and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw)) or (vcount_int = (ybh1raw + 33) and (hcount_int <= (xbh1raw + 50) and hcount_int >= xbh1raw))) then
+--                red <= "1000";
+--                green <= "0000";
+--                blue <= "0000";
+--           elsif((hcount_int > xbh1raw and vcount_int > ybh1raw) and (hcount_int < (xbh1raw + 50) and vcount < (ybh1raw + 33))) then
+--            -- Nog iets bedenken voor de bal, zal niet altijd achter dat batje zitten. Misschien iets met de straal.
+--               if(rball = 15 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
+--                    red <= "0010";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                    red <= "0010";
+--                    green <= "0000";
+--                    blue <= "0000";
+--                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--               else
+--                    red <= "0000";
+--                    green <= "0000";
+--                    blue <= "0000";
+--               end if; -- einde hockey batje 2
                
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";
-       elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-           red <= "1000";
-           green <= "0000";
-           blue <= "0000";            
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-              place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
-              place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
-              place_streep := 143;
-              place_score2 := 143;
-              place_moeilijkheid_spelweergave := 1643;
-               place_gekozen_moeilijheid := 1319;
-               place_dubbele_punt := 35;
-          end if; 
-        end if;
+--            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                red <= "1000";
+--                green <= "1000";
+--                blue <= "0000";
+--       elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--           red <= "1000";
+--           green <= "0000";
+--           blue <= "0000";            
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--              place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+--              place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+--              place_streep := 143;
+--              place_score2 := 143;
+--              place_moeilijkheid_spelweergave := 1643;
+--               place_gekozen_moeilijheid := 1319;
+--               place_dubbele_punt := 35;
+--          end if; 
+--        end if;
         
-        --Tennis en Demo
-        if((spelmod = "11" or spelmod = "00") and menu = "00") then
-             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
-                             color := Rom10(place_score); -- 144 binair -- "0000";
-                             red(0) <= color;
-                             red(1) <= color;
-                             red(2) <= color;
-                             red(3) <= color;
-                             green(0) <= color;
-                             green(1) <= color;
-                             green(2) <= color;
-                             green(3) <= color;
-                             blue(0) <= color;
-                             blue(1) <= color;
-                             blue(2) <= color;
-                             blue(3) <= color;
-                             place_score := place_score - 1;   
+--        --Tennis en Demo
+--        if((spelmod = "11" or spelmod = "00") and menu = "00") then
+--             if place_score < 804 and (hcount >= x_score and hcount <= (x_score + 66)) and (vcount >= y_score and vcount <= (y_score + 11))then    
+--                             color := Rom10(place_score); -- 144 binair -- "0000";
+--                             red(0) <= color;
+--                             red(1) <= color;
+--                             red(2) <= color;
+--                             red(3) <= color;
+--                             green(0) <= color;
+--                             green(1) <= color;
+--                             green(2) <= color;
+--                             green(3) <= color;
+--                             blue(0) <= color;
+--                             blue(1) <= color;
+--                             blue(2) <= color;
+--                             blue(3) <= color;
+--                             place_score := place_score - 1;   
                           
-                      elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
-                               if score1 = 0 and place_score1 < 144 then
-                                     color := Rom11(place_score1); -- 144 binair -- "0000";
-                                     red(0) <= color;
-                                     red(1) <= color;
-                                     red(2) <= color;
-                                     red(3) <= color;
-                                     green(0) <= color;
-                                     green(1) <= color;
-                                     green(2) <= color;
-                                     green(3) <= color;
-                                     blue(0) <= color;
-                                     blue(1) <= color;
-                                     blue(2) <= color;
-                                     blue(3) <= color;
-                                     place_score1 := place_score1 - 1; 
-                               end if;
+--                      elsif(hcount >= x_score1 and hcount <= (x_score1 + 11)) and (vcount >= y_score1 and vcount <= (y_score1 + 11)) then
+--                               if score1 = 0 and place_score1 < 144 then
+--                                     color := Rom11(place_score1); -- 144 binair -- "0000";
+--                                     red(0) <= color;
+--                                     red(1) <= color;
+--                                     red(2) <= color;
+--                                     red(3) <= color;
+--                                     green(0) <= color;
+--                                     green(1) <= color;
+--                                     green(2) <= color;
+--                                     green(3) <= color;
+--                                     blue(0) <= color;
+--                                     blue(1) <= color;
+--                                     blue(2) <= color;
+--                                     blue(3) <= color;
+--                                     place_score1 := place_score1 - 1; 
+--                               end if;
                                
-                               if score1 = 1 and place_score1 < 144 then
-                                      color := Rom12(place_score1); -- 144 binair -- "0000";
-                                      red(0) <= color;
-                                      red(1) <= color;
-                                      red(2) <= color;
-                                      red(3) <= color;
-                                      green(0) <= color;
-                                      green(1) <= color;
-                                      green(2) <= color;
-                                      green(3) <= color;
-                                      blue(0) <= color;
-                                      blue(1) <= color;
-                                      blue(2) <= color;
-                                      blue(3) <= color;
-                                      place_score1 := place_score1 - 1; 
-                                end if;
+--                               if score1 = 1 and place_score1 < 144 then
+--                                      color := Rom12(place_score1); -- 144 binair -- "0000";
+--                                      red(0) <= color;
+--                                      red(1) <= color;
+--                                      red(2) <= color;
+--                                      red(3) <= color;
+--                                      green(0) <= color;
+--                                      green(1) <= color;
+--                                      green(2) <= color;
+--                                      green(3) <= color;
+--                                      blue(0) <= color;
+--                                      blue(1) <= color;
+--                                      blue(2) <= color;
+--                                      blue(3) <= color;
+--                                      place_score1 := place_score1 - 1; 
+--                                end if;
                                 
-                                 if score1 = 2 and place_score1 < 144 then
-                                       color := Rom13(place_score1); -- 144 binair -- "0000";
-                                       red(0) <= color;
-                                       red(1) <= color;
-                                       red(2) <= color;
-                                       red(3) <= color;
-                                       green(0) <= color;
-                                       green(1) <= color;
-                                       green(2) <= color;
-                                       green(3) <= color;
-                                       blue(0) <= color;
-                                       blue(1) <= color;
-                                       blue(2) <= color;
-                                       blue(3) <= color;
-                                       place_score1 := place_score1 - 1; 
-                                 end if;
+--                                 if score1 = 2 and place_score1 < 144 then
+--                                       color := Rom13(place_score1); -- 144 binair -- "0000";
+--                                       red(0) <= color;
+--                                       red(1) <= color;
+--                                       red(2) <= color;
+--                                       red(3) <= color;
+--                                       green(0) <= color;
+--                                       green(1) <= color;
+--                                       green(2) <= color;
+--                                       green(3) <= color;
+--                                       blue(0) <= color;
+--                                       blue(1) <= color;
+--                                       blue(2) <= color;
+--                                       blue(3) <= color;
+--                                       place_score1 := place_score1 - 1; 
+--                                 end if;
                                  
-                                 if score1 = 3 and place_score1 < 144 then
-                                      color := Rom14(place_score1); -- 144 binair -- "0000";
-                                      red(0) <= color;
-                                      red(1) <= color;
-                                      red(2) <= color;
-                                      red(3) <= color;
-                                      green(0) <= color;
-                                      green(1) <= color;
-                                      green(2) <= color;
-                                      green(3) <= color;
-                                      blue(0) <= color;
-                                      blue(1) <= color;
-                                      blue(2) <= color;
-                                      blue(3) <= color;
-                                      place_score1 := place_score1 - 1; 
-                                  end if;
+--                                 if score1 = 3 and place_score1 < 144 then
+--                                      color := Rom14(place_score1); -- 144 binair -- "0000";
+--                                      red(0) <= color;
+--                                      red(1) <= color;
+--                                      red(2) <= color;
+--                                      red(3) <= color;
+--                                      green(0) <= color;
+--                                      green(1) <= color;
+--                                      green(2) <= color;
+--                                      green(3) <= color;
+--                                      blue(0) <= color;
+--                                      blue(1) <= color;
+--                                      blue(2) <= color;
+--                                      blue(3) <= color;
+--                                      place_score1 := place_score1 - 1; 
+--                                  end if;
                                 
-                                  if score1 = 4 and place_score1 < 144 then
-                                       color := Rom15(place_score1); -- 144 binair -- "0000";
-                                       red(0) <= color;
-                                       red(1) <= color;
-                                       red(2) <= color;
-                                       red(3) <= color;
-                                       green(0) <= color;
-                                       green(1) <= color;
-                                       green(2) <= color;
-                                       green(3) <= color;
-                                       blue(0) <= color;
-                                       blue(1) <= color;
-                                       blue(2) <= color;
-                                       blue(3) <= color;
-                                       place_score1 := place_score1 - 1; 
-                                 end if;
+--                                  if score1 = 4 and place_score1 < 144 then
+--                                       color := Rom15(place_score1); -- 144 binair -- "0000";
+--                                       red(0) <= color;
+--                                       red(1) <= color;
+--                                       red(2) <= color;
+--                                       red(3) <= color;
+--                                       green(0) <= color;
+--                                       green(1) <= color;
+--                                       green(2) <= color;
+--                                       green(3) <= color;
+--                                       blue(0) <= color;
+--                                       blue(1) <= color;
+--                                       blue(2) <= color;
+--                                       blue(3) <= color;
+--                                       place_score1 := place_score1 - 1; 
+--                                 end if;
                                  
-                                  if score1 = 5 and place_score1 < 144 then
-                                         color := Rom16(place_score1); -- 144 binair -- "0000";
-                                         red(0) <= color;
-                                         red(1) <= color;
-                                         red(2) <= color;
-                                         red(3) <= color;
-                                         green(0) <= color;
-                                         green(1) <= color;
-                                         green(2) <= color;
-                                         green(3) <= color;
-                                         blue(0) <= color;
-                                         blue(1) <= color;
-                                         blue(2) <= color;
-                                         blue(3) <= color;
-                                         place_score1 := place_score1 - 1; 
-                                   end if;
+--                                  if score1 = 5 and place_score1 < 144 then
+--                                         color := Rom16(place_score1); -- 144 binair -- "0000";
+--                                         red(0) <= color;
+--                                         red(1) <= color;
+--                                         red(2) <= color;
+--                                         red(3) <= color;
+--                                         green(0) <= color;
+--                                         green(1) <= color;
+--                                         green(2) <= color;
+--                                         green(3) <= color;
+--                                         blue(0) <= color;
+--                                         blue(1) <= color;
+--                                         blue(2) <= color;
+--                                         blue(3) <= color;
+--                                         place_score1 := place_score1 - 1; 
+--                                   end if;
                                  
-                          elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
-                              color := Rom21(place_streep); -- 144 binair -- "0000";
-                                 red(0) <= color;
-                                 red(1) <= color;
-                                 red(2) <= color;
-                                 red(3) <= color;
-                                 green(0) <= color;
-                                 green(1) <= color;
-                                 green(2) <= color;
-                                 green(3) <= color;
-                                 blue(0) <= color;
-                                 blue(1) <= color;
-                                 blue(2) <= color;
-                                 blue(3) <= color;
-                                 place_streep := place_streep - 1; 
+--                          elsif place_streep < 144 and (hcount >= x_streep and hcount <= (x_streep + 11)) and (vcount >= y_streep and vcount <= (y_streep + 11))then    
+--                              color := Rom21(place_streep); -- 144 binair -- "0000";
+--                                 red(0) <= color;
+--                                 red(1) <= color;
+--                                 red(2) <= color;
+--                                 red(3) <= color;
+--                                 green(0) <= color;
+--                                 green(1) <= color;
+--                                 green(2) <= color;
+--                                 green(3) <= color;
+--                                 blue(0) <= color;
+--                                 blue(1) <= color;
+--                                 blue(2) <= color;
+--                                 blue(3) <= color;
+--                                 place_streep := place_streep - 1; 
                          
-                          elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
-                             if score2 = 0 and place_score2 < 144 then
-                                    color := Rom11(place_score2); -- 144 binair -- "0000";
-                                    red(0) <= color;
-                                    red(1) <= color;
-                                    red(2) <= color;
-                                    red(3) <= color;
-                                    green(0) <= color;
-                                    green(1) <= color;
-                                    green(2) <= color;
-                                    green(3) <= color;
-                                    blue(0) <= color;
-                                    blue(1) <= color;
-                                    blue(2) <= color;
-                                    blue(3) <= color;
-                                    place_score2 := place_score2 - 1; 
-                              end if;
+--                          elsif(hcount >= x_score2 and hcount <= (x_score2 + 11)) and (vcount >= y_score2 and vcount <= (y_score2 + 11)) then
+--                             if score2 = 0 and place_score2 < 144 then
+--                                    color := Rom11(place_score2); -- 144 binair -- "0000";
+--                                    red(0) <= color;
+--                                    red(1) <= color;
+--                                    red(2) <= color;
+--                                    red(3) <= color;
+--                                    green(0) <= color;
+--                                    green(1) <= color;
+--                                    green(2) <= color;
+--                                    green(3) <= color;
+--                                    blue(0) <= color;
+--                                    blue(1) <= color;
+--                                    blue(2) <= color;
+--                                    blue(3) <= color;
+--                                    place_score2 := place_score2 - 1; 
+--                              end if;
                               
                                
-                             if score2 = 1 and place_score2 < 144 then
-                                    color := Rom12(place_score2); -- 144 binair -- "0000";
-                                    red(0) <= color;
-                                    red(1) <= color;
-                                    red(2) <= color;
-                                    red(3) <= color;
-                                    green(0) <= color;
-                                    green(1) <= color;
-                                    green(2) <= color;
-                                    green(3) <= color;
-                                    blue(0) <= color;
-                                    blue(1) <= color;
-                                    blue(2) <= color;
-                                    blue(3) <= color;
-                                    place_score2 := place_score2 - 1; 
-                              end if;
+--                             if score2 = 1 and place_score2 < 144 then
+--                                    color := Rom12(place_score2); -- 144 binair -- "0000";
+--                                    red(0) <= color;
+--                                    red(1) <= color;
+--                                    red(2) <= color;
+--                                    red(3) <= color;
+--                                    green(0) <= color;
+--                                    green(1) <= color;
+--                                    green(2) <= color;
+--                                    green(3) <= color;
+--                                    blue(0) <= color;
+--                                    blue(1) <= color;
+--                                    blue(2) <= color;
+--                                    blue(3) <= color;
+--                                    place_score2 := place_score2 - 1; 
+--                              end if;
                               
-                               if score2 = 2 and place_score2 < 144 then
-                                     color := Rom13(place_score2); -- 144 binair -- "0000";
-                                     red(0) <= color;
-                                     red(1) <= color;
-                                     red(2) <= color;
-                                     red(3) <= color;
-                                     green(0) <= color;
-                                     green(1) <= color;
-                                     green(2) <= color;
-                                     green(3) <= color;
-                                     blue(0) <= color;
-                                     blue(1) <= color;
-                                     blue(2) <= color;
-                                     blue(3) <= color;
-                                     place_score2 := place_score2 - 1; 
-                               end if;
+--                               if score2 = 2 and place_score2 < 144 then
+--                                     color := Rom13(place_score2); -- 144 binair -- "0000";
+--                                     red(0) <= color;
+--                                     red(1) <= color;
+--                                     red(2) <= color;
+--                                     red(3) <= color;
+--                                     green(0) <= color;
+--                                     green(1) <= color;
+--                                     green(2) <= color;
+--                                     green(3) <= color;
+--                                     blue(0) <= color;
+--                                     blue(1) <= color;
+--                                     blue(2) <= color;
+--                                     blue(3) <= color;
+--                                     place_score2 := place_score2 - 1; 
+--                               end if;
                                
-                               if score2 = 3 and place_score2 < 144 then
-                                    color := Rom14(place_score2); -- 144 binair -- "0000";
-                                    red(0) <= color;
-                                    red(1) <= color;
-                                    red(2) <= color;
-                                    red(3) <= color;
-                                    green(0) <= color;
-                                    green(1) <= color;
-                                    green(2) <= color;
-                                    green(3) <= color;
-                                    blue(0) <= color;
-                                    blue(1) <= color;
-                                    blue(2) <= color;
-                                    blue(3) <= color;
-                                    place_score2 := place_score2 - 1; 
-                                end if;
+--                               if score2 = 3 and place_score2 < 144 then
+--                                    color := Rom14(place_score2); -- 144 binair -- "0000";
+--                                    red(0) <= color;
+--                                    red(1) <= color;
+--                                    red(2) <= color;
+--                                    red(3) <= color;
+--                                    green(0) <= color;
+--                                    green(1) <= color;
+--                                    green(2) <= color;
+--                                    green(3) <= color;
+--                                    blue(0) <= color;
+--                                    blue(1) <= color;
+--                                    blue(2) <= color;
+--                                    blue(3) <= color;
+--                                    place_score2 := place_score2 - 1; 
+--                                end if;
                               
-                                if score2 = 4 and place_score2 < 144 then
-                                     color := Rom15(place_score2); -- 144 binair -- "0000";
-                                     red(0) <= color;
-                                     red(1) <= color;
-                                     red(2) <= color;
-                                     red(3) <= color;
-                                     green(0) <= color;
-                                     green(1) <= color;
-                                     green(2) <= color;
-                                     green(3) <= color;
-                                     blue(0) <= color;
-                                     blue(1) <= color;
-                                     blue(2) <= color;
-                                     blue(3) <= color;
-                                     place_score2 := place_score2 - 1; 
-                               end if;
+--                                if score2 = 4 and place_score2 < 144 then
+--                                     color := Rom15(place_score2); -- 144 binair -- "0000";
+--                                     red(0) <= color;
+--                                     red(1) <= color;
+--                                     red(2) <= color;
+--                                     red(3) <= color;
+--                                     green(0) <= color;
+--                                     green(1) <= color;
+--                                     green(2) <= color;
+--                                     green(3) <= color;
+--                                     blue(0) <= color;
+--                                     blue(1) <= color;
+--                                     blue(2) <= color;
+--                                     blue(3) <= color;
+--                                     place_score2 := place_score2 - 1; 
+--                               end if;
                                
-                                if score2 = 5 and place_score2 < 144 then
-                                       color := Rom16(place_score2); -- 144 binair -- "0000";
-                                       red(0) <= color;
-                                       red(1) <= color;
-                                       red(2) <= color;
-                                       red(3) <= color;
-                                       green(0) <= color;
-                                       green(1) <= color;
-                                       green(2) <= color;
-                                       green(3) <= color;
-                                       blue(0) <= color;
-                                       blue(1) <= color;
-                                       blue(2) <= color;
-                                       blue(3) <= color;
-                                       place_score2 := place_score2 - 1; 
-                                 end if;
+--                                if score2 = 5 and place_score2 < 144 then
+--                                       color := Rom16(place_score2); -- 144 binair -- "0000";
+--                                       red(0) <= color;
+--                                       red(1) <= color;
+--                                       red(2) <= color;
+--                                       red(3) <= color;
+--                                       green(0) <= color;
+--                                       green(1) <= color;
+--                                       green(2) <= color;
+--                                       green(3) <= color;
+--                                       blue(0) <= color;
+--                                       blue(1) <= color;
+--                                       blue(2) <= color;
+--                                       blue(3) <= color;
+--                                       place_score2 := place_score2 - 1; 
+--                                 end if;
                                  
-            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
-                   color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
-                   red(0) <= color;
-                   red(1) <= color;
-                   red(2) <= color;
-                   red(3) <= color;
-                   green(0) <= color;
-                   green(1) <= color;
-                   green(2) <= color;
-                   green(3) <= color;
-                   blue(0) <= color;
-                   blue(1) <= color;
-                   blue(2) <= color;
-                   blue(3) <= color;
-                   place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
+--            elsif place_moeilijkheid_spelweergave < 1644 and (hcount >= x_moeilijkheid_spelweergave and hcount <= (x_moeilijkheid_spelweergave + 136)) and (vcount >= y_moeilijkheid_spelweergave and vcount <= (y_moeilijkheid_spelweergave + 11))then    
+--                   color := Rom4(place_moeilijkheid_spelweergave); -- 144 binair -- "0000";
+--                   red(0) <= color;
+--                   red(1) <= color;
+--                   red(2) <= color;
+--                   red(3) <= color;
+--                   green(0) <= color;
+--                   green(1) <= color;
+--                   green(2) <= color;
+--                   green(3) <= color;
+--                   blue(0) <= color;
+--                   blue(1) <= color;
+--                   blue(2) <= color;
+--                   blue(3) <= color;
+--                   place_moeilijkheid_spelweergave := place_moeilijkheid_spelweergave - 1;   
                   
-             elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
-                   color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
-                   red(0) <= color;
-                   red(1) <= color;
-                   red(2) <= color;
-                   red(3) <= color;
-                   green(0) <= color;
-                   green(1) <= color;
-                   green(2) <= color;
-                   green(3) <= color;
-                   blue(0) <= color;
-                   blue(1) <= color;
-                   blue(2) <= color;
-                   blue(3) <= color;
-                   place_dubbele_punt := place_dubbele_punt - 1;  
+--             elsif place_dubbele_punt < 36 and (hcount >= x_dubbele_punt and hcount <= (x_dubbele_punt + 2)) and (vcount >= y_dubbele_punt and vcount <= (y_dubbele_punt + 11))then    
+--                   color := Rom22(place_dubbele_punt); -- 144 binair -- "0000";
+--                   red(0) <= color;
+--                   red(1) <= color;
+--                   red(2) <= color;
+--                   red(3) <= color;
+--                   green(0) <= color;
+--                   green(1) <= color;
+--                   green(2) <= color;
+--                   green(3) <= color;
+--                   blue(0) <= color;
+--                   blue(1) <= color;
+--                   blue(2) <= color;
+--                   blue(3) <= color;
+--                   place_dubbele_punt := place_dubbele_punt - 1;  
                    
-            elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
-                if moeil = 0 and place_gekozen_moeilijheid < 1320 then
-                    color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                    red(0) <= color;
-                    red(1) <= color;
-                    red(2) <= color;
-                    red(3) <= color;
-                    green(0) <= color;
-                    green(1) <= color;
-                    green(2) <= color;
-                    green(3) <= color;
-                    blue(0) <= color;
-                    blue(1) <= color;
-                    blue(2) <= color;
-                    blue(3) <= color;
-                    place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-              end if;
+--            elsif(hcount >= x_gekozen_moeilijheid and hcount <= (x_gekozen_moeilijheid + 109)) and (vcount >= y_gekozen_moeilijheid and vcount <= (y_gekozen_moeilijheid + 11)) then
+--                if moeil = 0 and place_gekozen_moeilijheid < 1320 then
+--                    color := Rom7(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                    red(0) <= color;
+--                    red(1) <= color;
+--                    red(2) <= color;
+--                    red(3) <= color;
+--                    green(0) <= color;
+--                    green(1) <= color;
+--                    green(2) <= color;
+--                    green(3) <= color;
+--                    blue(0) <= color;
+--                    blue(1) <= color;
+--                    blue(2) <= color;
+--                    blue(3) <= color;
+--                    place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--              end if;
               
-              if moeil = 1 and place_gekozen_moeilijheid < 1320 then
-                      color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                      red(0) <= color;
-                      red(1) <= color;
-                      red(2) <= color;
-                      red(3) <= color;
-                      green(0) <= color;
-                      green(1) <= color;
-                      green(2) <= color;
-                      green(3) <= color;
-                      blue(0) <= color;
-                      blue(1) <= color;
-                      blue(2) <= color;
-                      blue(3) <= color;
-                      place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-                end if;
+--              if moeil = 1 and place_gekozen_moeilijheid < 1320 then
+--                      color := Rom8(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                      red(0) <= color;
+--                      red(1) <= color;
+--                      red(2) <= color;
+--                      red(3) <= color;
+--                      green(0) <= color;
+--                      green(1) <= color;
+--                      green(2) <= color;
+--                      green(3) <= color;
+--                      blue(0) <= color;
+--                      blue(1) <= color;
+--                      blue(2) <= color;
+--                      blue(3) <= color;
+--                      place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--                end if;
                 
-                if moeil = 2 and place_gekozen_moeilijheid < 1320 then
-                        color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
-                        red(0) <= color;
-                        red(1) <= color;
-                        red(2) <= color;
-                        red(3) <= color;
-                        green(0) <= color;
-                        green(1) <= color;
-                        green(2) <= color;
-                        green(3) <= color;
-                        blue(0) <= color;
-                        blue(1) <= color;
-                        blue(2) <= color;
-                        blue(3) <= color;
-                        place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
-                  end if;
+--                if moeil = 2 and place_gekozen_moeilijheid < 1320 then
+--                        color := Rom9(place_gekozen_moeilijheid); -- 144 binair -- "0000";
+--                        red(0) <= color;
+--                        red(1) <= color;
+--                        red(2) <= color;
+--                        red(3) <= color;
+--                        green(0) <= color;
+--                        green(1) <= color;
+--                        green(2) <= color;
+--                        green(3) <= color;
+--                        blue(0) <= color;
+--                        blue(1) <= color;
+--                        blue(2) <= color;
+--                        blue(3) <= color;
+--                        place_gekozen_moeilijheid := place_gekozen_moeilijheid - 1; 
+--                  end if;
                   
-            elsif((hcount_int = xb2raw and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (hcount_int = (xb2raw + 150) and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (vcount_int = yb2raw and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw)) or (vcount_int = (yb2raw + 100) and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw))) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "1000"; 
-            elsif((hcount_int > xb2raw and vcount_int > yb2raw) and (hcount_int < (xb2raw + 150) and vcount < (yb2raw + 100))) then
-                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                    red <= "0010";
-                    green <= "0010";
-                    blue <= "0000";          
-                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                    red <= "0100";
-                    green <= "0000";
-                    blue <= "0000";
+--            elsif((hcount_int = xb2raw and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (hcount_int = (xb2raw + 150) and (vcount_int <= (yb2raw + 100) and vcount_int >= yb2raw)) or (vcount_int = yb2raw and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw)) or (vcount_int = (yb2raw + 100) and (hcount_int <= (xb2raw + 150) and hcount_int >= xb2raw))) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "1000"; 
+--            elsif((hcount_int > xb2raw and vcount_int > yb2raw) and (hcount_int < (xb2raw + 150) and vcount < (yb2raw + 100))) then
+--                if((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                    red <= "0010";
+--                    green <= "0010";
+--                    blue <= "0000";          
+--                elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                    red <= "0100";
+--                    green <= "0000";
+--                    blue <= "0000";
           
-            --Schuine lijnen  
-                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
-                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                    red <= "0000";
-                    green <= "0010"; 
-                    blue <= "0000";
+--            --Schuine lijnen  
+--                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
+--                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                    red <= "0000";
+--                    green <= "0010"; 
+--                    blue <= "0000";
                                 
-                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                    red <= "0000";
-                    green <= "0010";
-                    blue <= "0000";
-                else
-                    red <= "0000";
-                    green <= "0000";
-                    blue <= "0000";
-                end if;   
-        --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
+--                elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                    red <= "0000";
+--                    green <= "0010";
+--                    blue <= "0000";
+--                else
+--                    red <= "0000";
+--                    green <= "0000";
+--                    blue <= "0000";
+--                end if;   
+--        --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
                
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
-                red <= "1000";
-                green <= "0000";
-                blue <= "0000";            
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
-              if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                  place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
-                  place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
-                  place_streep := 143;
-                  place_score2 := 143;
-                  place_moeilijkheid_spelweergave := 1643;
-                   place_gekozen_moeilijheid := 1319;
-                   place_dubbele_punt := 35;
-              end if; 
-        end if;
+--            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+--                red <= "1000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = xb1raw and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (hcount_int = (xb1raw + 38) and (vcount_int <= (yb1raw + 25) and vcount_int >= yb1raw)) or (vcount_int = yb1raw and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw)) or (vcount_int = (yb1raw + 25) and (hcount_int <= (xb1raw + 38) and hcount_int >= xb1raw))) then
+--                red <= "1000";
+--                green <= "0000";
+--                blue <= "0000";            
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
+--              if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                  place_score := 803; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                  place_score1 := 143; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                  place_streep := 143;
+--                  place_score2 := 143;
+--                  place_moeilijkheid_spelweergave := 1643;
+--                   place_gekozen_moeilijheid := 1319;
+--                   place_dubbele_punt := 35;
+--              end if; 
+--        end if;
         
         
-        --HoofdMenu
-        if(menu = "01") then
-            --ROM hoofdmenu moet er nog worden ingezet
-            if place_hoofdmenu < 4860 and hcount >= x_hoofdmenu and hcount <= (x_hoofdmenu + 89) and vcount >= y_hoofdmenu and vcount <= (y_hoofdmenu + 53)then    
-               color := Rom1(place_hoofdmenu); -- 144 binair -- "0000";
-               red(0) <= color;
-               red(1) <= color;
-               red(2) <= color;
-               red(3) <= color;
-               green(0) <= color;
-               green(1) <= color;
-               green(2) <= color;
-               green(3) <= color;
-               blue(0) <= color;
-               blue(1) <= color;
-               blue(2) <= color;
-               blue(3) <= color;
-               place_hoofdmenu := place_hoofdmenu - 1;
+--        --HoofdMenu
+--        if(menu = "01") then
+--            --ROM hoofdmenu moet er nog worden ingezet
+--            if place_hoofdmenu < 4860 and hcount >= x_hoofdmenu and hcount <= (x_hoofdmenu + 89) and vcount >= y_hoofdmenu and vcount <= (y_hoofdmenu + 53)then    
+--               color := Rom1(place_hoofdmenu); -- 144 binair -- "0000";
+--               red(0) <= color;
+--               red(1) <= color;
+--               red(2) <= color;
+--               red(3) <= color;
+--               green(0) <= color;
+--               green(1) <= color;
+--               green(2) <= color;
+--               green(3) <= color;
+--               blue(0) <= color;
+--               blue(1) <= color;
+--               blue(2) <= color;
+--               blue(3) <= color;
+--               place_hoofdmenu := place_hoofdmenu - 1;
                
-           elsif place_pong < 612 and hcount >= x_pong and hcount <= (x_pong + 50) and vcount >= y_pong and vcount <= (y_pong + 11)then    
-               color := Rom2(place_pong); -- 144 binair -- "0000";
-               red(0) <= color;
-               red(1) <= color;
-               red(2) <= color;
-               red(3) <= color;
-               green(0) <= color;
-               green(1) <= color;
-               green(2) <= color;
-               green(3) <= color;
-               blue(0) <= color;
-               blue(1) <= color;
-               blue(2) <= color;
-               blue(3) <= color;
-               place_pong := place_pong - 1;
+--           elsif place_pong < 612 and hcount >= x_pong and hcount <= (x_pong + 50) and vcount >= y_pong and vcount <= (y_pong + 11)then    
+--               color := Rom2(place_pong); -- 144 binair -- "0000";
+--               red(0) <= color;
+--               red(1) <= color;
+--               red(2) <= color;
+--               red(3) <= color;
+--               green(0) <= color;
+--               green(1) <= color;
+--               green(2) <= color;
+--               green(3) <= color;
+--               blue(0) <= color;
+--               blue(1) <= color;
+--               blue(2) <= color;
+--               blue(3) <= color;
+--               place_pong := place_pong - 1;
                
-             elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_0 and vcount <= (y_cursor_hoofdmenu_0 + 11) and menusel = 0 then
-                 color := Rom23(place_cursor); -- 144 binair -- "0000";
-                 red(0) <= color;
-                 red(1) <= color;
-                 red(2) <= color;
-                 red(3) <= color;
-                 green(0) <= color;
-                 green(1) <= color;
-                 green(2) <= color;
-                 green(3) <= color;
-                 blue(0) <= color;
-                 blue(1) <= color;
-                 blue(2) <= color;
-                 blue(3) <= color;
-                 place_cursor := place_cursor - 1;
+--             elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_0 and vcount <= (y_cursor_hoofdmenu_0 + 11) and menusel = 0 then
+--                 color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                 red(0) <= color;
+--                 red(1) <= color;
+--                 red(2) <= color;
+--                 red(3) <= color;
+--                 green(0) <= color;
+--                 green(1) <= color;
+--                 green(2) <= color;
+--                 green(3) <= color;
+--                 blue(0) <= color;
+--                 blue(1) <= color;
+--                 blue(2) <= color;
+--                 blue(3) <= color;
+--                 place_cursor := place_cursor - 1;
                  
-            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_1 and vcount <= (y_cursor_hoofdmenu_1 + 11) and menusel = 1 then
-                  color := Rom23(place_cursor); -- 144 binair -- "0000";
-                  red(0) <= color;
-                  red(1) <= color;
-                  red(2) <= color;
-                  red(3) <= color;
-                  green(0) <= color;
-                  green(1) <= color;
-                  green(2) <= color;
-                  green(3) <= color;
-                  blue(0) <= color;
-                  blue(1) <= color;
-                  blue(2) <= color;
-                  blue(3) <= color;
-                  place_cursor := place_cursor - 1;
+--            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_1 and vcount <= (y_cursor_hoofdmenu_1 + 11) and menusel = 1 then
+--                  color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                  red(0) <= color;
+--                  red(1) <= color;
+--                  red(2) <= color;
+--                  red(3) <= color;
+--                  green(0) <= color;
+--                  green(1) <= color;
+--                  green(2) <= color;
+--                  green(3) <= color;
+--                  blue(0) <= color;
+--                  blue(1) <= color;
+--                  blue(2) <= color;
+--                  blue(3) <= color;
+--                  place_cursor := place_cursor - 1;
                   
-            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_2 and vcount <= (y_cursor_hoofdmenu_2 + 11) and menusel = 2 then
-                    color := Rom23(place_cursor); -- 144 binair -- "0000";
-                    red(0) <= color;
-                    red(1) <= color;
-                    red(2) <= color;
-                    red(3) <= color;
-                    green(0) <= color;
-                    green(1) <= color;
-                    green(2) <= color;
-                    green(3) <= color;
-                    blue(0) <= color;
-                    blue(1) <= color;
-                    blue(2) <= color;
-                    blue(3) <= color;
-                    place_cursor := place_cursor - 1;
+--            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_2 and vcount <= (y_cursor_hoofdmenu_2 + 11) and menusel = 2 then
+--                    color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                    red(0) <= color;
+--                    red(1) <= color;
+--                    red(2) <= color;
+--                    red(3) <= color;
+--                    green(0) <= color;
+--                    green(1) <= color;
+--                    green(2) <= color;
+--                    green(3) <= color;
+--                    blue(0) <= color;
+--                    blue(1) <= color;
+--                    blue(2) <= color;
+--                    blue(3) <= color;
+--                    place_cursor := place_cursor - 1;
                     
-            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_3 and vcount <= (y_cursor_hoofdmenu_3 + 11) and menusel = 3 then
-                    color := Rom23(place_cursor); -- 144 binair -- "0000";
-                    red(0) <= color;
-                    red(1) <= color;
-                    red(2) <= color;
-                    red(3) <= color;
-                    green(0) <= color;
-                    green(1) <= color;
-                    green(2) <= color;
-                    green(3) <= color;
-                    blue(0) <= color;
-                    blue(1) <= color;
-                    blue(2) <= color;
-                    blue(3) <= color;
-                    place_cursor := place_cursor - 1;
+--            elsif place_cursor < 72 and hcount >= x_cursor_hoofdmenu and hcount <= (x_cursor_hoofdmenu + 5) and vcount >= y_cursor_hoofdmenu_3 and vcount <= (y_cursor_hoofdmenu_3 + 11) and menusel = 3 then
+--                    color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                    red(0) <= color;
+--                    red(1) <= color;
+--                    red(2) <= color;
+--                    red(3) <= color;
+--                    green(0) <= color;
+--                    green(1) <= color;
+--                    green(2) <= color;
+--                    green(3) <= color;
+--                    blue(0) <= color;
+--                    blue(1) <= color;
+--                    blue(2) <= color;
+--                    blue(3) <= color;
+--                    place_cursor := place_cursor - 1;
             
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
                 
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
             
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                place_hoofdmenu := 4859; -- waarom werkt vcount = 0 and hcount = 0 niet
-            end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                place_hoofdmenu := 4859; -- waarom werkt vcount = 0 and hcount = 0 niet
+--            end if;
                            
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                place_pong := 611; -- waarom werkt vcount = 0 and hcount = 0 niet
-                place_cursor := 71;
-            end if;                
-    end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                place_pong := 611; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                place_cursor := 71;
+--            end if;                
+--    end if;
         
         
-        --Moeilijkheidsgraad
-        if(menu = "10") then
-            --ROM Moeilijkheidsgraad moet er nog worden ingezet
-            if place_moeilijkheidmenu < 4400 and hcount >= x_moeilijkheidmenu and hcount <= (x_moeilijkheidmenu + 109) and vcount >= y_moeilijkheidmenu and vcount <= (y_moeilijkheidmenu + 39)then    
-                color := Rom3(place_moeilijkheidmenu); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_moeilijkheidmenu := place_moeilijkheidmenu - 1;
+--        --Moeilijkheidsgraad
+--        if(menu = "10") then
+--            --ROM Moeilijkheidsgraad moet er nog worden ingezet
+--            if place_moeilijkheidmenu < 4400 and hcount >= x_moeilijkheidmenu and hcount <= (x_moeilijkheidmenu + 109) and vcount >= y_moeilijkheidmenu and vcount <= (y_moeilijkheidmenu + 39)then    
+--                color := Rom3(place_moeilijkheidmenu); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_moeilijkheidmenu := place_moeilijkheidmenu - 1;
                 
-            elsif place_moeilijkheid < 1644 and hcount >= x_moeilijkheid and hcount <= (x_moeilijkheid + 136) and vcount >= y_moeilijkheid and vcount <= (y_moeilijkheid + 11)then    
-                color := Rom4(place_moeilijkheid); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_moeilijkheid := place_moeilijkheid - 1;
+--            elsif place_moeilijkheid < 1644 and hcount >= x_moeilijkheid and hcount <= (x_moeilijkheid + 136) and vcount >= y_moeilijkheid and vcount <= (y_moeilijkheid + 11)then    
+--                color := Rom4(place_moeilijkheid); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_moeilijkheid := place_moeilijkheid - 1;
                 
-            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_0 and vcount <= (y_cursor_moeilijkheid_0 + 11) and menusel = 0 then
-                   color := Rom23(place_cursor); -- 144 binair -- "0000";
-                   red(0) <= color;
-                   red(1) <= color;
-                   red(2) <= color;
-                   red(3) <= color;
-                   green(0) <= color;
-                   green(1) <= color;
-                   green(2) <= color;
-                   green(3) <= color;
-                   blue(0) <= color;
-                   blue(1) <= color;
-                   blue(2) <= color;
-                   blue(3) <= color;
-                   place_cursor := place_cursor - 1;
+--            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_0 and vcount <= (y_cursor_moeilijkheid_0 + 11) and menusel = 0 then
+--                   color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                   red(0) <= color;
+--                   red(1) <= color;
+--                   red(2) <= color;
+--                   red(3) <= color;
+--                   green(0) <= color;
+--                   green(1) <= color;
+--                   green(2) <= color;
+--                   green(3) <= color;
+--                   blue(0) <= color;
+--                   blue(1) <= color;
+--                   blue(2) <= color;
+--                   blue(3) <= color;
+--                   place_cursor := place_cursor - 1;
                    
-            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_1 and vcount <= (y_cursor_moeilijkheid_1 + 11) and menusel = 1 then
-                  color := Rom23(place_cursor); -- 144 binair -- "0000";
-                  red(0) <= color;
-                  red(1) <= color;
-                  red(2) <= color;
-                  red(3) <= color;
-                  green(0) <= color;
-                  green(1) <= color;
-                  green(2) <= color;
-                  green(3) <= color;
-                  blue(0) <= color;
-                  blue(1) <= color;
-                  blue(2) <= color;
-                  blue(3) <= color;
-                  place_cursor := place_cursor - 1;
+--            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_1 and vcount <= (y_cursor_moeilijkheid_1 + 11) and menusel = 1 then
+--                  color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                  red(0) <= color;
+--                  red(1) <= color;
+--                  red(2) <= color;
+--                  red(3) <= color;
+--                  green(0) <= color;
+--                  green(1) <= color;
+--                  green(2) <= color;
+--                  green(3) <= color;
+--                  blue(0) <= color;
+--                  blue(1) <= color;
+--                  blue(2) <= color;
+--                  blue(3) <= color;
+--                  place_cursor := place_cursor - 1;
                   
-            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_2 and vcount <= (y_cursor_moeilijkheid_2 + 11) and menusel = 2 then
-                color := Rom23(place_cursor); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_cursor := place_cursor - 1;    
+--            elsif place_cursor < 72 and hcount >= x_cursor_moeilijkheid and hcount <= (x_cursor_moeilijkheid + 5) and vcount >= y_cursor_moeilijkheid_2 and vcount <= (y_cursor_moeilijkheid_2 + 11) and menusel = 2 then
+--                color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_cursor := place_cursor - 1;    
             
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
             
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                place_moeilijkheidmenu := 4399; -- waarom werkt vcount = 0 and hcount = 0 niet
-            end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                place_moeilijkheidmenu := 4399; -- waarom werkt vcount = 0 and hcount = 0 niet
+--            end if;
             
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-               place_moeilijkheid := 1643; -- waarom werkt vcount = 0 and hcount = 0 niet
-               place_cursor := 71;
-            end if;   
-        end if;
-        --Pauze
-        if(menu = "11") then
-            if place_pauzemenu < 2678 and hcount >= x_pauzemenu and hcount <= (x_pauzemenu + 102) and vcount >= y_pauzemenu and vcount <= (y_pauzemenu + 25)then    
-                color := Rom5(place_pauzemenu); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_pauzemenu := place_pauzemenu - 1;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--               place_moeilijkheid := 1643; -- waarom werkt vcount = 0 and hcount = 0 niet
+--               place_cursor := 71;
+--            end if;   
+--        end if;
+--        --Pauze
+--        if(menu = "11") then
+--            if place_pauzemenu < 2678 and hcount >= x_pauzemenu and hcount <= (x_pauzemenu + 102) and vcount >= y_pauzemenu and vcount <= (y_pauzemenu + 25)then    
+--                color := Rom5(place_pauzemenu); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_pauzemenu := place_pauzemenu - 1;
                 
-             elsif place_pauze < 1236 and hcount >= x_pauze and hcount <= (x_pauze + 102) and vcount >= y_pauze and vcount <= (y_pauze + 11)then    
-                color := Rom6(place_pauze); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_pauze := place_pauze - 1;
+--             elsif place_pauze < 1236 and hcount >= x_pauze and hcount <= (x_pauze + 102) and vcount >= y_pauze and vcount <= (y_pauze + 11)then    
+--                color := Rom6(place_pauze); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_pauze := place_pauze - 1;
                 
-            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_0 and vcount <= (y_cursor_pauze_0 + 11) and menusel = 0 then
-                color := Rom23(place_cursor); -- 144 binair -- "0000";
-                red(0) <= color;
-                red(1) <= color;
-                red(2) <= color;
-                red(3) <= color;
-                green(0) <= color;
-                green(1) <= color;
-                green(2) <= color;
-                green(3) <= color;
-                blue(0) <= color;
-                blue(1) <= color;
-                blue(2) <= color;
-                blue(3) <= color;
-                place_cursor := place_cursor - 1; 
+--            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_0 and vcount <= (y_cursor_pauze_0 + 11) and menusel = 0 then
+--                color := Rom23(place_cursor); -- 144 binair -- "0000";
+--                red(0) <= color;
+--                red(1) <= color;
+--                red(2) <= color;
+--                red(3) <= color;
+--                green(0) <= color;
+--                green(1) <= color;
+--                green(2) <= color;
+--                green(3) <= color;
+--                blue(0) <= color;
+--                blue(1) <= color;
+--                blue(2) <= color;
+--                blue(3) <= color;
+--                place_cursor := place_cursor - 1; 
                 
-            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_1 and vcount <= (y_cursor_pauze_1 + 11) and menusel = 1 then
-               color := Rom23(place_cursor); -- 144 binair -- "0000";
-               red(0) <= color;
-               red(1) <= color;
-               red(2) <= color;
-               red(3) <= color;
-               green(0) <= color;
-               green(1) <= color;
-               green(2) <= color;
-               green(3) <= color;
-               blue(0) <= color;
-               blue(1) <= color;
-               blue(2) <= color;
-               blue(3) <= color;
-               place_cursor := place_cursor - 1;    
+--            elsif place_cursor < 72 and hcount >= x_cursor_pauze and hcount <= (x_cursor_pauze + 5) and vcount >= y_cursor_pauze_1 and vcount <= (y_cursor_pauze_1 + 11) and menusel = 1 then
+--               color := Rom23(place_cursor); -- 144 binair -- "0000";
+--               red(0) <= color;
+--               red(1) <= color;
+--               red(2) <= color;
+--               red(3) <= color;
+--               green(0) <= color;
+--               green(1) <= color;
+--               green(2) <= color;
+--               green(3) <= color;
+--               blue(0) <= color;
+--               blue(1) <= color;
+--               blue(2) <= color;
+--               blue(3) <= color;
+--               place_cursor := place_cursor - 1;    
             
-            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            --Schuine lijnen  
-            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
-            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
-                red <= "0000";
-                green <= "1000"; 
-                blue <= "0000";
+--            elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            --Schuine lijnen  
+--            elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
+--            elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+--                red <= "0000";
+--                green <= "1000"; 
+--                blue <= "0000";
                 
-            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
-                red <= "0000";
-                green <= "1000";
-                blue <= "0000";
-            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
-                red <= "0000";
-                green <= "0000";
-                blue <= "0000";
-            end if;
+--            elsif((hcount_int = 230 and (vcount_int <= 430 and vcount_int >= 119)) or (hcount_int = 696 and (vcount_int <= 430 and vcount_int >= 119)) or (vcount_int = 119 and (hcount_int <= 696 and hcount_int >= 230)) or (vcount_int = 430 and (hcount_int <= 696 and hcount_int >= 230))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 293 and (vcount_int <= 388 and vcount_int >= 161)) or (hcount_int = 633 and (vcount_int <= 388 and vcount_int >= 161)) or (vcount_int = 161 and (hcount_int <= 634 and hcount_int >= 293)) or (vcount_int = 388 and (hcount_int <= 634 and hcount_int >= 293))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 328 and (vcount_int <= 364 and vcount_int >= 186)) or (hcount_int = 598 and (vcount_int <= 364 and vcount_int >= 186)) or (vcount_int = 186 and (hcount_int <= 598 and hcount_int >= 328)) or (vcount_int = 364 and (hcount_int <= 598 and hcount_int >= 328))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 360 and (vcount_int <= 343 and vcount_int >= 206)) or (hcount_int = 566 and (vcount_int <= 343 and vcount_int >= 206)) or (vcount_int = 343 and (hcount_int <= 566 and hcount_int >= 360)) or (vcount_int = 206 and (hcount_int <= 566 and hcount_int >= 360))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif((hcount_int = 384 and (vcount_int <= 327 and vcount_int >= 221)) or (hcount_int = 543 and (vcount_int <= 327 and vcount_int >= 221)) or (vcount_int = 221 and (hcount_int <= 543 and hcount_int >= 384)) or (vcount_int = 327 and (hcount_int <= 543 and hcount_int >= 384))) then
+--                red <= "0000";
+--                green <= "1000";
+--                blue <= "0000";
+--            elsif (hcount_int >= 144) and (hcount_int < 784) and (vcount_int >= 31) and (vcount_int < 511) then
+--                red <= "0000";
+--                green <= "0000";
+--                blue <= "0000";
+--            end if;
             
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                place_pauzemenu := 2677; -- waarom werkt vcount = 0 and hcount = 0 niet
-            end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                place_pauzemenu := 2677; -- waarom werkt vcount = 0 and hcount = 0 niet
+--            end if;
             
-            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
-                place_pauze := 1235; -- waarom werkt vcount = 0 and hcount = 0 niet
-                place_cursor := 71;
-            end if;     
-        end if;
+--            if (vcount = 0 and hcount = 1) then -- waarom werkt dit wel en hetgeen in de if loop hierboven niet 
+--                place_pauze := 1235; -- waarom werkt vcount = 0 and hcount = 0 niet
+--                place_cursor := 71;
+--            end if;     
+--        end if;
     end if;
 end process;
 

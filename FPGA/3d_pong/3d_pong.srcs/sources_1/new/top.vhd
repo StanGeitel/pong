@@ -5,6 +5,7 @@ entity top is port (
     clk100MHz : in STD_LOGIC; -- W5
     clkSPI : in STD_LOGIC;
     dataSPI : in STD_LOGIC;
+    geluid : in STD_LOGIC;
     hsync : out STD_LOGIC;
     vsync : out STD_LOGIC;
     red, green, blue : out STD_LOGIC_VECTOR (3 downto 0);
@@ -43,6 +44,7 @@ component image port(
     hcount, vcount : in STD_LOGIC_VECTOR(9 downto 0);
     data_ram, data_ram2 : in STD_LOGIC_VECTOR(9 downto 0);
     datasound : in STD_LOGIC_VECTOR(7 downto 0);
+    geluid : in STD_LOGIC;
     addr_ram : out STD_LOGIC_VECTOR(3 downto 0);
     red, green, blue : out STD_LOGIC_VECTOR(3 downto 0);
     adressound : out STD_LOGIC_VECTOR(9 downto 0);
@@ -117,6 +119,7 @@ image1 : image port map(
     data_ram => tmpdata_out,
     data_ram2 => tmpdata_out2,
     datasound => tmpdatasound,
+    geluid => geluid,
     addr_ram => tmpaddr_img,
     hcount => tmphcount,
     vcount => tmpvcount,

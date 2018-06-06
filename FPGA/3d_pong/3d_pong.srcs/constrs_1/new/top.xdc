@@ -50,4 +50,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {blue[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {blue[3]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports pwmsound]
-set_property PACKAGE_PIN R18 [get_ports pwmsound]
+set_property PACKAGE_PIN P18 [get_ports pwmsound]
+
+set_property PACKAGE_PIN W16 [get_ports geluid]
+set_property IOSTANDARD LVCMOS33 [get_ports geluid]
+

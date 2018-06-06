@@ -1025,7 +1025,12 @@ begin
                     red <= "0000";
                     green <= "0000";
                     blue <= "0000";
-                end if;                  
+                end if;    
+                
+            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                red <= "1000";
+                green <= "1000";
+                blue <= "0000";                     
         --Schuine lijnen  
             elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
                 red <= "0000";
@@ -1035,10 +1040,7 @@ begin
                 red <= "0000";
                 green <= "1000"; 
                 blue <= "0000";               
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";        
+      
             elsif((hcount_int = 145 and (vcount_int <= 486 and vcount_int >= 62)) or (hcount_int = 781 and (vcount_int <= 486 and vcount_int >= 62)) or (vcount_int = 62 and (hcount_int <= 781 and hcount_int >= 145)) or (vcount_int = 486 and (hcount_int <= 781 and hcount_int >= 145))) then
                 red <= "0000";
                 green <= "1000";
@@ -1429,6 +1431,16 @@ begin
                     red <= "0001";
                     green <= "0001";
                     blue <= "0000";
+               --Schuine lijnen  
+                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0001"; 
+                    blue <= "0000";
+                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                    red <= "0000";
+                    green <= "0001"; 
+                    blue <= "0000";
+                    
                elsif((hcount_int = xbh2 and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (hcount_int = (xbh2 + 50) and (vcount_int <= (ybh2 + 33) and vcount_int >= ybh2)) or (vcount_int = ybh2 and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2)) or (vcount_int = (ybh2 + 33) and (hcount_int <= (xbh2 + 50) and hcount_int >= xbh2))) then
                     red <= "0001";
                     green <= "0000";
@@ -1465,6 +1477,15 @@ begin
                 if(rball = 15 and ((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball)) then
                    red <= "0001";
                    green <= "0001";
+                   blue <= "0000";
+            --Schuine lijnen  
+                elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                   red <= "0000";
+                   green <= "0010"; 
+                   blue <= "0000";
+                elsif ( abs((3 * (vcount_int - 62 )) + (2 *( hcount_int - 145)) - 3*425 ) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
+                   red <= "0000";
+                   green <= "0010"; 
                    blue <= "0000";
                 elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
                    red <= "0001";
@@ -1530,6 +1551,11 @@ begin
             green <= "0000";
             blue <= "1000";    
         --hockey batje 1 einde
+        
+        elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+            red <= "1000";
+            green <= "1000";
+            blue <= "0000";
                
         --Schuine lijnen  
             elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
@@ -1603,10 +1629,7 @@ begin
                     blue <= "0000";
                end if; -- einde hockey batje 2
                
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";
+
        elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
            red <= "1000";
            green <= "0000";
@@ -2028,7 +2051,12 @@ begin
                     red <= "0000";
                     green <= "0000";
                     blue <= "0000";
-                end if;   
+                end if;  
+            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
+                    red <= "1000";
+                    green <= "1000";
+                    blue <= "0000";
+                     
         --Schuine lijnen  
             elsif ( abs((3 * (vcount_int - 62)) - (2 *( hcount_int - 145))) < 3 ) and ( (hcount < 383 or hcount > 543) and ( vcount < 220 or vcount > 328) and hcount > 145 and hcount < 781 and vcount > 62 and vcount < 486) then
                 red <= "0000";
@@ -2039,10 +2067,7 @@ begin
                 green <= "1000"; 
                 blue <= "0000";
                
-            elsif((xball-hcount_int)*(xball-hcount_int)+(yball-vcount_int)*(yball-vcount_int) <= rball*rball or (hcount_int-xball)*(hcount_int-xball)+(vcount_int-yball)*(vcount_int-yball) <= rball*rball) then
-                red <= "1000";
-                green <= "1000";
-                blue <= "0000";
+
             elsif((hcount_int = xb2 and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (hcount_int = (xb2 + 38) and (vcount_int <= (yb2 + 25) and vcount_int >= yb2)) or (vcount_int = yb2 and (hcount_int <= (xb2 + 38) and hcount_int >= xb2)) or (vcount_int = (yb2 + 25) and (hcount_int <= (xb2 + 38) and hcount_int >= xb2))) then
                 red <= "1000";
                 green <= "0000";

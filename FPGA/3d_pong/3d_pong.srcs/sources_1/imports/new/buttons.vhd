@@ -9,7 +9,8 @@ entity buttons is port (
     up, down, left, right, go, forward, backward : in STD_LOGIC;
     wea2 : out STD_LOGIC_VECTOR(0 downto 0);
     addra2 : out STD_LOGIC_VECTOR(3 downto 0);
-    dina2 : out STD_LOGIC_VECTOR(9 downto 0));
+    dina2 : out STD_LOGIC_VECTOR(9 downto 0);
+    sw : in std_logic_vector (8 downto 0));
 end buttons;
 
 architecture Behavioral of buttons is
@@ -34,8 +35,39 @@ signal tmpwea2 : STD_LOGIC_VECTOR(0 downto 0);
         -- Lucah: ball voor schuine lijnen ipv schuine lijnen voor bal
         -- Lucah: transparantie van bal bij goede straal (die diepte voorstelt)
         -- Bij samenvoegen op letten dat andere entity nog extra in- en outputs heeft voor de tweede ram
-        
+component two_bit_adder
+        Port( A0 : in STD_LOGIC;
+              A1 : in STD_LOGIC;
+              B0 : in STD_LOGIC;
+              B1 : in STD_LOGIC;
+              C_in : in STD_LOGIC;
+              S0 : out STD_LOGIC;
+              S1 : out STD_LOGIC;
+              C_out : out STD_LOGIC);
+        end component;
+                    
 begin
+
+FBA0: two_bit_adder port map(
+      A0 => sw(0), 
+      A1 => sw(1), 
+      B0 => sw(2), 
+      B1 => sw(3), 
+      C_in => sw(8), 
+      S0 => score(0),
+      S1 => score(1),
+      C_out => score(2));
+      
+FBA1: two_bit_adder port map(
+        A0 => sw(4), 
+        A1 => sw(5), 
+        B0 => sw(6), 
+        B1 => sw(7), 
+        C_in => sw(8), 
+        S0 => score(5),
+        S1 => score(6),
+        C_out => score(7));   
+        
 process(clk25MHz)
 variable tmpcontrol : STD_LOGIC_VECTOR(9 downto 0);
 begin
@@ -59,18 +91,18 @@ begin
                 downpressed <= '0';
             end if; 
             
-            if (go = '1' and gopressed = '0') then 
-                gopressed <= '1';
-                if (control(1 downto 0) = "00") then
-                    tmpcontrol(5 downto 2) := "0000";
-                elsif (control(1 downto 0) = "01") then
-                    tmpcontrol(1 downto 0) := "0100";
-                elsif (control(1 downto 0) = "10") then
-                    tmpcontrol(1 downto 0) := "1000"; 
-                elsif (control(1 downto 0) = "11") then
-                    tmpcontrol(1 downto 0) := "0000"; 
-                end if;
-            end if;
+--            if (go = '1' and gopressed = '0') then 
+--                gopressed <= '1';
+--                if (control(1 downto 0) = "00") then
+--                    tmpcontrol(5 downto 2) := "0000";
+--                elsif (control(1 downto 0) = "01") then
+--                    tmpcontrol(1 downto 0) := "0100";
+--                elsif (control(1 downto 0) = "10") then
+--                    tmpcontrol(1 downto 0) := "1000"; 
+--                elsif (control(1 downto 0) = "11") then
+--                    tmpcontrol(1 downto 0) := "0000"; 
+--                end if;
+--            end if;
             if (go = '0' and gopressed = '1') then
                 gopressed <= '0';
             end if;

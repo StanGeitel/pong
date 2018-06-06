@@ -10,7 +10,8 @@ entity top is port (
     vsync : out STD_LOGIC;
     red, green, blue : out STD_LOGIC_VECTOR (3 downto 0);
     pwmsound : out STD_LOGIC;
-    up, down, left, right, go, forward, backward : in STD_LOGIC);
+    up, down, left, right, go, forward, backward : in STD_LOGIC;
+    sw : in std_logic_vector (7 downto 0));
 end top;
 
 architecture Behavioral of top is
@@ -62,11 +63,12 @@ end component;
 
 component buttons is port(
     clk25MHz : in STD_LOGIC;
-    vcount : in STD_LOGIC_VECTOR(9 downto 0);
-    up, down, left, right, go, forward, backward : in STD_LOGIC;
-    wea2 : out STD_LOGIC_VECTOR(0 downto 0);
-    addra2 : out STD_LOGIC_VECTOR(3 downto 0);
-    dina2 : out STD_LOGIC_VECTOR(9 downto 0));
+   vcount : in STD_LOGIC_VECTOR(9 downto 0);
+   up, down, left, right, go, forward, backward : in STD_LOGIC;
+   wea2 : out STD_LOGIC_VECTOR(0 downto 0);
+   addra2 : out STD_LOGIC_VECTOR(3 downto 0);
+   dina2 : out STD_LOGIC_VECTOR(9 downto 0);
+   sw : in std_logic_vector (8 downto 0));
 end component;
 
 component rom_geluid is port(
@@ -153,7 +155,8 @@ buttons1 : buttons port map(
     backward => backward,
     wea2 => tmpwea2,
     addra2 => tmpaddra2,
-    dina2 => tmpdina2);
+    dina2 => tmpdina2,
+    sw => sw);
 
 rom_Geluid1 : rom_Geluid port map(
     clk => tmpclkVGA,

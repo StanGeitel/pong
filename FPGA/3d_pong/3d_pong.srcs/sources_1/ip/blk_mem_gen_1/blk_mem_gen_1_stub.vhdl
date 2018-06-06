@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jun  6 09:39:09 2018
--- Host        : DESKTOP-UBGEV9I running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/jobgr/stack/Computer/Documenten/GitHub/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_stub.vhdl
+-- Date        : Wed Jun  6 11:14:01 2018
+-- Host        : LAPTOP-NJE0O93L running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {D:/Documenten/Avans 2017-2018/Blok 8/Pong
+--               github/pong/FPGA/3d_pong/3d_pong.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_stub.vhdl}
 -- Design      : blk_mem_gen_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
